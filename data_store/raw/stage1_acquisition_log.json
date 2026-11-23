@@ -1,0 +1,52 @@
+{
+  "acquired_at": "2026-11-23 09:52:34",
+  "source": "Vietcap IQ Insight API (https://iq.vietcap.com.vn/)",
+  "year_range": "2018-2025",
+  "unit": "Tỷ VNĐ (Billion VND)",
+  "elapsed_seconds": 636.75,
+  "status_counts": {
+    "ok": 634,
+    "missing_balance_sheet": 7,
+    "no_common_years": 1,
+    "missing_cash_flow": 1,
+    "missing_income_statement": 1
+  },
+  "n_companies_success": 643,
+  "n_firm_years": 5007,
+  "failed_tickers_sample": [
+    {
+      "ticker": "AMY",
+      "reason": "no_common_years"
+    }
+  ],
+  "n_failed_total": 1,
+  "funnel": {
+    "total_market_all_exchanges": 1519,
+    "excluded_upcom": 808,
+    "hose_hnx_total": 711,
+    "excluded_financial_institutions": 67,
+    "target_non_financial_hose_hnx": 644,
+    "hose_non_financial": 363,
+    "hnx_non_financial": 281
+  },
+  "audit_summary": {
+    "n_rows": 5007,
+    "n_companies": 643,
+    "valid_bs_rows": 5007,
+    "bs_pass_1pct": 5006,
+    "bs_exact_001pct": 5005,
+    "bs_pass_rate": 99.98,
+    "valid_is_rows": 5001,
+    "gp_pass_1pct": 5001,
+    "gp_exact_001pct": 5001,
+    "gp_pass_rate": 100.0,
+    "n_ta_nonpos": 0,
+    "n_neg_equity": 5,
+    "n_zero_rev": 11,
+    "n_cfo_div": 1387,
+    "n_missing_dep": 0,
+    "n_zero_dep": 503,
+    "n_has_lag1": 4351
+  },
+  "recovery_pass_recovered": 9
+}

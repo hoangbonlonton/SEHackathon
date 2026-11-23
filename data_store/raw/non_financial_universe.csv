@@ -1,0 +1,645 @@
+﻿ticker,exchange,viOrganName,enOrganName,viSector,enSector,icbCodeLv2,icbCodeLv4,marketCap,marketPrice
+VIC,HOSE,Tập đoàn Vingroup - Công ty CP,VinGroup Joint Stock Company,Bất động sản,Real Estate,8600,8633,1874568022603500.0,241500.0
+VHM,HOSE,Công ty Cổ phần Vinhomes,Vinhomes Joint Stock Company,Bất động sản,Real Estate,8600,8633,495353887682400.0,60300.0
+MCH,HOSE,Công ty Cổ phần Hàng Tiêu Dùng MaSan,Masan Consumer Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3577,172708193762900.0,132100.0
+VPL,HOSE,Công ty Cổ phần Vinpearl,Vinpearl Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5755,172156836192000.0,96000.0
+HPG,HOSE,Công ty Cổ phần Tập đoàn Hòa Phát,Hoa Phat Group Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,170970031530000.0,20250.0
+GAS,HOSE,Tổng Công ty Khí Việt Nam - Công ty Cổ phần,PetroVietnam Gas Joint Stock Corporation,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,169389072871200.0,70200.0
+BSR,HOSE,Công ty Cổ phần - Tổng Công ty Lọc Hoá dầu Việt Nam,PetroVietnam Refining and Petrochemical Corporation,Dầu khí,Oil & Gas,0500,0533,118172272589600.0,23600.0
+GVR,HOSE,Tập đoàn Công nghiệp Cao su Việt Nam - Công ty Cổ phần,Viet Nam Rubber Group - Joint Stock Company,Hóa chất,Chemicals,1300,1353,109000000000000.0,27250.0
+VNM,HOSE,Công ty Cổ phần Sữa Việt Nam,Vietnam Dairy Products Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,107841700962000.0,51600.0
+MWG,HOSE,Công ty Cổ phần Đầu tư Thế Giới Di Động,Mobile World Investment Corporation,Bán lẻ,Retail,5300,5379,104626710697400.0,70900.0
+VJC,HOSE,Công ty Cổ phần Hàng không Vietjet,VietJet Aviation Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5751,104596642696000.0,136000.0
+MSN,HOSE,Công ty Cổ phần Tập đoàn Masan,Masan Group Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3577,101203960542300.0,69300.0
+DMX,HOSE,Công ty Cổ phần Đầu tư Điện Máy Xanh,Dien May Xanh Investment Joint Stock Company,Bán lẻ,Retail,5300,5373,95713011000000.0,75500.0
+FPT,HOSE,Công ty Cổ phần FPT,FPT Corporation,Công nghệ Thông tin,Technology,9500,9537,83443448424000.0,44250.0
+HVN,HOSE,Tổng Công ty Hàng không Việt Nam - CTCP,Vietnam Airlines JSC,Du lịch và Giải trí,Travel & Leisure,5700,5751,70008709747500.0,22500.0
+KSF,HNX,Công ty Cổ phần Tập đoàn Sunshine,Sunshine Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,60645664559200.0,67400.0
+SAB,HOSE,Tổng Công ty Cổ phần Bia - Rượu - Nước Giải khát Sài Gòn,Saigon Beer - Alcohol - Beverage Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3533,54380644572800.0,42400.0
+VRE,HOSE,Công ty Cổ phần Vincom Retail,Vincom Retail Joint Stock Company,Bất động sản,Real Estate,8600,8633,52831403032500.0,23250.0
+POW,HOSE,Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP,PetroVietnam Power Corporation,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,40648955366000.0,13250.0
+PLX,HOSE,Tập đoàn Xăng dầu Việt Nam,Vietnam National Petroleum Group,Dầu khí,Oil & Gas,0500,0533,39657363182650.0,30650.0
+GEE,HOSE,Công ty Cổ phần Công nghiệp Gelex,GELEX Industry Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2737,38558052502200.0,60200.0
+BCM,HOSE,Tập đoàn Đầu tư và Phát triển Công nghiệp Becamex - CTCP,Becamex Investment And Industrial Development Group,Bất động sản,Real Estate,8600,8633,37001250000000.0,35750.0
+GMD,HOSE,Công ty Cổ phần Tập đoàn Gemadept,Gemadept Group Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,32239601512800.0,49650.0
+NVL,HOSE,Công ty Cổ phần Tập đoàn Đầu tư Địa ốc No Va,No Va Land Investment Group Corporation,Bất động sản,Real Estate,8600,8633,31628359491120.0,9870.0
+REE,HOSE,Công ty Cổ phần Cơ điện Lạnh,Refrigeration Electrical Engineering Corporation,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,29206244836600.0,46850.0
+KSV,HNX,Tổng Công ty Khoáng sản TKV - Công ty Cổ phần,Vinacomin - Minerals Holding Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1775,28409982196400.0,94700.0
+GEX,HOSE,Công ty Cổ phần Tập đoàn Gelex,Gelex Group Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2737,25907732888400.0,19800.0
+FRT,HOSE,Công ty Cổ phần Bán lẻ Kỹ thuật số FPT,FPT Digital Retail Joint Stock Company,Bán lẻ,Retail,5300,5379,25856656808400.0,144600.0
+PGV,HOSE,Tổng Công ty Phát điện 3 - Công ty Cổ phần,Power Generation Joint Stock Corporation 3,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,25055571792650.0,20650.0
+KBC,HOSE,Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP,Kinh Bac City Development Holding Corporation,Bất động sản,Real Estate,8600,8633,24532711471950.0,26050.0
+VPI,HOSE,Công ty Cổ phần Phát triển Bất động sản Văn Phú,Van Phu Real Estate Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,23003217804600.0,59400.0
+THD,HNX,Công ty Cổ phần Thaiholdings,Thaiholdings Joint Stock Company,Bất động sản,Real Estate,8600,8637,21521498434800.0,55900.0
+GEL,HOSE,Công ty Cổ phần Hạ tầng GELEX,GELEX Infrastructure Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,21360000000000.0,24000.0
+SBT,HOSE,Công ty Cổ phần Thành Thành Công - Biên Hòa,Thanh Thanh Cong - Bien Hoa Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,19533853839500.0,20900.0
+KDH,HOSE,Công ty Cổ phần Đầu tư và Kinh doanh nhà Khang Điền,Khang Dien House Trading and Investment Joint Stock Company,Bất động sản,Real Estate,8600,8633,19115319756400.0,15350.0
+HAG,HOSE,Công ty Cổ phần Hoàng Anh Gia Lai,Hoang Anh Gia Lai Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,17426740141250.0,13750.0
+VGC,HOSE,Tổng Công ty Viglacera - Công ty Cổ phần,Viglacera Corporation - JSC,Xây dựng và Vật liệu,Construction & Materials,2300,2353,17194222500000.0,38350.0
+PVS,HNX,Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam,PetroVietnam Technical Services Corporation,Dầu khí,Oil & Gas,0500,0573,16324401832200.0,26600.0
+DCM,HOSE,Công ty Cổ phần - Tổng Công ty Phân bón Dầu Khí Cà Mau,PetroVietnam Ca Mau Fertilizer Corporation,Hóa chất,Chemicals,1300,1357,16040820000000.0,30300.0
+CRV,HOSE,Công ty Cổ phần Tập đoàn Bất động sản CRV,CRV Real Estate Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,15741457137500.0,22900.0
+SJS,HOSE,Công ty Cổ phần SJ Group,SJ Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,15468691056000.0,52000.0
+PVD,HOSE,Tổng Công ty Cổ phần Khoan và Dịch vụ khoan Dầu khí,PetroVietNam Drilling & Well Service Corporation,Dầu khí,Oil & Gas,0500,0573,15029423494200.0,16200.0
+IDC,HNX,Tổng Công ty IDICO - CTCP,IDICO Corporation - JSC,Bất động sản,Real Estate,8600,8633,14109704003200.0,33800.0
+DXG,HOSE,Công ty Cổ phần Bluemarq Group,Bluemarq Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,13758938870250.0,10850.0
+LGC,HOSE,Công ty Cổ phần Đầu tư Cầu đường CII,CII Bridges and Roads Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,13746043958400.0,64800.0
+KDC,HOSE,Công ty Cổ phần Tập đoàn KIDO,KIDO Group Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3577,13706726880000.0,49600.0
+TCH,HOSE,Công ty Cổ phần Đầu tư Dịch vụ Tài chính Hoàng Huy,Hoang Huy Investment Financial Services Joint Stock Company,Bất động sản,Real Estate,8600,8633,13444391627200.0,13400.0
+HUT,HNX,Công ty Cổ phần Tasco,Tasco Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,13033084088200.0,12200.0
+BAF,HOSE,Công ty Cổ phần Nông nghiệp BAF Việt Nam,BAF Vietnam Agriculture Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,12554626532700.0,30450.0
+DPM,HOSE,Tổng Công ty Phân bón và Hóa chất Dầu khí - Công ty Cổ phần,Petrovietnam Fertilizer and Chemicals Corporation,Hóa chất,Chemicals,1300,1357,12272646629050.0,18050.0
+TAL,HOSE,Công Ty Cổ Phần Đầu Tư Bất Động Sản Taseco,Taseco Land Investment Joint Stock Company,Bất động sản,Real Estate,8600,8633,12196792933600.0,24200.0
+DGC,HOSE,Công ty Cổ phần Tập đoàn Hóa chất Đức Giang,Ducgiang Chemicals Group Joint Stock Company,Hóa chất,Chemicals,1300,1357,11659197279100.0,30700.0
+NLG,HOSE,Công ty Cổ phần Đầu tư Nam Long,Nam Long Investment Corporation,Bất động sản,Real Estate,8600,8633,11157239809000.0,23000.0
+PDR,HOSE,Công ty Cổ phần Phát triển Bất động sản Phát Đạt,Phat Dat Real Estate Development Corporation,Bất động sản,Real Estate,8600,8633,11025793637950.0,11050.0
+DHG,HOSE,Công ty Cổ phần Dược Hậu Giang,DHG Pharmaceutical Joint Stock Company,Y tế,Health Care,4500,4577,10956520749800.0,83800.0
+NTP,HNX,Công ty Cổ phần Nhựa Thiếu niên Tiền Phong,Tien Phong Plastic Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,10775373210000.0,52500.0
+VHC,HOSE,Công ty Cổ phần Vĩnh Hoàn,Vinh Hoan Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3573,10619275161300.0,50700.0
+BMP,HOSE,Công ty Cổ phần Nhựa Bình Minh,Binh Minh Plastics Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,10445455688800.0,127600.0
+SIP,HOSE,Công ty Cổ phần Đầu tư Sài Gòn VRG,Saigon VRG Investment Corporation,Bất động sản,Real Estate,8600,8633,10253483136050.0,42350.0
+BWE,HOSE,Công ty Cổ phần - Tổng công ty Nước - Môi trường Bình Dương,Binh Duong Water - Environment Corporation - Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7577,10229823754700.0,40700.0
+VCG,HOSE,Tổng Công ty Cổ phần Xuất nhập khẩu và Xây dựng Việt Nam,Viet Nam Construction And Import - Export Joint Stock Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,9949011491250.0,14250.0
+PVT,HOSE,Tổng Công ty Cổ phần Vận tải Dầu khí,PetroVietNam Transportation Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,9666384140600.0,18700.0
+VSH,HOSE,Công ty Cổ phần Thủy điện Vĩnh Sơn - Sông Hinh,Vinh Son - Song Hinh Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,9225220656300.0,39050.0
+CII,HOSE,Công ty Cổ phần Đầu tư Hạ tầng Kỹ thuật Thành phố Hồ Chí Minh,Ho Chi Minh City Infrastructure Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,8937404370300.0,13300.0
+HAH,HOSE,Công ty Cổ phần Vận tải và Xếp dỡ Hải An,Hai An Transport and Stevedoring Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,8757514305650.0,45650.0
+DGW,HOSE,Công ty Cổ phần Thế Giới Số,Digiworld Corp.,Bán lẻ,Retail,5300,5379,8688742900000.0,38900.0
+DIG,HOSE,Tổng Công ty Cổ phần Đầu tư Phát triển Xây dựng,Development Investment Construction Joint Stock Corporation,Bất động sản,Real Estate,8600,8633,8365950281330.0,9910.0
+VTP,HOSE,Tổng Công ty Cổ phần Bưu chính Viettel,Viettel Post Joint Stock Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2771,8176349425500.0,40500.0
+HSG,HOSE,Công ty Cổ phần Tập đoàn Hoa Sen,Hoa Sen Group,Tài nguyên Cơ bản,Basic Resources,1700,1757,8072627040000.0,10000.0
+CTD,HOSE,Công ty Cổ phần Xây dựng Coteccons,Coteccons Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,8051271840000.0,72000.0
+AMY,HOSE,Công ty Cổ phần Công nghiệp Á Mỹ,Asia-Us Industrial Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,7883339420100.0,49100.0
+VCF,HOSE,Công ty Cổ phần VinaCafé Biên Hòa,VinaCafé Bien Hoa Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3537,7793002382000.0,293200.0
+PC1,HOSE,Công ty Cổ phần Tập đoàn PC1,PC1 Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,7614881786400.0,16100.0
+PET,HOSE,Tổng Công ty Cổ phần Dịch vụ Tổng hợp Dầu khí,Petrovietnam General Services Corporation,Bán lẻ,Retail,5300,5379,7551495439200.0,48800.0
+TDM,HOSE,Công ty Cổ phần Nước Thủ Dầu Một,Thu Dau Mot Water Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7577,7320379000000.0,59900.0
+DTK,HNX,Tổng Công ty Điện lực TKV - Công ty Cổ phần,Vinacomin - Power Holding Corporation,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,7305611982500.0,10700.0
+CTR,HOSE,Tổng Công ty Cổ phần Công trình Viettel,Viettel Construction Joint Stock Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,7302243381000.0,57000.0
+DBC,HOSE,Công ty Cổ phần Tập đoàn Dabaco Việt Nam,DABACO Group,Thực phẩm và đồ uống,Food & Beverage,3500,3573,6982953283800.0,16200.0
+HPA,HOSE,Công ty Cổ phần Phát triển Nông nghiệp Hoà Phát,Hoa Phat Agriculture Development Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,6882750000000.0,24150.0
+NT2,HOSE,Công ty Cổ phần Điện lực Dầu khí Nhơn Trạch 2,PetroVietnam Power Nhon Trach 2 Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,6837055688750.0,23750.0
+CEO,HNX,Công ty Cổ phần Tập đoàn C.E.O,CEO Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,6791843607000.0,11400.0
+PHR,HOSE,Công ty Cổ phần Cao su Phước Hòa,Phuoc Hoa Rubber Joint Stock Company,Hóa chất,Chemicals,1300,1353,6670604802650.0,27350.0
+HDG,HOSE,Công ty Cổ phần Tập đoàn Hà Đô,Ha Do Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,6572360927950.0,16150.0
+PNJ,HOSE,Công ty Cổ phần Vàng bạc Đá quý Phú Nhuận,Phu Nhuan Jewelry Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3767,6550041075200.0,12800.0
+TMS,HOSE,Công ty Cổ phần Transimex,Transimex Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,6098811972000.0,33000.0
+NKG,HOSE,Công ty Cổ phần Thép Nam Kim,Nam Kim Steel Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,6080200918350.0,12350.0
+BHN,HOSE,Tổng Công ty Cổ phần Bia - Rượu - Nước giải khát Hà Nội,Hanoi Beer Alcohol and Beverage Joint Stock Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3533,6015210000000.0,25950.0
+SCG,HNX,Công ty Cổ phần Tập đoàn Xây dựng SCG,SCG Construction Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,5440000000000.0,64000.0
+HHV,HOSE,Công ty Cổ phần Đầu tư Hạ tầng Giao thông Đèo Cả,Deo Ca Traffic Infrastructure Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,5279764250720.0,9190.0
+VIF,HNX,Tổng Công ty Lâm nghiệp Việt Nam - Công ty Cổ phần,Viet Nam Forestry Corporation Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1733,5215000000000.0,14900.0
+IMP,HOSE,Công ty Cổ phần Dược phẩm Imexpharm,Imexpharm Corporation,Y tế,Health Care,4500,4577,5159300227000.0,33500.0
+TLG,HOSE,Công ty Cổ phần Tập đoàn Thiên Long,Thien Long Group Corporation,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3724,5067737850000.0,52500.0
+HNA,HOSE,Công ty Cổ phần Thủy điện Hủa Na,Hua Na Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,4951638020500.0,21050.0
+VSC,HOSE,Công ty Cổ phần Container Việt Nam,Viet Nam Container Shipping Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,4866814706000.0,13000.0
+DHT,HNX,Công ty Cổ phần Dược phẩm Hà Tây,Hatay Pharmaceutical Joint Stock Company,Y tế,Health Care,4500,4577,4832110629500.0,48500.0
+VCS,HNX,Công ty Cổ phần VICOSTONE,VICOSTONE Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,4608000000000.0,28800.0
+HT1,HOSE,Công ty Cổ phần Xi măng VICEM Hà Tiên,VICEM Ha Tien Cement Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,4579078932000.0,12000.0
+ACG,HOSE,Công ty Cổ phần Gỗ An Cường,An Cuong Wood - Working Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1733,4372850434000.0,29000.0
+IJC,HOSE,Công ty Cổ phần Phát triển Hạ tầng Kỹ thuật,Becamex Infrastructure Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,4287444158400.0,6810.0
+GEG,HOSE,Công ty Cổ phần Điện Gia Lai,Gia Lai Electricity Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,4270102958750.0,11350.0
+DVV,HOSE,Công ty Cổ phần DatViet VAC Group Holdings,DatViet Vac Group Holdings Corporation,Truyền thông,Media,5500,5553,4178175000000.0,37500.0
+HHS,HOSE,Công ty Cổ phần Đầu tư Dịch vụ Hoàng Huy,Hoang Huy Investment Services Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,4168664591200.0,9650.0
+PDN,HOSE,Công ty Cổ phần Cảng Đồng Nai,Dong Nai Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,4167436500000.0,75000.0
+ANV,HOSE,Công ty Cổ phần Nam Việt,Nam Viet Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3573,4166902487500.0,15650.0
+CHP,HOSE,Công ty Cổ phần Thủy điện Miền Trung,Central Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,4099109976000.0,26000.0
+DBD,HOSE,Công ty Cổ phần Dược - Trang thiết bị y tế Bình Định (BIDIPHAR),Binh Dinh Pharmaceutical and Medical Equipment Joint Stock Company,Y tế,Health Care,4500,4577,4015793635000.0,42500.0
+PAN,HOSE,Công ty Cổ phần Tập đoàn PAN,The PAN Group Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,3973169681100.0,15850.0
+MSH,HOSE,Công ty Cổ phần May Sông Hồng,Song Hong Garment Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,3915731496000.0,34800.0
+DPG,HOSE,Công ty Cổ phần Tập đoàn Đạt Phương,Dat Phuong Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,3788857717200.0,31950.0
+DHC,HOSE,Công ty Cổ phần Đông Hải Bến Tre,DongHai Joint Stock Company of Ben Tre,Tài nguyên Cơ bản,Basic Resources,1700,1737,3734674143000.0,35150.0
+SCS,HOSE,Công ty Cổ phần Dịch vụ Hàng hóa Sài Gòn,Saigon Cargo Service Corporation,Du lịch và Giải trí,Travel & Leisure,5700,5751,3730808829800.0,38900.0
+CMG,HOSE,Công ty Cổ phần Tập đoàn Công nghệ CMC,CMC Corporation,Công nghệ Thông tin,Technology,9500,9533,3726270528000.0,16000.0
+PGS,HNX,Công ty Cổ phần Kinh doanh Khí Miền Nam,Southern Gas Trading Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,3599913168000.0,72000.0
+VC3,HNX,Công ty Cổ phần Tập đoàn Nam Mê Kông,Nam MeKong Group Joint Stock Company,Bất động sản,Real Estate,8600,8637,3452044788800.0,23200.0
+BFC,HOSE,Công ty Cổ phần Phân bón Bình Điền,Binh Dien Fertilizer Joint Stock Company,Hóa chất,Chemicals,1300,1357,3378628386300.0,59100.0
+SZC,HOSE,Công ty Cổ phần Sonadezi Châu Đức,Sonadezi Chau Duc Shareholding Company,Bất động sản,Real Estate,8600,8633,3374734931250.0,18750.0
+TMP,HOSE,Công ty Cổ phần Thủy điện Thác Mơ,Thac Mo Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,3269000000000.0,46700.0
+SHP,HOSE,Công ty Cổ phần Thủy điện Miền Nam,Southern Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,3137396912000.0,31000.0
+AST,HOSE,Công ty Cổ phần Dịch vụ Hàng không Taseco,Taseco Air Services Joint Stock Company,Bán lẻ,Retail,5300,5379,3077995953000.0,57000.0
+NTC,HOSE,Công ty Cổ phần Khu Công nghiệp Nam Tân Uyên,Nam Tan Uyen Joint Stock Corporation,Bất động sản,Real Estate,8600,8633,3071997440000.0,128000.0
+DVP,HOSE,Công ty Cổ phần Đầu tư và Phát triển Cảng Đình Vũ,Dinh Vu Port Investment & Development Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,3000000000000.0,75000.0
+STG,HOSE,Công ty Cổ phần Kho Vận Miền Nam,South Logistics Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,2996727388500.0,30500.0
+HDC,HOSE,Công ty Cổ phần Phát triển Nhà Bà Rịa Vũng Tàu,Ba Ria - Vung Tau House Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,2974776136850.0,12950.0
+PTB,HOSE,Công ty Cổ phần Phú Tài,Phu Tai Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1733,2951967975600.0,29400.0
+IPA,HNX,Công ty Cổ phần Tập đoàn Đầu tư I.P.A,I.P.A Investments Group Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,2950932396000.0,12000.0
+NAF,HOSE,Công ty Cổ phần Nafoods Group,Nafoods Group Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3537,2939794715600.0,48050.0
+TDP,HOSE,Công ty Cổ phần Thuận Đức,Thuan Duc Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,2855021881400.0,27700.0
+DPR,HOSE,Công ty Cổ phần Cao su Đồng Phú,Dong Phu Rubber Joint Stock Company,Hóa chất,Chemicals,1300,1353,2845514273000.0,32750.0
+QCG,HOSE,Công ty Cổ phần Quốc Cường Gia Lai,Quoc Cuong Gia Lai Joint Stock Company,Bất động sản,Real Estate,8600,8633,2820073695250.0,10250.0
+TRA,HOSE,Công ty Cổ phần Traphaco,Traphaco Joint Stock Company,Y tế,Health Care,4500,4577,2810346612000.0,33900.0
+DNP,HNX,Công ty Cổ phần DNP Holding,DNP Holding Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,2805224116400.0,19900.0
+TET,HNX,Công ty Cổ phần Bất động sản Pristie,Pristie Real Estate Joint Stock Company,Bất động sản,Real Estate,8600,8633,2799132300000.0,45000.0
+DXS,HOSE,Công ty Cổ phần Dịch vụ Bất động sản Đất Xanh,Dat Xanh Real Estate Services Joint Stock Company,Bất động sản,Real Estate,8600,8637,2721784682800.0,4700.0
+MCM,HOSE,Công ty Cổ phần Giống bò sữa Mộc Châu,Mocchau Dairy Cattle Breeding Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,2706000000000.0,24600.0
+PPC,HOSE,Công ty Cổ phần Nhiệt điện Phả Lại,Pha Lai Thermal Power Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,2603377998480.0,8120.0
+AAA,HOSE,Công ty Cổ phần Nhựa An Phát Xanh,An Phat Bioplastics Joint Stock Company,Hóa chất,Chemicals,1300,1353,2602639445300.0,6610.0
+VVS,HOSE,Công ty Cổ phần Đầu tư Phát triển Máy Việt Nam,Vietnam Machine Investment Development Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,2583000000000.0,60000.0
+SAM,HOSE,Công ty Cổ phần SAM Holdings,SAM Holdings Corporation,Công nghệ Thông tin,Technology,9500,9578,2493043193170.0,6190.0
+CDN,HNX,Công ty Cổ phần Cảng Đà Nẵng,DaNang Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,2475000000000.0,25000.0
+SHI,HOSE,Công ty Cổ phần Quốc tế Sơn Hà,Sonha International Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1757,2464268460500.0,14500.0
+DCL,HOSE,Công ty Cổ phần Dược phẩm Cửu Long,Cuu Long Pharmaceutical Joint Stock Corporation,Y tế,Health Care,4500,4577,2410353990000.0,33000.0
+CDC,HOSE,Công ty Cổ phần Chương Dương,Chuong Duong Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,2343106148400.0,22200.0
+OCH,HNX,Công ty Cổ phần One Capital Hospitality,One Capital Hospitality Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,2277000000000.0,6900.0
+CSV,HOSE,Công ty Cổ phần Hóa chất Cơ bản miền Nam,South Basic Chemicals Joint Stock Company,Hóa chất,Chemicals,1300,1357,2248673168500.0,20350.0
+TRC,HOSE,Công ty Cổ phần Cao su Tây Ninh,Tay Ninh Rubber Joint Stock Company,Hóa chất,Chemicals,1300,1353,2238000000000.0,18650.0
+FMC,HOSE,Công ty Cổ phần Thực phẩm Sao Ta,Sao Ta Foods Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,2229761114900.0,34100.0
+VPD,HOSE,Công ty Cổ phần Phát triển Điện lực Việt Nam,Vietnam Power Development Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,2174428431600.0,20400.0
+TNG,HNX,Công ty Cổ phần Đầu tư và Thương mại TNG,TNG Investment And Trading Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,2124065889000.0,16500.0
+PGD,HOSE,Công ty Cổ phần Phân phối khí thấp áp dầu khí Việt Nam,Petro Viet Nam Low Pressure Gas Distribution Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,2019545144400.0,20400.0
+KHG,HOSE,Công ty Cổ phần Tập đoàn Khải Hoàn Land,Khai Hoan Land Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,2004481014300.0,4460.0
+NCT,HOSE,Công ty Cổ phần Dịch vụ Hàng hóa Nội Bài,Noibai Cargo Terminal Services Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,1972896192800.0,75400.0
+TBC,HOSE,Công ty Cổ phần Thủy điện Thác Bà,Thac Ba Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,1936750000000.0,30500.0
+TV2,HOSE,Công ty Cổ phần Tư vấn Xây dựng Điện 2,Power Engineering Consulting Joint Stock Company 2,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,1907614161250.0,28250.0
+SGN,HOSE,Công ty Cổ phần Phục vụ mặt đất Sài Gòn,Saigon Ground Services Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,1875921096000.0,56000.0
+GDA,HOSE,Công ty Cổ phần Tôn Đông Á,Ton Dong A Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1757,1856280694950.0,12450.0
+TTA,HOSE,Công ty Cổ phần Đầu tư Xây dựng và Phát triển Trường Thành,Truong Thanh Development and Construction Investment Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,1848086550450.0,10350.0
+DMC,HOSE,Công ty Cổ phần Xuất nhập khẩu Y tế DOMESCO,Domesco Medical Import - Export Joint Stock Corporation,Y tế,Health Care,4500,4577,1805828180000.0,52000.0
+CTF,HOSE,Công ty Cổ phần City Auto,City Auto Corporation,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,1803075242150.0,18850.0
+VIT,HNX,Công ty Cổ phần Viglacera Tiên Sơn,Viglacera Tien Son Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,1747812676200.0,21900.0
+TCM,HOSE,Công ty Cổ phần Dệt may - Đầu tư - Thương mại Thành Công,Thanh Cong Textile Garment Investment Trading Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,1729287816900.0,14700.0
+PVP,HOSE,Công ty Cổ phần Vận tải Dầu khí Thái Bình Dương,Pacific Petroleum Transportation Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,1726645825800.0,16650.0
+NBB,HOSE,Công ty Cổ phần Đầu tư Năm Bảy Bảy,577 Investment Corporation,Bất động sản,Real Estate,8600,8633,1718133717600.0,17100.0
+VFG,HOSE,Công ty Cổ phần Khử trùng Việt Nam,Viet Nam Fumigation Joint Stock Company,Hóa chất,Chemicals,1300,1357,1668504560000.0,40000.0
+RAL,HOSE,Công ty Cổ phần Bóng đèn Phích nước Rạng Đông,Rang Dong Light Source and Vacuum Flask Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3726,1662447781400.0,70600.0
+ASM,HOSE,Công ty Cổ phần Tập đoàn Sao Mai,Sao Mai Group Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3573,1661352266640.0,4080.0
+FCN,HOSE,Công ty Cổ phần Tập đoàn FECON,FECON Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,1645237602250.0,10450.0
+CRE,HOSE,Công ty Cổ phần Bất động sản Thế Kỷ,Century Land Joint Stock Company,Bất động sản,Real Estate,8600,8633,1641421628040.0,3540.0
+MZG,HOSE,Công ty Cổ Phần Miza,Miza Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1737,1581570630000.0,10000.0
+SCR,HOSE,Công ty Cổ phần Địa Ốc Sài Gòn Thương Tín,Sai Gon Thuong Tin Real Estate Joint Stock Company,Bất động sản,Real Estate,8600,8633,1580283782120.0,3670.0
+APH,HOSE,Công ty Cổ phần Tập đoàn An Phát Holdings,An Phat Holdings Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,1560859315200.0,6400.0
+YEG,HOSE,Công ty Cổ phần Tập đoàn Yeah1,Yeah1 Group Corporation,Truyền thông,Media,5500,5553,1555585136000.0,7000.0
+VTZ,HNX,Công ty Cổ phần Sản xuất và Thương mại Nhựa Việt Thành,Viet Thanh Plastic Trading and Manufacturing Joint Stock Company,Hóa chất,Chemicals,1300,1353,1553660593200.0,20400.0
+AGG,HOSE,Công ty Cổ phần Đầu tư và Phát triển Bất động sản An Gia,An Gia Real Estate Investment And Development Corporation,Bất động sản,Real Estate,8600,8633,1518150449340.0,8370.0
+NTL,HOSE,Công ty Cổ phần Phát triển Đô thị Từ Liêm,Tu Liem Urban Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,1506451765000.0,12350.0
+HTG,HOSE,Tổng Công ty Cổ phần Dệt may Hòa Thọ,Hoa Tho Textile - Garment Joint Stock Corporation,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,1499123002400.0,34700.0
+LIX,HOSE,Công ty Cổ phần LIX,LIX Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3767,1490400000000.0,23000.0
+SVC,HOSE,Công ty Cổ phần Dịch vụ tổng hợp Sài Gòn,SaiGon General Service Corporation,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,1482957845100.0,15900.0
+PLC,HNX,Tổng Công ty Hóa dầu Petrolimex - Công ty Cổ phần,Petrolimex Petrochemical Corporation,Hóa chất,Chemicals,1300,1357,1478595457800.0,18300.0
+BCF,HNX,Công ty Cổ phần Thực phẩm Bích Chi,Bich Chi Food Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,1474926215000.0,35000.0
+SGT,HOSE,Công ty Cổ phần Công nghệ Viễn thông Sài Gòn,Saigon Telecommunication And Technologies Corporation,Công nghệ Thông tin,Technology,9500,9535,1472631919600.0,9950.0
+BMJ,HOSE,Công ty Cổ phần Khoáng sản Miền Đông AHP,Easterns AHP Minerals Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,1454249695300.0,13850.0
+VOS,HOSE,Công ty Cổ phần Vận tải Biển Việt Nam,Viet Nam Ocean Shipping Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,1442000000000.0,10300.0
+SBA,HOSE,Công ty Cổ phần Sông Ba,Song Ba Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,1435336260400.0,22600.0
+OPC,HOSE,Công ty Cổ phần Dược Phẩm OPC,OPC Pharmaceutial Joint Stock Company,Y tế,Health Care,4500,4577,1423844097000.0,19000.0
+AAN,HOSE,Công ty Cổ phần Lương thực A An,A An Food Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,1420574240500.0,15500.0
+LHC,HNX,Công ty Cổ phần Đầu tư và Xây dựng Thủy lợi Lâm Đồng,Lam Dong Investment Hydraulic Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,1411200000000.0,49000.0
+CLC,HOSE,Công ty Cổ phần Cát Lợi,Cat Loi Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3785,1389001899000.0,53000.0
+ASG,HOSE,Công ty Cổ phần Tập đoàn ASG,ASG Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,1379926968800.0,15200.0
+MVB,HNX,Tổng Công ty Công nghiệp mỏ Việt Bắc TKV - Công ty Cổ phần,Vinacomin - Viet Bac Mining Industry Holding Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1775,1365000000000.0,13000.0
+KSB,HOSE,Công ty Cổ phần Khoáng sản và Xây dựng Bình Dương,Binh Duong Mineral And Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,1361880065700.0,11900.0
+SZB,HNX,Công ty Cổ phần Sonadezi Long Bình,Sonadezi Long Binh Share Holding Company,Bất động sản,Real Estate,8600,8633,1356000000000.0,45200.0
+DRC,HOSE,Công ty Cổ phần Cao su Đà Nẵng,DaNang Rubber Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3357,1348167640590.0,8730.0
+SRC,HOSE,Công ty Cổ phần Cao su Sao Vàng,Sao Vang Rubber Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3357,1347999812650.0,36950.0
+LBM,HOSE,Công ty Cổ phần Khoáng sản và Vật liệu xây dựng Lâm Đồng,Lam Dong Minerals And Building Materials Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,1330000000000.0,26600.0
+LHG,HOSE,Công ty Cổ phần Long Hậu,Long Hau Corporation,Bất động sản,Real Estate,8600,8633,1307814061500.0,26150.0
+SZL,HOSE,Công ty Cổ phần Sonadezi Long Thành,Sonadezi Long Thanh Shareholding Company,Bất động sản,Real Estate,8600,8633,1306189756400.0,27100.0
+HHC,HNX,Công ty Cổ phần Bánh kẹo Hải Hà,Hai Ha Confectionery Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,1289362500000.0,78500.0
+S4A,HOSE,Công ty Cổ phần Thủy điện Sê San 4A,SeSan 4A HydroElectric Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,1284990000000.0,30450.0
+LCG,HOSE,Công ty Cổ phần Lizen,Lizen Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,1282999221090.0,6210.0
+SEB,HNX,Công ty Cổ phần Đầu tư và Phát triển Điện Miền Trung,Mien Trung Power Investment and Development Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,1279998760000.0,40000.0
+DP3,HNX,Công ty Cổ Phần Dược Phẩm Trung Ương 3,Central Phamarceutical Joint Stock Company No 3,Y tế,Health Care,4500,4577,1277096020200.0,59400.0
+QNP,HOSE,Công ty Cổ phần Cảng Quy Nhơn,Quy Nhon Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,1252708450000.0,31000.0
+CTI,HOSE,Công ty Cổ phần Đầu tư Phát triển Cường Thuận IDICO,Cuong Thuan IDICO Development Investment Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,1243932504950.0,17950.0
+NET,HNX,Công ty Cổ phần Bột giặt Net,Net Detergent Joint -Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3767,1238630082200.0,55300.0
+IDI,HOSE,Công ty Cổ phần Đầu tư và Phát triển Đa Quốc Gia I.D.I,I.D.I International Development and Investment Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3573,1229277006000.0,4500.0
+HGM,HNX,Công ty Cổ phần Cơ khí và Khoáng sản Hà Giang,Ha Giang Mineral and Mechanics Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,1214640000000.0,96400.0
+CSM,HOSE,Công ty Cổ phần Công nghiệp Cao su Miền Nam,The Southern Rubber Industry Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3357,1196871776100.0,11550.0
+LAS,HNX,Công ty Cổ phần Supe Phốt phát và Hóa chất Lâm Thao,Lam Thao Fertilizers & Chemicals Joint Stock Company,Hóa chất,Chemicals,1300,1357,1196277840000.0,10600.0
+SLS,HNX,Công ty Cổ phần Mía đường Sơn La,Son La Sugar Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,1194617290000.0,122000.0
+VGS,HNX,Công ty Cổ phần Ống thép Việt - Đức VG PIPE,Viet Nam Germany Steel Pipe Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,1187416191500.0,19300.0
+STK,HOSE,Công ty Cổ phần Sợi Thế Kỷ,Century Synthetic Fiber Corporation,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,1166802101400.0,7570.0
+SMB,HOSE,Công ty Cổ phần Bia Sài Gòn - Miền Trung,Sai Gon - Mien Trung Beer Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3533,1150588280400.0,38550.0
+TMB,HNX,Công ty Cổ phần Kinh doanh Than Miền Bắc - Vinacomin,Vinacomin - Northern Coal Trading Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,1125000000000.0,75000.0
+HQC,HOSE,Công ty Cổ phần Tư vấn - Thương mại - Dịch vụ Địa ốc Hoàng Quân,Hoang Quan Consulting Trading Service Real Estate Corporation,Bất động sản,Real Estate,8600,8633,1121612700460.0,1790.0
+CLM,HNX,Công ty Cổ phần Xuất nhập khẩu Than - Vinacomin,Vinacomin - Coal Import Export Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,1113799225000.0,77000.0
+TIX,HOSE,Công ty Cổ phần Sản xuất Kinh doanh Xuất nhập khẩu Dịch vụ và Đầu tư Tân Bình,Tan Binh Import - Export Joint Stock Corporation,Bất động sản,Real Estate,8600,8633,1102500000000.0,36750.0
+ELC,HOSE,Công ty Cổ phần Công nghệ - Viễn thông ELCOM,ELCOM Technology Communications Corporation,Công nghệ Thông tin,Technology,9500,9578,1095057404400.0,9300.0
+PMC,HNX,Công ty Cổ phần Dược phẩm Dược liệu Pharmedic,Pharmedic Pharmaceutical Medicinal Joint Stock Company,Y tế,Health Care,4500,4577,1091911041000.0,117000.0
+GHC,HOSE,Công ty Cổ phần Thủy điện Gia Lai,Gia Lai Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,1086705000000.0,22800.0
+GMA,HNX,Công ty Cổ phần G-Automobile,G-Automobile Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,1071999946400.0,53600.0
+CVT,HOSE,Công ty Cổ phần CMC,CMC Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,1062201178650.0,28950.0
+PAC,HOSE,Công ty Cổ phần Pin Ắc quy Miền Nam,Dry Cell and Storage Battery JointStock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2733,1054317357500.0,13750.0
+NSC,HOSE,Công ty Cổ phần Tập đoàn Giống cây trồng Việt Nam,Vietnam National Seed Group Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,1045683702000.0,59500.0
+TNH,HOSE,Công ty Cổ phần Tập đoàn Bệnh viện TNH,TNH Hospital Group Joint Stock Company,Y tế,Health Care,4500,4533,1042422471470.0,6290.0
+IDV,HNX,Công ty Cổ phần Phát triển Hạ tầng Vĩnh Phúc,Vinh Phuc Infrastructure Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,1033797005800.0,21800.0
+NHH,HOSE,Công ty Cổ phần Nhựa Hà Nội,HaNoi Plastics Joint Stock Company,Hóa chất,Chemicals,1300,1353,1031361320000.0,9130.0
+NNC,HOSE,Công ty Cổ phần Đá Núi Nhỏ,Nui Nho Stone Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,1030240000000.0,47000.0
+VDP,HOSE,Công ty Cổ phần Dược phẩm Trung ương VIDIPHA,VIDIPHA Central Pharmaceutical Joint - Stock Company,Y tế,Health Care,4500,4577,1022923245150.0,31950.0
+HRC,HOSE,Công ty Cổ phần Cao su Hòa Bình,Hoa Binh Rubber Joint Stock Company,Hóa chất,Chemicals,1300,1353,999839188200.0,33100.0
+INN,HNX,Công ty Cổ phần Bao bì và In Nông nghiệp,Agriculture Printing And Packaging Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,996300000000.0,36900.0
+TIP,HOSE,Công ty Cổ phần Phát triển Khu công nghiệp Tín Nghĩa,Tin Nghia Industrial Park Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,975117855000.0,15000.0
+HHP,HOSE,Công ty Cổ phần HHP Global,HHP Global Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1737,972495676750.0,10550.0
+SMC,HOSE,Công ty Cổ phần Đầu tư Thương mại SMC,SMC Trading Investment Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,971610252800.0,8800.0
+TTE,HOSE,Công ty Cổ phần Đầu tư Năng lượng Trường Thịnh,Truong Thinh Energy Investment Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,967249080000.0,33950.0
+MST,HNX,Công ty Cổ phần Đầu tư MST,MST Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,965635870000.0,8500.0
+FIT,HOSE,Công ty Cổ phần Tập đoàn F.I.T,F.I.T Group Joint Stock Company,Y tế,Health Care,4500,4577,941614504180.0,2770.0
+HPX,HOSE,Công ty Cổ phần Đầu tư Hải Phát,Hai Phat Investment Joint Stock Company,Bất động sản,Real Estate,8600,8633,933797543670.0,3070.0
+HTN,HOSE,Công ty Cổ phần Hưng Thịnh Incons,Hung Thinh Incons Joint Stock Company,Bất động sản,Real Estate,8600,8633,908986171600.0,6800.0
+SBG,HOSE,Công ty Cổ Phần Tập Đoàn Cơ Khí Công Nghệ Cao Siba,Siba High-tech Mechanical Group Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2727,902884688200.0,14600.0
+PSD,HNX,Công ty Cổ phần Dịch vụ Phân phối Tổng hợp Dầu khí,Petroleum General Distribution Services Joint Stock Company,Bán lẻ,Retail,5300,5379,891998622400.0,12700.0
+THG,HOSE,Công ty Cổ phần Đầu tư và Xây dựng Tiền Giang,Tien Giang Investment and Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,891719382450.0,25350.0
+C69,HNX,Công ty Cổ phần Xây dựng 1369,1369 Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,889919596800.0,14400.0
+DHA,HOSE,Công ty Cổ phần Hóa An,Hoa An Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,889152809200.0,60400.0
+ITC,HOSE,Công ty Cổ phần Đầu tư - Kinh doanh nhà,Investment and Trading of Real Estate Joint stock Company,Bất động sản,Real Estate,8600,8633,872498938740.0,8580.0
+HAX,HOSE,Công ty Cổ phần Dịch vụ Ô tô Hàng Xanh,Hang Xanh Motors Service Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,870261416100.0,8100.0
+TN1,HOSE,Công ty Cổ phần Rox Key Holdings,Rox Key Holdings Joint Stock Company,Bất động sản,Real Estate,8600,8633,869279803200.0,13150.0
+GIL,HOSE,Công ty Cổ phần Sản xuất Kinh doanh Xuất nhập khẩu Bình Thạnh,Binh Thanh Import Export Production and Trade Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,868647663900.0,8550.0
+PGC,HOSE,Tổng Công ty Gas Petrolimex - Công ty Cổ phần,Petrolimex Gas Corporation - Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,862851775500.0,14300.0
+CLL,HOSE,Công ty Cổ phần Cảng Cát Lái,Cat Lai Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,860200000000.0,25300.0
+TCL,HOSE,Công ty Cổ phần Đại lý Giao nhận Vận tải Xếp dỡ Tân Cảng,Tan Cang Logistics and Stevedoring Join Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,856499582400.0,28400.0
+WCS,HNX,Công ty Cổ phần Bến xe Miền Tây,West Coach Station Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,842990727000.0,281000.0
+CAR,HNX,Công ty cổ phần Tập đoàn Giáo dục Trí Việt,Tri Viet Education Group Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2793,834750600000.0,150000.0
+VTO,HOSE,Công ty Cổ phần Vận tải Xăng dầu VITACO,Vietnam Tanker Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,822626659800.0,10300.0
+DXP,HNX,Công ty Cổ phần Cảng Đoạn Xá,DoanXa Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,814777808800.0,13600.0
+SJD,HOSE,Công ty Cổ phần Thủy điện Cần Đơn,Can Don Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,814183716000.0,11800.0
+PVC,HNX,Tổng Công ty Hóa chất và Dịch vụ Dầu khí - Công ty Cổ phần,Petrovietnam Chemical and Services Corporation,Dầu khí,Oil & Gas,0500,0573,811944630000.0,10000.0
+FDC,HOSE,Công ty Cổ phần Ngoại thương và Phát triển Đầu tư Thành phố Hồ Chí Minh,Foreign Trade Development And Investment Corporation of Ho Chi Minh City,Bất động sản,Real Estate,8600,8633,811093248000.0,21000.0
+TDC,HOSE,Công ty Cổ phần Kinh doanh và Phát triển Bình Dương,Binhduong Trade And Development Joint Stock Company,Bất động sản,Real Estate,8600,8637,795175000000.0,6250.0
+HAP,HOSE,Công ty Cổ phần Tập Đoàn Hapaco,Hapaco Group Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1737,794346882320.0,7160.0
+PCT,HNX,Công ty Cổ phần Vận tải Biển Global Pacific,Global Pacific Shipping Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,792351380700.0,9900.0
+VE4,HNX,Công ty Cổ phần Xây dựng điện VNECO4,VNECO4 Electricity Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,787280000000.0,260000.0
+NFC,HNX,Công ty Cổ phần Phân lân Ninh Bình,Ninh Binh Phosphate Fertilizer Joint Stock Company,Hóa chất,Chemicals,1300,1357,778697370000.0,49500.0
+SHN,HNX,Công ty Cổ phần Đầu tư Tổng hợp Hà Nội,Hanoi Investment General Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1771,777642882000.0,6000.0
+SGR,HOSE,Công ty Cổ phần Tổng Công ty Cổ phần Địa ốc Sài Gòn,Saigon Real Estate Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,766387656420.0,9140.0
+SGC,HNX,Công ty Cổ phần Xuất nhập khẩu Sa Giang,Sa Giang Import Export Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3577,750495900000.0,105000.0
+TEG,HOSE,Công ty Cổ phần Trường Thành Energy Group,Truong Thanh Energy Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,749000684400.0,6200.0
+CKG,HOSE,Công ty Cổ phần Tập đoàn CIC,CIC Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,739460393820.0,4570.0
+HVH,HOSE,Công ty Cổ phần Đầu tư và Công nghệ HVC,HVC Investment And Technology Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,738947070200.0,10300.0
+VNC,HNX,Công ty Cổ phần Tập đoàn Vinacontrol,Vinacontrol Group Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,734968920000.0,35000.0
+ILB,HOSE,Công ty Cổ phần ICD Tân Cảng - Long Bình,ICD Tan Cang - Long Binh Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,733430246400.0,19200.0
+GSP,HOSE,Công ty Cổ phần Vận tải Sản phẩm Khí Quốc tế,International Gas Product Shipping Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,727830516000.0,9800.0
+EVG,HOSE,Công ty Cổ phần Tập đoàn Everland,Everland Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,723237558400.0,3200.0
+S99,HNX,Công ty Cổ phần SCI,SCI Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,722561044800.0,6900.0
+SAF,HNX,Công ty Cổ phần Lương thực Thực phẩm SAFOCO,Safoco Foodstuff Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,716772105000.0,59500.0
+SJ1,HNX,Công ty Cổ phần Nông nghiệp Hùng Hậu,Hung Hau Agricultural Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3573,712935978400.0,16400.0
+VC7,HNX,Công ty Cổ phần Tập đoàn BGI,BGI Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,711070114400.0,7400.0
+DL1,HNX,Công ty Cổ phần Tập đoàn Alpha Seven,Alpha Seven Group Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,704341509300.0,3900.0
+MAC,HNX,Công ty Cổ phần Tập đoàn Macstar,Macstar Group Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,701094343000.0,14500.0
+ABT,HOSE,Công ty Cổ phần Xuất nhập khẩu Thủy sản Bến Tre,Bentre Aquaproduct Import And Export Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,694858163000.0,59000.0
+NVT,HOSE,Công ty Cổ phần Bất động sản Du lịch Ninh Vân Bay,Ninh Van Bay Travel Real Estate Joint Stock Company,Bất động sản,Real Estate,8600,8633,693230000000.0,7660.0
+DTL,HOSE,Công ty Cổ phần Đại Thiên Lộc,Dai Thien Loc Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1757,688161668400.0,11350.0
+DTD,HNX,Công ty Cổ phần Đầu tư Phát triển Thành Đạt,Thanh Dat Investment Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,682190228400.0,9300.0
+L18,HNX,Công ty Cổ phần Đầu tư và Xây dựng số 18,Construction and Investment Joint Stock Company No18,Xây dựng và Vật liệu,Construction & Materials,2300,2357,674660893600.0,11800.0
+BCC,HNX,Công ty Cổ phần Xi măng Bỉm Sơn,Bim Son Cement Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,665332984800.0,5400.0
+DC4,HOSE,Công ty Cổ phần Dicera Holdings,Dicera Holdings Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,659070517330.0,5990.0
+VIP,HOSE,Công ty Cổ phần Vận tải Xăng dầu VIPCO,Vietnam Petroleum Transport Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,658005743010.0,9610.0
+LSS,HOSE,Công ty Cổ phần Mía đường Lam Sơn,Lam Son Sugar Cane Joint Stock Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3577,657194121600.0,7300.0
+TLD,HOSE,Công ty Cổ phần Đầu tư Xây dựng và Phát triển Đô thị Thăng Long,Thang Long Urban Development and Construction Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,640774383500.0,7850.0
+TFC,HNX,Công ty Cổ phần Trang,Trang Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3577,637856772600.0,37900.0
+CNG,HOSE,Công ty Cổ phần CNG Việt Nam,Clean Natural Gas Vietnam Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,635297293800.0,18100.0
+TNC,HOSE,Công ty Cổ phần Cao su Thống Nhất,Thong Nhat Rubber Joint Stock Company,Hóa chất,Chemicals,1300,1353,635250000000.0,33000.0
+S55,HNX,Công ty Cổ phần Sông Đà 505,Song Da 505 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,635000000000.0,63500.0
+CLW,HOSE,Công ty Cổ phần Cấp nước Chợ Lớn,ChoLon Water Supply Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7577,630500000000.0,48500.0
+TPP,HNX,Công ty Cổ phần Tân Phú Việt Nam,Tan Phu Viet Nam Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,628862820000.0,10000.0
+MCP,HOSE,Công ty Cổ phần In và Bao bì Mỹ Châu,My Chau Printing And Packaging Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,622866471150.0,31350.0
+PDV,HOSE,Công ty Cổ phần Vận tải và Tiếp vận Phương Đông Việt,Phuong Dong Viet Shipping and Logistics Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,610724930200.0,7700.0
+KOS,HOSE,Công ty Cổ phần KOSY,KOSY Joint Stock Company,Bất động sản,Real Estate,8600,8633,610477364700.0,2820.0
+CST,HNX,Công ty Cổ phần Than Cao Sơn - TKV,Cao Son Coal Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,604139499300.0,14100.0
+ECO,HOSE,Công ty Cổ Phần Nhựa Sinh Thái Việt Nam,Viet Nam Eco Plastic Technology Joint Stock Company,Hóa chất,Chemicals,1300,1353,601019395200.0,18900.0
+OGC,HOSE,Công ty Cổ phần Tập đoàn Đại Dương,Ocean Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,599999998000.0,2000.0
+HLD,HNX,Công ty Cổ phần Đầu tư và Phát triển Bất động sản HUDLAND,HUDLAND Real Estate Investment and Development Joint,Bất động sản,Real Estate,8600,8633,599499574900.0,10900.0
+D2D,HOSE,Công ty Cổ phần Phát triển Đô thị Công nghiệp số 2,Industrial Urban Development Joint - Stock Company No.2,Bất động sản,Real Estate,8600,8633,596116917400.0,19700.0
+SFI,HOSE,Công ty Cổ phần Đại lý Vận tải SAFI,Sea And Air Freight International,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,591528816000.0,24000.0
+TKU,HNX,Công ty Cổ phần Công nghiệp Tung Kuang,Tung Kuang Industrial Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1753,586017475000.0,12500.0
+TCO,HOSE,Công ty Cổ phần Janus Group,Janus Group Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,584670344400.0,10200.0
+ADS,HOSE,Công ty Cổ phần DAMSAN,Damsan Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,572196505230.0,7490.0
+LDG,HOSE,Công ty Cổ phần Đầu tư LDG,LDG Investment Joint stock Company,Bất động sản,Real Estate,8600,8633,567467184780.0,2220.0
+KHP,HOSE,Công ty Cổ phần Điện lực Khánh Hòa,Khanh Hoa Power Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,563409853080.0,9060.0
+BTW,HNX,Công ty Cổ phần Cấp nước Bến Thành,Ben Thanh Water Supply Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7577,561600000000.0,60000.0
+HTC,HNX,Công ty Cổ phần Thương mại Hóc Môn,Hocmon Trade Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,560999762000.0,34000.0
+BTS,HNX,Công ty Cổ phần Xi măng VICEM Bút Sơn,VICEM But Son Cement Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,556019361000.0,4500.0
+BTT,HOSE,Công ty Cổ phần Thương mại - Dịch vụ Bến Thành,Ben Thanh Trading and Service Joint Stock Company,Bán lẻ,Retail,5300,5373,553500000000.0,41000.0
+ADP,HOSE,Công ty Cổ phần Sơn Á Đông,A Dong Paint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,548348430000.0,23800.0
+ICT,HOSE,Công ty Cổ phần Viễn thông - Tin học Bưu điện,Joint Stock Company for Telecoms and Informatics,Công nghệ Thông tin,Technology,9500,9537,547145000000.0,17000.0
+ACL,HOSE,Công ty Cổ phần Xuất nhập khẩu Thủy sản Cửu Long An Giang,CuuLong Fish Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,546733307100.0,10900.0
+DLG,HOSE,Công ty Cổ phần Tập đoàn Đức Long Gia Lai,Duc Long Gia Lai Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,535764398800.0,1790.0
+HII,HOSE,Công ty Cổ phần An Tiến Industries,An Tien Industries Joint Stock Company,Hóa chất,Chemicals,1300,1353,533320235840.0,7240.0
+NDN,HNX,Công ty Cổ phần Đầu tư Phát triển Nhà Đà Nẵng,Danang Housing Investment Development Joint Stock Company,Bất động sản,Real Estate,8600,8633,530268726400.0,7400.0
+HJS,HNX,Công ty Cổ phần Thủy điện Nậm Mu,Nam Mu Hydropower Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,529197480000.0,25200.0
+ANT,HOSE,Công ty Cổ phần Rau quả Thực phẩm An Giang,An Giang Fruit-Vegetables & Foodstuff Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,527583466800.0,14950.0
+DAT,HOSE,Công ty Cổ phần Đầu tư Du lịch và Phát triển Thủy sản,Travel Investment and Seafood Development Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3573,526135391600.0,7600.0
+CAP,HNX,Công ty Cổ phần Lâm Nông sản Thực phẩm Yên Bái,Yen Bai Joint Stock Forest Agricultural Products And Foodstuffs Company,Tài nguyên Cơ bản,Basic Resources,1700,1737,520705806500.0,34100.0
+NTH,HNX,Công ty Cổ phần Thủy điện Nước Trong,Nuoc trong Thermal Power Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,518498544000.0,48000.0
+L14,HNX,Công ty Cổ phần Licogi 14,Licogi 14 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,515350560500.0,16700.0
+TYA,HOSE,Công ty Cổ phần Dây và Cáp điện Taya Việt Nam,Taya (VIET NAM) Electric Wire and Cable Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2733,509297661200.0,16600.0
+VNG,HOSE,Công ty Cổ phần Du Lịch Thành Thành Công,Thanh Thanh Cong Tourism Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5753,505838361600.0,5200.0
+TIG,HNX,Công ty Cổ phần Tập đoàn Đầu tư Thăng Long,ThangLong Investment Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,503376133000.0,2600.0
+L40,HNX,Công ty Cổ phần Đầu tư và Xây dựng 40,40 Investment and Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,498959265000.0,21000.0
+NHA,HOSE,Tổng Công ty Đầu tư Phát triển Nhà và Đô thị Nam Hà Nội,Ha Noi South Housing and Urban Development Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,495304586650.0,6950.0
+PCH,HNX,Công ty Cổ phần Picomat Holding,Picomat Holding Joint Stock Company,Hóa chất,Chemicals,1300,1353,494830281400.0,18200.0
+HVT,HNX,Công ty Cổ phần Hóa chất Việt Trì,Viet Tri Chemical Joint Stock Company,Hóa chất,Chemicals,1300,1357,494460828000.0,18000.0
+VRC,HOSE,Công ty Cổ phần Bất động sản và Đầu tư VRC,VRC Real Estate and Investment Joint Stock Company,Bất động sản,Real Estate,8600,8633,493000000000.0,9860.0
+SKG,HOSE,Công ty Cổ phần Tàu Cao tốc Superdong - Kiên Giang,Superdong - Kien Giang Fast Ferry Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5759,478783418400.0,7200.0
+MDG,HOSE,Công ty Cổ phần Miền Đông,Mien Dong Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,475456165050.0,46050.0
+RYG,HOSE,Công ty Cổ phần Sản xuất và Đầu tư Hoàng Gia,Royal Manufacture And Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,471192230180.0,6770.0
+ASP,HOSE,Công ty Cổ phần Tập đoàn Dầu khí An Pha,An Pha Petrol Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,470478229200.0,12600.0
+HKT,HNX,Công ty Cổ phần QP Holdings,QP Holdings Joint Stock Company,Bất động sản,Real Estate,8600,8633,464556131200.0,13400.0
+CRC,HOSE,Công ty Cổ phần Create Capital Việt Nam,Create Capital Vietnam Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,464144669400.0,4350.0
+HTI,HOSE,Công ty Cổ phần Đầu tư Phát triển Hạ tầng IDICO,IDICO Infrastructure Development Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,454075440000.0,18200.0
+CMX,HOSE,Công ty Cổ phần CAMIMEX Group,CAMIMEX Group Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,453450505500.0,4450.0
+C32,HOSE,Công ty Cổ phần Đầu tư và Xây dựng 3-2,3-2 Investment and Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,450874350000.0,15000.0
+DNC,HNX,Công ty Cổ phần Điện nước Lắp máy Hải Phòng,Haiphong Electricity Water Machine Assembly Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,448550240700.0,44700.0
+PIC,HNX,Công ty Cổ phần Đầu tư Điện lực 3,PC3-Investment Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,446754539400.0,13400.0
+UIC,HOSE,Công ty Cổ phần Đầu tư Phát triển Nhà và Đô thị IDICO,Idico Urban and House Development Joint stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,444050000000.0,53500.0
+VNT,HNX,Công ty Cổ phần Giao nhận Vận tải Ngoại Thương,The Van Cargoes and Foreign Trade Logistics Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,442732980200.0,26600.0
+DSN,HOSE,Công ty Cổ phần Công viên nước Đầm Sen,Dam Sen Water Park Corporation,Du lịch và Giải trí,Travel & Leisure,5700,5755,439821527600.0,36400.0
+HCD,HOSE,Công ty Cổ phần Đầu tư Sản xuất và Thương mại HCD,HCD Investment Producing And Trading Joint Stock Company,Hóa chất,Chemicals,1300,1353,436832264520.0,6120.0
+TTF,HOSE,Công ty Cổ phần Tập đoàn Kỹ nghệ Gỗ Trường Thành,Truong Thanh Furniture Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1733,432885677400.0,1100.0
+SFG,HOSE,Công ty Cổ phần Phân bón Miền Nam,The Southern Fertilizer Joint Stock Company,Hóa chất,Chemicals,1300,1357,431075997000.0,9000.0
+GDT,HOSE,Công ty Cổ phần Chế biến Gỗ Đức Thành,Duc Thanh Wood Processing Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3726,429602274900.0,15900.0
+TNT,HOSE,Công ty Cổ phần Tập đoàn TNT,TNT Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,426870000000.0,8370.0
+COM,HOSE,Công ty Cổ phần Vật tư - Xăng dầu,Materials - Petroleum Joint Stock Company,Bán lẻ,Retail,5300,5379,423618840000.0,30000.0
+AME,HNX,Công ty cổ phần Alphanam E&C,Alphanam E&C Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2737,417280000000.0,6400.0
+TSA,HOSE,Công ty Cổ Phần Đầu Tư Và Xây Lắp Trường Sơn,Truong Son Investment And Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,411013190180.0,9970.0
+DSH,HOSE,Công ty Cổ phần Đông Sơn Holdings,Dong Son Holdings Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,409639759650.0,10450.0
+POT,HNX,Công ty Cổ phần Thiết bị Bưu điện,Post and Telecommunication Equipment Joint Stock Company,Công nghệ Thông tin,Technology,9500,9572,408030126000.0,21000.0
+NBW,HNX,Công ty Cổ phần Cấp nước Nhà Bè,Nha Be Water Supply Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7577,406570000000.0,37300.0
+VNF,HNX,Công ty Cổ phần Vinafreight,Vinafreight Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,405764864000.0,12800.0
+TVD,HNX,Công ty Cổ phần Than Vàng Danh - Vinacomin,Vang Danh Coal Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,404665776000.0,9000.0
+IDJ,HNX,Công ty Cổ phần Đầu tư IDJ Việt Nam,IDJ Vietnam Investment Joint Stock Company,Bất động sản,Real Estate,8600,8633,399027443900.0,2300.0
+BTP,HOSE,Công ty Cổ phần Nhiệt điện Bà Rịa,Ba Ria Thermal Power Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,393156400000.0,6500.0
+TDW,HOSE,Công ty Cổ phần Cấp nước Thủ Đức,Thu Duc Water Supply Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7577,391000000000.0,46000.0
+DRL,HOSE,Công ty Cổ phần Thủy điện - Điện lực 3,Hydro Power Joint Stock Company - Power No.3,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,387125000000.0,40750.0
+L10,HOSE,Công ty Cổ phần Lilama 10,Lilama 10 Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,386705000000.0,39500.0
+NRC,HNX,Công ty Cổ phần Tập đoàn Bất động sản Quốc gia,National Realty Corporation Joint Stock Company,Bất động sản,Real Estate,8600,8633,379650824200.0,4100.0
+CCI,HOSE,Công ty Cổ phần Đầu tư Phát triển Công nghiệp Thương mại Củ Chi,Cuchi Commercial and Industrial Developing Investment Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,378887868000.0,16200.0
+SHE,HNX,Công ty Cổ phần Phát triển Năng Lượng Sơn Hà,Son Ha Development of Renewable Energy Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3722,370522338300.0,5700.0
+PHN,HNX,Công ty Cổ phần Pin Hà Nội,Hanoi Battery Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2733,369949461000.0,51000.0
+NAG,HNX,Công ty Cổ phần Tập đoàn Nagakawa,Nagakawa Group Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2733,367245443400.0,6600.0
+PVB,HNX,Công ty Cổ phần Bọc ống Dầu khí Việt Nam,PetroVietnam Coating Joint Stock Company,Dầu khí,Oil & Gas,0500,0573,365039966200.0,16900.0
+EVE,HOSE,Công ty Cổ phần Everpia,Everpia Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,364804227370.0,8690.0
+SD9,HNX,Công ty Cổ phần Sông Đà 9,Song Da No9 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,359457000000.0,10500.0
+TD6,HNX,Công ty Cổ Phần Than Đèo Nai - Cọc Sáu - TKV,Deo Nai - Coc Sau - TKV Coal Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,359224171600.0,5800.0
+QHD,HNX,Công ty Cổ phần Que hàn điện Việt Đức,Viet Duc Welding Electrode Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2727,356666508200.0,53800.0
+VTV,HNX,Công ty Cổ phần Năng lượng và Môi trường VICEM,VICEM Energy And Environment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,355678005000.0,11400.0
+CSC,HNX,Công ty Cổ phần Tập đoàn COTANA,COTANA GROUP Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,353055939600.0,7800.0
+HIO,HOSE,Công ty Cổ Phần Helio Energy,Helio Energy Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,351540000000.0,8370.0
+CTB,HNX,Công ty Cổ phần Chế tạo Bơm Hải Dương,Hai Duong Pump Manufacturing Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,343200000000.0,16500.0
+TMT,HOSE,Công ty Cổ phần Ô tô TMT,TMT Motors Corporation,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,342965214000.0,9300.0
+AFX,HOSE,Công ty Cổ phần Xuất Nhập khẩu Nông sản Thực phẩm An Giang,An Giang Agriculture and Foods Import - Export Joint Stock Company,Bán lẻ,Retail,5300,5337,342650000000.0,9790.0
+VNS,HOSE,Công ty Cổ phần Ánh Dương Việt Nam,Vietnam Sun Corporation,Du lịch và Giải trí,Travel & Leisure,5700,5759,339295960000.0,5000.0
+TLH,HOSE,Công ty Cổ phần Tập đoàn Thép Tiến Lên,Tien Len Steel Corporation Joint - Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,338083251170.0,3010.0
+HUB,HOSE,Công ty Cổ phần Xây lắp Thừa Thiên Huế,Thua Thien Hue Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,333423268500.0,10500.0
+SAV,HOSE,Công ty Cổ phần Hợp tác Kinh tế và Xuất nhập khẩu Savimex,Savimex Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1733,325283049000.0,11900.0
+ACC,HOSE,Công ty Cổ phần Đầu tư và Xây dựng Bình Dương ACC,ACC Binh Duong Investment and Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,324449978370.0,3090.0
+SJE,HNX,Công ty Cổ phần Sông Đà 11,Song Da No11 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,324000000000.0,8100.0
+BKC,HNX,Công ty Cổ phần Khoáng sản Bắc Kạn,Backan Mineral Joint Stock Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1775,323211015900.0,10700.0
+CCR,HNX,Công ty Cổ phần Cảng Cam Ranh,Cam Ranh Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,322787744400.0,13200.0
+TVT,HOSE,Tổng Công ty Việt Thắng - CTCP,Viet Thang Corporation,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,318150000000.0,15150.0
+ITD,HOSE,Công ty Cổ phần Công nghệ ITD,ITD Technology Corporation,Công nghệ Thông tin,Technology,9500,9537,316551283000.0,10250.0
+API,HNX,Công ty Cổ phần Đầu tư Châu Á - Thái Bình Dương,Asia - Pacific Investment Joint Stock Company,Bất động sản,Real Estate,8600,8633,302702313600.0,3600.0
+HID,HOSE,Công ty Cổ phần Halcom Vietnam,Halcom Vietnam Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,300884778320.0,3920.0
+DBT,HOSE,Công ty Cổ phần Dược phẩm Bến Tre,Bentre Pharmaceutical Joint-Stock Company,Y tế,Health Care,4500,4577,300863616000.0,12800.0
+GDW,HNX,Công ty Cổ phần Cấp nước Gia Định,Gia Dinh Wasuco Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7577,300200000000.0,31600.0
+NBC,HNX,Công ty Cổ phần Than Núi Béo - Vinacomin,Vinacomin NuiBeo Coal Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,295992992000.0,8000.0
+SCI,HNX,Công ty Cổ phần SCI E&C,SCI E&C Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,294000000000.0,7000.0
+TTL,HNX,Tổng Công ty Thăng Long - Công ty Cổ phần,Thang Long Joint Stock Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,292975900000.0,7000.0
+CIG,HOSE,Công ty Cổ phần COMA 18,COMA 18 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,291948496840.0,5720.0
+C47,HOSE,Công ty Cổ phần Xây dựng 47,Construction Joint Stock Company 47,Xây dựng và Vật liệu,Construction & Materials,2300,2357,290738152000.0,8000.0
+TSC,HOSE,Công ty Cổ phần Vật tư Kỹ thuật Nông nghiệp Cần Thơ,Techno - Agricultural Supplying Joint Stock Company,Hóa chất,Chemicals,1300,1357,289382619750.0,1470.0
+LAF,HOSE,Công ty Cổ phần Chế biến Hàng Xuất khẩu Long An,Long An Food Processing Export Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,288570960050.0,18950.0
+MBG,HNX,Công ty Cổ phần Tập đoàn MBG,MBG Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,288524496000.0,2400.0
+HDA,HNX,Công ty Cổ phần Hãng sơn Đông Á,Dong A Paint Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,288419135500.0,9500.0
+EID,HNX,Công ty Cổ phần Đầu tư và Phát triển Giáo dục Hà Nội,Hanoi Education Development and Investment Joint Stock Company,Truyền thông,Media,5500,5557,285000000000.0,19000.0
+SSC,HOSE,Công ty Cổ phần Giống cây trồng Miền Nam,Southern Seed Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3573,282689020500.0,21300.0
+HMC,HOSE,Công ty Cổ phần Kim khí Thành phố Hồ Chí Minh - VNSTEEL,VNSTEEL - HoChiMinh City Metal Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1757,282554989650.0,10350.0
+YBM,HOSE,Công ty Cổ phần Khoáng sản Công nghiệp Yên Bái,YBM Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,282492329500.0,8780.0
+TDH,HOSE,Công ty Cổ phần Phát triển Nhà Thủ Đức,Thu Duc Housing Development Corporation,Bất động sản,Real Estate,8600,8633,279378862160.0,2480.0
+JVC,HOSE,Công ty Cổ phần Đầu tư và Phát triển Y tế Việt Nhật,Japan Vietnam Medical Investment And Development Joint Stock Company,Y tế,Health Care,4500,4535,277875422370.0,2470.0
+GLT,HNX,Công ty Cổ phần Kỹ thuật điện Toàn Cầu,Global Electrical Technology Corporation,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3743,275768371200.0,22400.0
+NHT,HOSE,Công ty Cổ phần Sản xuất và Thương mại Nam Hoa,Nam Hoa Trading & Production Corporation,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3747,272441972300.0,11350.0
+PLP,HOSE,Công ty Cổ phần Sản xuất và Công nghệ Nhựa Pha Lê,Pha Le Plastics Manufacturing and Technology Joint Stock Company,Hóa chất,Chemicals,1300,1353,269999541000.0,3000.0
+VNL,HOSE,Công ty Cổ phần Logistics Vinalink,Vinalink Logistics Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,269519923400.0,18200.0
+VSI,HOSE,Công ty Cổ phần Đầu tư và Xây dựng Cấp thoát nước,Water Supply Sewerage Construction and Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,267299939250.0,20250.0
+LIG,HNX,Công ty Cổ phần Licogi 13,Licogi 13 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,263817850800.0,2800.0
+MHC,HOSE,Công ty Cổ phần MHC,MHC Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,260197413300.0,5700.0
+HOM,HNX,Công ty Cổ phần Xi măng VICEM Hoàng Mai,VICEM Hoang Mai Cement Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,259191831600.0,3600.0
+HLC,HNX,Công ty Cổ phần Than Hà Lầm - Vinacomin,Ha Lam -  Vinacomin Coal Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,254151990000.0,10000.0
+SRF,HOSE,Công ty Cổ phần Searefico,Searefico Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,253062982200.0,7490.0
+VMS,HNX,Công ty Cổ phần Phát triển Hàng Hải,Vietnam Maritime Development Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,251999944000.0,28000.0
+CLH,HNX,Công ty Cổ phần Xi măng La Hiên VVMI,La Hien Cement Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,249600000000.0,20800.0
+GIC,HNX,Công ty Cổ phần VSC Green Logistics,VSC Green Logistics Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,249429482400.0,9800.0
+DQC,HOSE,Công ty Cổ phần Tập đoàn Điện Quang,Dien Quang Group Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3726,248298174660.0,9010.0
+TV4,HNX,Công ty Cổ phần Tư vấn Xây dựng Điện 4,Power Engineering Consulting Joint Stock Company 4,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,247268662500.0,12500.0
+UNI,HNX,Công ty Cổ phần Đầu tư và Phát triển Sao Mai Việt,Sao Mai Viet Investment and Development Joint Stock Company,Công nghệ Thông tin,Technology,9500,9533,247182265600.0,5800.0
+MED,HNX,Công ty Cổ phần Dược Trung ương Mediplantex,Mediplantex National Pharmaceutical Joint Stock Company,Y tế,Health Care,4500,4577,245718000000.0,19800.0
+PMS,HNX,Công ty Cổ phần Cơ khí Xăng dầu,Petroleum Mechanical Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,243419893600.0,33800.0
+VPH,HOSE,Công ty Cổ phần Vạn Phát Hưng,Van Phat Hung Corporation,Bất động sản,Real Estate,8600,8633,243162390000.0,2550.0
+CCC,HOSE,Công ty Cổ Phần Xây Dựng CDC,CDC Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,242092256490.0,5670.0
+BCE,HOSE,Công ty Cổ phần Xây dựng và Giao thông Bình Dương,Binh Duong Construction & Civil Engineering Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,241079116040.0,5740.0
+NAP,HNX,Công ty Cổ phần Cảng Nghệ Tĩnh,Nghe Tinh Port Holding Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,240992640000.0,11200.0
+HAR,HOSE,Công ty Cổ phần Đầu tư Thương mại Bất động sản An Dương Thảo Điền,An Duong Thao Dien Real Estate Trade Joint Stock Company,Bất động sản,Real Estate,8600,8633,239210225000.0,2500.0
+SC5,HOSE,Công ty Cổ phần Xây dựng số 5,Construction Joint Stock Company No 5,Xây dựng và Vật liệu,Construction & Materials,2300,2357,238986809050.0,15950.0
+VHL,HNX,Công ty Cổ phần Viglacera Hạ Long,Viglacera Ha Long Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,237500000000.0,9500.0
+HTL,HOSE,Công ty Cổ phần Kỹ thuật và Ô tô Trường Long,Truong Long Engineering and Auto Joint Stock Company,Ô tô và phụ tùng,Automobiles & Parts,3300,3353,237000000000.0,19750.0
+BAX,HNX,Công ty Cổ phần Thống Nhất,Thong Nhat Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,236160000000.0,28800.0
+DHM,HOSE,Công ty Cổ phần Đầu tư và Thương mại DHM,DHM Investment and Trading Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,234842753200.0,6800.0
+ABR,HOSE,Công ty Cổ phần Đầu tư Nhãn Hiệu Việt,Viet Brand Invest Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,234000000000.0,11700.0
+PMG,HOSE,Công ty Cổ phần Đầu tư và Sản xuất Petro Miền Trung,Petro Center Corporation,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,233998203900.0,5050.0
+ABS,HOSE,Công ty Cổ phần Dịch vụ Nông nghiệp Bình Thuận,BinhThuan Agriculture Services Joint Stock Company,Hóa chất,Chemicals,1300,1357,233600000000.0,2920.0
+HSL,HOSE,Công ty Cổ phần Công nghệ Sinh học Helios,Helios Biotechnology Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,232561198890.0,6030.0
+VSA,HNX,Công ty Cổ phần Đại lý Hàng hải Việt Nam,Vietnam Ocean Shipping Agency Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,231182370400.0,16400.0
+VGP,HNX,Công ty Cổ phần Cảng Rau Quả,The Vegetexco Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,230864699000.0,29500.0
+PJT,HOSE,Công ty Cổ phần Vận tải Xăng dầu đường thủy Petrolimex,Petrolimex Joint Stock Tanker Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,223945065000.0,9000.0
+SGH,HNX,Công ty Cổ phần Khách sạn Sài Gòn,Saigon Hotel Corporation,Du lịch và Giải trí,Travel & Leisure,5700,5753,222553800000.0,18000.0
+FIR,HOSE,Công ty Cổ phần Địa ốc First Real,First Real Joint Stock Company,Bất động sản,Real Estate,8600,8633,221902606800.0,3140.0
+PNC,HOSE,Công ty Cổ phần Văn hóa Phương Nam,Phuong Nam Cultural Joint Stock Company,Truyền thông,Media,5500,5557,220846727950.0,20450.0
+PJC,HNX,Công ty Cổ phần Thương mại và Vận tải Petrolimex Hà Nội,Petrolimex Ha Noi Transportation and Trading Joint-Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,219805830000.0,30000.0
+PVG,HNX,Công ty Cổ phần Kinh doanh LPG Việt Nam,Petro Vietnam LPG Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,215992018800.0,5400.0
+DAH,HOSE,Công ty Cổ phần Tập đoàn Khách sạn Đông Á,Dong A Hotel Group Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5753,213026000000.0,2530.0
+VC6,HNX,Công ty cổ phần Xây dựng và Đầu tư Visicons,Visicons Construction and Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,211933883000.0,17000.0
+VC2,HNX,Công ty Cổ phần Đầu tư và Xây dựng VINA2,VINA2 Investment and Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,211807470000.0,2800.0
+HMH,HNX,Công ty Cổ phần Hải Minh,Hai Minh Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,210401880800.0,15200.0
+TNI,HOSE,Công ty Cổ phần Tập đoàn Thành Nam,Thanh Nam Group Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,208950000000.0,3980.0
+TCT,HOSE,Công ty Cổ phần Cáp treo Núi Bà Tây Ninh,Tay Ninh Cable Car Tour Company,Du lịch và Giải trí,Travel & Leisure,5700,5759,207805000000.0,16250.0
+LGL,HOSE,Công ty Cổ phần Đầu tư và Phát triển Đô thị Long Giang,Long Giang Investment and Urban Development Joint-stock Company,Bất động sản,Real Estate,8600,8633,205473429000.0,3990.0
+VPS,HOSE,Công ty Cổ phần Thuốc sát trùng Việt Nam,Vietnam Pesticide Joint Stock Company,Hóa chất,Chemicals,1300,1357,204492221120.0,8360.0
+SFC,HOSE,Công ty Cổ phần Nhiên liệu Sài Gòn,Saigon Fuel Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,197600532500.0,17500.0
+VCC,HNX,Công ty Cổ phần Vinaconex 25,Vinaconex 25 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,196800000000.0,8200.0
+VMD,HOSE,Công ty Cổ phần Y Dược phẩm Vimedimex,Vimedimex Medi - Pharma Joint Stock Company,Y tế,Health Care,4500,4577,194547376800.0,12600.0
+PPP,HNX,Công ty Cổ phần Dược phẩm Phong Phú,Phong Phu Pharmaceutical Joint Stock Company,Y tế,Health Care,4500,4577,193599802000.0,22000.0
+SMA,HOSE,Công ty Cổ phần Thiết bị Phụ tùng Sài Gòn,Saigon Machinery Spare Parts Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,192944885280.0,9480.0
+ICG,HNX,Công ty Cổ phần Xây dựng Sông Hồng,SONG HONG Construction Joint stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,191534800000.0,10900.0
+PTD,HNX,Công ty Cổ phần Thiết kế - Xây dựng - Thương mại Phúc Thịnh,Phuc Thinh Design Construction Trading Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2357,189999363500.0,9500.0
+PHC,HOSE,Công ty Cổ phần Xây dựng Phục Hưng Holdings,Phuc Hung Holdings Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,180427660120.0,3560.0
+PCE,HNX,Công ty Cổ phần Phân bón và hóa chất dầu khí Miền Trung,Central Petrovietnam Fertilizer and Chemicals Joint Stock Company,Hóa chất,Chemicals,1300,1357,178000000000.0,17800.0
+THT,HNX,Công ty Cổ phần Than Hà Tu - Vinacomin,Vinacomin - Ha Tu Coal Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,176897174400.0,7200.0
+SD5,HNX,Công ty Cổ phần Sông Đà 5,Song Da 5 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,176798966400.0,6800.0
+X20,HNX,Công ty Cổ phần X20,X20 Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,175950000000.0,10200.0
+MDC,HNX,Công ty Cổ phần Than Mông Dương - Vinacomin,Vinacomin - Mong Duong Coal Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1771,175630437200.0,8200.0
+KHS,HNX,Công ty Cổ phần Kiên Hùng,Kien Hung Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,172833228800.0,11300.0
+SBV,HOSE,Công ty Cổ phần Siam Brothers Việt Nam,Siam Brothers Vietnam Joint Stock Company,Bán lẻ,Retail,5300,5379,171566546840.0,5980.0
+VID,HOSE,Công ty Cổ phần Đầu tư Phát triển Thương mại Viễn Đông,Vien Dong Investment Development Trading Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1737,171511489800.0,4200.0
+ADG,HOSE,Công ty Cổ phần Clever Group,Clever Group Corporation,Truyền thông,Media,5500,5555,171044168000.0,8000.0
+CCL,HOSE,Công ty Cổ phần Đầu tư và Phát triển Đô thị Dầu khí Cửu Long,Cuu Long Petro Urban Development And Investment Corporation,Bất động sản,Real Estate,8600,8633,170399535800.0,2600.0
+PDB,HNX,Công ty Cổ phần Tập đoàn Đầu tư DIN Capital,DIN Capital Investment Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,169289639000.0,19000.0
+RCL,HNX,Công ty Cổ phần Địa ốc Chợ Lớn,Cho Lon Real Estate Joint Stock Company,Bất động sản,Real Estate,8600,8633,168694308900.0,11700.0
+TPC,HOSE,Công ty Cổ phần Nhựa Tân Đại Hưng,Tan Dai Hung Plastic Joint Stock Company,Hóa chất,Chemicals,1300,1353,168542971400.0,13150.0
+HTV,HOSE,Công ty Cổ phần Logistics Vicem,Logistics Vicem Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2773,168386400000.0,12850.0
+CIA,HNX,Công ty Cổ Phần Dịch Vụ Sân Bay Quốc Tế Cam Ranh,Cam Ranh International Airport Services Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,166085062700.0,8900.0
+HCC,HNX,Công ty Cổ phần Bê tông Hòa Cầm - Intimex,Intimex - Hoa Cam Concrete Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,162048418400.0,22600.0
+CJC,HNX,Công ty Cổ phần Cơ điện Miền Trung,Central Area Electrical Mechanical Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2737,158400000000.0,19800.0
+V21,HNX,Công ty Cổ phần Vinaconex 21,Vinaconex 21 Joint Stock Company,Bất động sản,Real Estate,8600,8633,158398987200.0,4800.0
+VC1,HNX,Công ty Cổ phần Xây dựng số 1,Construction Joint Stock Company No 1,Xây dựng và Vật liệu,Construction & Materials,2300,2357,156000000000.0,13000.0
+PTL,HOSE,Công ty Cổ phần Victory Group,Victory Group Joint Stock Company,Bất động sản,Real Estate,8600,8633,154000000000.0,1540.0
+SVT,HOSE,Công ty Cổ phần Công nghệ Sài Gòn Viễn Đông,Sai Gon Vien Dong Technology Joint Stock Company,Bán lẻ,Retail,5300,5377,153721484640.0,8880.0
+SED,HNX,Công ty Cổ phần Đầu tư và Phát triển Giáo dục Phương Nam,Phuong Nam Education Investment and Development Joint Stock Company,Truyền thông,Media,5500,5557,152984700000.0,16500.0
+TA9,HNX,Công ty Cổ phần Xây lắp Thành An 96,Thanh An 96 Construction and Installation Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,152976492000.0,10800.0
+LM8,HOSE,Công ty Cổ phần Lilama 18,Lilama 18 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,151157780200.0,16100.0
+DTT,HOSE,Công ty Cổ phần Kỹ nghệ Đô Thành,Do Thanh Technology Corporation,Hóa chất,Chemicals,1300,1353,150808670000.0,18500.0
+MAS,HNX,Công ty cổ phần Dịch vụ Hàng Không Sân Bay Đà Nẵng,Danang Airport Services Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5759,149795673300.0,35100.0
+GMX,HNX,Công ty Cổ phần Gạch ngói Gốm xây dựng Mỹ Xuân,My Xuan Brick Tile Pottery and Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,149068441500.0,16500.0
+VDL,HNX,Công ty Cổ phần Thực phẩm Lâm Đồng,Lam Dong Foodstuffs Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3535,146571500000.0,10000.0
+D11,HNX,Công ty Cổ phần Địa ốc 11,Real Estate 11 Joint Stock Company,Bất động sản,Real Estate,8600,8633,146448939600.0,16200.0
+VBC,HNX,"Công ty Cổ phần Nhựa, Bao bì Vinh",Vinh Plastic and Bags Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,146249220000.0,19500.0
+PTC,HOSE,Công ty Cổ phần Đầu tư ICAPITAL,ICAPITAL Investment Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,144540391760.0,4490.0
+AMV,HNX,Công ty Cổ phần Sản xuất Kinh doanh Dược và Trang thiết bị Y tế Việt Mỹ,American Vietnamese Biotech Incorporation,Y tế,Health Care,4500,4535,144216215000.0,1100.0
+TDT,HNX,Công ty Cổ phần Đầu tư và Phát triển TDT,TDT Investment And Development Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,143379204000.0,6000.0
+PPS,HNX,Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam,PetroVietnam Power Services Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,142500000000.0,9500.0
+ARM,HNX,Công ty Cổ phần Xuất nhập khẩu Hàng không,General Aviation Import Export Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2797,142496761400.0,45800.0
+PTX,HNX,Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Nghệ Tĩnh,Petrolimex Nghe Tinh Transportation and Service Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,141513966000.0,22000.0
+QTC,HNX,Công ty Cổ phần Công trình Giao thông Vận tải Quảng Nam,Quang Nam Transportion Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,139102804000.0,46000.0
+HU1,HOSE,Công ty Cổ phần Đầu tư và Xây dựng HUD1,HUD1 Investment And Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,137500000000.0,5500.0
+LDP,HNX,Công ty Cổ phần Dược Lâm Đồng - Ladophar,Lam Dong Pharmaceutical Joint Stock Company,Y tế,Health Care,4500,4577,136715385500.0,7300.0
+BRC,HOSE,Công ty Cổ phần Cao su Bến Thành,Ben Thanh Rubber Joint Stock Company,Hóa chất,Chemicals,1300,1353,133649967600.0,10800.0
+TTT,HNX,Công ty Cổ phần Du Lịch - Thương Mại Tây Ninh,Tay Ninh Tourist - Trading Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5759,132536090000.0,29000.0
+SVD,HOSE,Công ty Cổ phần Đầu tư & Thương mại Vũ Đăng,Vu Dang Investment & Trading Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,132508358400.0,4800.0
+DRH,HOSE,Công ty Cổ phần DRH Holdings,DRH Holdings JSC,Bất động sản,Real Estate,8600,8633,132367416620.0,1070.0
+TOT,HNX,Công ty Cổ phần Transimex Logistics,Transimex Logistics Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,132140299600.0,12700.0
+CMV,HOSE,Công ty Cổ phần Thương nghiệp Cà Mau,Ca Mau Trading Joint Stock Company,Bán lẻ,Retail,5300,5373,131811601680.0,7260.0
+SHA,HOSE,Công ty Cổ phần Sơn Hà Sài Gòn,Son Ha Sai Gon Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,131694870000.0,3750.0
+KDM,HNX,Công ty Cổ phần Tập đoàn GCL,GCL Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,131427771300.0,17300.0
+CMS,HNX,Công ty Cổ phần Tập đoàn CMH Việt Nam,CMH Viet Nam Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,129807750000.0,5100.0
+AAT,HOSE,Công ty Cổ phần Tập đoàn Tiên Sơn Thanh Hóa,Tien Son Thanh Hoa Group Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,127474385400.0,1800.0
+KMT,HNX,Công ty Cổ phần Kim khí Miền Trung,Central Vietnam Metal Corporation,Tài nguyên Cơ bản,Basic Resources,1700,1757,127020649800.0,12900.0
+DTG,HNX,Công ty Cổ phần Dược phẩm Tipharco,Tipharco Pharmaceutical Joint Stock Company,Y tế,Health Care,4500,4577,126788532000.0,12000.0
+VTB,HOSE,Công ty Cổ phần Viettronics Tân Bình,Viettronics Tan Binh Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2733,125332432000.0,11600.0
+NST,HNX,Công ty Cổ phần Ngân Sơn,Ngan Son Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3785,123222033000.0,11000.0
+PSW,HNX,Công ty Cổ phần Phân bón và hóa chất dầu khí Tây Nam Bộ,South West PetroVietNam Fertilizer and Chemicals Joint Stock Company,Hóa chất,Chemicals,1300,1357,122400000000.0,7200.0
+PIT,HOSE,Công ty Cổ phần Xuất nhập khẩu Petrolimex,Petrolimex International Trading Joint Stock Company,Bán lẻ,Retail,5300,5373,122207935000.0,8600.0
+V12,HNX,Công ty Cổ phần Xây dựng số 12,Viet Nam Construction Joint Stock Company No 12,Xây dựng và Vật liệu,Construction & Materials,2300,2357,121014400000.0,10400.0
+KMR,HOSE,Công ty Cổ phần Mirae,MIRAE Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3763,120580950840.0,2120.0
+FCM,HOSE,Công ty Cổ phần Bê tông Phan Vũ Hà Nam,Phan Vu Ha Nam Concrete Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,117415630040.0,2540.0
+TV3,HNX,Công ty Cổ phần Tư vấn Xây dựng Điện 3,Power Engineering Consulting Joint Stock Company 3,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,116110925800.0,12200.0
+SDU,HNX,Công ty Cổ phần Đầu tư Xây dựng và Phát triển Đô thị Sông Đà,Song Da Urban Investment Construction And Development Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,116000000000.0,5800.0
+PSE,HNX,Công ty Cổ phần Phân bón và hóa chất dầu khí Đông Nam Bộ,South-East PetroVietnam Fertilizer and Chemicals Joint Stock Company,Hóa chất,Chemicals,1300,1357,115000000000.0,9200.0
+BKG,HOSE,Công ty Cổ phần Đầu tư BKG Việt Nam,BKG Vietnam Investment Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3726,114574432000.0,1600.0
+BMC,HOSE,Công ty Cổ phần Khoáng sản Bình Định,Binh Dinh Minerals Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,113888269700.0,9190.0
+DVM,HNX,Công ty Cổ phần Dược liệu Việt Nam,Vietnam Medicinal Materials Joint Stock Company,Y tế,Health Care,4500,4577,112938688800.0,2400.0
+SPM,HOSE,Công ty Cổ phần S.P.M,S.P.M Corporation,Y tế,Health Care,4500,4577,112914000000.0,8200.0
+NAV,HOSE,Công ty Cổ phần Nam Việt,Nam Viet Joint - Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,111599721000.0,13950.0
+PRC,HNX,Công ty Cổ phần Logistics Portserco,Portserco Logistics Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,111594564000.0,9000.0
+PIA,HNX,Công ty Cổ phần Tin học Viễn thông Petrolimex,Petrolimex Information Technology and Telecommunication Joint Stock Company,Viễn thông,Telecommunications,6500,6535,111150000000.0,28500.0
+PMB,HNX,Công ty Cổ phần Phân bón và Hóa chất Dầu khí Miền Bắc,North PetroVietnam Fertilizer and Chemicals Joint Stock Company,Hóa chất,Chemicals,1300,1357,104400000000.0,8700.0
+MEL,HNX,Công ty Cổ phần Thép Mê Lin,Me Lin Steel Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,103500000000.0,6900.0
+CTP,HNX,Công ty Cổ phần Tập đoàn CTP Group,CTP Group Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3537,101639384000.0,7000.0
+EBS,HNX,Công ty Cổ phần Sách Giáo dục tại Thành phố Hà Nội,Educational Book Joint Stock Company In Hanoi city,Truyền thông,Media,5500,5557,99655840000.0,10000.0
+VCA,HOSE,Công ty Cổ phần Thép VICASA,VICASA Steel Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,98717593000.0,6500.0
+DHP,HNX,Công ty Cổ phần Điện cơ Hải Phòng,Hai Phong Electrical Mechanical Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2737,97769660000.0,10300.0
+DST,HNX,Công ty Cổ phần Đầu tư Sao Thăng Long,Sao Thang Long Investment Joint Stock Company,Truyền thông,Media,5500,5557,96657000000.0,3000.0
+KTS,HNX,Công ty Cổ phần Đường Kon Tum,Kon Tum Sugar Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,95823000000.0,18900.0
+GMH,HOSE,Công ty Cổ phần Minh Hưng Quảng Trị,Quang Tri Minh Hung Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,95700000000.0,5800.0
+CAN,HNX,Công ty Cổ phần Đồ hộp Hạ Long,Halong Canned Food Joint Stock Corporation,Thực phẩm và đồ uống,Food & Beverage,3500,3577,95000000000.0,19000.0
+VTH,HNX,Công ty Cổ phần Dây cáp điện Việt Thái,Viet Thai Electric Cable Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2733,94782156600.0,8600.0
+PPY,HNX,Công ty Cổ phần Xăng dầu dầu khí Phú Yên,Petrovietnam Oil Phu Yen Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,92576774400.0,6600.0
+HAT,HNX,Công ty Cổ phần Thương mại Bia Hà Nội,Hanoi Beer Trading Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3533,92128500000.0,29500.0
+VMC,HNX,Công ty Cổ phần VIMECO,Vimeco Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,91990454400.0,3200.0
+THB,HNX,Công ty Cổ phần Bia Hà Nội - Thanh Hóa,Ha Noi - Thanh Hoa Beer Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3533,91396560000.0,8000.0
+NBP,HNX,Công ty Cổ phần Nhiệt Điện Ninh Bình,Ninh Binh Thermal Power Joint-Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7535,88771950000.0,6900.0
+SPC,HNX,Công ty Cổ phần Bảo vệ Thực vật Sài Gòn,Saigon Plant Protection Joint Stock Company,Hóa chất,Chemicals,1300,1357,87399000000.0,8300.0
+VHE,HNX,Công ty Cổ phần Dược liệu và Thực phẩm Việt Nam,Viet Nam Herbs and Foods Joint Stock Company,Y tế,Health Care,4500,4577,86163989600.0,2600.0
+TMC,HNX,Công ty Cổ phần Thương mại Xuất nhập khẩu Thủ Đức,Thu Duc Trading and Import Export Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,84320000000.0,6800.0
+PPT,HNX,Công ty cổ phần Petro Times,Petro Times Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,82508676600.0,4200.0
+ATS,HNX,Công ty Cổ phần Tập đoàn Đầu tư ATS,ATS Investment Group Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5757,81900000000.0,23400.0
+QST,HNX,Công ty Cổ phần Sách và Thiết bị trường học Quảng Ninh,Quang Ninh Book And Educational Equipment Joint Stock Company,Truyền thông,Media,5500,5557,80676000000.0,24900.0
+VPG,HOSE,Công ty Cổ phần Đầu tư Thương mại Xuất nhập khẩu Việt Phát,Viet Phat Import Export Trading Investment Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,80458333410.0,910.0
+TTC,HNX,Công ty Cổ phần Gạch men Thanh Thanh,Thanh Thanh Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,79009022400.0,13300.0
+TSB,HNX,Công ty Cổ phần Ắc quy Tia Sáng,Tia Sang Battery Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2733,78922116000.0,11700.0
+NSH,HNX,Công ty Cổ phần Tập đoàn Nhôm Sông Hồng Shalumi,Song Hong Aluminum Shalumi Group Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1753,78635060600.0,3800.0
+TCR,HOSE,Công ty Cổ phần Công nghiệp Gốm sứ TAICERA,Taicera Enterprise Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,78585495660.0,1730.0
+VSM,HNX,Công ty Cổ phần Container Miền Trung,Central Container Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,78003362500.0,15500.0
+HEV,HNX,Công ty Cổ phần Sách Đại học - Dạy nghề,Higher Education And Vocational Book Joint Stock Company,Truyền thông,Media,5500,5557,78000000000.0,15600.0
+SRA,HNX,Công ty Cổ phần SARA Việt Nam,Sara Vietnam Joint Stock Company,Y tế,Health Care,4500,4535,77759953200.0,1800.0
+ONE,HNX,Công ty Cổ phần Công nghệ ONE,One Technologies Corporation,Công nghệ Thông tin,Technology,9500,9572,77357848400.0,9800.0
+KST,HNX,Công ty Cổ phần KASATI,Kasati Joint Stock Company,Công nghệ Thông tin,Technology,9500,9578,77297058000.0,12900.0
+MCF,HNX,Công ty Cổ phần Xây lắp Cơ khí và Lương thực Thực phẩm,Mechanics Construction And Foodstuff Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,76522649800.0,7100.0
+CAG,HNX,Công ty Cổ phần Cảng An Giang,An Giang Port Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,75900000000.0,5500.0
+DTA,HOSE,Công ty Cổ phần Đệ Tam,De Tam Joint Stock Company,Bất động sản,Real Estate,8600,8633,75872501110.0,3890.0
+PSC,HNX,Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Sài Gòn,Petrolimex Saigon Transportation And Service Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,75600000000.0,10500.0
+AAM,HOSE,Công ty Cổ Phần Thủy Sản MeKong,Mekong Fisheries Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3573,75248510400.0,7200.0
+PPE,HNX,Công ty Cổ phần Tư vấn Đầu tư PP Enterprise,PP Enterprise Investment Consultancy Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,75240000000.0,20900.0
+GTA,HOSE,Công ty Cổ phần Chế biến Gỗ Thuận An,Thuan An Wood Processing Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1733,74904600000.0,7620.0
+TTH,HNX,Công ty Cổ phần Thương mại và Dịch vụ Tiến Thành,Tien Thanh Service and Trading Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,74749692000.0,2000.0
+ALT,HNX,Công ty Cổ phần Văn hóa Tân Bình,Alta Company,Truyền thông,Media,5500,5557,74577217000.0,13000.0
+HMR,HNX,Công ty Cổ phần Đá Hoàng Mai,Hoang Mai Stone Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,73781174700.0,8100.0
+NO1,HOSE,Công ty Cổ phần Tập đoàn 911,911 Group Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,73307398040.0,2980.0
+ITQ,HNX,Công ty Cổ phần Tập đoàn Thiên Quang,Thien Quang Group Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,73239601500.0,2300.0
+CTT,HNX,Công ty Cổ phần Chế tạo máy - Vinacomin,Vinacomin - Machinery Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,72808940500.0,15500.0
+ADC,HNX,Công ty Cổ phần Mĩ thuật và Truyền thông,Art Design and Communication Joint Stock Company,Truyền thông,Media,5500,5557,71205054400.0,17900.0
+TJC,HNX,Công ty Cổ phần Dịch vụ Vận tải và Thương mại,Transportation and Trading services Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,70520000000.0,8200.0
+SDG,HNX,Công ty Cổ phần Sadico Cần Thơ,Sadico Can Tho Joint Stock Corporation,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,69965979300.0,6900.0
+LBE,HNX,Công ty Cổ phần Thương mại và Dịch vụ LVA,LVA Trading And Services Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3767,69671137000.0,14500.0
+STC,HNX,Công ty Cổ phần Sách và Thiết bị trường học Thành phố Hồ Chí Minh,Book And Educational Equipment Joint Stock Company of Ho Chi Minh City,Truyền thông,Media,5500,5557,67986360000.0,12000.0
+SMT,HNX,Công ty Cổ phần ONESPHERE,ONESPHERE Joint Stock Company,Công nghệ Thông tin,Technology,9500,9578,67575611700.0,10300.0
+VCM,HNX,Công ty Cổ phần BV Life,BV Life Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,67200000000.0,5600.0
+VC9,HNX,Công ty Cổ phần Xây dựng số 9 - VC9,VC9 - No 9 Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,66780800000.0,4000.0
+PV2,HNX,Công ty Cổ phần Genea Capital,Genea Capital Joint Stock Company,Bất động sản,Real Estate,8600,8633,66363840000.0,1800.0
+DAD,HNX,Công ty Cổ phần Đầu tư và Phát triển Giáo dục Đà Nẵng,Danang Education Development And Investment Joint Stock Company,Truyền thông,Media,5500,5557,65228800000.0,14000.0
+MIC,HNX,Công ty Cổ phần Kỹ nghệ Khoáng sản Quảng Nam,Quang Nam Mineral Industry Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,64960582000.0,7600.0
+CPC,HNX,Công ty Cổ phần Thuốc sát trùng Cần Thơ,Cantho Pesticides Joint Stock Company,Hóa chất,Chemicals,1300,1357,64895055000.0,15900.0
+KSD,HNX,Công ty Cổ phần Đầu tư DNA,DNA Investement Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3722,63600000000.0,5300.0
+BBS,HNX,Công ty Cổ phần VICEM Bao bì Bút Sơn,VICEM Packing But Son Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,62400000000.0,10400.0
+BXH,HNX,Công ty Cổ phần VICEM Bao bì Hải Phòng,Haiphong Packing VICEM Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,60240800000.0,20000.0
+MCC,HNX,Công ty Cổ phần Gạch ngói cao cấp,High - Grade Brick - Tile Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2353,59334875600.0,11900.0
+BED,HNX,Công ty Cổ phần Sách và Thiết bị trường học Đà Nẵng,Da Nang Books & Educational Equipment Joint Stock Company,Truyền thông,Media,5500,5557,58800000000.0,19600.0
+STP,HNX,Công ty Cổ phần Công nghiệp Thương mại Sông Đà,Song Da Industry Trade Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,57758853600.0,7200.0
+SGD,HNX,Công ty Cổ phần Sách Giáo dục tại Thành phố Hồ Chí Minh,Educational Book Joint Stock Company in Ho Chi Minh City,Truyền thông,Media,5500,5557,57006300000.0,14100.0
+TMX,HNX,Công ty Cổ phần VICEM Thương mại Xi măng,VICEM Cement Trading Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,57000000000.0,9500.0
+HAS,HOSE,Công ty Cổ phần Hacisco,Hacisco Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,56940000000.0,7300.0
+PTS,HNX,Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Hải Phòng,Hai Phong Petrolimex Transportation and Services Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,56793600000.0,10200.0
+NHC,HNX,Công ty Cổ phần Gạch ngói Nhị Hiệp,Nhi Hiep Brick-Tile Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,56572681200.0,18600.0
+BNA,HNX,Công ty Cổ phần Tập đoàn Đầu tư Bảo Ngọc,Bao Ngoc Investment Group Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3577,56248909200.0,1800.0
+AMC,HNX,Công ty Cổ phần Khoáng sản Á Châu,Asia Mineral Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1775,56002369000.0,13100.0
+PGN,HNX,Công ty Cổ phần Phụ Gia Nhựa,Plastic Additives Joint Stock Company,Hóa chất,Chemicals,1300,1353,55842668100.0,5900.0
+DC2,HNX,Công ty Cổ phần Đầu tư Phát triển - Xây dựng (DIC) số 2,Development Investment Construction Number 2 Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,52396276500.0,4500.0
+PBP,HNX,Công ty Cổ phần Bao bì Dầu khí Việt Nam,PetroVietnam Packaging Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,52073780000.0,10000.0
+NDX,HNX,Công ty Cổ phần Xây lắp Phát triển Nhà Đà Nẵng,Danang Housing Development Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,51772807800.0,5400.0
+HAD,HNX,Công ty Cổ phần Bia Hà Nội - Hải Dương,Ha Noi – Hai Duong Beer Joint Stock Company,Thực phẩm và đồ uống,Food & Beverage,3500,3533,51600000000.0,12900.0
+ST8,HOSE,Công ty Cổ phần Tập đoàn ST8,ST8 Holdings Joint Stock Company,Công nghệ Thông tin,Technology,9500,9574,50927385960.0,1980.0
+CKV,HNX,Công ty Cổ phần CokyVina,CokyVina Joint Stock Company,Công nghệ Thông tin,Technology,9500,9578,50551200000.0,12600.0
+MKV,HNX,Công ty Cổ phần Dược Thú Y Cai Lậy,Cai Lay Veterinary Pharmaceutical Joint Stock Company,Y tế,Health Care,4500,4577,50000000000.0,10000.0
+PMP,HNX,Công ty Cổ phần Bao bì Đạm Phú Mỹ,Dam Phu My Packaging Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,48300000000.0,11500.0
+VTC,HNX,Công ty Cổ phần Viễn Thông VTC,VTC Telecommunications Joint Stock Company,Công nghệ Thông tin,Technology,9500,9578,47415729000.0,8900.0
+PGT,HNX,Công ty Cổ phần PGT Holdings,PGT Holdings Joint Stock Company,Du lịch và Giải trí,Travel & Leisure,5700,5759,46209005000.0,5000.0
+SDN,HNX,Công ty Cổ phần Sơn Đồng Nai,Dong Nai Paint Corporation,Xây dựng và Vật liệu,Construction & Materials,2300,2353,45546540000.0,15000.0
+CMC,HNX,Công ty Cổ phần Đầu tư CMC,CMC Investment Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2757,45423414000.0,7600.0
+BPC,HNX,Công ty Cổ phần Vicem Bao bì Bỉm Sơn,Vicem Packaging Bimson Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2723,44840000000.0,11800.0
+DIH,HNX,Công ty Cổ phần Đầu tư Phát triển Xây dựng - Hội An,Development Investment Construction Hoi An Joint Stock Company,Bất động sản,Real Estate,8600,8633,44397690400.0,5600.0
+TDG,HOSE,Công ty Cổ phần Đầu tư TDG Global,TDG Global Investment Joint Stock Company,"Điện, nước & xăng dầu khí đốt",Utilities,7500,7573,44306477700.0,1830.0
+SVN,HNX,Công ty Cổ phần Tập đoàn Vexilla Việt Nam,Vexilla Viet Nam Group Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,44100000000.0,2100.0
+VTJ,HNX,Công ty Cổ phần Thương mại và Đầu tư VI NA TA BA,VI NA TA BA Trading &amp; Investment Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3785,43320000000.0,3800.0
+SFN,HNX,Công ty Cổ phần Dệt lưới Sài Gòn,Saigon Fishing Net Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2797,43248665000.0,15100.0
+DS3,HNX,Công ty Cổ phần DS3,DS3 Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2777,41611947000.0,3900.0
+VE3,HNX,Công ty Cổ phần Xây dựng điện VNECO 3,VNECO 3 Electricity Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,40460000000.0,11900.0
+PEN,HNX,Công ty Cổ phần Xây lắp III Petrolimex,Petrolimex Installation No.3 joint stock company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,39000000000.0,7800.0
+GKM,HNX,Công ty Cổ phần GKM Holdings,GKM Holdings Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,34577660700.0,1100.0
+VLA,HNX,Công ty Cổ phần Đầu tư và Phát triển Công nghệ Văn Lang,Van Lang Technology Development and Investment Joint Stock Company,Công nghệ Thông tin,Technology,9500,9537,33965966000.0,8500.0
+INC,HNX,Công ty Cổ phần Tư vấn Đầu tư IDICO,IDICO Investment Consultancy Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,32960000000.0,10300.0
+LCD,HNX,Công ty Cổ phần Lắp máy - Thí nghiệm cơ điện,Erection - Electromechanics Testing Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,29398922000.0,19600.0
+KKC,HNX,Công ty Cổ phần Tập đoàn Thành Thái,Thanh Thai Group Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,28598988000.0,5500.0
+FID,HNX,Công ty Cổ phần Đầu tư và Phát triển Doanh nghiệp Việt Nam,Vietnam Enterprise Investment and Development Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,27187553800.0,1100.0
+DXV,HOSE,Công ty Cổ phần VICEM Vật liệu Xây dựng Đà Nẵng,Danang Building Material VICEM Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,25938000000.0,2620.0
+TXM,HNX,Công ty Cổ phần VICEM Thạch cao Xi Măng,VICEM Gypsum and Cement Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2353,25900000000.0,3700.0
+DAE,HNX,Công ty Cổ phần Sách Giáo dục tại Thành phố Đà Nẵng,Educational Book Joint Stock Company in Da Nang City,Truyền thông,Media,5500,5557,25611251400.0,13300.0
+SMN,HNX,Công ty Cổ phần Sách và thiết bị giáo dục Miền Nam,South Books and Educational Equipment Joint Stock Company,Truyền thông,Media,5500,5557,24668000000.0,5600.0
+CX8,HNX,Công ty Cổ phần Đầu tư và Xây lắp Constrexim số 8,Constrexim No. 8 Investment and Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,24260824500.0,9500.0
+CET,HNX,Công ty Cổ phần HTC Holding,HTC Holding Joint Stock Company,Hàng cá nhân & Gia dụng,Personal & Household Goods,3700,3767,23595000000.0,3900.0
+SSM,HNX,Công ty Cổ phần Chế tạo kết cấu thép VNECO.SSM,Steel Structure Manufacture Joint Stock Company,Tài nguyên Cơ bản,Basic Resources,1700,1757,22758394200.0,4600.0
+THS,HNX,Công ty Cổ phần Thanh Hoa - Sông Đà,Song Da - Thanh Hoa Joint Stock Company,Bán lẻ,Retail,5300,5373,22410000000.0,8300.0
+HCT,HNX,Công ty Cổ phần Thương mại - Dịch vụ - Vận tải Xi măng Hải Phòng,Hai Phong Cement Transport And Trading Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2779,21373681000.0,10600.0
+MCO,HNX,Công ty Cổ phần Đầu tư và Xây dựng BDC Việt Nam,Investment and Construction BDC Viet Nam Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,18467680500.0,4500.0
+SDC,HNX,Công ty Cổ phần Tư vấn Sông Đà,Song Da Consulting Joint Stock Company,Hàng & Dịch vụ Công nghiệp,Industrial Goods & Services,2700,2791,17555950400.0,5800.0
+ECI,HNX,Công ty Cổ phần Tập đoàn ECI,ECI Group Joint Stock Company,Truyền thông,Media,5500,5557,16192000000.0,9200.0
+VE1,HNX,Công ty Cổ phần Xây dựng điện VNECO 1,VNECO 1 Electricity Construction Joint Stock Company,Xây dựng và Vật liệu,Construction & Materials,2300,2357,13048816000.0,2200.0
