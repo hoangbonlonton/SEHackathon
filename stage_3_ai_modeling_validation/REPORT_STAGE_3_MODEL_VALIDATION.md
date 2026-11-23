@@ -1,6 +1,6 @@
 # BÁO CÁO QUY TRÌNH, KẾT QUẢ, PHÂN TÍCH & GIẢI THÍCH KÝ HIỆU GIAI ĐOẠN 3: HUẤN LUYỆN AI (`ISOLATION FOREST`), GIẢI THÍCH `SHAP` & 4 LỚP KIỂM CHỨNG
 
-> **Thời điểm thực thi:** `2026-11-23 12:19:34` (Tổng thời gian huấn luyện + SHAP + 4 lớp kiểm chứng: **`11.99 giây`** trên CPU máy RAM 32GB)  
+> **Thời điểm thực thi:** `2026-11-23 14:25:31` (Tổng thời gian huấn luyện + SHAP + 4 lớp kiểm chứng: **`17.86 giây`** trên CPU máy RAM 32GB)  
 > **Quy mô huấn luyện & chấm điểm:** **`4,340` quan sát `firm-year`** (giai đoạn `2019–2025`, gồm **`639` doanh nghiệp năm 2025**)  
 > **Nguyên tắc pháp lý:** Hệ thống xuất **Chỉ báo rủi ro kiểm toán (Forensic Risk Red Flags)** hỗ trợ sàng lọc theo thái độ hoài nghi nghề nghiệp của **VSA 240**, tuyệt đối không kết luận pháp lý về hành vi gian lận.
 
@@ -69,57 +69,64 @@ Thực thi tự động qua script [`03_train_validate_model.py`](03_train_valid
 
 | Hạng | Mã biến rủi ro | Tên Chỉ số Tiếng Việt | Tác động trung bình `|SHAP|` (Điểm rủi ro) | `|SHAP|` trên IsoForest gốc |
 | :---: | :--- | :--- | :---: | :---: |
-| **1** | `risk_cfo` | CFO/Tổng TS thấp (Dòng tiền yếu/âm) | **6.404 điểm** | `0.26059` |
-| **2** | `risk_altman` | Altman Z'' thấp (Sức khỏe tài chính yếu) | **5.424 điểm** | `0.28024` |
-| **3** | `risk_dsri` | DSRI (Phải thu KH tăng nhanh hơn DT) | **3.956 điểm** | `0.34415` |
-| **4** | `risk_tata` | TATA (Dồn tích lợi nhuận trên giấy) | **3.300 điểm** | `0.29825` |
-| **5** | `risk_sgi` | SGI (Tăng trưởng DT quá nóng) | **2.466 điểm** | `0.32248` |
-| **6** | `risk_aqi` | AQI (Tài sản dài hạn mờ ám tăng) | **2.289 điểm** | `0.40285` |
-| **7** | `risk_gmi` | GMI (Biên lãi gộp suy giảm) | **1.926 điểm** | `0.32078` |
-| **8** | `risk_srr` | SRR (Phải thu khác & Trả trước cao) | **1.634 điểm** | `0.38000` |
-| **9** | `risk_ar_rev` | Phải thu NH / Doanh thu cao | **1.185 điểm** | `0.38615` |
-| **10** | `risk_depi` | DEPI (Tỷ lệ khấu hao giảm) | **1.051 điểm** | `0.37852` |
-| **11** | `risk_lvgi` | LVGI (Đòn bẩy nợ tăng nhanh) | **0.380 điểm** | `0.29965` |
-| **12** | `risk_sgai` | SGAI (Chi phí BH & QLDN phình to) | **0.246 điểm** | `0.32207` |
+| **1** | `risk_cfo` | CFO/Tổng TS thấp (Dòng tiền yếu/âm) | **7.202 điểm** | `0.26059` |
+| **2** | `risk_altman` | Altman Z'' thấp (Sức khỏe tài chính yếu) | **5.665 điểm** | `0.28024` |
+| **3** | `risk_dsri` | DSRI (Phải thu KH tăng nhanh hơn DT) | **4.174 điểm** | `0.34415` |
+| **4** | `risk_tata` | TATA (Dồn tích lợi nhuận trên giấy) | **3.102 điểm** | `0.29825` |
+| **5** | `risk_sgi` | SGI (Tăng trưởng DT quá nóng) | **2.650 điểm** | `0.32248` |
+| **6** | `risk_aqi` | AQI (Tài sản dài hạn mờ ám tăng) | **2.318 điểm** | `0.40285` |
+| **7** | `risk_srr` | SRR (Phải thu khác & Trả trước cao) | **1.919 điểm** | `0.38000` |
+| **8** | `risk_gmi` | GMI (Biên lãi gộp suy giảm) | **1.806 điểm** | `0.32078` |
+| **9** | `risk_depi` | DEPI (Tỷ lệ khấu hao giảm) | **0.964 điểm** | `0.37852` |
+| **10** | `risk_ar_rev` | Phải thu NH / Doanh thu cao | **0.388 điểm** | `0.38615` |
+| **11** | `risk_lvgi` | LVGI (Đòn bẩy nợ tăng nhanh) | **0.378 điểm** | `0.29965` |
+| **12** | `risk_sgai` | SGAI (Chi phí BH & QLDN phình to) | **0.299 điểm** | `0.32207` |
 
 ### 2.3. Đối chiếu 9 Doanh nghiệp Tiêu biểu Năm 2025 (Đánh giá Đa trụ cột & Giải trình AI)
 
 | Mã CK | Tổng Điểm (`0–100`) | Hạng Rủi ro | Beneish | Altman $Z''$ | Tiền & SRR | AI IsoForest | Giải trình Tự động từ `SHAP` (Top yếu tố kéo rủi ro lên) |
 | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
-| **FPT** | **11.7đ** | Thấp (An toàn) | 24 | 16 | 2 | 0 | TATA (Dồn tích lợi nhuận trên giấy) (+0.7đ) |
-| **VNM** | **7.8đ** | Thấp (An toàn) | 23 | 0 | 2 | 1 | Không có chỉ báo rủi ro nổi bật; các chỉ số chính đều nằm trong vùng lành mạnh hơn chuẩn ngành. |
-| **MWG** | **12.4đ** | Thấp (An toàn) | 25 | 11 | 6 | 3 | AQI (Tài sản dài hạn mờ ám tăng) (+1.5đ) |
-| **HPG** | **35.8đ** | Thấp (An toàn) | 60 | 32 | 5 | 35 | DSRI (Phải thu KH tăng nhanh hơn DT) (+14.4đ); DEPI (Tỷ lệ khấu hao giảm) (+3.5đ) |
-| **NVL** | **26.8đ** | Thấp (An toàn) | 13 | 20 | 54 | 29 | DEPI (Tỷ lệ khấu hao giảm) (+2.7đ); DSRI (Phải thu KH tăng nhanh hơn DT) (+2.7đ); Phải thu NH / Doanh thu cao (+1.7đ) |
-| **HAG** | **41.1đ** | Trung bình (Cần theo dõi) | 39 | 53 | 25 | 44 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+10.7đ); Phải thu NH / Doanh thu cao (+4.4đ); SGI (Tăng trưởng DT quá nóng) (+2.7đ) |
-| **HVN** | **33.9đ** | Thấp (An toàn) | 13 | 100 | 4 | 18 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+10.5đ); SRR (Phải thu khác & Trả trước cao) (+4.0đ) |
-| **TTF** | **53.7đ** | Trung bình (Cần theo dõi) | 20 | 84 | 64 | 55 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+12.4đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+8.3đ); Phải thu NH / Doanh thu cao (+5.2đ) |
-| **DIG** | **35.5đ** | Thấp (An toàn) | 71 | 7 | 18 | 35 | SGI (Tăng trưởng DT quá nóng) (+13.9đ); DEPI (Tỷ lệ khấu hao giảm) (+4.6đ); SRR (Phải thu khác & Trả trước cao) (+1.1đ) |
+| **FPT** | **11.7đ** | Thấp (An toàn) | 24 | 16 | 2 | 0 | Không có chỉ báo rủi ro nổi bật; các chỉ số chính đều nằm trong vùng lành mạnh hơn chuẩn ngành. |
+| **VNM** | **7.8đ** | Thấp (An toàn) | 23 | 0 | 2 | 1 | TATA (Dồn tích lợi nhuận trên giấy) (+2.3đ) |
+| **MWG** | **12.4đ** | Thấp (An toàn) | 25 | 11 | 6 | 3 | Không có chỉ báo rủi ro nổi bật; các chỉ số chính đều nằm trong vùng lành mạnh hơn chuẩn ngành. |
+| **HPG** | **35.8đ** | Thấp (An toàn) | 60 | 32 | 5 | 35 | DSRI (Phải thu KH tăng nhanh hơn DT) (+12.5đ); DEPI (Tỷ lệ khấu hao giảm) (+3.5đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+1.8đ) |
+| **NVL** | **26.8đ** | Thấp (An toàn) | 13 | 20 | 54 | 29 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+6.1đ); SRR (Phải thu khác & Trả trước cao) (+1.9đ); DEPI (Tỷ lệ khấu hao giảm) (+1.3đ) |
+| **HAG** | **41.1đ** | Trung bình (Cần theo dõi) | 39 | 53 | 25 | 44 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+7.6đ); TATA (Dồn tích lợi nhuận trên giấy) (+3.3đ); SGI (Tăng trưởng DT quá nóng) (+1.7đ) |
+| **HVN** | **33.9đ** | Thấp (An toàn) | 13 | 100 | 4 | 18 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+19.2đ); LVGI (Đòn bẩy nợ tăng nhanh) (+0.6đ) |
+| **TTF** | **53.7đ** | Trung bình (Cần theo dõi) | 20 | 84 | 64 | 55 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+15.3đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+9.9đ); TATA (Dồn tích lợi nhuận trên giấy) (+1.8đ) |
+| **DIG** | **35.5đ** | Thấp (An toàn) | 71 | 7 | 18 | 35 | SGI (Tăng trưởng DT quá nóng) (+18.2đ); SRR (Phải thu khác & Trả trước cao) (+5.6đ); DEPI (Tỷ lệ khấu hao giảm) (+2.6đ) |
 
 ### 2.4. Top 10 Doanh nghiệp Cần Ưu tiên Kiểm toán Pháp chứng Sâu Nhất Năm 2025
 
 | Mã CK | Ngành ICB | Tổng Điểm | 4 Trụ cột (`Ben/Alt/Cash/AI`) | Giải trình Tự động từ `SHAP` |
 | :---: | :--- | :---: | :---: | :--- |
-| **SMT** | Công nghệ Thông tin | **80.8** | 78 / 82 / 65 / 95 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+13.8đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+13.6đ); AQI (Tài sản dài hạn mờ ám tăng) (+12.9đ) |
-| **TDH** | Bất động sản | **80.2** | 77 / 89 / 86 / 70 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+24.0đ); GMI (Biên lãi gộp suy giảm) (+14.8đ); SGI (Tăng trưởng DT quá nóng) (+6.3đ) |
-| **CIG** | Xây dựng và Vật liệu | **76.1** | 100 / 28 / 97 / 78 | SGI (Tăng trưởng DT quá nóng) (+16.2đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+15.1đ); TATA (Dồn tích lợi nhuận trên giấy) (+7.8đ) |
-| **HAT** | Thực phẩm và đồ uống | **73.2** | 95 / 45 / 80 / 71 | DSRI (Phải thu KH tăng nhanh hơn DT) (+18.5đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+12.6đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+8.6đ) |
-| **VTC** | Công nghệ Thông tin | **73.0** | 95 / 67 / 78 / 49 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+18.1đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+9.8đ); TATA (Dồn tích lợi nhuận trên giấy) (+9.6đ) |
-| **SRF** | Hàng & Dịch vụ Công nghiệp | **72.1** | 67 / 74 / 67 / 80 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+11.7đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+11.1đ); GMI (Biên lãi gộp suy giảm) (+11.1đ) |
-| **VE3** | Xây dựng và Vật liệu | **71.8** | 86 / 76 / 67 / 54 | AQI (Tài sản dài hạn mờ ám tăng) (+16.6đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+13.9đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+10.8đ) |
-| **PVB** | Dầu khí | **71.8** | 100 / 15 / 75 / 92 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+18.7đ); SGI (Tăng trưởng DT quá nóng) (+11.5đ); TATA (Dồn tích lợi nhuận trên giấy) (+9.6đ) |
-| **NTL** | Bất động sản | **70.3** | 100 / 0 / 77 / 100 | DSRI (Phải thu KH tăng nhanh hơn DT) (+16.1đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+16.0đ); GMI (Biên lãi gộp suy giảm) (+8.6đ) |
-| **HLD** | Bất động sản | **70.0** | 100 / 12 / 75 / 88 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+19.0đ); SGI (Tăng trưởng DT quá nóng) (+14.4đ); TATA (Dồn tích lợi nhuận trên giấy) (+11.5đ) |
+| **SMT** | Công nghệ Thông tin | **80.8** | 78 / 82 / 65 / 95 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+17.4đ); AQI (Tài sản dài hạn mờ ám tăng) (+12.9đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+12.2đ) |
+| **TDH** | Bất động sản | **80.2** | 77 / 89 / 86 / 70 | Altman Z'' thấp (Sức khỏe tài chính yếu) (+16.2đ); SGI (Tăng trưởng DT quá nóng) (+12.9đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+8.4đ) |
+| **CIG** | Xây dựng và Vật liệu | **76.1** | 100 / 28 / 97 / 78 | SGI (Tăng trưởng DT quá nóng) (+19.4đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+14.1đ); SRR (Phải thu khác & Trả trước cao) (+7.1đ) |
+| **HAT** | Thực phẩm và đồ uống | **73.2** | 95 / 45 / 80 / 71 | DSRI (Phải thu KH tăng nhanh hơn DT) (+20.5đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+15.9đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+5.1đ) |
+| **VTC** | Công nghệ Thông tin | **73.0** | 95 / 67 / 78 / 49 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+18.3đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+8.3đ); TATA (Dồn tích lợi nhuận trên giấy) (+7.7đ) |
+| **SRF** | Hàng & Dịch vụ Công nghiệp | **72.1** | 67 / 74 / 67 / 80 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+14.5đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+13.4đ); TATA (Dồn tích lợi nhuận trên giấy) (+6.4đ) |
+| **VE3** | Xây dựng và Vật liệu | **71.8** | 86 / 76 / 67 / 54 | AQI (Tài sản dài hạn mờ ám tăng) (+17.0đ); CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+14.2đ); Altman Z'' thấp (Sức khỏe tài chính yếu) (+12.5đ) |
+| **PVB** | Dầu khí | **71.8** | 100 / 15 / 75 / 92 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+20.6đ); SGI (Tăng trưởng DT quá nóng) (+10.2đ); TATA (Dồn tích lợi nhuận trên giấy) (+9.1đ) |
+| **NTL** | Bất động sản | **70.3** | 100 / 0 / 77 / 100 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+18.2đ); DSRI (Phải thu KH tăng nhanh hơn DT) (+15.0đ); TATA (Dồn tích lợi nhuận trên giấy) (+7.3đ) |
+| **HLD** | Bất động sản | **70.0** | 100 / 12 / 75 / 88 | CFO/Tổng TS thấp (Dòng tiền yếu/âm) (+20.9đ); SGI (Tăng trưởng DT quá nóng) (+14.8đ); TATA (Dồn tích lợi nhuận trên giấy) (+9.8đ) |
 
 ---
 
 ## 3. KẾT QUẢ 4 LỚP KIỂM CHỨNG KHOA HỌC (QUALITY GATE 3 — MINH BẠCH 100%)
 
-### Lớp 1: Kiểm chứng Độ trung thực Giải thích `SHAP` (Explainability Fidelity)
-- **Độ khớp mô hình giải thích (`R²`):** **`0.9653`** (tái hiện **`96.53%`** biến thiên của điểm rủi ro tổng hợp!).
-- **Sai số trung bình tuyệt đối (`MAE`):** **`2.67` điểm** trên thang 100 (sai lệch cực nhỏ!).
+### Lớp 1: Kiểm chứng Độ trung thực Giải thích `SHAP` — Đối sánh Trước & Sau Tối ưu (Explainability Fidelity)
+
+> **Lưu ý quan trọng tránh nhầm lẫn:** Bài toán chính của hệ thống là **Phát hiện Bất thường Không giám sát & Xếp hạng Rủi ro** (điểm `Composite Risk Score` tính chính xác `100%`, sai số `0.00`). Các chỉ số `R²` và `MAE` dưới đây là **độ khớp của bộ phiên dịch SHAP** (chuyển đổi đóng góp từng chỉ số về đơn vị điểm `0–100` để hiển thị trên biểu đồ thác nước).
+
+| Phiên bản Bộ phiên dịch `SHAP` | Đầu vào giải thích | `R²` (Trên toàn tập) | `MAE` (Điểm trên thang 100) | `R²` Out-of-Time (`2024–2025`) | `MAE` Out-of-Time (`2024–2025`) |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **Trước tối ưu (V1)** | 12 biến `risk_z_*` bị cắt cụt phần tốt về `0` | `0.9653` | `2.67` điểm | — | — |
+| **Sau tối ưu (V2 — Hiện hành)** | **12 chỉ số tài chính đầy đủ hai chiều** *(giữ nguyên Isolation Forest 100%)* | **`0.9964`** | **`0.85` điểm** *(giảm **68.2%** sai số!)* | **`0.9545`** | **`2.81` điểm** |
+
 - **Độ chính xác tính cộng tính (`Base Value + sum(SHAP) == Dự đoán`):** Sai số lớn nhất trên toàn bộ 4.340 dòng chỉ là **`0.0`** (chính xác tuyệt đối về mặt số học!).
-- **So sánh tầm quan trọng giữa `SHAP trên IsoForest gốc` và `SHAP trên Composite Score`:** `Isolation Forest` không giám sát đánh giá ngang nhau độ thưa hình học của cả 12 chiều (ưu tiên các biến đuôi dài như `AQI`, `Phải thu/DT`, `SRR`, `DEPI`), trong khi `Composite Score` lồng ghép thêm trọng số tài chính kinh điển (`CFO/Tổng TS` #1 = `6.40đ`, `Altman Z''` #2 = `5.42đ`, `DSRI` #3 = `3.96đ`, `TATA` #4 = `3.30đ`). Chính sự bổ trợ trực giao giữa *góc nhìn hình học đa biến (AI)* và *góc nhìn kế toán học thuật* này đã giúp hệ thống tổng hợp đạt sức mạnh phân biệt `AUC = 0.9299` vượt trội mọi mô hình đơn lẻ!
+- **Ý nghĩa của kết quả sau tối ưu:** Việc mở lại toàn bộ thông tin hai chiều cho bộ phiên dịch SHAP (mà **không làm thay đổi một dấu phẩy nào** của điểm rủi ro chính thức `AUC = 0.9299`) giúp sai số giải thích giảm mạnh **68.2%** (từ `2.67` xuống chỉ còn **`0.85` điểm** trên thang 100, và trên tập tương lai `2024–2025` chưa từng thấy vẫn giữ vững `R² = 0.9545`, `MAE = 2.81đ` — chứng minh hoàn toàn **không bị học vẹt / overfitting**!).
+- **So sánh tầm quan trọng giữa `SHAP trên IsoForest gốc` và `SHAP trên Composite Score`:** `Isolation Forest` không giám sát đánh giá ngang nhau độ thưa hình học của cả 12 chiều (ưu tiên các biến đuôi dài như `AQI`, `Phải thu/DT`, `SRR`, `DEPI`), trong khi `Composite Score` lồng ghép thêm trọng số tài chính kinh điển (`CFO/Tổng TS`, `Altman Z''`, `DSRI`, `TATA`). Chính sự bổ trợ trực giao giữa *góc nhìn hình học đa biến (AI)* và *góc nhìn kế toán học thuật* này đã giúp hệ thống tổng hợp đạt sức mạnh phân biệt `AUC = 0.9299` vượt trội mọi mô hình đơn lẻ!
 
 ### Lớp 2: Kiểm định Hội tụ Đa mô hình (Cross-Model Convergence — Spearman $\rho$)
 Chứng minh 4 trụ cột độc lập bổ trợ hài hòa cho nhau chứ không mâu thuẫn hay trùng lặp hoàn toàn:

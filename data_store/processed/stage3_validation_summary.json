@@ -1,6 +1,6 @@
 {
-  "trained_at": "2026-11-23 12:19:34",
-  "elapsed_seconds": 11.99,
+  "trained_at": "2026-11-23 14:25:31",
+  "elapsed_seconds": 17.86,
   "n_scored_firm_years": 4340,
   "n_scored_2025": 639,
   "risk_tier_counts_all": {
@@ -14,11 +14,16 @@
     "Cao (Cảnh báo Đỏ)": 26
   },
   "layer1_shap_fidelity": {
-    "surrogate_r2": 0.9653,
-    "surrogate_mae_points": 2.67,
+    "before_opt_r2": 0.9653,
+    "before_opt_mae_points": 2.67,
+    "surrogate_r2": 0.9964,
+    "surrogate_mae_points": 0.85,
+    "surrogate_oot_r2": 0.9545,
+    "surrogate_oot_mae_points": 2.81,
+    "mae_reduction_pct": 68.2,
     "shap_additivity_max_err": 0.0,
-    "native_vs_composite_importance_spearman": -0.4266,
-    "native_vs_composite_importance_p": 0.16669998762494498
+    "native_vs_composite_importance_spearman": -0.4056,
+    "native_vs_composite_importance_p": 0.19083587400450036
   },
   "layer2_convergence": {
     "spearman_matrix": {
@@ -435,73 +440,73 @@
     {
       "feature": "risk_cfo",
       "label_vi": "CFO/Tổng TS thấp (Dòng tiền yếu/âm)",
-      "mean_abs_shap_points": 6.404,
+      "mean_abs_shap_points": 7.202,
       "native_iso_shap": 0.26059
     },
     {
       "feature": "risk_altman",
       "label_vi": "Altman Z'' thấp (Sức khỏe tài chính yếu)",
-      "mean_abs_shap_points": 5.424,
+      "mean_abs_shap_points": 5.665,
       "native_iso_shap": 0.28024
     },
     {
       "feature": "risk_dsri",
       "label_vi": "DSRI (Phải thu KH tăng nhanh hơn DT)",
-      "mean_abs_shap_points": 3.956,
+      "mean_abs_shap_points": 4.174,
       "native_iso_shap": 0.34415
     },
     {
       "feature": "risk_tata",
       "label_vi": "TATA (Dồn tích lợi nhuận trên giấy)",
-      "mean_abs_shap_points": 3.3,
+      "mean_abs_shap_points": 3.102,
       "native_iso_shap": 0.29825
     },
     {
       "feature": "risk_sgi",
       "label_vi": "SGI (Tăng trưởng DT quá nóng)",
-      "mean_abs_shap_points": 2.466,
+      "mean_abs_shap_points": 2.65,
       "native_iso_shap": 0.32248
     },
     {
       "feature": "risk_aqi",
       "label_vi": "AQI (Tài sản dài hạn mờ ám tăng)",
-      "mean_abs_shap_points": 2.289,
+      "mean_abs_shap_points": 2.318,
       "native_iso_shap": 0.40285
-    },
-    {
-      "feature": "risk_gmi",
-      "label_vi": "GMI (Biên lãi gộp suy giảm)",
-      "mean_abs_shap_points": 1.926,
-      "native_iso_shap": 0.32078
     },
     {
       "feature": "risk_srr",
       "label_vi": "SRR (Phải thu khác & Trả trước cao)",
-      "mean_abs_shap_points": 1.634,
+      "mean_abs_shap_points": 1.919,
       "native_iso_shap": 0.38
     },
     {
-      "feature": "risk_ar_rev",
-      "label_vi": "Phải thu NH / Doanh thu cao",
-      "mean_abs_shap_points": 1.185,
-      "native_iso_shap": 0.38615
+      "feature": "risk_gmi",
+      "label_vi": "GMI (Biên lãi gộp suy giảm)",
+      "mean_abs_shap_points": 1.806,
+      "native_iso_shap": 0.32078
     },
     {
       "feature": "risk_depi",
       "label_vi": "DEPI (Tỷ lệ khấu hao giảm)",
-      "mean_abs_shap_points": 1.051,
+      "mean_abs_shap_points": 0.964,
       "native_iso_shap": 0.37852
+    },
+    {
+      "feature": "risk_ar_rev",
+      "label_vi": "Phải thu NH / Doanh thu cao",
+      "mean_abs_shap_points": 0.388,
+      "native_iso_shap": 0.38615
     },
     {
       "feature": "risk_lvgi",
       "label_vi": "LVGI (Đòn bẩy nợ tăng nhanh)",
-      "mean_abs_shap_points": 0.38,
+      "mean_abs_shap_points": 0.378,
       "native_iso_shap": 0.29965
     },
     {
       "feature": "risk_sgai",
       "label_vi": "SGAI (Chi phí BH & QLDN phình to)",
-      "mean_abs_shap_points": 0.246,
+      "mean_abs_shap_points": 0.299,
       "native_iso_shap": 0.32207
     }
   ]
