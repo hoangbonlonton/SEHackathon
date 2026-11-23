@@ -1,0 +1,1537 @@
+﻿icb_sector_vi,year,feature,n_companies_sector,n_valid_obs,sector_median,robust_scale,benchmark_scope
+Bán lẻ,2018,dsri,14,0,0.0,1.4826,market_fallback_small_sector
+Bán lẻ,2018,gmi,14,0,0.0,1.4826,market_fallback_small_sector
+Bán lẻ,2018,aqi,14,0,0.0,1.4826,market_fallback_small_sector
+Bán lẻ,2018,sgi,14,0,0.0,1.4826,market_fallback_small_sector
+Bán lẻ,2018,depi,14,0,0.0,1.4826,market_fallback_small_sector
+Bán lẻ,2018,sgai,14,0,0.0,1.4826,market_fallback_small_sector
+Bán lẻ,2018,tata,14,14,0.03779,0.13968,icb_sector
+Bán lẻ,2018,lvgi,14,0,0.0,1.4826,market_fallback_small_sector
+Bán lẻ,2018,altman_z_double_prime,14,14,6.6078,2.66912,icb_sector
+Bán lẻ,2018,cfo_to_assets,14,14,0.02049,0.15604,icb_sector
+Bán lẻ,2018,sensitive_receivables_ratio,14,14,0.05361,0.02905,icb_sector
+Bán lẻ,2018,receivable_to_revenue,14,14,0.06593,0.0618,icb_sector
+Bán lẻ,2019,dsri,14,14,0.99484,0.21922,icb_sector
+Bán lẻ,2019,gmi,14,14,0.98647,0.13633,icb_sector
+Bán lẻ,2019,aqi,14,14,1.06203,0.18533,icb_sector
+Bán lẻ,2019,sgi,14,14,1.01739,0.17139,icb_sector
+Bán lẻ,2019,depi,14,14,0.94877,0.07959,icb_sector
+Bán lẻ,2019,sgai,14,14,1.05156,0.14036,icb_sector
+Bán lẻ,2019,tata,14,14,0.03238,0.09116,icb_sector
+Bán lẻ,2019,lvgi,14,14,0.96177,0.09334,icb_sector
+Bán lẻ,2019,altman_z_double_prime,14,14,6.8994,2.86239,icb_sector
+Bán lẻ,2019,cfo_to_assets,14,14,0.06354,0.10053,icb_sector
+Bán lẻ,2019,sensitive_receivables_ratio,14,14,0.06478,0.02665,icb_sector
+Bán lẻ,2019,receivable_to_revenue,14,14,0.06613,0.04918,icb_sector
+Bán lẻ,2020,dsri,14,14,0.91682,0.46685,icb_sector
+Bán lẻ,2020,gmi,14,14,0.94305,0.16826,icb_sector
+Bán lẻ,2020,aqi,14,14,1.0335,0.29288,icb_sector
+Bán lẻ,2020,sgi,14,14,0.94439,0.29599,icb_sector
+Bán lẻ,2020,depi,14,14,0.92315,0.11093,icb_sector
+Bán lẻ,2020,sgai,14,14,1.11796,0.27915,icb_sector
+Bán lẻ,2020,tata,14,14,-0.03142,0.14458,icb_sector
+Bán lẻ,2020,lvgi,14,14,0.98498,0.19681,icb_sector
+Bán lẻ,2020,altman_z_double_prime,14,14,6.97646,3.1391,icb_sector
+Bán lẻ,2020,cfo_to_assets,14,14,0.06086,0.19608,icb_sector
+Bán lẻ,2020,sensitive_receivables_ratio,14,14,0.05163,0.04387,icb_sector
+Bán lẻ,2020,receivable_to_revenue,14,14,0.09622,0.09277,icb_sector
+Bán lẻ,2021,dsri,14,14,1.15537,0.60548,icb_sector
+Bán lẻ,2021,gmi,14,14,0.99905,0.17934,icb_sector
+Bán lẻ,2021,aqi,14,14,0.92196,0.24813,icb_sector
+Bán lẻ,2021,sgi,14,14,1.05095,0.23895,icb_sector
+Bán lẻ,2021,depi,14,14,0.93517,0.0758,icb_sector
+Bán lẻ,2021,sgai,14,14,1.00161,0.13099,icb_sector
+Bán lẻ,2021,tata,14,14,0.03396,0.10888,icb_sector
+Bán lẻ,2021,lvgi,14,14,1.01953,0.08776,icb_sector
+Bán lẻ,2021,altman_z_double_prime,14,14,6.8545,2.46587,icb_sector
+Bán lẻ,2021,cfo_to_assets,14,14,0.01653,0.08263,icb_sector
+Bán lẻ,2021,sensitive_receivables_ratio,14,14,0.04966,0.04085,icb_sector
+Bán lẻ,2021,receivable_to_revenue,14,14,0.10723,0.10905,icb_sector
+Bán lẻ,2022,dsri,14,14,0.83721,0.44618,icb_sector
+Bán lẻ,2022,gmi,14,14,0.94721,0.12735,icb_sector
+Bán lẻ,2022,aqi,14,14,0.98629,0.12546,icb_sector
+Bán lẻ,2022,sgi,14,14,1.12832,0.32762,icb_sector
+Bán lẻ,2022,depi,14,14,0.9573,0.04471,icb_sector
+Bán lẻ,2022,sgai,14,14,0.99722,0.20841,icb_sector
+Bán lẻ,2022,tata,14,14,-0.00448,0.10904,icb_sector
+Bán lẻ,2022,lvgi,14,14,0.98541,0.07817,icb_sector
+Bán lẻ,2022,altman_z_double_prime,14,14,7.0828,2.83405,icb_sector
+Bán lẻ,2022,cfo_to_assets,14,14,0.04068,0.1595,icb_sector
+Bán lẻ,2022,sensitive_receivables_ratio,14,14,0.04337,0.03106,icb_sector
+Bán lẻ,2022,receivable_to_revenue,14,14,0.08345,0.07419,icb_sector
+Bán lẻ,2023,dsri,15,14,1.19531,0.35721,icb_sector
+Bán lẻ,2023,gmi,15,14,0.98447,0.17683,icb_sector
+Bán lẻ,2023,aqi,15,14,0.95529,0.16052,icb_sector
+Bán lẻ,2023,sgi,15,14,0.91437,0.09429,icb_sector
+Bán lẻ,2023,depi,15,14,0.94393,0.098,icb_sector
+Bán lẻ,2023,sgai,15,14,1.07345,0.13529,icb_sector
+Bán lẻ,2023,tata,15,15,0.00856,0.07589,icb_sector
+Bán lẻ,2023,lvgi,15,14,1.05296,0.06756,icb_sector
+Bán lẻ,2023,altman_z_double_prime,15,15,6.48078,2.31694,icb_sector
+Bán lẻ,2023,cfo_to_assets,15,15,0.05716,0.09835,icb_sector
+Bán lẻ,2023,sensitive_receivables_ratio,15,15,0.04618,0.01689,icb_sector
+Bán lẻ,2023,receivable_to_revenue,15,15,0.07084,0.06995,icb_sector
+Bán lẻ,2024,dsri,15,15,0.97272,0.32671,icb_sector
+Bán lẻ,2024,gmi,15,15,0.93016,0.10832,icb_sector
+Bán lẻ,2024,aqi,15,15,0.96424,0.12233,icb_sector
+Bán lẻ,2024,sgi,15,15,1.10605,0.1149,icb_sector
+Bán lẻ,2024,depi,15,15,0.93559,0.1382,icb_sector
+Bán lẻ,2024,sgai,15,15,1.04209,0.14636,icb_sector
+Bán lẻ,2024,tata,15,15,-0.0053,0.06202,icb_sector
+Bán lẻ,2024,lvgi,15,15,1.00069,0.04908,icb_sector
+Bán lẻ,2024,altman_z_double_prime,15,15,6.39553,2.46589,icb_sector
+Bán lẻ,2024,cfo_to_assets,15,15,0.03961,0.07748,icb_sector
+Bán lẻ,2024,sensitive_receivables_ratio,15,15,0.03683,0.01753,icb_sector
+Bán lẻ,2024,receivable_to_revenue,15,15,0.10409,0.08441,icb_sector
+Bán lẻ,2025,dsri,15,15,1.11915,0.29158,icb_sector
+Bán lẻ,2025,gmi,15,15,1.02843,0.1374,icb_sector
+Bán lẻ,2025,aqi,15,15,0.88693,0.20183,icb_sector
+Bán lẻ,2025,sgi,15,15,1.1727,0.21018,icb_sector
+Bán lẻ,2025,depi,15,15,0.9715,0.16301,icb_sector
+Bán lẻ,2025,sgai,15,15,0.88037,0.16317,icb_sector
+Bán lẻ,2025,tata,15,15,0.03907,0.12226,icb_sector
+Bán lẻ,2025,lvgi,15,15,1.06693,0.10093,icb_sector
+Bán lẻ,2025,altman_z_double_prime,15,15,6.45574,2.0958,icb_sector
+Bán lẻ,2025,cfo_to_assets,15,15,0.03777,0.11577,icb_sector
+Bán lẻ,2025,sensitive_receivables_ratio,15,15,0.04599,0.02443,icb_sector
+Bán lẻ,2025,receivable_to_revenue,15,15,0.06593,0.07691,icb_sector
+Bất động sản,2018,dsri,75,0,0.0,1.4826,market_fallback_small_sector
+Bất động sản,2018,gmi,75,0,0.0,1.4826,market_fallback_small_sector
+Bất động sản,2018,aqi,75,0,0.0,1.4826,market_fallback_small_sector
+Bất động sản,2018,sgi,75,0,0.0,1.4826,market_fallback_small_sector
+Bất động sản,2018,depi,75,0,0.0,1.4826,market_fallback_small_sector
+Bất động sản,2018,sgai,75,0,0.0,1.4826,market_fallback_small_sector
+Bất động sản,2018,tata,75,75,0.01684,0.08644,icb_sector
+Bất động sản,2018,lvgi,75,0,0.0,1.4826,market_fallback_small_sector
+Bất động sản,2018,altman_z_double_prime,75,75,7.37144,2.26468,icb_sector
+Bất động sản,2018,cfo_to_assets,75,75,0.02917,0.11028,icb_sector
+Bất động sản,2018,sensitive_receivables_ratio,75,75,0.1305,0.12203,icb_sector
+Bất động sản,2018,receivable_to_revenue,75,75,0.72444,0.52898,icb_sector
+Bất động sản,2019,dsri,76,75,1.08533,0.5613,icb_sector
+Bất động sản,2019,gmi,76,75,0.99945,0.30517,icb_sector
+Bất động sản,2019,aqi,76,75,1.0,0.26895,icb_sector
+Bất động sản,2019,sgi,76,75,1.12009,0.41621,icb_sector
+Bất động sản,2019,depi,76,75,0.97654,0.21833,icb_sector
+Bất động sản,2019,sgai,76,74,1.08337,0.52074,icb_sector
+Bất động sản,2019,tata,76,76,0.01524,0.10034,icb_sector
+Bất động sản,2019,lvgi,76,75,1.01005,0.1385,icb_sector
+Bất động sản,2019,altman_z_double_prime,76,76,6.85281,2.36934,icb_sector
+Bất động sản,2019,cfo_to_assets,76,76,0.03939,0.10107,icb_sector
+Bất động sản,2019,sensitive_receivables_ratio,76,76,0.1346,0.1321,icb_sector
+Bất động sản,2019,receivable_to_revenue,76,76,0.73299,0.55747,icb_sector
+Bất động sản,2020,dsri,77,75,1.04281,0.54745,icb_sector
+Bất động sản,2020,gmi,77,74,0.95642,0.32329,icb_sector
+Bất động sản,2020,aqi,77,76,1.04084,0.37105,icb_sector
+Bất động sản,2020,sgi,77,76,0.99705,0.48838,icb_sector
+Bất động sản,2020,depi,77,76,0.96758,0.17874,icb_sector
+Bất động sản,2020,sgai,77,76,1.07559,0.54898,icb_sector
+Bất động sản,2020,tata,77,77,0.03129,0.08356,icb_sector
+Bất động sản,2020,lvgi,77,76,1.02172,0.11966,icb_sector
+Bất động sản,2020,altman_z_double_prime,77,77,6.69927,2.10882,icb_sector
+Bất động sản,2020,cfo_to_assets,77,77,0.01759,0.0973,icb_sector
+Bất động sản,2020,sensitive_receivables_ratio,77,77,0.14262,0.16325,icb_sector
+Bất động sản,2020,receivable_to_revenue,77,77,0.77628,0.72628,icb_sector
+Bất động sản,2021,dsri,76,76,1.07551,0.66259,icb_sector
+Bất động sản,2021,gmi,76,70,0.9168,0.21956,icb_sector
+Bất động sản,2021,aqi,76,75,1.0,0.20451,icb_sector
+Bất động sản,2021,sgi,76,76,1.0522,0.49417,icb_sector
+Bất động sản,2021,depi,76,76,0.92796,0.22093,icb_sector
+Bất động sản,2021,sgai,76,74,0.97363,0.35035,icb_sector
+Bất động sản,2021,tata,76,76,0.04679,0.08933,icb_sector
+Bất động sản,2021,lvgi,76,76,0.96378,0.15142,icb_sector
+Bất động sản,2021,altman_z_double_prime,76,76,7.04252,2.64631,icb_sector
+Bất động sản,2021,cfo_to_assets,76,76,0.00168,0.08781,icb_sector
+Bất động sản,2021,sensitive_receivables_ratio,76,76,0.12831,0.14781,icb_sector
+Bất động sản,2021,receivable_to_revenue,76,76,0.80702,0.78716,icb_sector
+Bất động sản,2022,dsri,79,75,1.0736,0.73835,icb_sector
+Bất động sản,2022,gmi,79,72,1.03601,0.37688,icb_sector
+Bất động sản,2022,aqi,79,76,0.99521,0.16083,icb_sector
+Bất động sản,2022,sgi,79,75,0.89026,0.39931,icb_sector
+Bất động sản,2022,depi,79,76,1.0,0.17038,icb_sector
+Bất động sản,2022,sgai,79,73,1.16249,0.57347,icb_sector
+Bất động sản,2022,tata,79,79,0.0271,0.08913,icb_sector
+Bất động sản,2022,lvgi,79,76,1.00531,0.12158,icb_sector
+Bất động sản,2022,altman_z_double_prime,79,79,6.40016,1.99363,icb_sector
+Bất động sản,2022,cfo_to_assets,79,79,0.00239,0.12021,icb_sector
+Bất động sản,2022,sensitive_receivables_ratio,79,79,0.14505,0.16957,icb_sector
+Bất động sản,2022,receivable_to_revenue,79,78,0.94294,0.998,icb_sector
+Bất động sản,2023,dsri,78,76,1.23608,0.83278,icb_sector
+Bất động sản,2023,gmi,78,75,0.98661,0.28431,icb_sector
+Bất động sản,2023,aqi,78,76,0.99752,0.14022,icb_sector
+Bất động sản,2023,sgi,78,76,0.87153,0.51119,icb_sector
+Bất động sản,2023,depi,78,78,0.98345,0.10974,icb_sector
+Bất động sản,2023,sgai,78,75,1.1227,0.66333,icb_sector
+Bất động sản,2023,tata,78,78,0.01955,0.08046,icb_sector
+Bất động sản,2023,lvgi,78,78,0.97721,0.08089,icb_sector
+Bất động sản,2023,altman_z_double_prime,78,78,6.75759,2.00007,icb_sector
+Bất động sản,2023,cfo_to_assets,78,78,-0.0028,0.07715,icb_sector
+Bất động sản,2023,sensitive_receivables_ratio,78,78,0.1635,0.18232,icb_sector
+Bất động sản,2023,receivable_to_revenue,78,76,1.08816,1.31152,icb_sector
+Bất động sản,2024,dsri,79,74,1.01539,0.5232,icb_sector
+Bất động sản,2024,gmi,79,72,1.03141,0.18616,icb_sector
+Bất động sản,2024,aqi,79,78,0.96953,0.18705,icb_sector
+Bất động sản,2024,sgi,79,75,1.08266,0.47319,icb_sector
+Bất động sản,2024,depi,79,78,0.95179,0.14232,icb_sector
+Bất động sản,2024,sgai,79,74,0.9194,0.31179,icb_sector
+Bất động sản,2024,tata,79,79,0.02632,0.06596,icb_sector
+Bất động sản,2024,lvgi,79,78,0.98286,0.11865,icb_sector
+Bất động sản,2024,altman_z_double_prime,79,79,6.66899,2.48413,icb_sector
+Bất động sản,2024,cfo_to_assets,79,79,0.00605,0.06985,icb_sector
+Bất động sản,2024,sensitive_receivables_ratio,79,79,0.17142,0.20306,icb_sector
+Bất động sản,2024,receivable_to_revenue,79,77,1.33836,1.61403,icb_sector
+Bất động sản,2025,dsri,79,76,0.82453,0.47977,icb_sector
+Bất động sản,2025,gmi,79,74,0.96431,0.16221,icb_sector
+Bất động sản,2025,aqi,79,77,1.00661,0.22011,icb_sector
+Bất động sản,2025,sgi,79,76,1.13568,0.61188,icb_sector
+Bất động sản,2025,depi,79,79,0.98271,0.10542,icb_sector
+Bất động sản,2025,sgai,79,74,0.96438,0.50256,icb_sector
+Bất động sản,2025,tata,79,79,0.02922,0.09123,icb_sector
+Bất động sản,2025,lvgi,79,79,0.97683,0.10279,icb_sector
+Bất động sản,2025,altman_z_double_prime,79,79,7.03316,1.96958,icb_sector
+Bất động sản,2025,cfo_to_assets,79,79,0.00372,0.09061,icb_sector
+Bất động sản,2025,sensitive_receivables_ratio,79,79,0.15296,0.17209,icb_sector
+Bất động sản,2025,receivable_to_revenue,79,78,1.05978,1.08084,icb_sector
+Công nghệ Thông tin,2018,dsri,16,0,0.0,1.4826,market_fallback_small_sector
+Công nghệ Thông tin,2018,gmi,16,0,0.0,1.4826,market_fallback_small_sector
+Công nghệ Thông tin,2018,aqi,16,0,0.0,1.4826,market_fallback_small_sector
+Công nghệ Thông tin,2018,sgi,16,0,0.0,1.4826,market_fallback_small_sector
+Công nghệ Thông tin,2018,depi,16,0,0.0,1.4826,market_fallback_small_sector
+Công nghệ Thông tin,2018,sgai,16,0,0.0,1.4826,market_fallback_small_sector
+Công nghệ Thông tin,2018,tata,16,16,0.02461,0.08571,icb_sector
+Công nghệ Thông tin,2018,lvgi,16,0,0.0,1.4826,market_fallback_small_sector
+Công nghệ Thông tin,2018,altman_z_double_prime,16,16,6.51526,2.14656,icb_sector
+Công nghệ Thông tin,2018,cfo_to_assets,16,16,0.02876,0.07342,icb_sector
+Công nghệ Thông tin,2018,sensitive_receivables_ratio,16,16,0.06373,0.04506,icb_sector
+Công nghệ Thông tin,2018,receivable_to_revenue,16,16,0.46426,0.27818,icb_sector
+Công nghệ Thông tin,2019,dsri,16,16,0.96538,0.15709,icb_sector
+Công nghệ Thông tin,2019,gmi,16,16,1.01274,0.43589,icb_sector
+Công nghệ Thông tin,2019,aqi,16,16,1.03455,0.29831,icb_sector
+Công nghệ Thông tin,2019,sgi,16,16,0.98257,0.19995,icb_sector
+Công nghệ Thông tin,2019,depi,16,16,1.0,0.05767,icb_sector
+Công nghệ Thông tin,2019,sgai,16,16,1.10838,0.31985,icb_sector
+Công nghệ Thông tin,2019,tata,16,16,-0.00269,0.04479,icb_sector
+Công nghệ Thông tin,2019,lvgi,16,16,1.00812,0.08878,icb_sector
+Công nghệ Thông tin,2019,altman_z_double_prime,16,16,6.29241,2.11855,icb_sector
+Công nghệ Thông tin,2019,cfo_to_assets,16,16,0.03735,0.02721,icb_sector
+Công nghệ Thông tin,2019,sensitive_receivables_ratio,16,16,0.07219,0.05901,icb_sector
+Công nghệ Thông tin,2019,receivable_to_revenue,16,16,0.47327,0.32294,icb_sector
+Công nghệ Thông tin,2020,dsri,16,16,0.94795,0.21416,icb_sector
+Công nghệ Thông tin,2020,gmi,16,15,0.97589,0.28953,icb_sector
+Công nghệ Thông tin,2020,aqi,16,15,1.06281,0.38072,icb_sector
+Công nghệ Thông tin,2020,sgi,16,16,0.91121,0.3287,icb_sector
+Công nghệ Thông tin,2020,depi,16,16,1.0,0.20061,icb_sector
+Công nghệ Thông tin,2020,sgai,16,16,1.0224,0.33081,icb_sector
+Công nghệ Thông tin,2020,tata,16,16,-0.0405,0.05798,icb_sector
+Công nghệ Thông tin,2020,lvgi,16,16,1.00818,0.15547,icb_sector
+Công nghệ Thông tin,2020,altman_z_double_prime,16,16,6.00742,1.62481,icb_sector
+Công nghệ Thông tin,2020,cfo_to_assets,16,16,0.07666,0.10104,icb_sector
+Công nghệ Thông tin,2020,sensitive_receivables_ratio,16,16,0.05654,0.04357,icb_sector
+Công nghệ Thông tin,2020,receivable_to_revenue,16,16,0.46921,0.31917,icb_sector
+Công nghệ Thông tin,2021,dsri,16,16,0.99408,0.14661,icb_sector
+Công nghệ Thông tin,2021,gmi,16,15,1.03589,0.29154,icb_sector
+Công nghệ Thông tin,2021,aqi,16,16,1.07116,0.33663,icb_sector
+Công nghệ Thông tin,2021,sgi,16,16,1.07709,0.37159,icb_sector
+Công nghệ Thông tin,2021,depi,16,16,0.97016,0.0736,icb_sector
+Công nghệ Thông tin,2021,sgai,16,16,0.98649,0.31698,icb_sector
+Công nghệ Thông tin,2021,tata,16,16,0.00173,0.15776,icb_sector
+Công nghệ Thông tin,2021,lvgi,16,16,1.01712,0.1473,icb_sector
+Công nghệ Thông tin,2021,altman_z_double_prime,16,16,5.99316,1.89321,icb_sector
+Công nghệ Thông tin,2021,cfo_to_assets,16,16,0.03051,0.13875,icb_sector
+Công nghệ Thông tin,2021,sensitive_receivables_ratio,16,16,0.10744,0.07515,icb_sector
+Công nghệ Thông tin,2021,receivable_to_revenue,16,16,0.45864,0.27688,icb_sector
+Công nghệ Thông tin,2022,dsri,16,16,0.93213,0.25871,icb_sector
+Công nghệ Thông tin,2022,gmi,16,16,1.16078,0.23355,icb_sector
+Công nghệ Thông tin,2022,aqi,16,16,1.10928,0.61901,icb_sector
+Công nghệ Thông tin,2022,sgi,16,16,1.26785,0.74555,icb_sector
+Công nghệ Thông tin,2022,depi,16,16,0.99168,0.13616,icb_sector
+Công nghệ Thông tin,2022,sgai,16,16,1.00549,0.42061,icb_sector
+Công nghệ Thông tin,2022,tata,16,16,0.04944,0.12283,icb_sector
+Công nghệ Thông tin,2022,lvgi,16,16,0.88601,0.11566,icb_sector
+Công nghệ Thông tin,2022,altman_z_double_prime,16,16,5.95893,1.13626,icb_sector
+Công nghệ Thông tin,2022,cfo_to_assets,16,16,-0.02758,0.14589,icb_sector
+Công nghệ Thông tin,2022,sensitive_receivables_ratio,16,16,0.09484,0.06844,icb_sector
+Công nghệ Thông tin,2022,receivable_to_revenue,16,16,0.41876,0.32909,icb_sector
+Công nghệ Thông tin,2023,dsri,15,15,1.03888,0.80717,icb_sector
+Công nghệ Thông tin,2023,gmi,15,15,1.01272,0.22033,icb_sector
+Công nghệ Thông tin,2023,aqi,15,15,1.0,0.1162,icb_sector
+Công nghệ Thông tin,2023,sgi,15,15,0.90081,0.37928,icb_sector
+Công nghệ Thông tin,2023,depi,15,15,1.0,0.09826,icb_sector
+Công nghệ Thông tin,2023,sgai,15,15,1.0114,0.29632,icb_sector
+Công nghệ Thông tin,2023,tata,15,15,0.00082,0.06728,icb_sector
+Công nghệ Thông tin,2023,lvgi,15,15,0.99379,0.05795,icb_sector
+Công nghệ Thông tin,2023,altman_z_double_prime,15,15,6.34448,1.26923,icb_sector
+Công nghệ Thông tin,2023,cfo_to_assets,15,15,0.00796,0.13879,icb_sector
+Công nghệ Thông tin,2023,sensitive_receivables_ratio,15,15,0.09484,0.07227,icb_sector
+Công nghệ Thông tin,2023,receivable_to_revenue,15,15,0.5567,0.39905,icb_sector
+Công nghệ Thông tin,2024,dsri,16,14,0.98163,0.45888,icb_sector
+Công nghệ Thông tin,2024,gmi,16,15,1.02414,0.18919,icb_sector
+Công nghệ Thông tin,2024,aqi,16,14,1.0,0.0614,icb_sector
+Công nghệ Thông tin,2024,sgi,16,15,1.19444,0.30165,icb_sector
+Công nghệ Thông tin,2024,depi,16,15,0.94665,0.07909,icb_sector
+Công nghệ Thông tin,2024,sgai,16,15,0.97443,0.30149,icb_sector
+Công nghệ Thông tin,2024,tata,16,16,0.0107,0.06271,icb_sector
+Công nghệ Thông tin,2024,lvgi,16,15,1.00256,0.0578,icb_sector
+Công nghệ Thông tin,2024,altman_z_double_prime,16,16,6.63959,1.16419,icb_sector
+Công nghệ Thông tin,2024,cfo_to_assets,16,16,-0.00445,0.14068,icb_sector
+Công nghệ Thông tin,2024,sensitive_receivables_ratio,16,16,0.10782,0.06212,icb_sector
+Công nghệ Thông tin,2024,receivable_to_revenue,16,16,0.50321,0.3822,icb_sector
+Công nghệ Thông tin,2025,dsri,16,16,1.15792,0.41558,icb_sector
+Công nghệ Thông tin,2025,gmi,16,15,1.0212,0.63209,icb_sector
+Công nghệ Thông tin,2025,aqi,16,16,0.95015,0.2376,icb_sector
+Công nghệ Thông tin,2025,sgi,16,16,1.13198,0.52309,icb_sector
+Công nghệ Thông tin,2025,depi,16,16,1.06928,0.12017,icb_sector
+Công nghệ Thông tin,2025,sgai,16,16,0.99415,0.53255,icb_sector
+Công nghệ Thông tin,2025,tata,16,16,0.00337,0.09022,icb_sector
+Công nghệ Thông tin,2025,lvgi,16,16,1.00342,0.2566,icb_sector
+Công nghệ Thông tin,2025,altman_z_double_prime,16,16,6.37304,2.28967,icb_sector
+Công nghệ Thông tin,2025,cfo_to_assets,16,16,0.02405,0.13061,icb_sector
+Công nghệ Thông tin,2025,sensitive_receivables_ratio,16,16,0.06752,0.05858,icb_sector
+Công nghệ Thông tin,2025,receivable_to_revenue,16,16,0.49555,0.32781,icb_sector
+Du lịch và Giải trí,2018,dsri,15,0,0.0,1.4826,market_fallback_small_sector
+Du lịch và Giải trí,2018,gmi,15,0,0.0,1.4826,market_fallback_small_sector
+Du lịch và Giải trí,2018,aqi,15,0,0.0,1.4826,market_fallback_small_sector
+Du lịch và Giải trí,2018,sgi,15,0,0.0,1.4826,market_fallback_small_sector
+Du lịch và Giải trí,2018,depi,15,0,0.0,1.4826,market_fallback_small_sector
+Du lịch và Giải trí,2018,sgai,15,0,0.0,1.4826,market_fallback_small_sector
+Du lịch và Giải trí,2018,tata,15,15,0.00446,0.06141,icb_sector
+Du lịch và Giải trí,2018,lvgi,15,0,0.0,1.4826,market_fallback_small_sector
+Du lịch và Giải trí,2018,altman_z_double_prime,15,15,7.48264,4.45257,icb_sector
+Du lịch và Giải trí,2018,cfo_to_assets,15,15,0.11331,0.15085,icb_sector
+Du lịch và Giải trí,2018,sensitive_receivables_ratio,15,15,0.03703,0.03802,icb_sector
+Du lịch và Giải trí,2018,receivable_to_revenue,15,15,0.24957,0.28328,icb_sector
+Du lịch và Giải trí,2019,dsri,15,14,1.01627,0.69503,icb_sector
+Du lịch và Giải trí,2019,gmi,15,14,1.08543,0.21669,icb_sector
+Du lịch và Giải trí,2019,aqi,15,15,1.0,0.27653,icb_sector
+Du lịch và Giải trí,2019,sgi,15,15,1.01321,0.10189,icb_sector
+Du lịch và Giải trí,2019,depi,15,15,0.93556,0.09528,icb_sector
+Du lịch và Giải trí,2019,sgai,15,15,1.02204,0.15775,icb_sector
+Du lịch và Giải trí,2019,tata,15,15,-0.01144,0.08956,icb_sector
+Du lịch và Giải trí,2019,lvgi,15,15,1.0845,0.27666,icb_sector
+Du lịch và Giải trí,2019,altman_z_double_prime,15,15,6.38699,5.3896,icb_sector
+Du lịch và Giải trí,2019,cfo_to_assets,15,15,0.13853,0.15415,icb_sector
+Du lịch và Giải trí,2019,sensitive_receivables_ratio,15,15,0.05975,0.05227,icb_sector
+Du lịch và Giải trí,2019,receivable_to_revenue,15,15,0.20891,0.19043,icb_sector
+Du lịch và Giải trí,2020,dsri,14,14,1.3462,1.09015,icb_sector
+Du lịch và Giải trí,2020,gmi,14,9,0.99506,0.21804,market_fallback_small_sector
+Du lịch và Giải trí,2020,aqi,14,12,0.98204,0.23236,icb_sector
+Du lịch và Giải trí,2020,sgi,14,14,0.38763,0.17299,icb_sector
+Du lịch và Giải trí,2020,depi,14,14,0.92039,0.09402,icb_sector
+Du lịch và Giải trí,2020,sgai,14,13,1.4504,0.41442,icb_sector
+Du lịch và Giải trí,2020,tata,14,14,-0.03075,0.08401,icb_sector
+Du lịch và Giải trí,2020,lvgi,14,14,0.99716,0.23694,icb_sector
+Du lịch và Giải trí,2020,altman_z_double_prime,14,14,7.42364,9.33509,icb_sector
+Du lịch và Giải trí,2020,cfo_to_assets,14,14,0.0024,0.07612,icb_sector
+Du lịch và Giải trí,2020,sensitive_receivables_ratio,14,14,0.03743,0.04108,icb_sector
+Du lịch và Giải trí,2020,receivable_to_revenue,14,14,0.32183,0.34172,icb_sector
+Du lịch và Giải trí,2021,dsri,14,14,1.3635,1.1337,icb_sector
+Du lịch và Giải trí,2021,gmi,14,4,1.00648,0.22192,market_fallback_small_sector
+Du lịch và Giải trí,2021,aqi,14,14,0.92027,0.27911,icb_sector
+Du lịch và Giải trí,2021,sgi,14,14,0.74848,0.41264,icb_sector
+Du lịch và Giải trí,2021,depi,14,14,0.92058,0.19656,icb_sector
+Du lịch và Giải trí,2021,sgai,14,13,1.20263,0.43714,icb_sector
+Du lịch và Giải trí,2021,tata,14,14,0.01533,0.08676,icb_sector
+Du lịch và Giải trí,2021,lvgi,14,14,1.09486,0.34367,icb_sector
+Du lịch và Giải trí,2021,altman_z_double_prime,14,14,7.89875,11.66398,icb_sector
+Du lịch và Giải trí,2021,cfo_to_assets,14,14,-0.00083,0.09873,icb_sector
+Du lịch và Giải trí,2021,sensitive_receivables_ratio,14,14,0.04174,0.04671,icb_sector
+Du lịch và Giải trí,2021,receivable_to_revenue,14,14,0.4382,0.42753,icb_sector
+Du lịch và Giải trí,2022,dsri,15,14,0.72402,0.73841,icb_sector
+Du lịch và Giải trí,2022,gmi,15,5,0.99556,0.21817,market_fallback_small_sector
+Du lịch và Giải trí,2022,aqi,15,14,0.98887,0.23466,icb_sector
+Du lịch và Giải trí,2022,sgi,15,14,2.28671,1.15055,icb_sector
+Du lịch và Giải trí,2022,depi,15,14,1.29914,0.56064,icb_sector
+Du lịch và Giải trí,2022,sgai,15,14,0.66418,0.24072,icb_sector
+Du lịch và Giải trí,2022,tata,15,15,0.05988,0.11728,icb_sector
+Du lịch và Giải trí,2022,lvgi,15,14,1.18196,0.27073,icb_sector
+Du lịch và Giải trí,2022,altman_z_double_prime,15,15,9.74054,12.68013,icb_sector
+Du lịch và Giải trí,2022,cfo_to_assets,15,15,0.04865,0.10197,icb_sector
+Du lịch và Giải trí,2022,sensitive_receivables_ratio,15,15,0.06633,0.07482,icb_sector
+Du lịch và Giải trí,2022,receivable_to_revenue,15,15,0.37681,0.51458,icb_sector
+Du lịch và Giải trí,2023,dsri,15,15,0.86077,0.41222,icb_sector
+Du lịch và Giải trí,2023,gmi,15,12,0.99568,0.33113,icb_sector
+Du lịch và Giải trí,2023,aqi,15,15,1.01391,0.19811,icb_sector
+Du lịch và Giải trí,2023,sgi,15,15,1.19984,0.2754,icb_sector
+Du lịch và Giải trí,2023,depi,15,15,0.9372,0.09311,icb_sector
+Du lịch và Giải trí,2023,sgai,15,15,0.95866,0.15892,icb_sector
+Du lịch và Giải trí,2023,tata,15,15,0.05097,0.06334,icb_sector
+Du lịch và Giải trí,2023,lvgi,15,15,1.09529,0.17134,icb_sector
+Du lịch và Giải trí,2023,altman_z_double_prime,15,15,8.40212,7.39352,icb_sector
+Du lịch và Giải trí,2023,cfo_to_assets,15,15,0.05191,0.08105,icb_sector
+Du lịch và Giải trí,2023,sensitive_receivables_ratio,15,15,0.05506,0.06056,icb_sector
+Du lịch và Giải trí,2023,receivable_to_revenue,15,15,0.45987,0.5288,icb_sector
+Du lịch và Giải trí,2024,dsri,15,14,0.903,0.3137,icb_sector
+Du lịch và Giải trí,2024,gmi,15,13,0.98336,0.33729,icb_sector
+Du lịch và Giải trí,2024,aqi,15,14,0.9727,0.1564,icb_sector
+Du lịch và Giải trí,2024,sgi,15,15,1.07323,0.28819,icb_sector
+Du lịch và Giải trí,2024,depi,15,15,1.02462,0.13282,icb_sector
+Du lịch và Giải trí,2024,sgai,15,15,1.04345,0.15935,icb_sector
+Du lịch và Giải trí,2024,tata,15,15,0.03377,0.13976,icb_sector
+Du lịch và Giải trí,2024,lvgi,15,15,0.93352,0.17948,icb_sector
+Du lịch và Giải trí,2024,altman_z_double_prime,15,15,9.45087,7.97703,icb_sector
+Du lịch và Giải trí,2024,cfo_to_assets,15,15,0.05874,0.16102,icb_sector
+Du lịch và Giải trí,2024,sensitive_receivables_ratio,15,15,0.02071,0.017,icb_sector
+Du lịch và Giải trí,2024,receivable_to_revenue,15,15,0.10748,0.10831,icb_sector
+Du lịch và Giải trí,2025,dsri,15,15,1.02225,0.25203,icb_sector
+Du lịch và Giải trí,2025,gmi,15,13,0.93032,0.09332,icb_sector
+Du lịch và Giải trí,2025,aqi,15,15,0.89131,0.18143,icb_sector
+Du lịch và Giải trí,2025,sgi,15,15,1.10715,0.19755,icb_sector
+Du lịch và Giải trí,2025,depi,15,15,1.0335,0.17407,icb_sector
+Du lịch và Giải trí,2025,sgai,15,15,0.94043,0.16503,icb_sector
+Du lịch và Giải trí,2025,tata,15,15,0.02851,0.0396,icb_sector
+Du lịch và Giải trí,2025,lvgi,15,15,0.99322,0.12355,icb_sector
+Du lịch và Giải trí,2025,altman_z_double_prime,15,15,9.98694,8.54412,icb_sector
+Du lịch và Giải trí,2025,cfo_to_assets,15,15,0.04735,0.09364,icb_sector
+Du lịch và Giải trí,2025,sensitive_receivables_ratio,15,15,0.01407,0.0192,icb_sector
+Du lịch và Giải trí,2025,receivable_to_revenue,15,15,0.11454,0.08181,icb_sector
+Dầu khí,2018,dsri,6,0,0.0,1.4826,market_fallback_small_sector
+Dầu khí,2018,gmi,6,0,0.0,1.4826,market_fallback_small_sector
+Dầu khí,2018,aqi,6,0,0.0,1.4826,market_fallback_small_sector
+Dầu khí,2018,sgi,6,0,0.0,1.4826,market_fallback_small_sector
+Dầu khí,2018,depi,6,0,0.0,1.4826,market_fallback_small_sector
+Dầu khí,2018,sgai,6,0,0.0,1.4826,market_fallback_small_sector
+Dầu khí,2018,tata,6,6,0.01822,0.10001,market_fallback_small_sector
+Dầu khí,2018,lvgi,6,0,0.0,1.4826,market_fallback_small_sector
+Dầu khí,2018,altman_z_double_prime,6,6,6.65702,2.84663,market_fallback_small_sector
+Dầu khí,2018,cfo_to_assets,6,6,0.0528,0.10465,market_fallback_small_sector
+Dầu khí,2018,sensitive_receivables_ratio,6,6,0.04056,0.04325,market_fallback_small_sector
+Dầu khí,2018,receivable_to_revenue,6,6,0.23035,0.20735,market_fallback_small_sector
+Dầu khí,2019,dsri,6,6,1.00166,0.35494,market_fallback_small_sector
+Dầu khí,2019,gmi,6,6,1.00236,0.20124,market_fallback_small_sector
+Dầu khí,2019,aqi,6,5,1.0,0.29198,market_fallback_small_sector
+Dầu khí,2019,sgi,6,6,1.03092,0.19223,market_fallback_small_sector
+Dầu khí,2019,depi,6,6,0.9696,0.12668,market_fallback_small_sector
+Dầu khí,2019,sgai,6,6,1.02948,0.21555,market_fallback_small_sector
+Dầu khí,2019,tata,6,6,-0.00178,0.08527,market_fallback_small_sector
+Dầu khí,2019,lvgi,6,6,0.98654,0.12862,market_fallback_small_sector
+Dầu khí,2019,altman_z_double_prime,6,6,6.56448,2.77627,market_fallback_small_sector
+Dầu khí,2019,cfo_to_assets,6,6,0.06271,0.108,market_fallback_small_sector
+Dầu khí,2019,sensitive_receivables_ratio,6,6,0.04095,0.04351,market_fallback_small_sector
+Dầu khí,2019,receivable_to_revenue,6,6,0.22436,0.22041,market_fallback_small_sector
+Dầu khí,2020,dsri,6,6,1.06596,0.38904,market_fallback_small_sector
+Dầu khí,2020,gmi,6,5,0.99506,0.21804,market_fallback_small_sector
+Dầu khí,2020,aqi,6,6,0.99635,0.28022,market_fallback_small_sector
+Dầu khí,2020,sgi,6,6,0.96378,0.24843,market_fallback_small_sector
+Dầu khí,2020,depi,6,6,0.9556,0.12418,market_fallback_small_sector
+Dầu khí,2020,sgai,6,6,1.04527,0.25542,market_fallback_small_sector
+Dầu khí,2020,tata,6,6,-0.00649,0.08133,market_fallback_small_sector
+Dầu khí,2020,lvgi,6,6,0.99517,0.13451,market_fallback_small_sector
+Dầu khí,2020,altman_z_double_prime,6,6,6.58817,2.73128,market_fallback_small_sector
+Dầu khí,2020,cfo_to_assets,6,6,0.06607,0.104,market_fallback_small_sector
+Dầu khí,2020,sensitive_receivables_ratio,6,6,0.04138,0.04793,market_fallback_small_sector
+Dầu khí,2020,receivable_to_revenue,6,6,0.25021,0.24139,market_fallback_small_sector
+Dầu khí,2021,dsri,6,6,0.98125,0.41233,market_fallback_small_sector
+Dầu khí,2021,gmi,6,4,1.00648,0.22192,market_fallback_small_sector
+Dầu khí,2021,aqi,6,6,0.97416,0.26231,market_fallback_small_sector
+Dầu khí,2021,sgi,6,6,1.06683,0.27376,market_fallback_small_sector
+Dầu khí,2021,depi,6,6,0.95004,0.12117,market_fallback_small_sector
+Dầu khí,2021,sgai,6,6,0.9753,0.2399,market_fallback_small_sector
+Dầu khí,2021,tata,6,6,0.02605,0.09526,market_fallback_small_sector
+Dầu khí,2021,lvgi,6,6,0.97762,0.15362,market_fallback_small_sector
+Dầu khí,2021,altman_z_double_prime,6,6,6.81817,2.91465,market_fallback_small_sector
+Dầu khí,2021,cfo_to_assets,6,6,0.03428,0.1044,market_fallback_small_sector
+Dầu khí,2021,sensitive_receivables_ratio,6,6,0.04249,0.04762,market_fallback_small_sector
+Dầu khí,2021,receivable_to_revenue,6,6,0.23907,0.23435,market_fallback_small_sector
+Dầu khí,2022,dsri,6,6,0.90758,0.37215,market_fallback_small_sector
+Dầu khí,2022,gmi,6,5,0.99556,0.21817,market_fallback_small_sector
+Dầu khí,2022,aqi,6,6,0.99028,0.23561,market_fallback_small_sector
+Dầu khí,2022,sgi,6,6,1.15467,0.27504,market_fallback_small_sector
+Dầu khí,2022,depi,6,6,0.98075,0.11477,market_fallback_small_sector
+Dầu khí,2022,sgai,6,6,0.98876,0.25617,market_fallback_small_sector
+Dầu khí,2022,tata,6,6,0.02419,0.09344,market_fallback_small_sector
+Dầu khí,2022,lvgi,6,6,0.98503,0.15047,market_fallback_small_sector
+Dầu khí,2022,altman_z_double_prime,6,6,6.878,2.9024,market_fallback_small_sector
+Dầu khí,2022,cfo_to_assets,6,6,0.04003,0.11596,market_fallback_small_sector
+Dầu khí,2022,sensitive_receivables_ratio,6,6,0.04834,0.05537,market_fallback_small_sector
+Dầu khí,2022,receivable_to_revenue,6,6,0.23683,0.24735,market_fallback_small_sector
+Dầu khí,2023,dsri,6,6,1.09861,0.45224,market_fallback_small_sector
+Dầu khí,2023,gmi,6,5,1.00967,0.21794,market_fallback_small_sector
+Dầu khí,2023,aqi,6,6,1.0,0.24667,market_fallback_small_sector
+Dầu khí,2023,sgi,6,6,0.92823,0.23421,market_fallback_small_sector
+Dầu khí,2023,depi,6,6,0.96885,0.10298,market_fallback_small_sector
+Dầu khí,2023,sgai,6,6,1.06562,0.25103,market_fallback_small_sector
+Dầu khí,2023,tata,6,6,0.0066,0.08705,market_fallback_small_sector
+Dầu khí,2023,lvgi,6,6,0.98817,0.12223,market_fallback_small_sector
+Dầu khí,2023,altman_z_double_prime,6,6,6.85175,3.05172,market_fallback_small_sector
+Dầu khí,2023,cfo_to_assets,6,6,0.04539,0.10709,market_fallback_small_sector
+Dầu khí,2023,sensitive_receivables_ratio,6,6,0.04718,0.05193,market_fallback_small_sector
+Dầu khí,2023,receivable_to_revenue,6,6,0.2582,0.26434,market_fallback_small_sector
+Dầu khí,2024,dsri,6,6,0.95065,0.35274,market_fallback_small_sector
+Dầu khí,2024,gmi,6,6,0.99939,0.19835,market_fallback_small_sector
+Dầu khí,2024,aqi,6,6,1.0,0.23362,market_fallback_small_sector
+Dầu khí,2024,sgi,6,6,1.07433,0.21522,market_fallback_small_sector
+Dầu khí,2024,depi,6,6,0.97412,0.11339,market_fallback_small_sector
+Dầu khí,2024,sgai,6,6,0.99031,0.18905,market_fallback_small_sector
+Dầu khí,2024,tata,6,6,3e-05,0.08857,market_fallback_small_sector
+Dầu khí,2024,lvgi,6,6,0.99572,0.11831,market_fallback_small_sector
+Dầu khí,2024,altman_z_double_prime,6,6,6.93115,3.11413,market_fallback_small_sector
+Dầu khí,2024,cfo_to_assets,6,6,0.05482,0.09839,market_fallback_small_sector
+Dầu khí,2024,sensitive_receivables_ratio,6,6,0.04318,0.04925,market_fallback_small_sector
+Dầu khí,2024,receivable_to_revenue,6,6,0.2251,0.23075,market_fallback_small_sector
+Dầu khí,2025,dsri,6,6,0.94668,0.34016,market_fallback_small_sector
+Dầu khí,2025,gmi,6,6,0.97328,0.16943,market_fallback_small_sector
+Dầu khí,2025,aqi,6,6,1.0,0.28117,market_fallback_small_sector
+Dầu khí,2025,sgi,6,6,1.08664,0.21929,market_fallback_small_sector
+Dầu khí,2025,depi,6,6,0.98271,0.12315,market_fallback_small_sector
+Dầu khí,2025,sgai,6,6,0.99658,0.22428,market_fallback_small_sector
+Dầu khí,2025,tata,6,6,0.01046,0.08369,market_fallback_small_sector
+Dầu khí,2025,lvgi,6,6,0.99322,0.12233,market_fallback_small_sector
+Dầu khí,2025,altman_z_double_prime,6,6,7.18651,3.12277,market_fallback_small_sector
+Dầu khí,2025,cfo_to_assets,6,6,0.05252,0.10131,market_fallback_small_sector
+Dầu khí,2025,sensitive_receivables_ratio,6,6,0.04603,0.05233,market_fallback_small_sector
+Dầu khí,2025,receivable_to_revenue,6,6,0.22862,0.23671,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,dsri,94,0,0.0,1.4826,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,gmi,94,0,0.0,1.4826,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,aqi,94,0,0.0,1.4826,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,sgi,94,0,0.0,1.4826,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,depi,94,0,0.0,1.4826,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,sgai,94,0,0.0,1.4826,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,tata,94,94,0.01123,0.10313,icb_sector
+Hàng & Dịch vụ Công nghiệp,2018,lvgi,94,0,0.0,1.4826,market_fallback_small_sector
+Hàng & Dịch vụ Công nghiệp,2018,altman_z_double_prime,94,94,7.07008,3.1282,icb_sector
+Hàng & Dịch vụ Công nghiệp,2018,cfo_to_assets,94,94,0.05956,0.10413,icb_sector
+Hàng & Dịch vụ Công nghiệp,2018,sensitive_receivables_ratio,94,94,0.03361,0.03789,icb_sector
+Hàng & Dịch vụ Công nghiệp,2018,receivable_to_revenue,94,94,0.21527,0.14319,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,dsri,94,94,0.95711,0.25489,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,gmi,94,91,0.9538,0.16742,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,aqi,94,90,1.0,0.2017,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,sgi,94,94,1.02426,0.142,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,depi,94,94,0.99986,0.12424,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,sgai,94,94,1.06668,0.15938,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,tata,94,94,0.00083,0.06382,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,lvgi,94,94,0.98993,0.14748,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,altman_z_double_prime,94,94,7.15137,3.19617,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,cfo_to_assets,94,94,0.06952,0.0917,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,sensitive_receivables_ratio,94,94,0.0308,0.03632,icb_sector
+Hàng & Dịch vụ Công nghiệp,2019,receivable_to_revenue,94,94,0.19969,0.13707,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,dsri,96,94,1.06021,0.27408,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,gmi,96,90,1.01376,0.21757,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,aqi,96,92,0.9709,0.26022,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,sgi,96,94,1.00658,0.18738,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,depi,96,94,0.93886,0.11005,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,sgai,96,93,1.03985,0.25787,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,tata,96,96,-0.01507,0.07171,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,lvgi,96,94,0.98773,0.15452,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,altman_z_double_prime,96,96,7.35512,3.69256,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,cfo_to_assets,96,96,0.07649,0.08375,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,sensitive_receivables_ratio,96,96,0.03634,0.03841,icb_sector
+Hàng & Dịch vụ Công nghiệp,2020,receivable_to_revenue,96,96,0.21319,0.17276,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,dsri,97,95,0.98395,0.31673,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,gmi,97,92,1.04771,0.23594,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,aqi,97,93,1.0,0.24828,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,sgi,97,95,1.06683,0.24212,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,depi,97,95,0.98013,0.12901,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,sgai,97,93,0.98312,0.18997,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,tata,97,97,-0.00682,0.08776,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,lvgi,97,95,0.98262,0.11173,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,altman_z_double_prime,97,97,7.23868,2.9324,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,cfo_to_assets,97,97,0.06258,0.09618,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,sensitive_receivables_ratio,97,97,0.034,0.0255,icb_sector
+Hàng & Dịch vụ Công nghiệp,2021,receivable_to_revenue,97,97,0.21729,0.15785,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,dsri,98,97,0.88287,0.31597,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,gmi,98,92,0.93362,0.17627,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,aqi,98,95,1.0,0.21267,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,sgi,98,97,1.1089,0.22463,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,depi,98,97,0.99322,0.13894,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,sgai,98,96,1.04689,0.25865,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,tata,98,98,0.00344,0.08609,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,lvgi,98,97,0.98878,0.18325,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,altman_z_double_prime,98,98,7.64953,3.63469,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,cfo_to_assets,98,98,0.06696,0.12066,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,sensitive_receivables_ratio,98,98,0.03781,0.0331,icb_sector
+Hàng & Dịch vụ Công nghiệp,2022,receivable_to_revenue,98,98,0.19469,0.15584,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,dsri,99,98,1.0286,0.31235,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,gmi,99,94,0.95205,0.17416,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,aqi,99,93,1.0,0.2986,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,sgi,99,98,0.95523,0.19969,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,depi,99,98,0.9516,0.13345,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,sgai,99,98,1.08871,0.23131,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,tata,99,99,0.0085,0.10837,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,lvgi,99,98,0.98786,0.16725,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,altman_z_double_prime,99,99,7.80723,4.02278,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,cfo_to_assets,99,99,0.07937,0.12009,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,sensitive_receivables_ratio,99,99,0.03553,0.03088,icb_sector
+Hàng & Dịch vụ Công nghiệp,2023,receivable_to_revenue,99,99,0.19186,0.11422,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,dsri,99,99,0.92951,0.26665,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,gmi,99,96,0.99802,0.21075,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,aqi,99,99,1.0,0.24014,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,sgi,99,99,1.132,0.22785,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,depi,99,99,0.98096,0.10324,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,sgai,99,99,0.97221,0.20528,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,tata,99,99,-0.00323,0.0967,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,lvgi,99,99,0.98986,0.13352,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,altman_z_double_prime,99,99,7.80763,3.5119,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,cfo_to_assets,99,99,0.06786,0.09131,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,sensitive_receivables_ratio,99,99,0.03587,0.0323,icb_sector
+Hàng & Dịch vụ Công nghiệp,2024,receivable_to_revenue,99,99,0.16726,0.12229,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,dsri,99,98,0.9479,0.19302,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,gmi,99,97,0.9889,0.17952,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,aqi,99,98,0.99561,0.24041,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,sgi,99,99,1.11891,0.18778,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,depi,99,99,0.97922,0.11695,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,sgai,99,99,0.98716,0.20172,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,tata,99,99,0.00154,0.07816,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,lvgi,99,99,1.03226,0.18952,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,altman_z_double_prime,99,99,7.82701,3.74234,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,cfo_to_assets,99,99,0.05911,0.10089,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,sensitive_receivables_ratio,99,99,0.03706,0.0341,icb_sector
+Hàng & Dịch vụ Công nghiệp,2025,receivable_to_revenue,99,99,0.17455,0.13093,icb_sector
+Hàng cá nhân & Gia dụng,2018,dsri,30,0,0.0,1.4826,market_fallback_small_sector
+Hàng cá nhân & Gia dụng,2018,gmi,30,0,0.0,1.4826,market_fallback_small_sector
+Hàng cá nhân & Gia dụng,2018,aqi,30,0,0.0,1.4826,market_fallback_small_sector
+Hàng cá nhân & Gia dụng,2018,sgi,30,0,0.0,1.4826,market_fallback_small_sector
+Hàng cá nhân & Gia dụng,2018,depi,30,0,0.0,1.4826,market_fallback_small_sector
+Hàng cá nhân & Gia dụng,2018,sgai,30,0,0.0,1.4826,market_fallback_small_sector
+Hàng cá nhân & Gia dụng,2018,tata,30,30,0.06576,0.12078,icb_sector
+Hàng cá nhân & Gia dụng,2018,lvgi,30,0,0.0,1.4826,market_fallback_small_sector
+Hàng cá nhân & Gia dụng,2018,altman_z_double_prime,30,30,7.48448,3.65096,icb_sector
+Hàng cá nhân & Gia dụng,2018,cfo_to_assets,30,30,0.05011,0.11635,icb_sector
+Hàng cá nhân & Gia dụng,2018,sensitive_receivables_ratio,30,30,0.02434,0.02283,icb_sector
+Hàng cá nhân & Gia dụng,2018,receivable_to_revenue,30,30,0.13861,0.12866,icb_sector
+Hàng cá nhân & Gia dụng,2019,dsri,30,30,0.98399,0.37422,icb_sector
+Hàng cá nhân & Gia dụng,2019,gmi,30,30,0.95979,0.1481,icb_sector
+Hàng cá nhân & Gia dụng,2019,aqi,30,30,1.04973,0.31936,icb_sector
+Hàng cá nhân & Gia dụng,2019,sgi,30,30,0.99894,0.18491,icb_sector
+Hàng cá nhân & Gia dụng,2019,depi,30,30,0.94937,0.12585,icb_sector
+Hàng cá nhân & Gia dụng,2019,sgai,30,30,1.0278,0.12105,icb_sector
+Hàng cá nhân & Gia dụng,2019,tata,30,30,-0.01387,0.08739,icb_sector
+Hàng cá nhân & Gia dụng,2019,lvgi,30,30,0.92744,0.15546,icb_sector
+Hàng cá nhân & Gia dụng,2019,altman_z_double_prime,30,30,7.65746,3.76803,icb_sector
+Hàng cá nhân & Gia dụng,2019,cfo_to_assets,30,30,0.12433,0.10111,icb_sector
+Hàng cá nhân & Gia dụng,2019,sensitive_receivables_ratio,30,30,0.02578,0.02001,icb_sector
+Hàng cá nhân & Gia dụng,2019,receivable_to_revenue,30,30,0.17395,0.14459,icb_sector
+Hàng cá nhân & Gia dụng,2020,dsri,31,30,1.01233,0.49093,icb_sector
+Hàng cá nhân & Gia dụng,2020,gmi,31,30,1.01145,0.17965,icb_sector
+Hàng cá nhân & Gia dụng,2020,aqi,31,30,1.03687,0.28763,icb_sector
+Hàng cá nhân & Gia dụng,2020,sgi,31,30,0.96038,0.25452,icb_sector
+Hàng cá nhân & Gia dụng,2020,depi,31,30,0.97798,0.09561,icb_sector
+Hàng cá nhân & Gia dụng,2020,sgai,31,30,1.06385,0.17692,icb_sector
+Hàng cá nhân & Gia dụng,2020,tata,31,31,-0.01562,0.08531,icb_sector
+Hàng cá nhân & Gia dụng,2020,lvgi,31,30,0.97419,0.1073,icb_sector
+Hàng cá nhân & Gia dụng,2020,altman_z_double_prime,31,31,7.82034,3.66219,icb_sector
+Hàng cá nhân & Gia dụng,2020,cfo_to_assets,31,31,0.09262,0.08663,icb_sector
+Hàng cá nhân & Gia dụng,2020,sensitive_receivables_ratio,31,31,0.01834,0.02043,icb_sector
+Hàng cá nhân & Gia dụng,2020,receivable_to_revenue,31,31,0.15459,0.14717,icb_sector
+Hàng cá nhân & Gia dụng,2021,dsri,31,31,1.0,0.33664,icb_sector
+Hàng cá nhân & Gia dụng,2021,gmi,31,31,1.02678,0.22098,icb_sector
+Hàng cá nhân & Gia dụng,2021,aqi,31,31,1.02696,0.32729,icb_sector
+Hàng cá nhân & Gia dụng,2021,sgi,31,31,1.11629,0.14998,icb_sector
+Hàng cá nhân & Gia dụng,2021,depi,31,31,0.91689,0.15311,icb_sector
+Hàng cá nhân & Gia dụng,2021,sgai,31,31,0.99568,0.25762,icb_sector
+Hàng cá nhân & Gia dụng,2021,tata,31,31,0.05775,0.08869,icb_sector
+Hàng cá nhân & Gia dụng,2021,lvgi,31,31,0.99124,0.17416,icb_sector
+Hàng cá nhân & Gia dụng,2021,altman_z_double_prime,31,31,7.93421,2.9856,icb_sector
+Hàng cá nhân & Gia dụng,2021,cfo_to_assets,31,31,0.00825,0.08031,icb_sector
+Hàng cá nhân & Gia dụng,2021,sensitive_receivables_ratio,31,31,0.025,0.02722,icb_sector
+Hàng cá nhân & Gia dụng,2021,receivable_to_revenue,31,31,0.14929,0.14908,icb_sector
+Hàng cá nhân & Gia dụng,2022,dsri,31,31,0.78879,0.31368,icb_sector
+Hàng cá nhân & Gia dụng,2022,gmi,31,30,0.99389,0.14304,icb_sector
+Hàng cá nhân & Gia dụng,2022,aqi,31,31,0.97363,0.32713,icb_sector
+Hàng cá nhân & Gia dụng,2022,sgi,31,30,1.19538,0.21542,icb_sector
+Hàng cá nhân & Gia dụng,2022,depi,31,31,1.0,0.10538,icb_sector
+Hàng cá nhân & Gia dụng,2022,sgai,31,30,0.91711,0.15677,icb_sector
+Hàng cá nhân & Gia dụng,2022,tata,31,31,0.0277,0.10542,icb_sector
+Hàng cá nhân & Gia dụng,2022,lvgi,31,31,0.90652,0.21635,icb_sector
+Hàng cá nhân & Gia dụng,2022,altman_z_double_prime,31,31,8.16296,3.15861,icb_sector
+Hàng cá nhân & Gia dụng,2022,cfo_to_assets,31,31,0.06409,0.10275,icb_sector
+Hàng cá nhân & Gia dụng,2022,sensitive_receivables_ratio,31,31,0.02477,0.0329,icb_sector
+Hàng cá nhân & Gia dụng,2022,receivable_to_revenue,31,30,0.1097,0.09465,icb_sector
+Hàng cá nhân & Gia dụng,2023,dsri,31,30,1.27167,0.47464,icb_sector
+Hàng cá nhân & Gia dụng,2023,gmi,31,29,1.07739,0.22232,icb_sector
+Hàng cá nhân & Gia dụng,2023,aqi,31,29,0.9619,0.17857,icb_sector
+Hàng cá nhân & Gia dụng,2023,sgi,31,30,0.86378,0.1857,icb_sector
+Hàng cá nhân & Gia dụng,2023,depi,31,31,1.0,0.06682,icb_sector
+Hàng cá nhân & Gia dụng,2023,sgai,31,30,1.07631,0.21681,icb_sector
+Hàng cá nhân & Gia dụng,2023,tata,31,31,0.01721,0.09529,icb_sector
+Hàng cá nhân & Gia dụng,2023,lvgi,31,31,0.94228,0.14611,icb_sector
+Hàng cá nhân & Gia dụng,2023,altman_z_double_prime,31,31,8.07274,3.25231,icb_sector
+Hàng cá nhân & Gia dụng,2023,cfo_to_assets,31,31,0.06924,0.12379,icb_sector
+Hàng cá nhân & Gia dụng,2023,sensitive_receivables_ratio,31,31,0.03467,0.04463,icb_sector
+Hàng cá nhân & Gia dụng,2023,receivable_to_revenue,31,31,0.17918,0.15327,icb_sector
+Hàng cá nhân & Gia dụng,2024,dsri,31,30,0.96445,0.25951,icb_sector
+Hàng cá nhân & Gia dụng,2024,gmi,31,29,0.9828,0.16946,icb_sector
+Hàng cá nhân & Gia dụng,2024,aqi,31,30,1.0069,0.30245,icb_sector
+Hàng cá nhân & Gia dụng,2024,sgi,31,30,1.07912,0.14683,icb_sector
+Hàng cá nhân & Gia dụng,2024,depi,31,31,0.967,0.10778,icb_sector
+Hàng cá nhân & Gia dụng,2024,sgai,31,30,0.98432,0.17671,icb_sector
+Hàng cá nhân & Gia dụng,2024,tata,31,31,-0.01048,0.08997,icb_sector
+Hàng cá nhân & Gia dụng,2024,lvgi,31,31,1.01427,0.14551,icb_sector
+Hàng cá nhân & Gia dụng,2024,altman_z_double_prime,31,31,8.02164,3.04017,icb_sector
+Hàng cá nhân & Gia dụng,2024,cfo_to_assets,31,31,0.05922,0.08317,icb_sector
+Hàng cá nhân & Gia dụng,2024,sensitive_receivables_ratio,31,31,0.0252,0.02801,icb_sector
+Hàng cá nhân & Gia dụng,2024,receivable_to_revenue,31,30,0.19816,0.16583,icb_sector
+Hàng cá nhân & Gia dụng,2025,dsri,31,30,1.01813,0.28054,icb_sector
+Hàng cá nhân & Gia dụng,2025,gmi,31,30,0.93259,0.20634,icb_sector
+Hàng cá nhân & Gia dụng,2025,aqi,31,31,0.96445,0.25432,icb_sector
+Hàng cá nhân & Gia dụng,2025,sgi,31,30,1.05469,0.12955,icb_sector
+Hàng cá nhân & Gia dụng,2025,depi,31,31,1.0,0.11062,icb_sector
+Hàng cá nhân & Gia dụng,2025,sgai,31,30,1.01091,0.19038,icb_sector
+Hàng cá nhân & Gia dụng,2025,tata,31,31,0.01736,0.08814,icb_sector
+Hàng cá nhân & Gia dụng,2025,lvgi,31,31,0.98764,0.12251,icb_sector
+Hàng cá nhân & Gia dụng,2025,altman_z_double_prime,31,31,8.22996,3.20558,icb_sector
+Hàng cá nhân & Gia dụng,2025,cfo_to_assets,31,31,0.06067,0.09975,icb_sector
+Hàng cá nhân & Gia dụng,2025,sensitive_receivables_ratio,31,31,0.02883,0.03601,icb_sector
+Hàng cá nhân & Gia dụng,2025,receivable_to_revenue,31,31,0.18525,0.16049,icb_sector
+Hóa chất,2018,dsri,35,0,0.0,1.4826,market_fallback_small_sector
+Hóa chất,2018,gmi,35,0,0.0,1.4826,market_fallback_small_sector
+Hóa chất,2018,aqi,35,0,0.0,1.4826,market_fallback_small_sector
+Hóa chất,2018,sgi,35,0,0.0,1.4826,market_fallback_small_sector
+Hóa chất,2018,depi,35,0,0.0,1.4826,market_fallback_small_sector
+Hóa chất,2018,sgai,35,0,0.0,1.4826,market_fallback_small_sector
+Hóa chất,2018,tata,35,35,0.07093,0.12178,icb_sector
+Hóa chất,2018,lvgi,35,0,0.0,1.4826,market_fallback_small_sector
+Hóa chất,2018,altman_z_double_prime,35,35,7.07076,1.55635,icb_sector
+Hóa chất,2018,cfo_to_assets,35,35,-0.00909,0.12448,icb_sector
+Hóa chất,2018,sensitive_receivables_ratio,35,35,0.02983,0.02178,icb_sector
+Hóa chất,2018,receivable_to_revenue,35,35,0.16194,0.12219,icb_sector
+Hóa chất,2019,dsri,34,34,1.0266,0.33317,icb_sector
+Hóa chất,2019,gmi,34,34,0.99987,0.2162,icb_sector
+Hóa chất,2019,aqi,34,34,0.97582,0.42888,icb_sector
+Hóa chất,2019,sgi,34,34,0.95383,0.18046,icb_sector
+Hóa chất,2019,depi,34,34,1.0,0.15471,icb_sector
+Hóa chất,2019,sgai,34,34,1.01916,0.16928,icb_sector
+Hóa chất,2019,tata,34,34,-0.0321,0.10967,icb_sector
+Hóa chất,2019,lvgi,34,34,0.97904,0.11916,icb_sector
+Hóa chất,2019,altman_z_double_prime,34,34,6.94024,2.71329,icb_sector
+Hóa chất,2019,cfo_to_assets,34,34,0.08032,0.12545,icb_sector
+Hóa chất,2019,sensitive_receivables_ratio,34,34,0.02249,0.0145,icb_sector
+Hóa chất,2019,receivable_to_revenue,34,34,0.16424,0.11546,icb_sector
+Hóa chất,2020,dsri,36,34,1.00911,0.37372,icb_sector
+Hóa chất,2020,gmi,36,34,0.92968,0.13716,icb_sector
+Hóa chất,2020,aqi,36,34,0.97388,0.1838,icb_sector
+Hóa chất,2020,sgi,36,34,0.94778,0.17227,icb_sector
+Hóa chất,2020,depi,36,34,0.92068,0.11495,icb_sector
+Hóa chất,2020,sgai,36,34,1.04688,0.14525,icb_sector
+Hóa chất,2020,tata,36,36,-0.00745,0.09833,icb_sector
+Hóa chất,2020,lvgi,36,34,0.98715,0.11901,icb_sector
+Hóa chất,2020,altman_z_double_prime,36,36,8.38595,3.21077,icb_sector
+Hóa chất,2020,cfo_to_assets,36,36,0.05953,0.10643,icb_sector
+Hóa chất,2020,sensitive_receivables_ratio,36,36,0.02133,0.01458,icb_sector
+Hóa chất,2020,receivable_to_revenue,36,36,0.14831,0.1057,icb_sector
+Hóa chất,2021,dsri,37,36,0.82767,0.38983,icb_sector
+Hóa chất,2021,gmi,37,36,0.93269,0.22073,icb_sector
+Hóa chất,2021,aqi,37,35,0.86874,0.15642,icb_sector
+Hóa chất,2021,sgi,37,36,1.22295,0.26546,icb_sector
+Hóa chất,2021,depi,37,36,0.919,0.11921,icb_sector
+Hóa chất,2021,sgai,37,36,0.9071,0.2159,icb_sector
+Hóa chất,2021,tata,37,37,0.05728,0.07904,icb_sector
+Hóa chất,2021,lvgi,37,36,0.98609,0.19409,icb_sector
+Hóa chất,2021,altman_z_double_prime,37,37,8.5012,3.70696,icb_sector
+Hóa chất,2021,cfo_to_assets,37,37,0.02736,0.09403,icb_sector
+Hóa chất,2021,sensitive_receivables_ratio,37,37,0.02527,0.01712,icb_sector
+Hóa chất,2021,receivable_to_revenue,37,37,0.12628,0.10666,icb_sector
+Hóa chất,2022,dsri,37,37,0.97405,0.44311,icb_sector
+Hóa chất,2022,gmi,37,37,1.03101,0.20988,icb_sector
+Hóa chất,2022,aqi,37,37,0.9303,0.21627,icb_sector
+Hóa chất,2022,sgi,37,37,1.20906,0.19307,icb_sector
+Hóa chất,2022,depi,37,37,0.93978,0.08928,icb_sector
+Hóa chất,2022,sgai,37,37,0.91453,0.1334,icb_sector
+Hóa chất,2022,tata,37,37,0.06634,0.08245,icb_sector
+Hóa chất,2022,lvgi,37,37,0.94131,0.1825,icb_sector
+Hóa chất,2022,altman_z_double_prime,37,37,8.34398,2.75457,icb_sector
+Hóa chất,2022,cfo_to_assets,37,37,-0.0024,0.08752,icb_sector
+Hóa chất,2022,sensitive_receivables_ratio,37,37,0.02213,0.01866,icb_sector
+Hóa chất,2022,receivable_to_revenue,37,37,0.13526,0.1027,icb_sector
+Hóa chất,2023,dsri,38,37,1.14063,0.48697,icb_sector
+Hóa chất,2023,gmi,38,36,1.08391,0.26322,icb_sector
+Hóa chất,2023,aqi,38,37,0.99567,0.24561,icb_sector
+Hóa chất,2023,sgi,38,37,0.87086,0.16597,icb_sector
+Hóa chất,2023,depi,38,37,0.97394,0.12085,icb_sector
+Hóa chất,2023,sgai,38,37,1.1092,0.15741,icb_sector
+Hóa chất,2023,tata,38,38,-0.02214,0.11124,icb_sector
+Hóa chất,2023,lvgi,38,37,0.96468,0.16079,icb_sector
+Hóa chất,2023,altman_z_double_prime,38,38,8.52538,3.12202,icb_sector
+Hóa chất,2023,cfo_to_assets,38,38,0.08432,0.13404,icb_sector
+Hóa chất,2023,sensitive_receivables_ratio,38,38,0.0225,0.01826,icb_sector
+Hóa chất,2023,receivable_to_revenue,38,38,0.1448,0.09562,icb_sector
+Hóa chất,2024,dsri,38,38,0.91146,0.41189,icb_sector
+Hóa chất,2024,gmi,38,37,0.91351,0.14062,icb_sector
+Hóa chất,2024,aqi,38,38,0.9678,0.2765,icb_sector
+Hóa chất,2024,sgi,38,38,1.07119,0.13277,icb_sector
+Hóa chất,2024,depi,38,38,1.00042,0.13292,icb_sector
+Hóa chất,2024,sgai,38,37,1.05146,0.15615,icb_sector
+Hóa chất,2024,tata,38,38,-0.00137,0.0778,icb_sector
+Hóa chất,2024,lvgi,38,38,0.99111,0.16599,icb_sector
+Hóa chất,2024,altman_z_double_prime,38,38,9.08232,3.01251,icb_sector
+Hóa chất,2024,cfo_to_assets,38,38,0.05938,0.08123,icb_sector
+Hóa chất,2024,sensitive_receivables_ratio,38,38,0.01785,0.01827,icb_sector
+Hóa chất,2024,receivable_to_revenue,38,38,0.12843,0.1011,icb_sector
+Hóa chất,2025,dsri,38,38,0.87961,0.42424,icb_sector
+Hóa chất,2025,gmi,38,38,1.03029,0.16207,icb_sector
+Hóa chất,2025,aqi,38,38,0.91313,0.22016,icb_sector
+Hóa chất,2025,sgi,38,38,1.10726,0.09453,icb_sector
+Hóa chất,2025,depi,38,38,0.99831,0.14906,icb_sector
+Hóa chất,2025,sgai,38,37,1.00199,0.22761,icb_sector
+Hóa chất,2025,tata,38,38,0.03581,0.10096,icb_sector
+Hóa chất,2025,lvgi,38,38,0.98663,0.17302,icb_sector
+Hóa chất,2025,altman_z_double_prime,38,38,8.69669,2.0756,icb_sector
+Hóa chất,2025,cfo_to_assets,38,38,0.0377,0.08335,icb_sector
+Hóa chất,2025,sensitive_receivables_ratio,38,38,0.02387,0.02161,icb_sector
+Hóa chất,2025,receivable_to_revenue,38,38,0.11195,0.11011,icb_sector
+Thực phẩm và đồ uống,2018,dsri,49,0,0.0,1.4826,market_fallback_small_sector
+Thực phẩm và đồ uống,2018,gmi,49,0,0.0,1.4826,market_fallback_small_sector
+Thực phẩm và đồ uống,2018,aqi,49,0,0.0,1.4826,market_fallback_small_sector
+Thực phẩm và đồ uống,2018,sgi,49,0,0.0,1.4826,market_fallback_small_sector
+Thực phẩm và đồ uống,2018,depi,49,0,0.0,1.4826,market_fallback_small_sector
+Thực phẩm và đồ uống,2018,sgai,49,0,0.0,1.4826,market_fallback_small_sector
+Thực phẩm và đồ uống,2018,tata,49,49,0.02661,0.08903,icb_sector
+Thực phẩm và đồ uống,2018,lvgi,49,0,0.0,1.4826,market_fallback_small_sector
+Thực phẩm và đồ uống,2018,altman_z_double_prime,49,49,6.81423,2.81823,icb_sector
+Thực phẩm và đồ uống,2018,cfo_to_assets,49,49,0.0784,0.07563,icb_sector
+Thực phẩm và đồ uống,2018,sensitive_receivables_ratio,49,49,0.03094,0.02557,icb_sector
+Thực phẩm và đồ uống,2018,receivable_to_revenue,49,49,0.12375,0.11083,icb_sector
+Thực phẩm và đồ uống,2019,dsri,48,48,0.9676,0.33827,icb_sector
+Thực phẩm và đồ uống,2019,gmi,48,47,1.04074,0.16248,icb_sector
+Thực phẩm và đồ uống,2019,aqi,48,48,0.9895,0.27787,icb_sector
+Thực phẩm và đồ uống,2019,sgi,48,48,1.03241,0.11699,icb_sector
+Thực phẩm và đồ uống,2019,depi,48,48,0.95209,0.10666,icb_sector
+Thực phẩm và đồ uống,2019,sgai,48,48,0.99404,0.16291,icb_sector
+Thực phẩm và đồ uống,2019,tata,48,48,0.02937,0.06906,icb_sector
+Thực phẩm và đồ uống,2019,lvgi,48,48,0.98033,0.13781,icb_sector
+Thực phẩm và đồ uống,2019,altman_z_double_prime,48,48,7.2665,2.96548,icb_sector
+Thực phẩm và đồ uống,2019,cfo_to_assets,48,48,0.06682,0.11879,icb_sector
+Thực phẩm và đồ uống,2019,sensitive_receivables_ratio,48,48,0.03616,0.03614,icb_sector
+Thực phẩm và đồ uống,2019,receivable_to_revenue,48,48,0.14207,0.13259,icb_sector
+Thực phẩm và đồ uống,2020,dsri,48,46,1.01585,0.35565,icb_sector
+Thực phẩm và đồ uống,2020,gmi,48,47,1.05539,0.24151,icb_sector
+Thực phẩm và đồ uống,2020,aqi,48,47,0.97602,0.17108,icb_sector
+Thực phẩm và đồ uống,2020,sgi,48,47,1.04803,0.27156,icb_sector
+Thực phẩm và đồ uống,2020,depi,48,47,1.0,0.13346,icb_sector
+Thực phẩm và đồ uống,2020,sgai,48,47,0.98249,0.2008,icb_sector
+Thực phẩm và đồ uống,2020,tata,48,48,0.01881,0.06502,icb_sector
+Thực phẩm và đồ uống,2020,lvgi,48,47,1.03304,0.1363,icb_sector
+Thực phẩm và đồ uống,2020,altman_z_double_prime,48,48,6.49961,2.41726,icb_sector
+Thực phẩm và đồ uống,2020,cfo_to_assets,48,48,0.06294,0.12106,icb_sector
+Thực phẩm và đồ uống,2020,sensitive_receivables_ratio,48,48,0.04344,0.05009,icb_sector
+Thực phẩm và đồ uống,2020,receivable_to_revenue,48,48,0.17243,0.16155,icb_sector
+Thực phẩm và đồ uống,2021,dsri,48,47,1.048,0.3964,icb_sector
+Thực phẩm và đồ uống,2021,gmi,48,46,0.98802,0.20796,icb_sector
+Thực phẩm và đồ uống,2021,aqi,48,47,0.95551,0.29401,icb_sector
+Thực phẩm và đồ uống,2021,sgi,48,47,1.03639,0.22748,icb_sector
+Thực phẩm và đồ uống,2021,depi,48,47,0.90467,0.10927,icb_sector
+Thực phẩm và đồ uống,2021,sgai,48,46,1.09476,0.25012,icb_sector
+Thực phẩm và đồ uống,2021,tata,48,48,0.03573,0.07244,icb_sector
+Thực phẩm và đồ uống,2021,lvgi,48,47,0.99174,0.22546,icb_sector
+Thực phẩm và đồ uống,2021,altman_z_double_prime,48,48,7.29402,2.90092,icb_sector
+Thực phẩm và đồ uống,2021,cfo_to_assets,48,48,0.03814,0.0878,icb_sector
+Thực phẩm và đồ uống,2021,sensitive_receivables_ratio,48,48,0.03455,0.028,icb_sector
+Thực phẩm và đồ uống,2021,receivable_to_revenue,48,48,0.14094,0.13454,icb_sector
+Thực phẩm và đồ uống,2022,dsri,50,47,0.88319,0.25191,icb_sector
+Thực phẩm và đồ uống,2022,gmi,50,46,0.93237,0.19276,icb_sector
+Thực phẩm và đồ uống,2022,aqi,50,47,0.92749,0.25721,icb_sector
+Thực phẩm và đồ uống,2022,sgi,50,47,1.20879,0.33299,icb_sector
+Thực phẩm và đồ uống,2022,depi,50,47,1.0,0.08282,icb_sector
+Thực phẩm và đồ uống,2022,sgai,50,46,0.98833,0.17213,icb_sector
+Thực phẩm và đồ uống,2022,tata,50,50,0.04799,0.0774,icb_sector
+Thực phẩm và đồ uống,2022,lvgi,50,47,0.98823,0.12236,icb_sector
+Thực phẩm và đồ uống,2022,altman_z_double_prime,50,50,7.09272,3.21294,icb_sector
+Thực phẩm và đồ uống,2022,cfo_to_assets,50,50,0.04633,0.11864,icb_sector
+Thực phẩm và đồ uống,2022,sensitive_receivables_ratio,50,50,0.04479,0.04668,icb_sector
+Thực phẩm và đồ uống,2022,receivable_to_revenue,50,50,0.1511,0.13737,icb_sector
+Thực phẩm và đồ uống,2023,dsri,50,48,1.00143,0.29915,icb_sector
+Thực phẩm và đồ uống,2023,gmi,50,49,1.03995,0.20658,icb_sector
+Thực phẩm và đồ uống,2023,aqi,50,48,1.02494,0.28065,icb_sector
+Thực phẩm và đồ uống,2023,sgi,50,49,0.95694,0.13581,icb_sector
+Thực phẩm và đồ uống,2023,depi,50,49,0.97113,0.10659,icb_sector
+Thực phẩm và đồ uống,2023,sgai,50,48,1.00168,0.1871,icb_sector
+Thực phẩm và đồ uống,2023,tata,50,50,0.02757,0.05235,icb_sector
+Thực phẩm và đồ uống,2023,lvgi,50,49,1.03686,0.11912,icb_sector
+Thực phẩm và đồ uống,2023,altman_z_double_prime,50,50,6.85225,3.82481,icb_sector
+Thực phẩm và đồ uống,2023,cfo_to_assets,50,50,0.05349,0.11984,icb_sector
+Thực phẩm và đồ uống,2023,sensitive_receivables_ratio,50,50,0.05341,0.06323,icb_sector
+Thực phẩm và đồ uống,2023,receivable_to_revenue,50,50,0.16847,0.16749,icb_sector
+Thực phẩm và đồ uống,2024,dsri,51,50,1.00453,0.31104,icb_sector
+Thực phẩm và đồ uống,2024,gmi,51,50,0.95403,0.15682,icb_sector
+Thực phẩm và đồ uống,2024,aqi,51,50,1.00149,0.28108,icb_sector
+Thực phẩm và đồ uống,2024,sgi,51,50,1.08581,0.17977,icb_sector
+Thực phẩm và đồ uống,2024,depi,51,50,0.95565,0.08423,icb_sector
+Thực phẩm và đồ uống,2024,sgai,51,50,1.01433,0.10007,icb_sector
+Thực phẩm và đồ uống,2024,tata,51,51,0.02146,0.08313,icb_sector
+Thực phẩm và đồ uống,2024,lvgi,51,50,0.9928,0.13278,icb_sector
+Thực phẩm và đồ uống,2024,altman_z_double_prime,51,51,7.55853,3.29776,icb_sector
+Thực phẩm và đồ uống,2024,cfo_to_assets,51,51,0.07297,0.13061,icb_sector
+Thực phẩm và đồ uống,2024,sensitive_receivables_ratio,51,51,0.05691,0.06083,icb_sector
+Thực phẩm và đồ uống,2024,receivable_to_revenue,51,51,0.14219,0.13135,icb_sector
+Thực phẩm và đồ uống,2025,dsri,51,51,1.07418,0.36628,icb_sector
+Thực phẩm và đồ uống,2025,gmi,51,51,0.93964,0.11847,icb_sector
+Thực phẩm và đồ uống,2025,aqi,51,51,1.0,0.30612,icb_sector
+Thực phẩm và đồ uống,2025,sgi,51,51,1.03261,0.13883,icb_sector
+Thực phẩm và đồ uống,2025,depi,51,51,0.98384,0.13446,icb_sector
+Thực phẩm và đồ uống,2025,sgai,51,51,1.02411,0.17956,icb_sector
+Thực phẩm và đồ uống,2025,tata,51,51,0.03995,0.0805,icb_sector
+Thực phẩm và đồ uống,2025,lvgi,51,51,0.98419,0.13046,icb_sector
+Thực phẩm và đồ uống,2025,altman_z_double_prime,51,51,7.91949,2.99901,icb_sector
+Thực phẩm và đồ uống,2025,cfo_to_assets,51,51,0.06281,0.12544,icb_sector
+Thực phẩm và đồ uống,2025,sensitive_receivables_ratio,51,51,0.04388,0.04265,icb_sector
+Thực phẩm và đồ uống,2025,receivable_to_revenue,51,51,0.15124,0.14224,icb_sector
+Truyền thông,2018,dsri,18,0,0.0,1.4826,market_fallback_small_sector
+Truyền thông,2018,gmi,18,0,0.0,1.4826,market_fallback_small_sector
+Truyền thông,2018,aqi,18,0,0.0,1.4826,market_fallback_small_sector
+Truyền thông,2018,sgi,18,0,0.0,1.4826,market_fallback_small_sector
+Truyền thông,2018,depi,18,0,0.0,1.4826,market_fallback_small_sector
+Truyền thông,2018,sgai,18,0,0.0,1.4826,market_fallback_small_sector
+Truyền thông,2018,tata,18,18,0.02761,0.06039,icb_sector
+Truyền thông,2018,lvgi,18,0,0.0,1.4826,market_fallback_small_sector
+Truyền thông,2018,altman_z_double_prime,18,18,11.25367,3.65357,icb_sector
+Truyền thông,2018,cfo_to_assets,18,18,0.06257,0.07709,icb_sector
+Truyền thông,2018,sensitive_receivables_ratio,18,18,0.05774,0.05811,icb_sector
+Truyền thông,2018,receivable_to_revenue,18,18,0.12597,0.08634,icb_sector
+Truyền thông,2019,dsri,18,18,0.95984,0.40756,icb_sector
+Truyền thông,2019,gmi,18,17,1.01413,0.06224,icb_sector
+Truyền thông,2019,aqi,18,18,0.98792,0.29813,icb_sector
+Truyền thông,2019,sgi,18,18,1.08269,0.11449,icb_sector
+Truyền thông,2019,depi,18,18,0.98445,0.04854,icb_sector
+Truyền thông,2019,sgai,18,18,1.04506,0.13943,icb_sector
+Truyền thông,2019,tata,18,18,0.00271,0.10387,icb_sector
+Truyền thông,2019,lvgi,18,18,1.02403,0.20065,icb_sector
+Truyền thông,2019,altman_z_double_prime,18,18,9.81419,3.55973,icb_sector
+Truyền thông,2019,cfo_to_assets,18,18,0.10856,0.05993,icb_sector
+Truyền thông,2019,sensitive_receivables_ratio,18,18,0.03873,0.04233,icb_sector
+Truyền thông,2019,receivable_to_revenue,18,18,0.12606,0.1074,icb_sector
+Truyền thông,2020,dsri,18,18,1.06067,0.23355,icb_sector
+Truyền thông,2020,gmi,18,17,1.03257,0.117,icb_sector
+Truyền thông,2020,aqi,18,18,0.96481,0.19728,icb_sector
+Truyền thông,2020,sgi,18,18,0.96853,0.14458,icb_sector
+Truyền thông,2020,depi,18,18,1.0,0.13427,icb_sector
+Truyền thông,2020,sgai,18,18,1.01065,0.1102,icb_sector
+Truyền thông,2020,tata,18,18,-0.03198,0.11495,icb_sector
+Truyền thông,2020,lvgi,18,18,1.07895,0.24509,icb_sector
+Truyền thông,2020,altman_z_double_prime,18,18,9.13146,3.27828,icb_sector
+Truyền thông,2020,cfo_to_assets,18,18,0.13104,0.08301,icb_sector
+Truyền thông,2020,sensitive_receivables_ratio,18,18,0.06823,0.08652,icb_sector
+Truyền thông,2020,receivable_to_revenue,18,18,0.13935,0.11516,icb_sector
+Truyền thông,2021,dsri,18,18,1.36704,0.86239,icb_sector
+Truyền thông,2021,gmi,18,18,1.03949,0.14373,icb_sector
+Truyền thông,2021,aqi,18,18,0.81636,0.2218,icb_sector
+Truyền thông,2021,sgi,18,18,1.08968,0.16429,icb_sector
+Truyền thông,2021,depi,18,18,1.0,0.26403,icb_sector
+Truyền thông,2021,sgai,18,18,1.02667,0.11576,icb_sector
+Truyền thông,2021,tata,18,18,0.08746,0.10515,icb_sector
+Truyền thông,2021,lvgi,18,18,1.02129,0.28023,icb_sector
+Truyền thông,2021,altman_z_double_prime,18,18,9.45271,3.17227,icb_sector
+Truyền thông,2021,cfo_to_assets,18,18,0.00199,0.10272,icb_sector
+Truyền thông,2021,sensitive_receivables_ratio,18,18,0.06419,0.07519,icb_sector
+Truyền thông,2021,receivable_to_revenue,18,18,0.15188,0.0758,icb_sector
+Truyền thông,2022,dsri,18,18,0.64551,0.22541,icb_sector
+Truyền thông,2022,gmi,18,18,0.99733,0.12176,icb_sector
+Truyền thông,2022,aqi,18,17,1.0,0.31014,icb_sector
+Truyền thông,2022,sgi,18,18,1.16045,0.22792,icb_sector
+Truyền thông,2022,depi,18,18,1.0,0.11094,icb_sector
+Truyền thông,2022,sgai,18,18,0.96894,0.09387,icb_sector
+Truyền thông,2022,tata,18,18,0.00559,0.09842,icb_sector
+Truyền thông,2022,lvgi,18,18,0.96298,0.14188,icb_sector
+Truyền thông,2022,altman_z_double_prime,18,18,9.22167,2.62809,icb_sector
+Truyền thông,2022,cfo_to_assets,18,18,0.06443,0.0749,icb_sector
+Truyền thông,2022,sensitive_receivables_ratio,18,18,0.05798,0.05011,icb_sector
+Truyền thông,2022,receivable_to_revenue,18,18,0.1068,0.0707,icb_sector
+Truyền thông,2023,dsri,19,18,1.0091,0.35515,icb_sector
+Truyền thông,2023,gmi,19,18,1.04837,0.14848,icb_sector
+Truyền thông,2023,aqi,19,18,0.91985,0.25063,icb_sector
+Truyền thông,2023,sgi,19,18,0.9771,0.22157,icb_sector
+Truyền thông,2023,depi,19,18,1.0,0.07488,icb_sector
+Truyền thông,2023,sgai,19,18,1.07,0.16701,icb_sector
+Truyền thông,2023,tata,19,19,0.02288,0.07735,icb_sector
+Truyền thông,2023,lvgi,19,18,0.94892,0.1752,icb_sector
+Truyền thông,2023,altman_z_double_prime,19,19,9.19976,2.47576,icb_sector
+Truyền thông,2023,cfo_to_assets,19,19,0.05174,0.07488,icb_sector
+Truyền thông,2023,sensitive_receivables_ratio,19,19,0.04115,0.03309,icb_sector
+Truyền thông,2023,receivable_to_revenue,19,19,0.08955,0.05849,icb_sector
+Truyền thông,2024,dsri,19,19,1.03937,0.41851,icb_sector
+Truyền thông,2024,gmi,19,19,1.07941,0.12322,icb_sector
+Truyền thông,2024,aqi,19,18,0.98842,0.20745,icb_sector
+Truyền thông,2024,sgi,19,19,1.09172,0.1888,icb_sector
+Truyền thông,2024,depi,19,19,1.0,0.04506,icb_sector
+Truyền thông,2024,sgai,19,19,0.92052,0.11324,icb_sector
+Truyền thông,2024,tata,19,19,0.01565,0.05544,icb_sector
+Truyền thông,2024,lvgi,19,19,1.02024,0.09574,icb_sector
+Truyền thông,2024,altman_z_double_prime,19,19,9.21759,2.89766,icb_sector
+Truyền thông,2024,cfo_to_assets,19,19,0.07759,0.05568,icb_sector
+Truyền thông,2024,sensitive_receivables_ratio,19,19,0.04069,0.04382,icb_sector
+Truyền thông,2024,receivable_to_revenue,19,19,0.08869,0.06489,icb_sector
+Truyền thông,2025,dsri,18,17,0.95987,0.29771,icb_sector
+Truyền thông,2025,gmi,18,17,0.93387,0.15757,icb_sector
+Truyền thông,2025,aqi,18,18,1.03303,0.31307,icb_sector
+Truyền thông,2025,sgi,18,17,0.88049,0.10115,icb_sector
+Truyền thông,2025,depi,18,18,1.0,0.03634,icb_sector
+Truyền thông,2025,sgai,18,17,1.13867,0.17384,icb_sector
+Truyền thông,2025,tata,18,18,0.0131,0.05265,icb_sector
+Truyền thông,2025,lvgi,18,18,0.90462,0.20302,icb_sector
+Truyền thông,2025,altman_z_double_prime,18,18,9.0059,3.70012,icb_sector
+Truyền thông,2025,cfo_to_assets,18,18,0.03682,0.08936,icb_sector
+Truyền thông,2025,sensitive_receivables_ratio,18,18,0.03209,0.03866,icb_sector
+Truyền thông,2025,receivable_to_revenue,18,17,0.11273,0.1058,icb_sector
+Tài nguyên Cơ bản,2018,dsri,50,0,0.0,1.4826,market_fallback_small_sector
+Tài nguyên Cơ bản,2018,gmi,50,0,0.0,1.4826,market_fallback_small_sector
+Tài nguyên Cơ bản,2018,aqi,50,0,0.0,1.4826,market_fallback_small_sector
+Tài nguyên Cơ bản,2018,sgi,50,0,0.0,1.4826,market_fallback_small_sector
+Tài nguyên Cơ bản,2018,depi,50,0,0.0,1.4826,market_fallback_small_sector
+Tài nguyên Cơ bản,2018,sgai,50,0,0.0,1.4826,market_fallback_small_sector
+Tài nguyên Cơ bản,2018,tata,50,50,0.04292,0.10729,icb_sector
+Tài nguyên Cơ bản,2018,lvgi,50,0,0.0,1.4826,market_fallback_small_sector
+Tài nguyên Cơ bản,2018,altman_z_double_prime,50,50,5.26217,1.82054,icb_sector
+Tài nguyên Cơ bản,2018,cfo_to_assets,50,50,0.01149,0.09576,icb_sector
+Tài nguyên Cơ bản,2018,sensitive_receivables_ratio,50,50,0.02837,0.01923,icb_sector
+Tài nguyên Cơ bản,2018,receivable_to_revenue,50,50,0.14381,0.1176,icb_sector
+Tài nguyên Cơ bản,2019,dsri,51,50,0.99145,0.35494,icb_sector
+Tài nguyên Cơ bản,2019,gmi,51,49,1.09428,0.33746,icb_sector
+Tài nguyên Cơ bản,2019,aqi,51,48,0.94645,0.28457,icb_sector
+Tài nguyên Cơ bản,2019,sgi,51,50,1.07541,0.222,icb_sector
+Tài nguyên Cơ bản,2019,depi,51,50,0.96861,0.1415,icb_sector
+Tài nguyên Cơ bản,2019,sgai,51,50,0.98494,0.24196,icb_sector
+Tài nguyên Cơ bản,2019,tata,51,51,-0.024,0.11003,icb_sector
+Tài nguyên Cơ bản,2019,lvgi,51,50,1.00619,0.1158,icb_sector
+Tài nguyên Cơ bản,2019,altman_z_double_prime,51,51,5.57295,1.74015,icb_sector
+Tài nguyên Cơ bản,2019,cfo_to_assets,51,51,0.05577,0.10667,icb_sector
+Tài nguyên Cơ bản,2019,sensitive_receivables_ratio,51,51,0.02632,0.02562,icb_sector
+Tài nguyên Cơ bản,2019,receivable_to_revenue,51,51,0.1102,0.09119,icb_sector
+Tài nguyên Cơ bản,2020,dsri,51,51,1.09347,0.39497,icb_sector
+Tài nguyên Cơ bản,2020,gmi,51,50,0.95188,0.19421,icb_sector
+Tài nguyên Cơ bản,2020,aqi,51,51,0.9839,0.35174,icb_sector
+Tài nguyên Cơ bản,2020,sgi,51,51,0.9762,0.16838,icb_sector
+Tài nguyên Cơ bản,2020,depi,51,51,0.95581,0.10461,icb_sector
+Tài nguyên Cơ bản,2020,sgai,51,51,1.04043,0.24447,icb_sector
+Tài nguyên Cơ bản,2020,tata,51,51,-0.00177,0.07864,icb_sector
+Tài nguyên Cơ bản,2020,lvgi,51,51,0.99314,0.08408,icb_sector
+Tài nguyên Cơ bản,2020,altman_z_double_prime,51,51,5.41617,2.32431,icb_sector
+Tài nguyên Cơ bản,2020,cfo_to_assets,51,51,0.04682,0.11192,icb_sector
+Tài nguyên Cơ bản,2020,sensitive_receivables_ratio,51,51,0.0323,0.0274,icb_sector
+Tài nguyên Cơ bản,2020,receivable_to_revenue,51,51,0.14714,0.1026,icb_sector
+Tài nguyên Cơ bản,2021,dsri,52,51,0.86929,0.43567,icb_sector
+Tài nguyên Cơ bản,2021,gmi,52,51,0.99698,0.32853,icb_sector
+Tài nguyên Cơ bản,2021,aqi,52,51,0.95658,0.3518,icb_sector
+Tài nguyên Cơ bản,2021,sgi,52,51,1.1881,0.28948,icb_sector
+Tài nguyên Cơ bản,2021,depi,52,51,0.9728,0.13435,icb_sector
+Tài nguyên Cơ bản,2021,sgai,52,51,0.91571,0.20189,icb_sector
+Tài nguyên Cơ bản,2021,tata,52,52,0.06943,0.11268,icb_sector
+Tài nguyên Cơ bản,2021,lvgi,52,51,0.98546,0.1321,icb_sector
+Tài nguyên Cơ bản,2021,altman_z_double_prime,52,52,6.17926,1.86683,icb_sector
+Tài nguyên Cơ bản,2021,cfo_to_assets,52,52,0.05314,0.15164,icb_sector
+Tài nguyên Cơ bản,2021,sensitive_receivables_ratio,52,52,0.0357,0.03535,icb_sector
+Tài nguyên Cơ bản,2021,receivable_to_revenue,52,52,0.13722,0.12023,icb_sector
+Tài nguyên Cơ bản,2022,dsri,52,51,0.88908,0.40031,icb_sector
+Tài nguyên Cơ bản,2022,gmi,52,50,1.20455,0.48849,icb_sector
+Tài nguyên Cơ bản,2022,aqi,52,51,1.01138,0.34827,icb_sector
+Tài nguyên Cơ bản,2022,sgi,52,51,1.12762,0.23191,icb_sector
+Tài nguyên Cơ bản,2022,depi,52,51,0.96509,0.12069,icb_sector
+Tài nguyên Cơ bản,2022,sgai,52,51,0.94035,0.2796,icb_sector
+Tài nguyên Cơ bản,2022,tata,52,52,0.002,0.1189,icb_sector
+Tài nguyên Cơ bản,2022,lvgi,52,51,0.96823,0.13534,icb_sector
+Tài nguyên Cơ bản,2022,altman_z_double_prime,52,52,5.88782,1.62889,icb_sector
+Tài nguyên Cơ bản,2022,cfo_to_assets,52,52,0.0629,0.14618,icb_sector
+Tài nguyên Cơ bản,2022,sensitive_receivables_ratio,52,52,0.03689,0.03132,icb_sector
+Tài nguyên Cơ bản,2022,receivable_to_revenue,52,52,0.12156,0.12045,icb_sector
+Tài nguyên Cơ bản,2023,dsri,53,51,1.20337,0.56575,icb_sector
+Tài nguyên Cơ bản,2023,gmi,53,50,0.9995,0.22456,icb_sector
+Tài nguyên Cơ bản,2023,aqi,53,51,0.99009,0.33815,icb_sector
+Tài nguyên Cơ bản,2023,sgi,53,52,0.89617,0.13356,icb_sector
+Tài nguyên Cơ bản,2023,depi,53,52,1.0,0.15497,icb_sector
+Tài nguyên Cơ bản,2023,sgai,53,52,1.0672,0.22138,icb_sector
+Tài nguyên Cơ bản,2023,tata,53,53,-0.00184,0.09983,icb_sector
+Tài nguyên Cơ bản,2023,lvgi,53,52,1.00078,0.10238,icb_sector
+Tài nguyên Cơ bản,2023,altman_z_double_prime,53,53,5.97616,2.04375,icb_sector
+Tài nguyên Cơ bản,2023,cfo_to_assets,53,53,0.03528,0.09586,icb_sector
+Tài nguyên Cơ bản,2023,sensitive_receivables_ratio,53,53,0.03808,0.03105,icb_sector
+Tài nguyên Cơ bản,2023,receivable_to_revenue,53,53,0.15682,0.10771,icb_sector
+Tài nguyên Cơ bản,2024,dsri,54,53,0.97619,0.44421,icb_sector
+Tài nguyên Cơ bản,2024,gmi,54,50,1.11612,0.27536,icb_sector
+Tài nguyên Cơ bản,2024,aqi,54,53,1.00466,0.24588,icb_sector
+Tài nguyên Cơ bản,2024,sgi,54,53,1.08802,0.19437,icb_sector
+Tài nguyên Cơ bản,2024,depi,54,53,0.97155,0.12259,icb_sector
+Tài nguyên Cơ bản,2024,sgai,54,52,0.99459,0.18081,icb_sector
+Tài nguyên Cơ bản,2024,tata,54,54,0.01361,0.08546,icb_sector
+Tài nguyên Cơ bản,2024,lvgi,54,53,1.01981,0.09168,icb_sector
+Tài nguyên Cơ bản,2024,altman_z_double_prime,54,54,5.92773,2.04795,icb_sector
+Tài nguyên Cơ bản,2024,cfo_to_assets,54,54,0.01965,0.09154,icb_sector
+Tài nguyên Cơ bản,2024,sensitive_receivables_ratio,54,54,0.03363,0.02668,icb_sector
+Tài nguyên Cơ bản,2024,receivable_to_revenue,54,54,0.15842,0.10368,icb_sector
+Tài nguyên Cơ bản,2025,dsri,54,54,0.92796,0.34982,icb_sector
+Tài nguyên Cơ bản,2025,gmi,54,49,0.95953,0.22911,icb_sector
+Tài nguyên Cơ bản,2025,aqi,54,54,1.03464,0.35222,icb_sector
+Tài nguyên Cơ bản,2025,sgi,54,54,1.00458,0.21829,icb_sector
+Tài nguyên Cơ bản,2025,depi,54,54,0.99217,0.14772,icb_sector
+Tài nguyên Cơ bản,2025,sgai,54,53,1.01283,0.1665,icb_sector
+Tài nguyên Cơ bản,2025,tata,54,54,-0.00553,0.08457,icb_sector
+Tài nguyên Cơ bản,2025,lvgi,54,54,0.99883,0.08532,icb_sector
+Tài nguyên Cơ bản,2025,altman_z_double_prime,54,54,5.95337,2.32694,icb_sector
+Tài nguyên Cơ bản,2025,cfo_to_assets,54,54,0.04722,0.10918,icb_sector
+Tài nguyên Cơ bản,2025,sensitive_receivables_ratio,54,54,0.04438,0.0471,icb_sector
+Tài nguyên Cơ bản,2025,receivable_to_revenue,54,54,0.12218,0.09485,icb_sector
+Viễn thông,2018,dsri,1,0,0.0,1.4826,market_fallback_small_sector
+Viễn thông,2018,gmi,1,0,0.0,1.4826,market_fallback_small_sector
+Viễn thông,2018,aqi,1,0,0.0,1.4826,market_fallback_small_sector
+Viễn thông,2018,sgi,1,0,0.0,1.4826,market_fallback_small_sector
+Viễn thông,2018,depi,1,0,0.0,1.4826,market_fallback_small_sector
+Viễn thông,2018,sgai,1,0,0.0,1.4826,market_fallback_small_sector
+Viễn thông,2018,tata,1,1,0.01822,0.10001,market_fallback_small_sector
+Viễn thông,2018,lvgi,1,0,0.0,1.4826,market_fallback_small_sector
+Viễn thông,2018,altman_z_double_prime,1,1,6.65702,2.84663,market_fallback_small_sector
+Viễn thông,2018,cfo_to_assets,1,1,0.0528,0.10465,market_fallback_small_sector
+Viễn thông,2018,sensitive_receivables_ratio,1,1,0.04056,0.04325,market_fallback_small_sector
+Viễn thông,2018,receivable_to_revenue,1,1,0.23035,0.20735,market_fallback_small_sector
+Viễn thông,2019,dsri,1,1,1.00166,0.35494,market_fallback_small_sector
+Viễn thông,2019,gmi,1,1,1.00236,0.20124,market_fallback_small_sector
+Viễn thông,2019,aqi,1,1,1.0,0.29198,market_fallback_small_sector
+Viễn thông,2019,sgi,1,1,1.03092,0.19223,market_fallback_small_sector
+Viễn thông,2019,depi,1,1,0.9696,0.12668,market_fallback_small_sector
+Viễn thông,2019,sgai,1,1,1.02948,0.21555,market_fallback_small_sector
+Viễn thông,2019,tata,1,1,-0.00178,0.08527,market_fallback_small_sector
+Viễn thông,2019,lvgi,1,1,0.98654,0.12862,market_fallback_small_sector
+Viễn thông,2019,altman_z_double_prime,1,1,6.56448,2.77627,market_fallback_small_sector
+Viễn thông,2019,cfo_to_assets,1,1,0.06271,0.108,market_fallback_small_sector
+Viễn thông,2019,sensitive_receivables_ratio,1,1,0.04095,0.04351,market_fallback_small_sector
+Viễn thông,2019,receivable_to_revenue,1,1,0.22436,0.22041,market_fallback_small_sector
+Viễn thông,2020,dsri,1,1,1.06596,0.38904,market_fallback_small_sector
+Viễn thông,2020,gmi,1,1,0.99506,0.21804,market_fallback_small_sector
+Viễn thông,2020,aqi,1,1,0.99635,0.28022,market_fallback_small_sector
+Viễn thông,2020,sgi,1,1,0.96378,0.24843,market_fallback_small_sector
+Viễn thông,2020,depi,1,1,0.9556,0.12418,market_fallback_small_sector
+Viễn thông,2020,sgai,1,1,1.04527,0.25542,market_fallback_small_sector
+Viễn thông,2020,tata,1,1,-0.00649,0.08133,market_fallback_small_sector
+Viễn thông,2020,lvgi,1,1,0.99517,0.13451,market_fallback_small_sector
+Viễn thông,2020,altman_z_double_prime,1,1,6.58817,2.73128,market_fallback_small_sector
+Viễn thông,2020,cfo_to_assets,1,1,0.06607,0.104,market_fallback_small_sector
+Viễn thông,2020,sensitive_receivables_ratio,1,1,0.04138,0.04793,market_fallback_small_sector
+Viễn thông,2020,receivable_to_revenue,1,1,0.25021,0.24139,market_fallback_small_sector
+Viễn thông,2021,dsri,1,1,0.98125,0.41233,market_fallback_small_sector
+Viễn thông,2021,gmi,1,1,1.00648,0.22192,market_fallback_small_sector
+Viễn thông,2021,aqi,1,1,0.97416,0.26231,market_fallback_small_sector
+Viễn thông,2021,sgi,1,1,1.06683,0.27376,market_fallback_small_sector
+Viễn thông,2021,depi,1,1,0.95004,0.12117,market_fallback_small_sector
+Viễn thông,2021,sgai,1,1,0.9753,0.2399,market_fallback_small_sector
+Viễn thông,2021,tata,1,1,0.02605,0.09526,market_fallback_small_sector
+Viễn thông,2021,lvgi,1,1,0.97762,0.15362,market_fallback_small_sector
+Viễn thông,2021,altman_z_double_prime,1,1,6.81817,2.91465,market_fallback_small_sector
+Viễn thông,2021,cfo_to_assets,1,1,0.03428,0.1044,market_fallback_small_sector
+Viễn thông,2021,sensitive_receivables_ratio,1,1,0.04249,0.04762,market_fallback_small_sector
+Viễn thông,2021,receivable_to_revenue,1,1,0.23907,0.23435,market_fallback_small_sector
+Viễn thông,2022,dsri,1,1,0.90758,0.37215,market_fallback_small_sector
+Viễn thông,2022,gmi,1,1,0.99556,0.21817,market_fallback_small_sector
+Viễn thông,2022,aqi,1,1,0.99028,0.23561,market_fallback_small_sector
+Viễn thông,2022,sgi,1,1,1.15467,0.27504,market_fallback_small_sector
+Viễn thông,2022,depi,1,1,0.98075,0.11477,market_fallback_small_sector
+Viễn thông,2022,sgai,1,1,0.98876,0.25617,market_fallback_small_sector
+Viễn thông,2022,tata,1,1,0.02419,0.09344,market_fallback_small_sector
+Viễn thông,2022,lvgi,1,1,0.98503,0.15047,market_fallback_small_sector
+Viễn thông,2022,altman_z_double_prime,1,1,6.878,2.9024,market_fallback_small_sector
+Viễn thông,2022,cfo_to_assets,1,1,0.04003,0.11596,market_fallback_small_sector
+Viễn thông,2022,sensitive_receivables_ratio,1,1,0.04834,0.05537,market_fallback_small_sector
+Viễn thông,2022,receivable_to_revenue,1,1,0.23683,0.24735,market_fallback_small_sector
+Viễn thông,2023,dsri,1,1,1.09861,0.45224,market_fallback_small_sector
+Viễn thông,2023,gmi,1,1,1.00967,0.21794,market_fallback_small_sector
+Viễn thông,2023,aqi,1,1,1.0,0.24667,market_fallback_small_sector
+Viễn thông,2023,sgi,1,1,0.92823,0.23421,market_fallback_small_sector
+Viễn thông,2023,depi,1,1,0.96885,0.10298,market_fallback_small_sector
+Viễn thông,2023,sgai,1,1,1.06562,0.25103,market_fallback_small_sector
+Viễn thông,2023,tata,1,1,0.0066,0.08705,market_fallback_small_sector
+Viễn thông,2023,lvgi,1,1,0.98817,0.12223,market_fallback_small_sector
+Viễn thông,2023,altman_z_double_prime,1,1,6.85175,3.05172,market_fallback_small_sector
+Viễn thông,2023,cfo_to_assets,1,1,0.04539,0.10709,market_fallback_small_sector
+Viễn thông,2023,sensitive_receivables_ratio,1,1,0.04718,0.05193,market_fallback_small_sector
+Viễn thông,2023,receivable_to_revenue,1,1,0.2582,0.26434,market_fallback_small_sector
+Viễn thông,2024,dsri,1,1,0.95065,0.35274,market_fallback_small_sector
+Viễn thông,2024,gmi,1,1,0.99939,0.19835,market_fallback_small_sector
+Viễn thông,2024,aqi,1,1,1.0,0.23362,market_fallback_small_sector
+Viễn thông,2024,sgi,1,1,1.07433,0.21522,market_fallback_small_sector
+Viễn thông,2024,depi,1,1,0.97412,0.11339,market_fallback_small_sector
+Viễn thông,2024,sgai,1,1,0.99031,0.18905,market_fallback_small_sector
+Viễn thông,2024,tata,1,1,3e-05,0.08857,market_fallback_small_sector
+Viễn thông,2024,lvgi,1,1,0.99572,0.11831,market_fallback_small_sector
+Viễn thông,2024,altman_z_double_prime,1,1,6.93115,3.11413,market_fallback_small_sector
+Viễn thông,2024,cfo_to_assets,1,1,0.05482,0.09839,market_fallback_small_sector
+Viễn thông,2024,sensitive_receivables_ratio,1,1,0.04318,0.04925,market_fallback_small_sector
+Viễn thông,2024,receivable_to_revenue,1,1,0.2251,0.23075,market_fallback_small_sector
+Viễn thông,2025,dsri,1,1,0.94668,0.34016,market_fallback_small_sector
+Viễn thông,2025,gmi,1,1,0.97328,0.16943,market_fallback_small_sector
+Viễn thông,2025,aqi,1,1,1.0,0.28117,market_fallback_small_sector
+Viễn thông,2025,sgi,1,1,1.08664,0.21929,market_fallback_small_sector
+Viễn thông,2025,depi,1,1,0.98271,0.12315,market_fallback_small_sector
+Viễn thông,2025,sgai,1,1,0.99658,0.22428,market_fallback_small_sector
+Viễn thông,2025,tata,1,1,0.01046,0.08369,market_fallback_small_sector
+Viễn thông,2025,lvgi,1,1,0.99322,0.12233,market_fallback_small_sector
+Viễn thông,2025,altman_z_double_prime,1,1,7.18651,3.12277,market_fallback_small_sector
+Viễn thông,2025,cfo_to_assets,1,1,0.05252,0.10131,market_fallback_small_sector
+Viễn thông,2025,sensitive_receivables_ratio,1,1,0.04603,0.05233,market_fallback_small_sector
+Viễn thông,2025,receivable_to_revenue,1,1,0.22862,0.23671,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,dsri,115,0,0.0,1.4826,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,gmi,115,0,0.0,1.4826,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,aqi,115,0,0.0,1.4826,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,sgi,115,0,0.0,1.4826,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,depi,115,0,0.0,1.4826,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,sgai,115,0,0.0,1.4826,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,tata,115,115,-0.00286,0.12138,icb_sector
+Xây dựng và Vật liệu,2018,lvgi,115,0,0.0,1.4826,market_fallback_small_sector
+Xây dựng và Vật liệu,2018,altman_z_double_prime,115,115,5.78839,2.58705,icb_sector
+Xây dựng và Vật liệu,2018,cfo_to_assets,115,115,0.05164,0.09247,icb_sector
+Xây dựng và Vật liệu,2018,sensitive_receivables_ratio,115,115,0.07536,0.07275,icb_sector
+Xây dựng và Vật liệu,2018,receivable_to_revenue,115,115,0.34286,0.26685,icb_sector
+Xây dựng và Vật liệu,2019,dsri,115,115,1.03285,0.37491,icb_sector
+Xây dựng và Vật liệu,2019,gmi,115,109,1.0021,0.23393,icb_sector
+Xây dựng và Vật liệu,2019,aqi,115,114,1.00182,0.36632,icb_sector
+Xây dựng và Vật liệu,2019,sgi,115,115,1.05498,0.228,icb_sector
+Xây dựng và Vật liệu,2019,depi,115,115,0.98971,0.15558,icb_sector
+Xây dựng và Vật liệu,2019,sgai,115,115,1.03322,0.26325,icb_sector
+Xây dựng và Vật liệu,2019,tata,115,115,0.00132,0.09347,icb_sector
+Xây dựng và Vật liệu,2019,lvgi,115,115,0.99026,0.10211,icb_sector
+Xây dựng và Vật liệu,2019,altman_z_double_prime,115,115,5.74795,2.3136,icb_sector
+Xây dựng và Vật liệu,2019,cfo_to_assets,115,115,0.03935,0.1159,icb_sector
+Xây dựng và Vật liệu,2019,sensitive_receivables_ratio,115,115,0.06474,0.06104,icb_sector
+Xây dựng và Vật liệu,2019,receivable_to_revenue,115,115,0.37303,0.32636,icb_sector
+Xây dựng và Vật liệu,2020,dsri,117,114,1.10377,0.48938,icb_sector
+Xây dựng và Vật liệu,2020,gmi,117,111,0.96174,0.24773,icb_sector
+Xây dựng và Vật liệu,2020,aqi,117,114,0.9865,0.33354,icb_sector
+Xây dựng và Vật liệu,2020,sgi,117,114,0.94991,0.30008,icb_sector
+Xây dựng và Vật liệu,2020,depi,117,115,0.94479,0.13504,icb_sector
+Xây dựng và Vật liệu,2020,sgai,117,114,1.08666,0.30382,icb_sector
+Xây dựng và Vật liệu,2020,tata,117,117,-0.00294,0.08417,icb_sector
+Xây dựng và Vật liệu,2020,lvgi,117,115,0.99351,0.10038,icb_sector
+Xây dựng và Vật liệu,2020,altman_z_double_prime,117,117,5.70531,2.25553,icb_sector
+Xây dựng và Vật liệu,2020,cfo_to_assets,117,117,0.05525,0.0976,icb_sector
+Xây dựng và Vật liệu,2020,sensitive_receivables_ratio,117,117,0.08036,0.0827,icb_sector
+Xây dựng và Vật liệu,2020,receivable_to_revenue,117,116,0.43314,0.41704,icb_sector
+Xây dựng và Vật liệu,2021,dsri,119,116,0.98898,0.50926,icb_sector
+Xây dựng và Vật liệu,2021,gmi,119,113,1.03479,0.2517,icb_sector
+Xây dựng và Vật liệu,2021,aqi,119,115,1.0,0.21197,icb_sector
+Xây dựng và Vật liệu,2021,sgi,119,116,1.03414,0.34052,icb_sector
+Xây dựng và Vật liệu,2021,depi,119,117,0.97452,0.13208,icb_sector
+Xây dựng và Vật liệu,2021,sgai,119,116,0.96583,0.30825,icb_sector
+Xây dựng và Vật liệu,2021,tata,119,119,0.01973,0.09278,icb_sector
+Xây dựng và Vật liệu,2021,lvgi,119,117,0.96781,0.11344,icb_sector
+Xây dựng và Vật liệu,2021,altman_z_double_prime,119,119,5.86203,2.17426,icb_sector
+Xây dựng và Vật liệu,2021,cfo_to_assets,119,119,0.02837,0.11639,icb_sector
+Xây dựng và Vật liệu,2021,sensitive_receivables_ratio,119,119,0.08514,0.08697,icb_sector
+Xây dựng và Vật liệu,2021,receivable_to_revenue,119,118,0.47276,0.47955,icb_sector
+Xây dựng và Vật liệu,2022,dsri,121,117,0.95518,0.40809,icb_sector
+Xây dựng và Vật liệu,2022,gmi,121,116,1.05124,0.27899,icb_sector
+Xây dựng và Vật liệu,2022,aqi,121,116,1.0,0.20111,icb_sector
+Xây dựng và Vật liệu,2022,sgi,121,118,1.17139,0.33556,icb_sector
+Xây dựng và Vật liệu,2022,depi,121,119,0.9589,0.12147,icb_sector
+Xây dựng và Vật liệu,2022,sgai,121,118,0.97917,0.26562,icb_sector
+Xây dựng và Vật liệu,2022,tata,121,121,0.04009,0.09937,icb_sector
+Xây dựng và Vật liệu,2022,lvgi,121,119,1.00123,0.12788,icb_sector
+Xây dựng và Vật liệu,2022,altman_z_double_prime,121,121,6.14813,2.50873,icb_sector
+Xây dựng và Vật liệu,2022,cfo_to_assets,121,121,0.00716,0.10896,icb_sector
+Xây dựng và Vật liệu,2022,sensitive_receivables_ratio,121,121,0.08558,0.09193,icb_sector
+Xây dựng và Vật liệu,2022,receivable_to_revenue,121,121,0.45205,0.44031,icb_sector
+Xây dựng và Vật liệu,2023,dsri,122,121,1.14078,0.3991,icb_sector
+Xây dựng và Vật liệu,2023,gmi,122,117,1.00756,0.2796,icb_sector
+Xây dựng và Vật liệu,2023,aqi,122,120,1.01934,0.29219,icb_sector
+Xây dựng và Vật liệu,2023,sgi,122,121,0.89362,0.24721,icb_sector
+Xây dựng và Vật liệu,2023,depi,122,121,0.94017,0.09317,icb_sector
+Xây dựng và Vật liệu,2023,sgai,122,121,1.05925,0.31677,icb_sector
+Xây dựng và Vật liệu,2023,tata,122,122,-0.00358,0.08903,icb_sector
+Xây dựng và Vật liệu,2023,lvgi,122,121,0.98897,0.09866,icb_sector
+Xây dựng và Vật liệu,2023,altman_z_double_prime,122,122,5.86294,2.34636,icb_sector
+Xây dựng và Vật liệu,2023,cfo_to_assets,122,122,0.03078,0.10056,icb_sector
+Xây dựng và Vật liệu,2023,sensitive_receivables_ratio,122,122,0.08768,0.09727,icb_sector
+Xây dựng và Vật liệu,2023,receivable_to_revenue,122,122,0.55113,0.47192,icb_sector
+Xây dựng và Vật liệu,2024,dsri,123,122,0.88659,0.37606,icb_sector
+Xây dựng và Vật liệu,2024,gmi,123,116,0.98009,0.28391,icb_sector
+Xây dựng và Vật liệu,2024,aqi,123,119,1.01009,0.23657,icb_sector
+Xây dựng và Vật liệu,2024,sgi,123,122,1.05117,0.27856,icb_sector
+Xây dựng và Vật liệu,2024,depi,123,122,0.98701,0.16019,icb_sector
+Xây dựng và Vật liệu,2024,sgai,123,120,0.97152,0.28164,icb_sector
+Xây dựng và Vật liệu,2024,tata,123,123,-0.02939,0.09435,icb_sector
+Xây dựng và Vật liệu,2024,lvgi,123,122,0.98788,0.0896,icb_sector
+Xây dựng và Vật liệu,2024,altman_z_double_prime,123,123,5.76475,2.20802,icb_sector
+Xây dựng và Vật liệu,2024,cfo_to_assets,123,123,0.05193,0.09965,icb_sector
+Xây dựng và Vật liệu,2024,sensitive_receivables_ratio,123,123,0.07595,0.08989,icb_sector
+Xây dựng và Vật liệu,2024,receivable_to_revenue,123,123,0.45408,0.4193,icb_sector
+Xây dựng và Vật liệu,2025,dsri,123,122,0.85743,0.3048,icb_sector
+Xây dựng và Vật liệu,2025,gmi,123,116,0.98554,0.30687,icb_sector
+Xây dựng và Vật liệu,2025,aqi,123,118,0.97573,0.29356,icb_sector
+Xây dựng và Vật liệu,2025,sgi,123,123,1.10815,0.27296,icb_sector
+Xây dựng và Vật liệu,2025,depi,123,123,0.94282,0.1224,icb_sector
+Xây dựng và Vật liệu,2025,sgai,123,120,0.94669,0.2558,icb_sector
+Xây dựng và Vật liệu,2025,tata,123,123,-0.00783,0.08461,icb_sector
+Xây dựng và Vật liệu,2025,lvgi,123,123,0.98446,0.09057,icb_sector
+Xây dựng và Vật liệu,2025,altman_z_double_prime,123,123,6.05212,2.16899,icb_sector
+Xây dựng và Vật liệu,2025,cfo_to_assets,123,123,0.05252,0.09582,icb_sector
+Xây dựng và Vật liệu,2025,sensitive_receivables_ratio,123,123,0.07967,0.08932,icb_sector
+Xây dựng và Vật liệu,2025,receivable_to_revenue,123,123,0.48544,0.45087,icb_sector
+Y tế,2018,dsri,25,0,0.0,1.4826,market_fallback_small_sector
+Y tế,2018,gmi,25,0,0.0,1.4826,market_fallback_small_sector
+Y tế,2018,aqi,25,0,0.0,1.4826,market_fallback_small_sector
+Y tế,2018,sgi,25,0,0.0,1.4826,market_fallback_small_sector
+Y tế,2018,depi,25,0,0.0,1.4826,market_fallback_small_sector
+Y tế,2018,sgai,25,0,0.0,1.4826,market_fallback_small_sector
+Y tế,2018,tata,25,25,0.05355,0.06012,icb_sector
+Y tế,2018,lvgi,25,0,0.0,1.4826,market_fallback_small_sector
+Y tế,2018,altman_z_double_prime,25,25,8.91406,4.84022,icb_sector
+Y tế,2018,cfo_to_assets,25,25,0.05268,0.07918,icb_sector
+Y tế,2018,sensitive_receivables_ratio,25,25,0.03311,0.02861,icb_sector
+Y tế,2018,receivable_to_revenue,25,25,0.24467,0.13728,icb_sector
+Y tế,2019,dsri,25,25,1.04324,0.21443,icb_sector
+Y tế,2019,gmi,25,25,1.00636,0.09051,icb_sector
+Y tế,2019,aqi,25,24,0.94096,0.42692,icb_sector
+Y tế,2019,sgi,25,25,1.00377,0.18475,icb_sector
+Y tế,2019,depi,25,25,0.92244,0.22273,icb_sector
+Y tế,2019,sgai,25,25,0.99931,0.17716,icb_sector
+Y tế,2019,tata,25,25,0.02649,0.08336,icb_sector
+Y tế,2019,lvgi,25,25,0.9689,0.18007,icb_sector
+Y tế,2019,altman_z_double_prime,25,25,7.9172,3.8476,icb_sector
+Y tế,2019,cfo_to_assets,25,25,0.03605,0.09675,icb_sector
+Y tế,2019,sensitive_receivables_ratio,25,25,0.03018,0.02745,icb_sector
+Y tế,2019,receivable_to_revenue,25,25,0.23338,0.14854,icb_sector
+Y tế,2020,dsri,25,25,1.06868,0.26465,icb_sector
+Y tế,2020,gmi,25,25,0.98472,0.1397,icb_sector
+Y tế,2020,aqi,25,25,1.01384,0.23598,icb_sector
+Y tế,2020,sgi,25,25,0.97645,0.12944,icb_sector
+Y tế,2020,depi,25,25,0.94895,0.14886,icb_sector
+Y tế,2020,sgai,25,25,1.01856,0.21009,icb_sector
+Y tế,2020,tata,25,25,0.00549,0.08145,icb_sector
+Y tế,2020,lvgi,25,25,1.00421,0.14618,icb_sector
+Y tế,2020,altman_z_double_prime,25,25,8.77663,3.78462,icb_sector
+Y tế,2020,cfo_to_assets,25,25,0.0898,0.13701,icb_sector
+Y tế,2020,sensitive_receivables_ratio,25,25,0.02982,0.02687,icb_sector
+Y tế,2020,receivable_to_revenue,25,25,0.2407,0.19946,icb_sector
+Y tế,2021,dsri,26,25,0.90975,0.11824,icb_sector
+Y tế,2021,gmi,26,25,1.00513,0.11116,icb_sector
+Y tế,2021,aqi,26,24,0.94326,0.27086,icb_sector
+Y tế,2021,sgi,26,25,1.03199,0.19715,icb_sector
+Y tế,2021,depi,26,25,0.89241,0.0834,icb_sector
+Y tế,2021,sgai,26,25,0.98463,0.14576,icb_sector
+Y tế,2021,tata,26,26,0.05556,0.06881,icb_sector
+Y tế,2021,lvgi,26,25,0.93477,0.14143,icb_sector
+Y tế,2021,altman_z_double_prime,26,26,9.44181,4.04683,icb_sector
+Y tế,2021,cfo_to_assets,26,26,0.02917,0.12222,icb_sector
+Y tế,2021,sensitive_receivables_ratio,26,26,0.02916,0.02901,icb_sector
+Y tế,2021,receivable_to_revenue,26,26,0.21355,0.18155,icb_sector
+Y tế,2022,dsri,26,26,0.96877,0.27166,icb_sector
+Y tế,2022,gmi,26,26,0.9503,0.11903,icb_sector
+Y tế,2022,aqi,26,26,0.99271,0.32587,icb_sector
+Y tế,2022,sgi,26,26,1.14603,0.14851,icb_sector
+Y tế,2022,depi,26,26,0.95894,0.09392,icb_sector
+Y tế,2022,sgai,26,26,1.00067,0.13821,icb_sector
+Y tế,2022,tata,26,26,0.03518,0.06601,icb_sector
+Y tế,2022,lvgi,26,26,0.9443,0.20009,icb_sector
+Y tế,2022,altman_z_double_prime,26,26,10.24696,4.83665,icb_sector
+Y tế,2022,cfo_to_assets,26,26,0.05084,0.11802,icb_sector
+Y tế,2022,sensitive_receivables_ratio,26,26,0.06261,0.07241,icb_sector
+Y tế,2022,receivable_to_revenue,26,26,0.25428,0.23413,icb_sector
+Y tế,2023,dsri,26,26,1.0036,0.29277,icb_sector
+Y tế,2023,gmi,26,26,1.02724,0.11831,icb_sector
+Y tế,2023,aqi,26,26,1.03919,0.44706,icb_sector
+Y tế,2023,sgi,26,26,1.01939,0.1599,icb_sector
+Y tế,2023,depi,26,26,0.95228,0.04345,icb_sector
+Y tế,2023,sgai,26,26,0.98053,0.15251,icb_sector
+Y tế,2023,tata,26,26,0.0187,0.05771,icb_sector
+Y tế,2023,lvgi,26,26,0.97471,0.17648,icb_sector
+Y tế,2023,altman_z_double_prime,26,26,10.07065,4.46899,icb_sector
+Y tế,2023,cfo_to_assets,26,26,0.04227,0.09168,icb_sector
+Y tế,2023,sensitive_receivables_ratio,26,26,0.05673,0.06624,icb_sector
+Y tế,2023,receivable_to_revenue,26,26,0.29814,0.2288,icb_sector
+Y tế,2024,dsri,26,26,1.10045,0.24039,icb_sector
+Y tế,2024,gmi,26,26,1.00083,0.10012,icb_sector
+Y tế,2024,aqi,26,26,1.03372,0.25189,icb_sector
+Y tế,2024,sgi,26,26,1.04471,0.10757,icb_sector
+Y tế,2024,depi,26,26,1.00704,0.11841,icb_sector
+Y tế,2024,sgai,26,26,0.98766,0.13586,icb_sector
+Y tế,2024,tata,26,26,0.02842,0.06933,icb_sector
+Y tế,2024,lvgi,26,26,1.00131,0.0942,icb_sector
+Y tế,2024,altman_z_double_prime,26,26,9.93024,4.77339,icb_sector
+Y tế,2024,cfo_to_assets,26,26,0.05454,0.06715,icb_sector
+Y tế,2024,sensitive_receivables_ratio,26,26,0.03614,0.03839,icb_sector
+Y tế,2024,receivable_to_revenue,26,26,0.29956,0.19537,icb_sector
+Y tế,2025,dsri,26,26,0.86484,0.31571,icb_sector
+Y tế,2025,gmi,26,26,0.96935,0.07326,icb_sector
+Y tế,2025,aqi,26,26,1.07614,0.37154,icb_sector
+Y tế,2025,sgi,26,26,1.0697,0.11908,icb_sector
+Y tế,2025,depi,26,26,0.92643,0.13976,icb_sector
+Y tế,2025,sgai,26,26,1.06395,0.17522,icb_sector
+Y tế,2025,tata,26,26,0.0088,0.07759,icb_sector
+Y tế,2025,lvgi,26,26,1.00649,0.28906,icb_sector
+Y tế,2025,altman_z_double_prime,26,26,9.37145,2.84342,icb_sector
+Y tế,2025,cfo_to_assets,26,26,0.07541,0.12864,icb_sector
+Y tế,2025,sensitive_receivables_ratio,26,26,0.02705,0.02625,icb_sector
+Y tế,2025,receivable_to_revenue,26,26,0.24029,0.14088,icb_sector
+Ô tô và phụ tùng,2018,dsri,11,0,0.0,1.4826,market_fallback_small_sector
+Ô tô và phụ tùng,2018,gmi,11,0,0.0,1.4826,market_fallback_small_sector
+Ô tô và phụ tùng,2018,aqi,11,0,0.0,1.4826,market_fallback_small_sector
+Ô tô và phụ tùng,2018,sgi,11,0,0.0,1.4826,market_fallback_small_sector
+Ô tô và phụ tùng,2018,depi,11,0,0.0,1.4826,market_fallback_small_sector
+Ô tô và phụ tùng,2018,sgai,11,0,0.0,1.4826,market_fallback_small_sector
+Ô tô và phụ tùng,2018,tata,11,11,-0.01823,0.13289,icb_sector
+Ô tô và phụ tùng,2018,lvgi,11,0,0.0,1.4826,market_fallback_small_sector
+Ô tô và phụ tùng,2018,altman_z_double_prime,11,11,5.02838,1.24343,icb_sector
+Ô tô và phụ tùng,2018,cfo_to_assets,11,11,0.03331,0.10129,icb_sector
+Ô tô và phụ tùng,2018,sensitive_receivables_ratio,11,11,0.04954,0.05114,icb_sector
+Ô tô và phụ tùng,2018,receivable_to_revenue,11,11,0.13949,0.08638,icb_sector
+Ô tô và phụ tùng,2019,dsri,11,11,0.791,0.46098,icb_sector
+Ô tô và phụ tùng,2019,gmi,11,11,0.89466,0.36345,icb_sector
+Ô tô và phụ tùng,2019,aqi,11,11,1.01589,0.16751,icb_sector
+Ô tô và phụ tùng,2019,sgi,11,11,1.06106,0.05164,icb_sector
+Ô tô và phụ tùng,2019,depi,11,11,0.9181,0.12143,icb_sector
+Ô tô và phụ tùng,2019,sgai,11,11,0.9706,0.10317,icb_sector
+Ô tô và phụ tùng,2019,tata,11,11,-0.02681,0.09498,icb_sector
+Ô tô và phụ tùng,2019,lvgi,11,11,0.92914,0.06816,icb_sector
+Ô tô và phụ tùng,2019,altman_z_double_prime,11,11,5.10783,1.09608,icb_sector
+Ô tô và phụ tùng,2019,cfo_to_assets,11,11,0.03389,0.08929,icb_sector
+Ô tô và phụ tùng,2019,sensitive_receivables_ratio,11,11,0.04076,0.05468,icb_sector
+Ô tô và phụ tùng,2019,receivable_to_revenue,11,11,0.11405,0.11221,icb_sector
+Ô tô và phụ tùng,2020,dsri,10,10,0.94915,0.22854,icb_sector
+Ô tô và phụ tùng,2020,gmi,10,10,1.06385,0.27666,icb_sector
+Ô tô và phụ tùng,2020,aqi,10,10,0.91195,0.45983,icb_sector
+Ô tô và phụ tùng,2020,sgi,10,10,0.95663,0.10751,icb_sector
+Ô tô và phụ tùng,2020,depi,10,10,0.95703,0.15254,icb_sector
+Ô tô và phụ tùng,2020,sgai,10,10,0.96345,0.20519,icb_sector
+Ô tô và phụ tùng,2020,tata,10,10,-0.12758,0.11917,icb_sector
+Ô tô và phụ tùng,2020,lvgi,10,10,0.98456,0.07866,icb_sector
+Ô tô và phụ tùng,2020,altman_z_double_prime,10,10,5.60017,1.75454,icb_sector
+Ô tô và phụ tùng,2020,cfo_to_assets,10,10,0.17825,0.1971,icb_sector
+Ô tô và phụ tùng,2020,sensitive_receivables_ratio,10,10,0.03678,0.0517,icb_sector
+Ô tô và phụ tùng,2020,receivable_to_revenue,10,10,0.11151,0.10065,icb_sector
+Ô tô và phụ tùng,2021,dsri,11,10,0.84701,0.45061,icb_sector
+Ô tô và phụ tùng,2021,gmi,11,10,0.89637,0.10293,icb_sector
+Ô tô và phụ tùng,2021,aqi,11,10,0.96359,0.12125,icb_sector
+Ô tô và phụ tùng,2021,sgi,11,10,0.95213,0.18725,icb_sector
+Ô tô và phụ tùng,2021,depi,11,10,0.92152,0.15664,icb_sector
+Ô tô và phụ tùng,2021,sgai,11,10,1.03538,0.26754,icb_sector
+Ô tô và phụ tùng,2021,tata,11,11,0.05867,0.07911,icb_sector
+Ô tô và phụ tùng,2021,lvgi,11,10,0.92838,0.17352,icb_sector
+Ô tô và phụ tùng,2021,altman_z_double_prime,11,11,5.83835,2.37993,icb_sector
+Ô tô và phụ tùng,2021,cfo_to_assets,11,11,-0.02001,0.06723,icb_sector
+Ô tô và phụ tùng,2021,sensitive_receivables_ratio,11,11,0.07151,0.04902,icb_sector
+Ô tô và phụ tùng,2021,receivable_to_revenue,11,11,0.17581,0.10657,icb_sector
+Ô tô và phụ tùng,2022,dsri,12,11,0.83261,0.46411,icb_sector
+Ô tô và phụ tùng,2022,gmi,12,11,1.02581,0.15634,icb_sector
+Ô tô và phụ tùng,2022,aqi,12,10,0.98391,0.10061,icb_sector
+Ô tô và phụ tùng,2022,sgi,12,11,1.19973,0.14873,icb_sector
+Ô tô và phụ tùng,2022,depi,12,11,1.02249,0.28514,icb_sector
+Ô tô và phụ tùng,2022,sgai,12,11,1.01493,0.11278,icb_sector
+Ô tô và phụ tùng,2022,tata,12,12,0.06687,0.10698,icb_sector
+Ô tô và phụ tùng,2022,lvgi,12,11,1.02085,0.04544,icb_sector
+Ô tô và phụ tùng,2022,altman_z_double_prime,12,12,4.94974,1.17673,icb_sector
+Ô tô và phụ tùng,2022,cfo_to_assets,12,12,0.0017,0.05815,icb_sector
+Ô tô và phụ tùng,2022,sensitive_receivables_ratio,12,12,0.05981,0.07912,icb_sector
+Ô tô và phụ tùng,2022,receivable_to_revenue,12,12,0.1233,0.11147,icb_sector
+Ô tô và phụ tùng,2023,dsri,12,12,1.37058,0.78574,icb_sector
+Ô tô và phụ tùng,2023,gmi,12,12,1.09402,0.34294,icb_sector
+Ô tô và phụ tùng,2023,aqi,12,12,1.18076,0.59951,icb_sector
+Ô tô và phụ tùng,2023,sgi,12,12,0.9646,0.36921,icb_sector
+Ô tô và phụ tùng,2023,depi,12,12,0.97994,0.14991,icb_sector
+Ô tô và phụ tùng,2023,sgai,12,12,1.09683,0.38983,icb_sector
+Ô tô và phụ tùng,2023,tata,12,12,-0.01971,0.17188,icb_sector
+Ô tô và phụ tùng,2023,lvgi,12,12,0.94071,0.13475,icb_sector
+Ô tô và phụ tùng,2023,altman_z_double_prime,12,12,4.87402,0.67231,icb_sector
+Ô tô và phụ tùng,2023,cfo_to_assets,12,12,0.04702,0.17623,icb_sector
+Ô tô và phụ tùng,2023,sensitive_receivables_ratio,12,12,0.06184,0.08382,icb_sector
+Ô tô và phụ tùng,2023,receivable_to_revenue,12,12,0.16494,0.12325,icb_sector
+Ô tô và phụ tùng,2024,dsri,12,12,0.89775,0.27954,icb_sector
+Ô tô và phụ tùng,2024,gmi,12,11,0.97996,0.07252,icb_sector
+Ô tô và phụ tùng,2024,aqi,12,12,0.98336,0.15768,icb_sector
+Ô tô và phụ tùng,2024,sgi,12,12,1.09538,0.33347,icb_sector
+Ô tô và phụ tùng,2024,depi,12,12,1.0,0.11026,icb_sector
+Ô tô và phụ tùng,2024,sgai,12,12,1.02595,0.16679,icb_sector
+Ô tô và phụ tùng,2024,tata,12,12,-0.01821,0.10058,icb_sector
+Ô tô và phụ tùng,2024,lvgi,12,12,1.0255,0.15321,icb_sector
+Ô tô và phụ tùng,2024,altman_z_double_prime,12,12,5.07712,1.38322,icb_sector
+Ô tô và phụ tùng,2024,cfo_to_assets,12,12,0.06211,0.13071,icb_sector
+Ô tô và phụ tùng,2024,sensitive_receivables_ratio,12,12,0.11958,0.17071,icb_sector
+Ô tô và phụ tùng,2024,receivable_to_revenue,12,12,0.15649,0.08011,icb_sector
+Ô tô và phụ tùng,2025,dsri,12,12,1.2381,0.547,icb_sector
+Ô tô và phụ tùng,2025,gmi,12,11,1.10058,0.12311,icb_sector
+Ô tô và phụ tùng,2025,aqi,12,12,0.73053,0.27493,icb_sector
+Ô tô và phụ tùng,2025,sgi,12,12,1.16169,0.37952,icb_sector
+Ô tô và phụ tùng,2025,depi,12,12,1.05245,0.15935,icb_sector
+Ô tô và phụ tùng,2025,sgai,12,12,0.96174,0.16928,icb_sector
+Ô tô và phụ tùng,2025,tata,12,12,0.01109,0.06058,icb_sector
+Ô tô và phụ tùng,2025,lvgi,12,12,1.04359,0.08542,icb_sector
+Ô tô và phụ tùng,2025,altman_z_double_prime,12,12,5.34278,0.81681,icb_sector
+Ô tô và phụ tùng,2025,cfo_to_assets,12,12,0.02506,0.06024,icb_sector
+Ô tô và phụ tùng,2025,sensitive_receivables_ratio,12,12,0.11089,0.1439,icb_sector
+Ô tô và phụ tùng,2025,receivable_to_revenue,12,12,0.17878,0.11911,icb_sector
+"Điện, nước & xăng dầu khí đốt",2018,dsri,55,0,0.0,1.4826,market_fallback_small_sector
+"Điện, nước & xăng dầu khí đốt",2018,gmi,55,0,0.0,1.4826,market_fallback_small_sector
+"Điện, nước & xăng dầu khí đốt",2018,aqi,55,0,0.0,1.4826,market_fallback_small_sector
+"Điện, nước & xăng dầu khí đốt",2018,sgi,55,0,0.0,1.4826,market_fallback_small_sector
+"Điện, nước & xăng dầu khí đốt",2018,depi,55,0,0.0,1.4826,market_fallback_small_sector
+"Điện, nước & xăng dầu khí đốt",2018,sgai,55,0,0.0,1.4826,market_fallback_small_sector
+"Điện, nước & xăng dầu khí đốt",2018,tata,55,55,-0.01214,0.07525,icb_sector
+"Điện, nước & xăng dầu khí đốt",2018,lvgi,55,0,0.0,1.4826,market_fallback_small_sector
+"Điện, nước & xăng dầu khí đốt",2018,altman_z_double_prime,55,55,5.63029,2.17894,icb_sector
+"Điện, nước & xăng dầu khí đốt",2018,cfo_to_assets,55,55,0.1143,0.08451,icb_sector
+"Điện, nước & xăng dầu khí đốt",2018,sensitive_receivables_ratio,55,55,0.01461,0.01471,icb_sector
+"Điện, nước & xăng dầu khí đốt",2018,receivable_to_revenue,55,55,0.13897,0.14221,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,dsri,55,55,1.05364,0.33443,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,gmi,55,55,1.00262,0.1107,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,aqi,55,54,0.94221,0.23306,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,sgi,55,55,1.00927,0.16728,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,depi,55,55,0.94771,0.07949,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,sgai,55,54,0.99586,0.19905,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,tata,55,55,-0.01246,0.08216,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,lvgi,55,55,0.94374,0.10036,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,altman_z_double_prime,55,55,5.61096,2.06372,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,cfo_to_assets,55,55,0.11036,0.09531,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,sensitive_receivables_ratio,55,55,0.01414,0.0157,icb_sector
+"Điện, nước & xăng dầu khí đốt",2019,receivable_to_revenue,55,55,0.14769,0.14528,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,dsri,55,55,1.10196,0.30249,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,gmi,55,55,1.00098,0.12459,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,aqi,55,52,0.99045,0.20859,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,sgi,55,55,0.94851,0.2365,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,depi,55,55,0.951,0.1118,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,sgai,55,55,1.04714,0.19662,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,tata,55,55,-0.03369,0.0627,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,lvgi,55,55,0.96183,0.12169,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,altman_z_double_prime,55,55,5.59163,1.43001,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,cfo_to_assets,55,55,0.119,0.08641,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,sensitive_receivables_ratio,55,55,0.01461,0.0157,icb_sector
+"Điện, nước & xăng dầu khí đốt",2020,receivable_to_revenue,55,55,0.16218,0.14173,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,dsri,56,55,1.03398,0.38174,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,gmi,56,54,1.01349,0.2022,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,aqi,56,55,0.96841,0.27923,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,sgi,56,55,1.08137,0.2083,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,depi,56,55,0.94874,0.07599,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,sgai,56,55,0.94986,0.19489,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,tata,56,56,-0.02865,0.06683,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,lvgi,56,55,0.96022,0.14196,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,altman_z_double_prime,56,56,6.16098,2.15137,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,cfo_to_assets,56,56,0.09786,0.08454,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,sensitive_receivables_ratio,56,56,0.01195,0.01424,icb_sector
+"Điện, nước & xăng dầu khí đốt",2021,receivable_to_revenue,56,56,0.16687,0.15485,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,dsri,56,55,0.89528,0.2636,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,gmi,56,54,0.94473,0.10489,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,aqi,56,53,0.92957,0.23911,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,sgi,56,55,1.19836,0.17378,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,depi,56,55,0.95126,0.07226,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,sgai,56,55,0.94612,0.16927,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,tata,56,56,-0.01858,0.08089,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,lvgi,56,55,0.96219,0.12769,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,altman_z_double_prime,56,56,6.97327,2.92459,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,cfo_to_assets,56,56,0.13666,0.13149,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,sensitive_receivables_ratio,56,56,0.01433,0.01753,icb_sector
+"Điện, nước & xăng dầu khí đốt",2022,receivable_to_revenue,56,56,0.1655,0.18629,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,dsri,57,56,1.23458,0.3299,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,gmi,57,56,1.02887,0.14244,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,aqi,57,55,1.03578,0.29227,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,sgi,57,56,0.92947,0.15335,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,depi,57,56,0.99371,0.0976,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,sgai,57,56,1.14287,0.20896,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,tata,57,57,-0.01143,0.05222,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,lvgi,57,56,0.98557,0.13253,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,altman_z_double_prime,57,57,6.59041,2.89744,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,cfo_to_assets,57,57,0.09595,0.08807,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,sensitive_receivables_ratio,57,57,0.01702,0.01873,icb_sector
+"Điện, nước & xăng dầu khí đốt",2023,receivable_to_revenue,57,57,0.18583,0.22892,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,dsri,57,57,0.90893,0.24111,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,gmi,57,57,1.05354,0.10243,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,aqi,57,57,1.04053,0.24879,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,sgi,57,57,0.99926,0.1339,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,depi,57,57,0.94084,0.08772,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,sgai,57,57,1.0095,0.15019,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,tata,57,57,-0.04331,0.05231,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,lvgi,57,57,0.95736,0.13015,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,altman_z_double_prime,57,57,6.3079,2.83221,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,cfo_to_assets,57,57,0.1162,0.08233,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,sensitive_receivables_ratio,57,57,0.01467,0.01538,icb_sector
+"Điện, nước & xăng dầu khí đốt",2024,receivable_to_revenue,57,57,0.16063,0.18791,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,dsri,57,57,1.04411,0.23983,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,gmi,57,57,0.95438,0.08307,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,aqi,57,56,1.0961,0.30965,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,sgi,57,57,1.0561,0.14454,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,depi,57,57,0.95336,0.07171,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,sgai,57,57,1.03515,0.1541,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,tata,57,57,-0.00109,0.05352,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,lvgi,57,57,0.94918,0.1085,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,altman_z_double_prime,57,57,6.72924,2.9903,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,cfo_to_assets,57,57,0.12991,0.09479,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,sensitive_receivables_ratio,57,57,0.01726,0.01741,icb_sector
+"Điện, nước & xăng dầu khí đốt",2025,receivable_to_revenue,57,57,0.19212,0.17937,icb_sector

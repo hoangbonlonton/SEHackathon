@@ -1,0 +1,508 @@
+{
+  "trained_at": "2026-11-23 12:19:34",
+  "elapsed_seconds": 11.99,
+  "n_scored_firm_years": 4340,
+  "n_scored_2025": 639,
+  "risk_tier_counts_all": {
+    "Thấp (An toàn)": 3191,
+    "Trung bình (Cần theo dõi)": 928,
+    "Cao (Cảnh báo Đỏ)": 221
+  },
+  "risk_tier_counts_2025": {
+    "Thấp (An toàn)": 487,
+    "Trung bình (Cần theo dõi)": 126,
+    "Cao (Cảnh báo Đỏ)": 26
+  },
+  "layer1_shap_fidelity": {
+    "surrogate_r2": 0.9653,
+    "surrogate_mae_points": 2.67,
+    "shap_additivity_max_err": 0.0,
+    "native_vs_composite_importance_spearman": -0.4266,
+    "native_vs_composite_importance_p": 0.16669998762494498
+  },
+  "layer2_convergence": {
+    "spearman_matrix": {
+      "score_beneish": {
+        "score_beneish": {
+          "rho": 1.0,
+          "p": 0.0
+        },
+        "score_altman": {
+          "rho": -0.0428,
+          "p": 0.00481898717150663
+        },
+        "score_cash_quality": {
+          "rho": 0.5621,
+          "p": 0.0
+        },
+        "score_isoforest": {
+          "rho": 0.5167,
+          "p": 5.924360561021848e-295
+        },
+        "composite_risk_score": {
+          "rho": 0.7576,
+          "p": 0.0
+        }
+      },
+      "score_altman": {
+        "score_beneish": {
+          "rho": -0.0428,
+          "p": 0.00481898717150663
+        },
+        "score_altman": {
+          "rho": 1.0,
+          "p": 0.0
+        },
+        "score_cash_quality": {
+          "rho": 0.096,
+          "p": 2.3708824104853675e-10
+        },
+        "score_isoforest": {
+          "rho": 0.137,
+          "p": 1.228300587562236e-19
+        },
+        "composite_risk_score": {
+          "rho": 0.4075,
+          "p": 2.585870329178031e-173
+        }
+      },
+      "score_cash_quality": {
+        "score_beneish": {
+          "rho": 0.5621,
+          "p": 0.0
+        },
+        "score_altman": {
+          "rho": 0.096,
+          "p": 2.3708824104853675e-10
+        },
+        "score_cash_quality": {
+          "rho": 1.0,
+          "p": 0.0
+        },
+        "score_isoforest": {
+          "rho": 0.5477,
+          "p": 0.0
+        },
+        "composite_risk_score": {
+          "rho": 0.7438,
+          "p": 0.0
+        }
+      },
+      "score_isoforest": {
+        "score_beneish": {
+          "rho": 0.5167,
+          "p": 5.924360561021848e-295
+        },
+        "score_altman": {
+          "rho": 0.137,
+          "p": 1.228300587562236e-19
+        },
+        "score_cash_quality": {
+          "rho": 0.5477,
+          "p": 0.0
+        },
+        "score_isoforest": {
+          "rho": 1.0,
+          "p": 0.0
+        },
+        "composite_risk_score": {
+          "rho": 0.7854,
+          "p": 0.0
+        }
+      },
+      "composite_risk_score": {
+        "score_beneish": {
+          "rho": 0.7576,
+          "p": 0.0
+        },
+        "score_altman": {
+          "rho": 0.4075,
+          "p": 2.5858703291776662e-173
+        },
+        "score_cash_quality": {
+          "rho": 0.7438,
+          "p": 0.0
+        },
+        "score_isoforest": {
+          "rho": 0.7854,
+          "p": 0.0
+        },
+        "composite_risk_score": {
+          "rho": 1.0,
+          "p": 0.0
+        }
+      }
+    },
+    "n_iso_flagged": 434,
+    "iso_with_accounting_red_flag_pct": 96.31
+  },
+  "layer3_stability": {
+    "seed_stability": [
+      {
+        "seed": 7,
+        "spearman_rho": 0.9949,
+        "jaccard_top10": 0.887
+      },
+      {
+        "seed": 21,
+        "spearman_rho": 0.9946,
+        "jaccard_top10": 0.8587
+      },
+      {
+        "seed": 99,
+        "spearman_rho": 0.9941,
+        "jaccard_top10": 0.8507
+      },
+      {
+        "seed": 123,
+        "spearman_rho": 0.9952,
+        "jaccard_top10": 0.8952
+      },
+      {
+        "seed": 2026,
+        "spearman_rho": 0.9935,
+        "jaccard_top10": 0.8627
+      }
+    ],
+    "mean_seed_spearman": 0.9945,
+    "mean_seed_jaccard": 0.8709,
+    "contamination_sensitivity": [
+      {
+        "contamination": 0.05,
+        "n_flagged": 217,
+        "pct_flagged": 5.0,
+        "rank_spearman_rho": 1.0
+      },
+      {
+        "contamination": 0.08,
+        "n_flagged": 348,
+        "pct_flagged": 8.02,
+        "rank_spearman_rho": 1.0
+      },
+      {
+        "contamination": 0.1,
+        "n_flagged": 434,
+        "pct_flagged": 10.0,
+        "rank_spearman_rho": 1.0
+      },
+      {
+        "contamination": 0.12,
+        "n_flagged": 521,
+        "pct_flagged": 12.0,
+        "rank_spearman_rho": 1.0
+      },
+      {
+        "contamination": 0.15,
+        "n_flagged": 651,
+        "pct_flagged": 15.0,
+        "rank_spearman_rho": 1.0
+      }
+    ],
+    "oot_train_years": "2019–2023",
+    "oot_test_years": "2024–2025",
+    "oot_n_train": 3067,
+    "oot_n_test": 1273,
+    "oot_spearman_rho": 0.9983,
+    "oot_jaccard_top10": 0.8963
+  },
+  "layer4_empirical_backtest": {
+    "n_obs_group_a": 84,
+    "n_obs_group_b": 82,
+    "group_a_median_score": 13.29,
+    "group_a_mean_score": 16.35,
+    "group_b_median_score": 41.5,
+    "group_b_mean_score": 44.02,
+    "group_a_high_risk_pct": 0.0,
+    "group_b_high_or_watch_pct": 54.88,
+    "group_b_high_risk_pct": 14.63,
+    "mann_whitney_u": 6405.0,
+    "mann_whitney_p": 5.772500132771022e-22,
+    "auc_composite": 0.9299,
+    "auc_beneish_only": 0.5369,
+    "auc_altman_only": 0.9233,
+    "auc_isoforest_only": 0.8862,
+    "rank_biserial_effect": 0.8598,
+    "group_a_table": [
+      {
+        "ticker": "VNM",
+        "sector": "Thực phẩm và đồ uống",
+        "mean_score": 9.734308422357174,
+        "max_score": 13.23104637589802,
+        "score_2025": 7.832576687937225,
+        "n_years": 7
+      },
+      {
+        "ticker": "BMP",
+        "sector": "Xây dựng và Vật liệu",
+        "mean_score": 10.25343458569354,
+        "max_score": 31.354908653465674,
+        "score_2025": 8.707654186765907,
+        "n_years": 7
+      },
+      {
+        "ticker": "DHG",
+        "sector": "Y tế",
+        "mean_score": 11.42856988259038,
+        "max_score": 38.00817295212042,
+        "score_2025": 8.044793067773334,
+        "n_years": 7
+      },
+      {
+        "ticker": "DGC",
+        "sector": "Hóa chất",
+        "mean_score": 11.495425494594908,
+        "max_score": 25.564144464933406,
+        "score_2025": 24.486597847494718,
+        "n_years": 7
+      },
+      {
+        "ticker": "VHC",
+        "sector": "Thực phẩm và đồ uống",
+        "mean_score": 11.634025445113371,
+        "max_score": 26.11314317883846,
+        "score_2025": 3.447275684058524,
+        "n_years": 7
+      },
+      {
+        "ticker": "FPT",
+        "sector": "Công nghệ Thông tin",
+        "mean_score": 13.743367965620871,
+        "max_score": 20.0395560492582,
+        "score_2025": 11.684112398275904,
+        "n_years": 7
+      },
+      {
+        "ticker": "SAB",
+        "sector": "Thực phẩm và đồ uống",
+        "mean_score": 16.64722151752485,
+        "max_score": 33.14295446344577,
+        "score_2025": 24.301704578440955,
+        "n_years": 7
+      },
+      {
+        "ticker": "MWG",
+        "sector": "Bán lẻ",
+        "mean_score": 16.91790894531209,
+        "max_score": 34.60541139639937,
+        "score_2025": 12.420581454471547,
+        "n_years": 7
+      },
+      {
+        "ticker": "REE",
+        "sector": "Điện, nước & xăng dầu khí đốt",
+        "mean_score": 21.857243848961737,
+        "max_score": 30.570461213160897,
+        "score_2025": 12.666389270248258,
+        "n_years": 7
+      },
+      {
+        "ticker": "GAS",
+        "sector": "Điện, nước & xăng dầu khí đốt",
+        "mean_score": 22.82686697837034,
+        "max_score": 36.4277138701138,
+        "score_2025": 24.36372171234374,
+        "n_years": 7
+      },
+      {
+        "ticker": "PNJ",
+        "sector": "Hàng cá nhân & Gia dụng",
+        "mean_score": 24.51777159453406,
+        "max_score": 40.317060149773894,
+        "score_2025": 18.69897656732864,
+        "n_years": 7
+      },
+      {
+        "ticker": "CTR",
+        "sector": "Xây dựng và Vật liệu",
+        "mean_score": 25.11468326473243,
+        "max_score": 55.40532668746479,
+        "score_2025": 14.823748091131945,
+        "n_years": 7
+      }
+    ],
+    "group_b_table": [
+      {
+        "ticker": "DRH",
+        "sector": "Bất động sản",
+        "mean_score": 57.286639042009156,
+        "max_score": 79.11593771321353,
+        "peak_year": 2023,
+        "score_2025": 50.72559231572857,
+        "n_years": 7
+      },
+      {
+        "ticker": "TTF",
+        "sector": "Tài nguyên Cơ bản",
+        "mean_score": 56.260372913829556,
+        "max_score": 74.45886336875702,
+        "peak_year": 2020,
+        "score_2025": 53.66235048655129,
+        "n_years": 7
+      },
+      {
+        "ticker": "LDG",
+        "sector": "Bất động sản",
+        "mean_score": 53.57706287989187,
+        "max_score": 72.1507815169457,
+        "peak_year": 2021,
+        "score_2025": 38.190650849287415,
+        "n_years": 5
+      },
+      {
+        "ticker": "HAG",
+        "sector": "Thực phẩm và đồ uống",
+        "mean_score": 58.80962037231558,
+        "max_score": 72.13262049125976,
+        "peak_year": 2019,
+        "score_2025": 41.083264454404635,
+        "n_years": 7
+      },
+      {
+        "ticker": "QCG",
+        "sector": "Bất động sản",
+        "mean_score": 42.64591379482119,
+        "max_score": 69.84681287730722,
+        "peak_year": 2025,
+        "score_2025": 69.84681287730722,
+        "n_years": 7
+      },
+      {
+        "ticker": "JVC",
+        "sector": "Y tế",
+        "mean_score": 38.45403159787245,
+        "max_score": 66.9302008718281,
+        "peak_year": 2021,
+        "score_2025": 60.842386620400944,
+        "n_years": 7
+      },
+      {
+        "ticker": "DLG",
+        "sector": "Xây dựng và Vật liệu",
+        "mean_score": 39.79812586938647,
+        "max_score": 65.11526919046358,
+        "peak_year": 2025,
+        "score_2025": 65.11526919046358,
+        "n_years": 7
+      },
+      {
+        "ticker": "HPX",
+        "sector": "Bất động sản",
+        "mean_score": 30.88091276294048,
+        "max_score": 59.566461819565234,
+        "peak_year": 2021,
+        "score_2025": 34.414514934062694,
+        "n_years": 7
+      },
+      {
+        "ticker": "TNI",
+        "sector": "Tài nguyên Cơ bản",
+        "mean_score": 37.99669595658511,
+        "max_score": 59.06057600955464,
+        "peak_year": 2025,
+        "score_2025": 59.06057600955464,
+        "n_years": 7
+      },
+      {
+        "ticker": "NVL",
+        "sector": "Bất động sản",
+        "mean_score": 36.17360151348294,
+        "max_score": 51.85547933129224,
+        "peak_year": 2024,
+        "score_2025": 26.836603562157038,
+        "n_years": 7
+      },
+      {
+        "ticker": "OGC",
+        "sector": "Bất động sản",
+        "mean_score": 42.52681121229672,
+        "max_score": 51.31982383578764,
+        "peak_year": 2022,
+        "score_2025": 37.78875375156966,
+        "n_years": 7
+      },
+      {
+        "ticker": "HVN",
+        "sector": "Du lịch và Giải trí",
+        "mean_score": 36.5092386261707,
+        "max_score": 48.26651210255731,
+        "peak_year": 2020,
+        "score_2025": 33.93345716976503,
+        "n_years": 7
+      }
+    ]
+  },
+  "global_shap_importance": [
+    {
+      "feature": "risk_cfo",
+      "label_vi": "CFO/Tổng TS thấp (Dòng tiền yếu/âm)",
+      "mean_abs_shap_points": 6.404,
+      "native_iso_shap": 0.26059
+    },
+    {
+      "feature": "risk_altman",
+      "label_vi": "Altman Z'' thấp (Sức khỏe tài chính yếu)",
+      "mean_abs_shap_points": 5.424,
+      "native_iso_shap": 0.28024
+    },
+    {
+      "feature": "risk_dsri",
+      "label_vi": "DSRI (Phải thu KH tăng nhanh hơn DT)",
+      "mean_abs_shap_points": 3.956,
+      "native_iso_shap": 0.34415
+    },
+    {
+      "feature": "risk_tata",
+      "label_vi": "TATA (Dồn tích lợi nhuận trên giấy)",
+      "mean_abs_shap_points": 3.3,
+      "native_iso_shap": 0.29825
+    },
+    {
+      "feature": "risk_sgi",
+      "label_vi": "SGI (Tăng trưởng DT quá nóng)",
+      "mean_abs_shap_points": 2.466,
+      "native_iso_shap": 0.32248
+    },
+    {
+      "feature": "risk_aqi",
+      "label_vi": "AQI (Tài sản dài hạn mờ ám tăng)",
+      "mean_abs_shap_points": 2.289,
+      "native_iso_shap": 0.40285
+    },
+    {
+      "feature": "risk_gmi",
+      "label_vi": "GMI (Biên lãi gộp suy giảm)",
+      "mean_abs_shap_points": 1.926,
+      "native_iso_shap": 0.32078
+    },
+    {
+      "feature": "risk_srr",
+      "label_vi": "SRR (Phải thu khác & Trả trước cao)",
+      "mean_abs_shap_points": 1.634,
+      "native_iso_shap": 0.38
+    },
+    {
+      "feature": "risk_ar_rev",
+      "label_vi": "Phải thu NH / Doanh thu cao",
+      "mean_abs_shap_points": 1.185,
+      "native_iso_shap": 0.38615
+    },
+    {
+      "feature": "risk_depi",
+      "label_vi": "DEPI (Tỷ lệ khấu hao giảm)",
+      "mean_abs_shap_points": 1.051,
+      "native_iso_shap": 0.37852
+    },
+    {
+      "feature": "risk_lvgi",
+      "label_vi": "LVGI (Đòn bẩy nợ tăng nhanh)",
+      "mean_abs_shap_points": 0.38,
+      "native_iso_shap": 0.29965
+    },
+    {
+      "feature": "risk_sgai",
+      "label_vi": "SGAI (Chi phí BH & QLDN phình to)",
+      "mean_abs_shap_points": 0.246,
+      "native_iso_shap": 0.32207
+    }
+  ]
+}

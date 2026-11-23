@@ -252,18 +252,18 @@ $$Z'' = 3.25 + 6.56 X_1 + 3.26 X_2 + 6.72 X_3 + 1.05 X_4$$
 | **$X_3$** | $\dfrac{\text{EBIT}}{\text{TTS}}$ | **Sức sinh lời thực chất (ROA trước thuế & lãi vay):** Trọng số lớn nhất (`6.72`)! | $\dfrac{215.2}{1.100} = \mathbf{+0.1956}$ | $\dfrac{97.5}{1.350} = \mathbf{+0.0722}$ |
 | **$X_4$** | $\dfrac{\text{VCSH (Sổ sách)}}{\text{Tổng Nợ phải trả}}$ | **Tấm đệm an toàn vốn:** Vốn chủ sở hữu đủ che chắn bao nhiêu phần nợ vay? | $\dfrac{740}{360} = \mathbf{2.0556}$ | $\dfrac{200}{1.150} = \mathbf{0.1739}$ |
 
-#### Tính kết quả $Z''$-Score:
+#### Tính kết quả $Z''$-Score (Ngưỡng chuẩn Altman EMS 2005 có hằng số `+3.25`: An toàn `> 5.85`, Vùng Xám `4.35 – 5.85`, Nguy hiểm `< 4.35`):
 - **Công ty Minh Bạch:**
   $$Z'' = 3.25 + 6.56(0.2182) + 3.26(0.3273) + 6.72(0.1956) + 1.05(2.0556) = \mathbf{9.2212}$$
-  $\rightarrow$ Vì $9.2212 > 2.60$: **VÙNG AN TOÀN TUYỆT ĐỐI (Safe Zone).**
+  $\rightarrow$ Vì $9.2212 > 5.85$: **VÙNG AN TOÀN TUYỆT ĐỐI (Safe Zone — tương đương hạng tín nhiệm `AAA`).**
 
 - **Công ty Thổi Số:**
   $$Z'' = 3.25 + 6.56(-0.2667) + 3.26(-0.0889) + 6.72(0.0722) + 1.05(0.1739) = \mathbf{1.8788}$$
-  $\rightarrow$ Vì $1.10 \le 1.8788 \le 2.60$: **VÙNG XÁM CẢNH BÁO (Grey Zone)** — đang tiến gần sát vùng nguy hiểm `< 1.10` (một phần nhờ lợi nhuận sổ sách được "thổi" lên giữ cho $X_3$ còn dương!).
+  $\rightarrow$ Vì $1.8788 < 4.35$: **VÙNG NGUY HIỂM (Distress Zone — tương đương hạng `CCC/D`, nguy cơ mất khả năng thanh toán rất cao!)** *(Lưu ý học thuật: Do công thức Thị trường Mới nổi đã cộng hằng số `+3.25`, các ngưỡng phân vùng dịch lên tương ứng từ `2.60 / 1.10` thành **`5.85 / 4.35`**).*
 
 #### Ma trận 4 Góc Phần tư Kết hợp `Beneish M-Score × Altman Z''-Score` (Đọc trong 3 giây):
 
-| | **Altman $Z'' > 2.60$ (Tài chính Khỏe)** | **Altman $Z'' \le 2.60$ (Vùng Xám / Nguy hiểm)** |
+| | **Altman $Z'' > 5.85$ (Tài chính Khỏe)** | **Altman $Z'' \le 5.85$ (Vùng Xám / Nguy hiểm)** |
 | :--- | :--- | :--- |
 | **Beneish $M > -1.78$ (Nghi thao túng)** | **Góc 2 — Rủi ro Chất lượng Lợi nhuận:** Tài chính còn đệm tốt nhưng cách ghi nhận lợi nhuận quá "hung hãn", cần soi lại doanh thu & phải thu. | **Góc 1 — RỦI RO TỐI ĐA (Ưu tiên Kiểm toán #1):** Vừa gặp áp lực tài chính/thanh khoản, vừa có dấu hiệu làm đẹp sổ sách *(như Công ty Thổi Số!)*. |
 | **Beneish $M \le -1.78$ (Ít dấu hiệu thao túng)** | **Góc 4 — AN TOÀN & MINH BẠCH:** Sức khỏe tài chính vững và lợi nhuận thực chất *(như Công ty Minh Bạch!)*. | **Góc 3 — Rủi ro Kiệt quệ Thuần túy:** Doanh nghiệp khó khăn thật (có thể báo lỗ thật) nhưng không có dấu hiệu giấu số liệu. |

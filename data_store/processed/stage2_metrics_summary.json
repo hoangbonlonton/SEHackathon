@@ -1,0 +1,188 @@
+{
+  "summary": {
+    "n_total": 5007,
+    "n_beneish_valid": 4340,
+    "n_beneish_flagged": 1264,
+    "pct_beneish_flagged": 29.12,
+    "altman_zone_counts": {
+      "Safe": 3193,
+      "Grey": 1203,
+      "Distress": 611
+    },
+    "quadrant_counts_all": {
+      "Q4: An toàn & Minh bạch": 1956,
+      "Q3: Rủi ro Kiệt quệ Tài chính (Không dấu hiệu thổi số)": 1120,
+      "Q2: Rủi ro Chất lượng Lợi nhuận (Nghi thao túng)": 830,
+      "Q1: Rủi ro Tối đa (Nghi thao túng + Tài chính yếu)": 434
+    },
+    "quadrant_counts_2025": {
+      "Q4: An toàn & Minh bạch": 325,
+      "Q3: Rủi ro Kiệt quệ Tài chính (Không dấu hiệu thổi số)": 153,
+      "Q2: Rủi ro Chất lượng Lợi nhuận (Nghi thao túng)": 107,
+      "Q1: Rủi ro Tối đa (Nghi thao túng + Tài chính yếu)": 54
+    },
+    "n_depi_imputed": 514,
+    "n_gm_negative": 142,
+    "n_market_fallback_rows": 56,
+    "unit_tests_all_passed": true
+  },
+  "unit_tests": [
+    {
+      "test": "Test 1: Kiểm chứng công thức trên Công ty Minh Bạch (Cẩm nang V2)",
+      "expected": "M = -2.3277, Z'' = 9.2212, CFO/NI = 1.1310, SRR = 0.0345",
+      "actual": "M = -2.3277, Z'' = 9.2212, CFO/NI = 1.1310, SRR = 0.0345",
+      "max_abs_err": 4.8e-05,
+      "passed": true
+    },
+    {
+      "test": "Test 2: Kiểm chứng công thức trên Công ty Thổi Số (Cẩm nang V2)",
+      "expected": "M = -0.8411, Z'' = 1.8788, CFO/NI = -1.0000, SRR = 0.2444",
+      "actual": "M = -0.8411, Z'' = 1.8788, CFO/NI = -1.0000, SRR = 0.2444",
+      "max_abs_err": 3.1e-05,
+      "passed": true
+    },
+    {
+      "test": "Test 3: Kiểm chứng chéo độc lập trên dữ liệu thật FPT năm 2025",
+      "expected": "DSRI = 1.0833, TATA = 0.0319, Z'' = 7.1063",
+      "actual": "DSRI = 1.0833, TATA = 0.0319, Z'' = 7.1063",
+      "max_abs_err": 0.0,
+      "passed": true
+    },
+    {
+      "test": "Test 4: Kiểm tra tính liên tục chuỗi thời gian Lag-1 (Zero Cross-Company Leakage)",
+      "expected": "0 dòng vi phạm (mọi has_lag1 đều có year[t] - year[t-1] == 1)",
+      "actual": "0 dòng vi phạm trên 4,351 dòng has_lag1",
+      "max_abs_err": 0.0,
+      "passed": true
+    },
+    {
+      "test": "Test 5: Kiểm tra an toàn số học (Không tồn tại +/-inf trong 5,007 dòng)",
+      "expected": "0 ô chứa +/-inf",
+      "actual": "0 ô chứa +/-inf trên 5,007 x 97 ô số",
+      "max_abs_err": 0.0,
+      "passed": true
+    }
+  ],
+  "winsor_bounds_2025": {
+    "dsri": {
+      "p01_2025": 0.0392,
+      "p99_2025": 4.2521,
+      "raw_min_2025": 0.0,
+      "raw_max_2025": 1922.738
+    },
+    "gmi": {
+      "p01_2025": 0.177,
+      "p99_2025": 2.629,
+      "raw_min_2025": 0.0145,
+      "raw_max_2025": 6.954
+    },
+    "aqi": {
+      "p01_2025": 0.0761,
+      "p99_2025": 5.7031,
+      "raw_min_2025": 0.0003,
+      "raw_max_2025": 27.5104
+    },
+    "sgi": {
+      "p01_2025": 0.2609,
+      "p99_2025": 5.1104,
+      "raw_min_2025": 0.0002,
+      "raw_max_2025": 42.4282
+    },
+    "depi": {
+      "p01_2025": 0.3548,
+      "p99_2025": 4.6775,
+      "raw_min_2025": 0.1027,
+      "raw_max_2025": 166.9471
+    },
+    "sgai": {
+      "p01_2025": 0.2211,
+      "p99_2025": 4.7438,
+      "raw_min_2025": 0.0009,
+      "raw_max_2025": 2200.0765
+    },
+    "tata": {
+      "p01_2025": -0.427,
+      "p99_2025": 0.3422,
+      "raw_min_2025": -1.0447,
+      "raw_max_2025": 0.9227
+    },
+    "lvgi": {
+      "p01_2025": 0.3291,
+      "p99_2025": 2.8457,
+      "raw_min_2025": 0.0626,
+      "raw_max_2025": 12.3239
+    },
+    "altman_x1": {
+      "p01_2025": -0.2279,
+      "p99_2025": 0.8615,
+      "raw_min_2025": -0.3332,
+      "raw_max_2025": 0.9479
+    },
+    "altman_x2": {
+      "p01_2025": -0.6048,
+      "p99_2025": 0.4729,
+      "raw_min_2025": -1.3825,
+      "raw_max_2025": 0.8588
+    },
+    "altman_x3": {
+      "p01_2025": -0.0595,
+      "p99_2025": 0.3973,
+      "raw_min_2025": -1.0418,
+      "raw_max_2025": 0.9493
+    },
+    "altman_x4": {
+      "p01_2025": 0.1389,
+      "p99_2025": 47.4352,
+      "raw_min_2025": 0.0461,
+      "raw_max_2025": 378.1661
+    },
+    "cfo_to_ni": {
+      "p01_2025": -66.6746,
+      "p99_2025": 106.1512,
+      "raw_min_2025": -229.6653,
+      "raw_max_2025": 516.6461
+    },
+    "cfo_to_assets": {
+      "p01_2025": -0.2801,
+      "p99_2025": 0.5245,
+      "raw_min_2025": -0.8536,
+      "raw_max_2025": 0.7643
+    },
+    "accrual_ratio": {
+      "p01_2025": -0.3875,
+      "p99_2025": 0.3793,
+      "raw_min_2025": -0.6859,
+      "raw_max_2025": 1.3511
+    },
+    "sensitive_receivables_ratio": {
+      "p01_2025": 0.0011,
+      "p99_2025": 0.6789,
+      "raw_min_2025": 0.0002,
+      "raw_max_2025": 0.8808
+    },
+    "receivable_to_revenue": {
+      "p01_2025": 0.0097,
+      "p99_2025": 25.7786,
+      "raw_min_2025": 0.0044,
+      "raw_max_2025": 1141.5016
+    },
+    "inventory_to_assets": {
+      "p01_2025": 0.0,
+      "p99_2025": 0.7097,
+      "raw_min_2025": 0.0,
+      "raw_max_2025": 0.8008
+    },
+    "provision_coverage_ratio": {
+      "p01_2025": 0.0,
+      "p99_2025": 0.4777,
+      "raw_min_2025": 0.0,
+      "raw_max_2025": 1.0
+    },
+    "debt_to_assets": {
+      "p01_2025": 0.0207,
+      "p99_2025": 0.8781,
+      "raw_min_2025": 0.0026,
+      "raw_max_2025": 0.9559
+    }
+  }
+}

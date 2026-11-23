@@ -139,10 +139,11 @@ Trong đó:
 - $X_3 = \dfrac{\text{EBIT (Lợi nhuận trước lãi vay và thuế)}}{\text{Tổng tài sản}}$ *(Đo khả năng sinh lời thực chất từ tài sản, không phụ thuộc đòn bẩy)*
 - $X_4 = \dfrac{\text{Giá trị sổ sách Vốn chủ sở hữu}}{\text{Tổng nợ phải trả}}$ *(Đo đệm an toàn vốn trước nợ vay — dùng giá trị sổ sách nên áp dụng được cho cả doanh nghiệp chưa niêm yết/SME!)*
 
-**Ngưỡng phân loại rủi ro kiệt quệ tài chính:**
-- **$Z'' > 2.60$:** Vùng **An toàn (Safe Zone)** — Sức khỏe tài chính vững, xác suất kiệt quệ thấp.
-- **$1.10 \le Z'' \le 2.60$:** Vùng **Xám / Cảnh báo (Grey Zone)** — Cần theo dõi chặt chẽ cấu trúc nợ và thanh khoản.
-- **$Z'' < 1.10$:** Vùng **Nguy hiểm (Distress Zone)** — Rủi ro mất khả năng thanh toán / kiệt quệ tài chính cao.
+**Ngưỡng phân loại rủi ro kiệt quệ tài chính (Theo chuẩn Altman Emerging Market Score 2005 đã cộng hằng số `+3.25` để ánh xạ sang thang xếp hạng trái phiếu):**
+- **$Z'' > 5.85$** *(tương đương xếp hạng $\ge \text{BBB-}$)*: Vùng **An toàn (Safe Zone)** — Sức khỏe tài chính vững, xác suất kiệt quệ thấp.
+- **$4.35 \le Z'' \le 5.85$** *(tương đương $\text{BB+}$ đến $\text{B-}$)*: Vùng **Xám / Cảnh báo (Grey Zone)** — Cần theo dõi chặt chẽ cấu trúc nợ và thanh khoản.
+- **$Z'' < 4.35$** *(tương đương $\le \text{CCC+}$)*: Vùng **Nguy hiểm (Distress Zone)** — Rủi ro mất khả năng thanh toán / kiệt quệ tài chính cao.
+*(Lưu ý học thuật: Bản phi sản xuất không cộng hằng số `+3.25` dùng ngưỡng `2.60 / 1.10`; khi cộng hằng số `+3.25` của bản Thị trường Mới nổi thì toàn bộ ngưỡng dịch chuyển tương ứng $+3.25$ lên **`5.85 / 4.35`**).*
 
 > **Tại sao kết hợp cả Beneish M-Score và Altman $Z''$-Score lại cực mạnh?**  
 > Một doanh nghiệp vừa rơi vào vùng nguy hiểm của **Altman $Z''$** (sức khỏe yếu, áp lực nợ lớn $\rightarrow$ có *động cơ* làm đẹp sổ sách), vừa vượt ngưỡng **Beneish M-Score** (có *dấu hiệu* dồn tích bất thường) chính là đối tượng có mức độ ưu tiên kiểm toán cao nhất!

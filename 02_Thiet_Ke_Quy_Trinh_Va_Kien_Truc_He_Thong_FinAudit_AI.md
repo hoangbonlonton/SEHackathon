@@ -131,7 +131,7 @@ d:\SEHackathon\
   1. **8 biến thành phần Beneish:** `DSRI`, `GMI`, `AQI`, `SGI`, `DEPI`, `SGAI`, `TATA`, `LVGI`.
   2. **Điểm tổng hợp `Beneish M-Score`** và cờ cảnh báo `beneish_flag` ($M > -1.78$).
   3. **4 biến thành phần Altman Thị trường Mới nổi:** $X_1$ (Vốn lưu động/TTS), $X_2$ (LN chưa phân phối/TTS), $X_3$ (EBIT/TTS), $X_4$ (VCSH/Tổng Nợ).
-  4. **Điểm tổng hợp `Altman Z''-Score`** và phân vùng (`Safe > 2.60`, `Grey 1.10–2.60`, `Distress < 1.10`).
+  4. **Điểm tổng hợp `Altman Z''-Score` (EMS 2005 có `+3.25`)** và phân vùng (`Safe > 5.85`, `Grey 4.35–5.85`, `Distress < 4.35`).
   5. **Bộ chỉ số Chất lượng Lợi nhuận & Đặc thù VN:**
      - `cfo_to_ni` ($\text{CFO} / \text{NI}$) và cờ `cash_flow_divergence_flag` ($\text{NI} > 0$ nhưng $\text{CFO} < 0$).
      - `accrual_ratio` ($(\text{NI} - \text{CFO}) / \text{Tổng TS bình quân}$).
