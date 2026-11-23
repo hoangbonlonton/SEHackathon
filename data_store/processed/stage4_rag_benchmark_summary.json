@@ -1,0 +1,1591 @@
+{
+  "generated_at": "2026-11-23 15:03:39",
+  "elapsed_seconds": 7.15,
+  "legal_corpus_stats": {
+    "n_documents": 5,
+    "n_chunks": 24,
+    "documents": [
+      {
+        "doc_id": "01_VSA_240_TT214_2012",
+        "chunks": 5,
+        "bytes": 8611
+      },
+      {
+        "doc_id": "02_TT99_2025_TT200_2014_CheDoKeToan",
+        "chunks": 7,
+        "bytes": 10505
+      },
+      {
+        "doc_id": "03_TT48_2019_TT24_2022_DuPhong",
+        "chunks": 3,
+        "bytes": 6020
+      },
+      {
+        "doc_id": "04_VAS_14_DoanhThu_Va_VAS_26_BenLienQuan",
+        "chunks": 3,
+        "bytes": 5484
+      },
+      {
+        "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+        "chunks": 6,
+        "bytes": 9203
+      }
+    ]
+  },
+  "b09_structured_audit": {
+    "source_api": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company/{ticker}/financial-statement?section=NOTE",
+    "target_tickers_count": 38,
+    "target_tickers": [
+      "VNM",
+      "BMP",
+      "DHG",
+      "DGC",
+      "VHC",
+      "FPT",
+      "SAB",
+      "MWG",
+      "REE",
+      "GAS",
+      "PNJ",
+      "CTR",
+      "DRH",
+      "TTF",
+      "LDG",
+      "HAG",
+      "QCG",
+      "JVC",
+      "DLG",
+      "HPX",
+      "TNI",
+      "NVL",
+      "OGC",
+      "HVN",
+      "SMT",
+      "TDH",
+      "CIG",
+      "HAT",
+      "VTC",
+      "SRF",
+      "VE3",
+      "PVB",
+      "NTL",
+      "HLD",
+      "HU1",
+      "VCM",
+      "TDC",
+      "TTL"
+    ],
+    "fetch_status_counts": {
+      "OK": 38
+    },
+    "total_b09_rows_2018_2025": 289,
+    "total_b09_columns": 166,
+    "cross_check_b09_vs_b01": [
+      {
+        "metric_pair": "Tiền & TĐT (noc1 vs Mã 110)",
+        "n_comparable_firm_years": 289,
+        "exact_match_within_1pct": 287,
+        "exact_match_pct": 99.31,
+        "median_rel_diff_pct": 0.0,
+        "n_discrepancies": 2,
+        "sample_discrepancies": [
+          {
+            "ticker": "VE3",
+            "year": 2019,
+            "b09_bn_vnd": 0.84,
+            "b01_bn_vnd": 3.84,
+            "rel_diff_pct": 78.13
+          },
+          {
+            "ticker": "SRF",
+            "year": 2023,
+            "b09_bn_vnd": 272.79,
+            "b01_bn_vnd": 253.94,
+            "rel_diff_pct": 7.42
+          }
+        ]
+      },
+      {
+        "metric_pair": "Phải thu NH khác (noc10 vs Mã 136)",
+        "n_comparable_firm_years": 289,
+        "exact_match_within_1pct": 270,
+        "exact_match_pct": 93.43,
+        "median_rel_diff_pct": 0.0,
+        "n_discrepancies": 19,
+        "sample_discrepancies": [
+          {
+            "ticker": "DGC",
+            "year": 2025,
+            "b09_bn_vnd": 332.33,
+            "b01_bn_vnd": 1.42,
+            "rel_diff_pct": 23383.42
+          },
+          {
+            "ticker": "HPX",
+            "year": 2021,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 1453.43,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "DLG",
+            "year": 2021,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 267.94,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "REE",
+            "year": 2021,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 372.12,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "TTF",
+            "year": 2021,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 193.21,
+            "rel_diff_pct": 100.0
+          }
+        ]
+      },
+      {
+        "metric_pair": "Phải thu DH khác (noc30 vs Mã 216)",
+        "n_comparable_firm_years": 223,
+        "exact_match_within_1pct": 212,
+        "exact_match_pct": 95.07,
+        "median_rel_diff_pct": 0.0,
+        "n_discrepancies": 11,
+        "sample_discrepancies": [
+          {
+            "ticker": "HPX",
+            "year": 2018,
+            "b09_bn_vnd": 321.0,
+            "b01_bn_vnd": 60.36,
+            "rel_diff_pct": 431.79
+          },
+          {
+            "ticker": "DRH",
+            "year": 2025,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 1.87,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "NTL",
+            "year": 2019,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 0.01,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "VHC",
+            "year": 2025,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 2.55,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "PVB",
+            "year": 2024,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 0.03,
+            "rel_diff_pct": 100.0
+          }
+        ]
+      },
+      {
+        "metric_pair": "Hàng tồn kho gộp B09 vs ròng B01 (noc15 vs Mã 140)",
+        "n_comparable_firm_years": 288,
+        "exact_match_within_1pct": 171,
+        "exact_match_pct": 59.38,
+        "median_rel_diff_pct": 0.4179,
+        "accounting_consistent_gross_ge_net": 285,
+        "accounting_consistent_pct": 98.96,
+        "n_discrepancies": 3,
+        "sample_discrepancies": [
+          {
+            "ticker": "CTR",
+            "year": 2018,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 440.5,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "HPX",
+            "year": 2018,
+            "b09_bn_vnd": 1160.95,
+            "b01_bn_vnd": 3694.69,
+            "rel_diff_pct": 68.58
+          },
+          {
+            "ticker": "DRH",
+            "year": 2023,
+            "b09_bn_vnd": 1126.25,
+            "b01_bn_vnd": 1160.45,
+            "rel_diff_pct": 2.95
+          }
+        ]
+      },
+      {
+        "metric_pair": "TSCĐHH ròng (noc35-noc39 vs Mã 221)",
+        "n_comparable_firm_years": 288,
+        "exact_match_within_1pct": 274,
+        "exact_match_pct": 95.14,
+        "median_rel_diff_pct": 0.0,
+        "n_discrepancies": 14,
+        "sample_discrepancies": [
+          {
+            "ticker": "HPX",
+            "year": 2018,
+            "b09_bn_vnd": 205.52,
+            "b01_bn_vnd": 12.85,
+            "rel_diff_pct": 1499.21
+          },
+          {
+            "ticker": "HU1",
+            "year": 2021,
+            "b09_bn_vnd": 2.5,
+            "b01_bn_vnd": 0.97,
+            "rel_diff_pct": 158.53
+          },
+          {
+            "ticker": "VHC",
+            "year": 2020,
+            "b09_bn_vnd": 3610.61,
+            "b01_bn_vnd": 1503.22,
+            "rel_diff_pct": 140.19
+          },
+          {
+            "ticker": "CIG",
+            "year": 2019,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 17.44,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "VE3",
+            "year": 2020,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 4.92,
+            "rel_diff_pct": 100.0
+          }
+        ]
+      },
+      {
+        "metric_pair": "Vay ngắn hạn (noc65 vs Mã 320)",
+        "n_comparable_firm_years": 263,
+        "exact_match_within_1pct": 253,
+        "exact_match_pct": 96.2,
+        "median_rel_diff_pct": 0.0,
+        "n_discrepancies": 10,
+        "sample_discrepancies": [
+          {
+            "ticker": "GAS",
+            "year": 2018,
+            "b09_bn_vnd": 4885.61,
+            "b01_bn_vnd": 1489.87,
+            "rel_diff_pct": 227.92
+          },
+          {
+            "ticker": "NTL",
+            "year": 2019,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 168.01,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "SAB",
+            "year": 2022,
+            "b09_bn_vnd": 0.0,
+            "b01_bn_vnd": 658.63,
+            "rel_diff_pct": 100.0
+          },
+          {
+            "ticker": "TTF",
+            "year": 2020,
+            "b09_bn_vnd": 807.24,
+            "b01_bn_vnd": 507.24,
+            "rel_diff_pct": 59.14
+          },
+          {
+            "ticker": "HPX",
+            "year": 2018,
+            "b09_bn_vnd": 617.32,
+            "b01_bn_vnd": 671.74,
+            "rel_diff_pct": 8.1
+          }
+        ]
+      }
+    ],
+    "internal_consistency": {
+      "cash_subitems_sum_ok": 289,
+      "cash_subitems_comparable": 289,
+      "cash_subitems_ok_pct": 100.0,
+      "st_debt_subitems_sum_ok": 261,
+      "st_debt_subitems_comparable": 261,
+      "st_debt_subitems_ok_pct": 100.0
+    },
+    "group_b09_empirical_2025": {
+      "Nhóm A (Bluechip)": {
+        "n_firms_2025": 12,
+        "median_other_rec_st_bn": 480.2,
+        "median_wip_share_of_inv_pct": 9.96,
+        "median_lt_due_share_of_stdebt_pct": 0.0,
+        "firms_with_bonds_noc96": 1
+      },
+      "Nhóm Cảnh báo / Biến cố": {
+        "n_firms_2025": 26,
+        "median_other_rec_st_bn": 148.6,
+        "median_wip_share_of_inv_pct": 76.4,
+        "median_lt_due_share_of_stdebt_pct": 3.07,
+        "firms_with_bonds_noc96": 3
+      }
+    }
+  },
+  "real_pdf_diagnostics": [
+    {
+      "file_name": "NVL_BCTC_2025_Kiemtoan_Hopnhat.pdf",
+      "file_size_mb": 5.3,
+      "n_pages": 91,
+      "text_pages": 84,
+      "scan_or_empty_pages": 7,
+      "scan_ratio_pct": 7.69,
+      "total_chars": 289539,
+      "avg_chars_per_page": 3181.7,
+      "ocr_noise_ratio_pct": 6.53,
+      "quality_status": "NOISY_OCR_TEXT",
+      "n_chunks_indexed": 319,
+      "parse_seconds": 5.37,
+      "recommendation_vi": "PDF có lớp chữ OCR nhúng sẵn nhưng bị nhiễu dấu tiếng Việt. Hệ thống tự động kích hoạt chuẩn hóa không dấu + Char N-gram TF-IDF để bảo toàn khả năng truy xuất."
+    },
+    {
+      "file_name": "FPT_BCTC_2025_Kiemtoan_Hopnhat.pdf",
+      "file_size_mb": 7.67,
+      "n_pages": 73,
+      "text_pages": 0,
+      "scan_or_empty_pages": 73,
+      "scan_ratio_pct": 100.0,
+      "total_chars": 0,
+      "avg_chars_per_page": 0.0,
+      "ocr_noise_ratio_pct": 0.0,
+      "quality_status": "SCANNED_IMAGE_PDF",
+      "n_chunks_indexed": 0,
+      "parse_seconds": 0.02,
+      "recommendation_vi": "PDF là bản scan hình ảnh không có lớp chữ (0–<30 ký tự/trang). Hệ thống từ chối suy diễn mù; khuyến nghị đối chiếu qua Kênh 1 (Thuyết minh B09-DN cấu trúc Vietcap IQ) hoặc chạy OCR chuyên dụng (Phase 2)."
+    },
+    {
+      "file_name": "VNM_BCTC_2025_Kiemtoan_Hopnhat.pdf",
+      "file_size_mb": 3.17,
+      "n_pages": 63,
+      "text_pages": 0,
+      "scan_or_empty_pages": 63,
+      "scan_ratio_pct": 100.0,
+      "total_chars": 0,
+      "avg_chars_per_page": 0.0,
+      "ocr_noise_ratio_pct": 0.0,
+      "quality_status": "SCANNED_IMAGE_PDF",
+      "n_chunks_indexed": 0,
+      "parse_seconds": 0.02,
+      "recommendation_vi": "PDF là bản scan hình ảnh không có lớp chữ (0–<30 ký tự/trang). Hệ thống từ chối suy diễn mù; khuyến nghị đối chiếu qua Kênh 1 (Thuyết minh B09-DN cấu trúc Vietcap IQ) hoặc chạy OCR chuyên dụng (Phase 2)."
+    },
+    {
+      "file_name": "TDH_BCTC_2025_Kiemtoan_Hopnhat.pdf",
+      "file_size_mb": 4.83,
+      "n_pages": 52,
+      "text_pages": 0,
+      "scan_or_empty_pages": 52,
+      "scan_ratio_pct": 100.0,
+      "total_chars": 0,
+      "avg_chars_per_page": 0.0,
+      "ocr_noise_ratio_pct": 0.0,
+      "quality_status": "SCANNED_IMAGE_PDF",
+      "n_chunks_indexed": 0,
+      "parse_seconds": 0.02,
+      "recommendation_vi": "PDF là bản scan hình ảnh không có lớp chữ (0–<30 ký tự/trang). Hệ thống từ chối suy diễn mù; khuyến nghị đối chiếu qua Kênh 1 (Thuyết minh B09-DN cấu trúc Vietcap IQ) hoặc chạy OCR chuyên dụng (Phase 2)."
+    },
+    {
+      "file_name": "Thể lệ cuộc thị SE Hackathon Challenge-2026_1.pdf",
+      "file_size_mb": 0.3,
+      "n_pages": 12,
+      "text_pages": 12,
+      "scan_or_empty_pages": 0,
+      "scan_ratio_pct": 0.0,
+      "total_chars": 16502,
+      "avg_chars_per_page": 1375.2,
+      "ocr_noise_ratio_pct": 0.14,
+      "quality_status": "NATIVE_TEXT_CLEAN",
+      "n_chunks_indexed": 20,
+      "parse_seconds": 0.39,
+      "recommendation_vi": "PDF văn bản thuần chất lượng cao, trích xuất nguyên văn và trích dẫn chính xác từng số trang."
+    }
+  ],
+  "nvl_2025_triangulation": {
+    "company": "NVL (CTCP Tập đoàn Đầu tư Địa ốc No Va — BCTC Hợp nhất 2025)",
+    "pdf_auditor": "Công ty TNHH Kiểm toán và Dịch vụ Tin học Moore AISC (ký ngày 25/03/2026)",
+    "pdf_emphasis_of_matter_page": 12,
+    "items": [
+      {
+        "item": "Tổng cộng Tài sản (Mã 270)",
+        "b01_api_bn": 249907.85,
+        "b09_api_bn": null,
+        "pdf_audited_bn": 249907.85,
+        "note": "Khớp tuyệt đối 100.00% giữa Vietcap API và PDF kiểm toán Moore AISC (Trang 13+14: 206,852.32 + 43,055.53)"
+      },
+      {
+        "item": "Tiền và tương đương tiền (Mã 110)",
+        "b01_api_bn": 4352.03,
+        "b09_api_bn": 4352.03,
+        "pdf_audited_bn": 4395.47,
+        "note": "B01 API và B09 API khớp nhau 100.00% (4,352.03 tỷ); chênh 43.44 tỷ (-0.99%) so với PDF kiểm toán (4,395.47 tỷ) do tái phân loại nhỏ"
+      },
+      {
+        "item": "Phải thu KH (Mã 131) & Trả trước NB (Mã 132)",
+        "b01_api_bn": 11427.43,
+        "b09_api_bn": null,
+        "pdf_audited_bn": 11427.43,
+        "note": "Khớp tuyệt đối 100.00% từng khoản (Mã 131: 3,274.28 tỷ; Mã 132: 8,153.15 tỷ)"
+      },
+      {
+        "item": "Phải thu ngắn hạn khác (Mã 136)",
+        "b01_api_bn": 17590.62,
+        "b09_api_bn": 17590.62,
+        "pdf_audited_bn": 22309.45,
+        "note": "Phát hiện đối sánh trọng yếu: B01 & B09 API khớp nhau (17,590.62 tỷ) nhưng khác PDF gốc (22,309.45 tỷ) do nhà cung cấp dữ liệu tái phân loại nhóm Cho vay/Đầu tư ngắn hạn — chứng minh cần đọc PDF gốc!"
+      },
+      {
+        "item": "Phải thu dài hạn khác (Mã 216)",
+        "b01_api_bn": 14944.3,
+        "b09_api_bn": 14944.3,
+        "pdf_audited_bn": 24199.57,
+        "note": "Cùng hiện tượng chuẩn hóa/tái phân loại nhóm Phải thu dài hạn khác & Cho vay dài hạn giữa Vietcap IQ và PDF gốc (Tổng tài sản vẫn khớp 100.00%)"
+      },
+      {
+        "item": "Hàng tồn kho gộp B09 (Mã 141) vs ròng B01 (Mã 140)",
+        "b01_api_bn": 153324.02,
+        "b09_api_bn": 153744.73,
+        "pdf_audited_bn": 153744.73,
+        "note": "B09 API (153,744.73 tỷ) khớp 100.00% HTK gộp PDF (Mã 141); chênh với B01 ròng (153,324.02 tỷ) đúng bằng Dự phòng HTK 420.71 tỷ (Mã 149)!"
+      },
+      {
+        "item": "TSCĐ Hữu hình ròng (Mã 221 = Nguyên giá 222 - Hao mòn 223)",
+        "b01_api_bn": 1839.49,
+        "b09_api_bn": 1839.49,
+        "pdf_audited_bn": 1839.49,
+        "note": "Khớp tuyệt đối 100.00% giữa cả 3 nguồn (2,363.72 - 524.24 = 1,839.49 tỷ)"
+      },
+      {
+        "item": "Vay & Nợ thuê tài chính ngắn hạn (Mã 320)",
+        "b01_api_bn": 31718.05,
+        "b09_api_bn": 31718.05,
+        "pdf_audited_bn": 31718.05,
+        "note": "Khớp tuyệt đối 100.00% giữa API và Trang 15 PDF Kiểm toán (31,718.05 tỷ)"
+      },
+      {
+        "item": "Lưu chuyển tiền thuần HĐKD (CFO — B03-DN Mã 20)",
+        "b01_api_bn": -6145.39,
+        "b09_api_bn": null,
+        "pdf_audited_bn": -6145.0,
+        "note": "Khớp tuyệt đối với đoạn 'Vấn đề cần nhấn mạnh' của Moore AISC trên Trang 12 (âm 6,145 tỷ)!"
+      }
+    ]
+  },
+  "legal_benchmark_20q": {
+    "n_gold_queries": 20,
+    "comparison_by_mode": {
+      "bm25_raw": {
+        "label": "BM25 Raw (Có dấu)",
+        "hit_at_1_pct": 90.0,
+        "hit_at_3_pct": 100.0,
+        "mrr": 0.95,
+        "citation_accuracy_pct": 100.0,
+        "avg_latency_ms": 1.618
+      },
+      "bm25_dual": {
+        "label": "BM25 Dual-Script VN",
+        "hit_at_1_pct": 90.0,
+        "hit_at_3_pct": 100.0,
+        "mrr": 0.95,
+        "citation_accuracy_pct": 100.0,
+        "avg_latency_ms": 1.583
+      },
+      "tfidf_wc": {
+        "label": "TF-IDF Word+Char",
+        "hit_at_1_pct": 95.0,
+        "hit_at_3_pct": 100.0,
+        "mrr": 0.975,
+        "citation_accuracy_pct": 100.0,
+        "avg_latency_ms": 1.523
+      },
+      "hybrid_rrf": {
+        "label": "Hybrid RRF (FinAudit AI)",
+        "hit_at_1_pct": 95.0,
+        "hit_at_3_pct": 100.0,
+        "mrr": 0.975,
+        "citation_accuracy_pct": 100.0,
+        "avg_latency_ms": 1.56
+      }
+    },
+    "per_query_hybrid_rrf": [
+      {
+        "id": "Q01",
+        "group": "TT 99/2025 vs TT 200/2014",
+        "query": "Thông tư 99/2025/TT-BTC có hiệu lực từ ngày nào và thay thế những thông tư kế toán cũ nào?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 99/2025/TT-BTC — Điều 31: Hiệu lực thi hành và văn bản bị thay thế]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3362,
+        "latency_ms": 1.487
+      },
+      {
+        "id": "Q02",
+        "group": "TT 99/2025 vs TT 200/2014",
+        "query": "Theo Thông tư 99/2025, Bảng cân đối kế toán được đổi tên thành gì và quy định tại Điều, Phụ lục nào?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 99/2025/TT-BTC — Điều 17, Điều 18 & Phụ lục IV: Hệ thống Báo cáo tài chính và đổi tên Mẫu B01-DN]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.2099,
+        "latency_ms": 1.562
+      },
+      {
+        "id": "Q03",
+        "group": "TT 99/2025 vs TT 200/2014",
+        "query": "TK 112 trong Phụ lục II Thông tư 99/2025 được chuẩn hóa tên gọi mới như thế nào?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 99/2025/TT-BTC — Phụ lục II: Hệ thống Tài khoản kế toán cập nhật]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3015,
+        "latency_ms": 1.492
+      },
+      {
+        "id": "Q04",
+        "group": "TT 99/2025 vs TT 200/2014",
+        "query": "Doanh nghiệp có được tự bổ sung chỉ tiêu trên BCTC theo Thông tư 99/2025 không?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 99/2025/TT-BTC — Điều 17, Điều 18 & Phụ lục IV: Hệ thống Báo cáo tài chính và đổi tên Mẫu B01-DN]",
+        "top1_rrf": 0.031653,
+        "top1_tfidf": 0.1568,
+        "latency_ms": 1.404
+      },
+      {
+        "id": "Q05",
+        "group": "Dự phòng Thuế vs BCTC",
+        "query": "Sự khác nhau giữa Thông tư 48/2019 và Thông tư 200/99 khi trích lập dự phòng cho BCTC và tính thuế TNDN là gì?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 48/2019/TT-BTC — Khoản 1 Điều 1: Ranh giới pháp lý giữa Dự phòng Thuế TNDN và Dự phòng BCTC]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3218,
+        "latency_ms": 1.606
+      },
+      {
+        "id": "Q06",
+        "group": "Dự phòng Thuế vs BCTC",
+        "query": "Khoản nợ phải thu quá hạn từ 1 năm đến dưới 2 năm và trên 3 năm trích lập dự phòng bao nhiêu phần trăm?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 48/2019/TT-BTC — Điều 6: Điều kiện & Khung tỷ lệ trích lập Dự phòng nợ phải thu khó đòi theo tuổi nợ]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.2812,
+        "latency_ms": 1.523
+      },
+      {
+        "id": "Q07",
+        "group": "Dự phòng Thuế vs BCTC",
+        "query": "Công thức và điều kiện trích lập dự phòng giảm giá hàng tồn kho theo giá trị thuần có thể thực hiện được NRV?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 48/2019/TT-BTC — Điều 4: Dự phòng giảm giá hàng tồn kho (NRV)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.4182,
+        "latency_ms": 1.636
+      },
+      {
+        "id": "Q08",
+        "group": "Dự phòng Thuế vs BCTC",
+        "query": "Tai khoan 229 gom nhung tieu khoan du phong nao va quy dinh o Dieu may Thong tu 200?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 200/2014/TT-BTC — Điều 45 (TK 229 - Dự phòng tổn thất tài sản trên BCTC)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.2364,
+        "latency_ms": 1.421
+      },
+      {
+        "id": "Q09",
+        "group": "VSA 240 & VAS 14",
+        "query": "Kiểm toán viên có bắt buộc giả định tồn tại rủi ro gian lận trong ghi nhận doanh thu không? Căn cứ đoạn nào VSA 240?",
+        "matched_rank": 1,
+        "top1_citation": "[VSA 240 — Đoạn 26 & Hướng dẫn áp dụng A28-A30: Giả định bắt buộc về rủi ro gian lận trong ghi nhận doanh thu]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3708,
+        "latency_ms": 1.702
+      },
+      {
+        "id": "Q10",
+        "group": "VSA 240 & VAS 14",
+        "query": "3 thủ tục kiểm toán bắt buộc khi đối phó rủi ro Ban Giám đốc khống chế kiểm soát nội bộ theo VSA 240 là gì?",
+        "matched_rank": 1,
+        "top1_citation": "[VSA 240 — Đoạn 31-33: Rủi ro Ban Giám đốc khống chế kiểm soát (Management Override of Controls)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3151,
+        "latency_ms": 1.656
+      },
+      {
+        "id": "Q11",
+        "group": "VSA 240 & VAS 14",
+        "query": "Nêu 5 điều kiện bắt buộc để ghi nhận doanh thu bán hàng theo chuẩn mực VAS 14?",
+        "matched_rank": 1,
+        "top1_citation": "[VAS 14 — Đoạn 10: Năm (05) điều kiện bắt buộc ghi nhận doanh thu bán hàng]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3137,
+        "latency_ms": 1.492
+      },
+      {
+        "id": "Q12",
+        "group": "VSA 240 & VAS 14",
+        "query": "Thái độ hoài nghi nghề nghiệp của kiểm toán viên khi phát hiện lợi nhuận và dòng tiền phân kỳ được quy định ở đâu?",
+        "matched_rank": 1,
+        "top1_citation": "[VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3499,
+        "latency_ms": 1.697
+      },
+      {
+        "id": "Q13",
+        "group": "VAS 26 & TK trọng yếu",
+        "query": "Doanh nghiệp phải thuyết minh những thông tin gì về giao dịch và số dư công nợ với các bên liên quan trên B09-DN?",
+        "matched_rank": 1,
+        "top1_citation": "[VAS 26 — QĐ 234/2003/QĐ-BTC: Định nghĩa Bên liên quan và yêu cầu thuyết minh bắt buộc trên B09-DN]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3021,
+        "latency_ms": 1.73
+      },
+      {
+        "id": "Q14",
+        "group": "VAS 26 & TK trọng yếu",
+        "query": "Tài khoản 138 Phải thu khác và TK 141 Tạm ứng phản ánh những khoản nào, có rủi ro pháp chứng gì?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 200/2014/TT-BTC — Điều 20 (TK 136), Điều 21 (TK 138 - Phải thu khác) & Điều 22 (TK 141 - Tạm ứng)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.2672,
+        "latency_ms": 1.53
+      },
+      {
+        "id": "Q15",
+        "group": "VAS 26 & TK trọng yếu",
+        "query": "Chi phí xây dựng cơ bản dở dang TK 241 bị lợi dụng vốn hóa chi phí né khấu hao như thế nào?",
+        "matched_rank": 2,
+        "top1_citation": "[Playbook AQI & DEPI: Rủi ro Vốn hóa chi phí bất thường, Tài sản dài hạn mờ ám & Giảm tốc Khấu hao]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3132,
+        "latency_ms": 1.539
+      },
+      {
+        "id": "Q16",
+        "group": "VAS 26 & TK trọng yếu",
+        "query": "Trả trước cho người bán mã 132 xuất phát từ số dư tài khoản nào và tiềm ẩn rủi ro rút ruột dòng tiền ra sao?",
+        "matched_rank": 1,
+        "top1_citation": "[Thông tư 200/2014/TT-BTC — Điều 18 (TK 131 - Phải thu của khách hàng) & Điều 51 (TK 331 - Trả trước cho người bán)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.2054,
+        "latency_ms": 1.623
+      },
+      {
+        "id": "Q17",
+        "group": "SHAP Forensic Playbook",
+        "query": "Khi chi so DSRI vuot nguong 1.465 phai kiem tra nhung thuyet minh nao tren B09-DN?",
+        "matched_rank": 1,
+        "top1_citation": "[Playbook DSRI & AR/Revenue: Rủi ro Phải thu khách hàng tăng nhanh hơn Doanh thu (TK 131)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.1656,
+        "latency_ms": 1.455
+      },
+      {
+        "id": "Q18",
+        "group": "SHAP Forensic Playbook",
+        "query": "Chỉ số SRR tăng cao bất thường ở doanh nghiệp bất động sản có nghĩa là gì và cần soi mục nào?",
+        "matched_rank": 1,
+        "top1_citation": "[Playbook SRR: Rủi ro Phải thu khác, Trả trước cho người bán & Tài sản mềm (TK 138, 331, 141)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.1542,
+        "latency_ms": 1.51
+      },
+      {
+        "id": "Q19",
+        "group": "SHAP Forensic Playbook",
+        "query": "Doanh nghiệp có lợi nhuận sau thuế dương nhưng dòng tiền CFO âm sâu và TATA cao cần đối chiếu khoản mục nào?",
+        "matched_rank": 1,
+        "top1_citation": "[Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality)]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.2027,
+        "latency_ms": 1.531
+      },
+      {
+        "id": "Q20",
+        "group": "SHAP Forensic Playbook",
+        "query": "Altman Z'' roi vao vung nguy hiem duoi 4.35 va LVGI tang cao can kiem tra trai phieu va gia dinh hoat dong lien tuc ra sao?",
+        "matched_rank": 1,
+        "top1_citation": "[Playbook Altman Z'' & LVGI: Rủi ro Kiệt quệ tài chính, Đòn bẩy nợ vay & Khả năng hoạt động liên tục]",
+        "top1_rrf": 0.032258,
+        "top1_tfidf": 0.3603,
+        "latency_ms": 1.598
+      }
+    ],
+    "anti_hallucination_test": {
+      "n_out_of_scope_queries": 5,
+      "refused_correctly": 5,
+      "refusal_rate_pct": 100.0,
+      "false_abstention_on_20_gold": 0,
+      "details": [
+        {
+          "query": "Dự báo thời tiết Hà Nội ngày mai có mưa bão không?",
+          "abstained": true,
+          "max_word_tfidf": 0.0777,
+          "max_tfidf_wc": 0.0928,
+          "max_bm25_dual": 8.036,
+          "max_content_overlap": 5
+        },
+        {
+          "query": "Cách nấu phở bò Nam Định thơm ngon chuẩn vị tại nhà?",
+          "abstained": true,
+          "max_word_tfidf": 0.0801,
+          "max_tfidf_wc": 0.0943,
+          "max_bm25_dual": 6.066,
+          "max_content_overlap": 4
+        },
+        {
+          "query": "Mức phạt vượt đèn đỏ xe máy theo Nghị định giao thông mới nhất?",
+          "abstained": true,
+          "max_word_tfidf": 0.092,
+          "max_tfidf_wc": 0.1187,
+          "max_bm25_dual": 6.0991,
+          "max_content_overlap": 5
+        },
+        {
+          "query": "Kết quả trận chung kết Champions League bóng đá châu Âu đêm qua?",
+          "abstained": true,
+          "max_word_tfidf": 0.0,
+          "max_tfidf_wc": 0.0273,
+          "max_bm25_dual": 0.0,
+          "max_content_overlap": 0
+        },
+        {
+          "query": "Cách cài đặt driver card đồ họa NVIDIA RTX trên Ubuntu Linux?",
+          "abstained": true,
+          "max_word_tfidf": 0.0449,
+          "max_tfidf_wc": 0.0452,
+          "max_bm25_dual": 2.7627,
+          "max_content_overlap": 2
+        }
+      ]
+    }
+  },
+  "nvl_pdf_benchmark_6q": {
+    "n_pdf_queries": 6,
+    "comparison_by_mode": {
+      "bm25_raw": {
+        "hit_at_1_pct": 16.67,
+        "hit_at_3_pct": 33.33,
+        "mrr": 0.25
+      },
+      "bm25_dual": {
+        "hit_at_1_pct": 83.33,
+        "hit_at_3_pct": 83.33,
+        "mrr": 0.8333
+      },
+      "tfidf_wc": {
+        "hit_at_1_pct": 50.0,
+        "hit_at_3_pct": 83.33,
+        "mrr": 0.6667
+      },
+      "hybrid_rrf": {
+        "hit_at_1_pct": 83.33,
+        "hit_at_3_pct": 83.33,
+        "mrr": 0.8333
+      }
+    },
+    "hybrid_details": [
+      {
+        "id": "PDF_Q1",
+        "topic": "Ý kiến kiểm toán Moore AISC — Vấn đề cần nhấn mạnh (Going Concern)",
+        "query": "Vấn đề cần nhấn mạnh giả định hoạt động liên tục lưu chuyển tiền thuần âm 6145 tỷ đồng",
+        "expected_pages": "12",
+        "matched_rank": 1,
+        "top1_page": 12,
+        "top1_tfidf": 0.1169,
+        "top1_excerpt": "MOOREAISC  BAO CAO KIEM TOAN D<)C L~P (ti~p theo)  • ' ' ;.  Van ae can nhan m~nh  M~c dC1 khong dua ra y ki@n kiSm toan ngo~i tru, chung toi luu y ngu6i d9c d@n Thuy@t minh HI.2 \"Gia  djnh ho~t d(mg "
+      },
+      {
+        "id": "PDF_Q2",
+        "topic": "Bảng cân đối kế toán hợp nhất — Tài sản ngắn hạn (B01-DN/HN)",
+        "query": "Bảng cân đối kế toán hợp nhất tài sản ngắn hạn phải thu ngắn hạn khác hàng tồn kho 153744 tỷ",
+        "expected_pages": "13",
+        "matched_rank": 1,
+        "top1_page": 13,
+        "top1_tfidf": 0.1993,
+        "top1_excerpt": "CONG TY c6 PHAN T ~p DOAN oA u TU' OJA 6c NO v A Mfo BO! -DN/HN  BA.NG CAN DOI KE TOAN HQP NHAT  ~  \"  Tr;,i ngay 31 thong 12 nam 202 5 Dan vi tinh: D6ng Vi¢/ Nam  (  C  TAISA.N Ma sb Thuy~t 31/12/202"
+      },
+      {
+        "id": "PDF_Q3",
+        "topic": "Bảng cân đối kế toán hợp nhất — Tài sản dài hạn (B01-DN/HN)",
+        "query": "Tài sản dài hạn phải thu dài hạn khác 24199 tỷ nguyên giá tài sản cố định hữu hình",
+        "expected_pages": "14",
+        "matched_rank": 1,
+        "top1_page": 14,
+        "top1_tfidf": 0.1433,
+        "top1_excerpt": "C6NGTYC6PHANT~PDOANDAUTVDJA6CNOVA Mliu B01 -DN/HN  BANG CAN DOI KE TOAN HQP NHA T \"! - Dan vi tfnh: D6ng Vi¢t Nam ' Tgi ngay 31 thang 12 nam 2025  TA.ISAN Ma s6 Thuy~t 31/12/2025 01/01/2025  minh  B. "
+      },
+      {
+        "id": "PDF_Q4",
+        "topic": "Bảng cân đối kế toán hợp nhất — Nợ phải trả (B01-DN/HN)",
+        "query": "Nợ phải trả nợ ngắn hạn vay và nợ thuê tài chính ngắn hạn 31718 tỷ",
+        "expected_pages": "15",
+        "matched_rank": null,
+        "top1_page": 13,
+        "top1_tfidf": 0.1508,
+        "top1_excerpt": "CONG TY c6 PHAN T ~p DOAN oA u TU' OJA 6c NO v A Mfo BO! -DN/HN  BA.NG CAN DOI KE TOAN HQP NHAT  ~  \"  Tr;,i ngay 31 thong 12 nam 202 5 Dan vi tinh: D6ng Vi¢/ Nam  (  C  TAISA.N Ma sb Thuy~t 31/12/202"
+      },
+      {
+        "id": "PDF_Q5",
+        "topic": "Thuyết minh chi tiết Vay ngân hàng & Trái phiếu (Mục VI.23)",
+        "query": "Thuyết minh vay ngân hàng TMCP chi tiết các khoản vay và trái phiếu",
+        "expected_pages": "65..79",
+        "matched_rank": 1,
+        "top1_page": 73,
+        "top1_tfidf": 0.1428,
+        "top1_excerpt": "CONG TY CO PHAN T ~p DOAN DAU TU' DJA OC NO VA M~u B09 -DN/I-IN  BA.N THUYET MINH BAO cAo TAI CHiNH HQP NHAT  Cho 110111 tdi chinh kdt t/11ic ngi1y 3 I !hang I 2 nam 2025 Don vi tinh: D6ng Vi¢/ Nam  2"
+      },
+      {
+        "id": "PDF_Q6",
+        "topic": "Thuyết minh chi tiết Hàng tồn kho BĐS dở dang (Mục VI.8)",
+        "query": "Thuyết minh hàng tồn kho bất động sản để bán đang xây dựng dở dang",
+        "expected_pages": "42..55",
+        "matched_rank": 1,
+        "top1_page": 51,
+        "top1_tfidf": 0.1503,
+        "top1_excerpt": "CONG TY co PHAN T ~p DOAN oAu TU' D!A oc NO VA Miiu 809 -DN/HN  BAN THUY.ET MINH BAO cAo TA.I CHiNH HQP NHAT  Cho ni'/111 /(Ii chfnh kit tluic ngi,y 31 !hang 12 na/11 2025 -Dem vi tinh: DcJng Viet Nam"
+      }
+    ]
+  },
+  "shap_to_rag_case_studies": [
+    {
+      "ticker": "TDH",
+      "year": 2025,
+      "company_name": "Công ty Cổ phần Phát triển Nhà Thủ Đức",
+      "icb_sector_vi": "Bất động sản",
+      "composite_risk_score": 80.16,
+      "risk_tier": "Cao (Cảnh báo Đỏ)",
+      "beneish_m_score": -0.745,
+      "altman_z_double_prime": 2.441,
+      "pdf_status": "SCANNED_IMAGE_PDF",
+      "top_driver_briefs": [
+        {
+          "shap_col": "shap_risk_altman",
+          "driver_label_vi": "Altman Z'' thấp (Sức khỏe tài chính yếu / áp lực trả nợ)",
+          "shap_points": 16.19,
+          "legal_citations": [
+            {
+              "citation": "[Playbook Altman Z'' & LVGI: Rủi ro Kiệt quệ tài chính, Đòn bẩy nợ vay & Khả năng hoạt động liên tục]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.032258,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook Altman Z'' & LVGI: Rủi ro Kiệt quệ tài chính, Đòn bẩy nợ vay & Khả năng hoạt động liên tục - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đíc"
+            },
+            {
+              "citation": "[VSA 240 — Phụ lục 1 (Tam giác Gian lận & Các yếu tố rủi ro)]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.03125,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Phụ lục 1 (Tam giác Gian lận & Các yếu tố rủi ro) - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn bản ban hành:** Thông tư số 214/2012/TT-BTC ngày"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "short_term_debt": 0.2,
+            "long_term_debt": 0.65,
+            "total_liabilities": 504.15,
+            "total_equity": 181.29,
+            "retained_earnings": -947.65
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc65",
+              "label_vi": "Vay và nợ ngắn hạn",
+              "value_bn_vnd": 0.2
+            },
+            {
+              "field": "noc66",
+              "label_vi": "Vay ngắn hạn",
+              "value_bn_vnd": 0.2
+            },
+            {
+              "field": "noc93",
+              "label_vi": "Vay Dài hạn",
+              "value_bn_vnd": 0.65
+            },
+            {
+              "field": "noc94",
+              "label_vi": "Vay ngân hàng",
+              "value_bn_vnd": 0.65
+            },
+            {
+              "field": "noc68",
+              "label_vi": "Các khoản phải trả về Thuế",
+              "value_bn_vnd": 2.91
+            }
+          ],
+          "pdf_evidence": []
+        },
+        {
+          "shap_col": "shap_risk_sgi",
+          "driver_label_vi": "SGI (Tăng trưởng doanh thu quá nóng)",
+          "shap_points": 12.94,
+          "legal_citations": [
+            {
+              "citation": "[Playbook GMI, SGI & SGAI: Rủi ro Suy giảm Biên lợi nhuận, Tăng trưởng quá nóng & Phình chi phí quản lý]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.032258,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook GMI, SGI & SGAI: Rủi ro Suy giảm Biên lợi nhuận, Tăng trưởng quá nóng & Phình chi phí quản lý - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục "
+            },
+            {
+              "citation": "[VSA 240 — Đoạn 26 & Hướng dẫn áp dụng A28-A30: Giả định bắt buộc về rủi ro gian lận trong ghi nhận doanh thu]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.03125,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Đoạn 26 & Hướng dẫn áp dụng A28-A30: Giả định bắt buộc về rủi ro gian lận trong ghi nhận doanh thu - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "net_revenue": 122.78,
+            "accounts_receivable": 212.03,
+            "cfo": -23.75
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc102",
+              "label_vi": "Doanh thu",
+              "value_bn_vnd": 124.64
+            },
+            {
+              "field": "noc103",
+              "label_vi": "Doanh thu bán hàng",
+              "value_bn_vnd": 18.11
+            },
+            {
+              "field": "noc104",
+              "label_vi": "Doanh thu cung cấp dịch vụ",
+              "value_bn_vnd": 106.52
+            },
+            {
+              "field": "noc106",
+              "label_vi": "Giảm trừ doanh thu",
+              "value_bn_vnd": 1.86
+            },
+            {
+              "field": "noc109",
+              "label_vi": "Hàng bán bị trả lại",
+              "value_bn_vnd": 1.2
+            }
+          ],
+          "pdf_evidence": []
+        },
+        {
+          "shap_col": "shap_risk_cfo",
+          "driver_label_vi": "CFO/Tổng TS thấp (Dòng tiền HĐKD yếu/âm)",
+          "shap_points": 8.4,
+          "legal_citations": [
+            {
+              "citation": "[Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality)]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.031855,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality) - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đích"
+            },
+            {
+              "citation": "[VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism)]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.031653,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism) - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn bản ban hành:** Thông tư số 21"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "cfo": -23.75,
+            "net_income": 108.31,
+            "cash_and_equivalents": 23.2
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc1",
+              "label_vi": "Tiền và tương đương tiền",
+              "value_bn_vnd": 23.2
+            },
+            {
+              "field": "noc2",
+              "label_vi": "Tiền mặt",
+              "value_bn_vnd": 3.14
+            },
+            {
+              "field": "noc3",
+              "label_vi": "Tiền gửi Ngân hàng",
+              "value_bn_vnd": 20.06
+            },
+            {
+              "field": "noc15",
+              "label_vi": "Hàng tồn kho",
+              "value_bn_vnd": 440.43
+            },
+            {
+              "field": "noc19",
+              "label_vi": "Chi phí SX, KD dở dang",
+              "value_bn_vnd": 391.87
+            },
+            {
+              "field": "noc10",
+              "label_vi": "Phải thu ngắn hạn khác",
+              "value_bn_vnd": 53.68
+            }
+          ],
+          "pdf_evidence": []
+        }
+      ],
+      "audit_disclaimer_vi": "Cảnh báo theo VSA 240: Kết quả chỉ phản ánh chỉ báo rủi ro chất lượng lợi nhuận (Forensic Risk Red Flags) phục vụ khoanh vùng thủ tục kiểm toán sâu, không phải kết luận pháp lý về gian lận."
+    },
+    {
+      "ticker": "QCG",
+      "year": 2025,
+      "company_name": "Công ty Cổ phần Quốc Cường Gia Lai",
+      "icb_sector_vi": "Bất động sản",
+      "composite_risk_score": 69.85,
+      "risk_tier": "Cao (Cảnh báo Đỏ)",
+      "beneish_m_score": -0.584,
+      "altman_z_double_prime": 3.714,
+      "pdf_status": "NOT_ATTACHED",
+      "top_driver_briefs": [
+        {
+          "shap_col": "shap_risk_altman",
+          "driver_label_vi": "Altman Z'' thấp (Sức khỏe tài chính yếu / áp lực trả nợ)",
+          "shap_points": 13.71,
+          "legal_citations": [
+            {
+              "citation": "[Playbook Altman Z'' & LVGI: Rủi ro Kiệt quệ tài chính, Đòn bẩy nợ vay & Khả năng hoạt động liên tục]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.032258,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook Altman Z'' & LVGI: Rủi ro Kiệt quệ tài chính, Đòn bẩy nợ vay & Khả năng hoạt động liên tục - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đíc"
+            },
+            {
+              "citation": "[VSA 240 — Phụ lục 1 (Tam giác Gian lận & Các yếu tố rủi ro)]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.03125,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Phụ lục 1 (Tam giác Gian lận & Các yếu tố rủi ro) - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn bản ban hành:** Thông tư số 214/2012/TT-BTC ngày"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "short_term_debt": 820.09,
+            "long_term_debt": 14.0,
+            "total_liabilities": 3999.15,
+            "total_equity": 4744.69,
+            "retained_earnings": 751.53
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc65",
+              "label_vi": "Vay và nợ ngắn hạn",
+              "value_bn_vnd": 820.09
+            },
+            {
+              "field": "noc66",
+              "label_vi": "Vay ngắn hạn",
+              "value_bn_vnd": 820.09
+            },
+            {
+              "field": "noc93",
+              "label_vi": "Vay Dài hạn",
+              "value_bn_vnd": 14.0
+            },
+            {
+              "field": "noc68",
+              "label_vi": "Các khoản phải trả về Thuế",
+              "value_bn_vnd": 68.18
+            }
+          ],
+          "pdf_evidence": []
+        },
+        {
+          "shap_col": "shap_risk_cfo",
+          "driver_label_vi": "CFO/Tổng TS thấp (Dòng tiền HĐKD yếu/âm)",
+          "shap_points": 13.62,
+          "legal_citations": [
+            {
+              "citation": "[Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality)]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.031855,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality) - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đích"
+            },
+            {
+              "citation": "[VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism)]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.031653,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism) - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn bản ban hành:** Thông tư số 21"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "cfo": -1127.0,
+            "net_income": 170.75,
+            "cash_and_equivalents": 142.34
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc1",
+              "label_vi": "Tiền và tương đương tiền",
+              "value_bn_vnd": 142.34
+            },
+            {
+              "field": "noc2",
+              "label_vi": "Tiền mặt",
+              "value_bn_vnd": 25.18
+            },
+            {
+              "field": "noc3",
+              "label_vi": "Tiền gửi Ngân hàng",
+              "value_bn_vnd": 102.67
+            },
+            {
+              "field": "noc15",
+              "label_vi": "Hàng tồn kho",
+              "value_bn_vnd": 1274.36
+            },
+            {
+              "field": "noc19",
+              "label_vi": "Chi phí SX, KD dở dang",
+              "value_bn_vnd": 595.86
+            },
+            {
+              "field": "noc10",
+              "label_vi": "Phải thu ngắn hạn khác",
+              "value_bn_vnd": 138.02
+            }
+          ],
+          "pdf_evidence": []
+        },
+        {
+          "shap_col": "shap_risk_dsri",
+          "driver_label_vi": "DSRI (Phải thu KH tăng nhanh hơn Doanh thu)",
+          "shap_points": 12.82,
+          "legal_citations": [
+            {
+              "citation": "[Playbook DSRI & AR/Revenue: Rủi ro Phải thu khách hàng tăng nhanh hơn Doanh thu (TK 131)]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.032258,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook DSRI & AR/Revenue: Rủi ro Phải thu khách hàng tăng nhanh hơn Doanh thu (TK 131) - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đích:** Kết nố"
+            },
+            {
+              "citation": "[Thông tư 200/2014/TT-BTC — Điều 18 (TK 131 - Phải thu của khách hàng) & Điều 51 (TK 331 - Trả trước cho người bán)]",
+              "doc_id": "02_TT99_2025_TT200_2014_CheDoKeToan",
+              "score_rrf": 0.03125,
+              "excerpt": "Chế độ Kế toán Doanh nghiệp Việt Nam: Thông tư 99/2025/TT-BTC & Thông tư 200/2014/TT-BTC Thông tư 200/2014/TT-BTC — Điều 18 (TK 131 - Phải thu của khách hàng) & Điều 51 (TK 331 - Trả trước cho người bán) - **Văn bản hiện hành (từ 01/01/2026):** Thông tư số 99/2025/TT-BTC ngày 27/"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "accounts_receivable": 559.71,
+            "net_revenue": 473.25,
+            "provision_doubtful_debts": 1.13
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc102",
+              "label_vi": "Doanh thu",
+              "value_bn_vnd": 473.29
+            },
+            {
+              "field": "noc103",
+              "label_vi": "Doanh thu bán hàng",
+              "value_bn_vnd": 473.29
+            },
+            {
+              "field": "noc10",
+              "label_vi": "Phải thu ngắn hạn khác",
+              "value_bn_vnd": 138.02
+            },
+            {
+              "field": "noc14",
+              "label_vi": "Phải thu khác",
+              "value_bn_vnd": 138.02
+            }
+          ],
+          "pdf_evidence": []
+        }
+      ],
+      "audit_disclaimer_vi": "Cảnh báo theo VSA 240: Kết quả chỉ phản ánh chỉ báo rủi ro chất lượng lợi nhuận (Forensic Risk Red Flags) phục vụ khoanh vùng thủ tục kiểm toán sâu, không phải kết luận pháp lý về gian lận."
+    },
+    {
+      "ticker": "NVL",
+      "year": 2024,
+      "company_name": "Công ty Cổ phần Tập đoàn Đầu tư Địa ốc No Va",
+      "icb_sector_vi": "Bất động sản",
+      "composite_risk_score": 51.86,
+      "risk_tier": "Trung bình (Cần theo dõi)",
+      "beneish_m_score": -0.38,
+      "altman_z_double_prime": 6.404,
+      "pdf_status": "NOT_ATTACHED",
+      "top_driver_briefs": [
+        {
+          "shap_col": "shap_risk_gmi",
+          "driver_label_vi": "GMI (Biên lợi nhuận gộp suy giảm)",
+          "shap_points": 12.46,
+          "legal_citations": [
+            {
+              "citation": "[Playbook GMI, SGI & SGAI: Rủi ro Suy giảm Biên lợi nhuận, Tăng trưởng quá nóng & Phình chi phí quản lý]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.031855,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook GMI, SGI & SGAI: Rủi ro Suy giảm Biên lợi nhuận, Tăng trưởng quá nóng & Phình chi phí quản lý - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục "
+            },
+            {
+              "citation": "[Thông tư 48/2019/TT-BTC — Điều 4: Dự phòng giảm giá hàng tồn kho (NRV)]",
+              "doc_id": "03_TT48_2019_TT24_2022_DuPhong",
+              "score_rrf": 0.031653,
+              "excerpt": "Quy định Trích lập Dự phòng cho Mục đích Thuế TNDN: Thông tư 48/2019/TT-BTC & Thông tư 24/2022/TT-BTC Thông tư 48/2019/TT-BTC — Điều 4: Dự phòng giảm giá hàng tồn kho (NRV) - **Văn bản gốc:** Thông tư số 48/2019/TT-BTC ngày 08/08/2019 của Bộ Tài chính hướng dẫn việc trích lập và "
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "net_revenue": 9073.38,
+            "cogs": 8989.8,
+            "gross_profit": 83.57,
+            "inventory": 146607.44
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc15",
+              "label_vi": "Hàng tồn kho",
+              "value_bn_vnd": 147027.94
+            },
+            {
+              "field": "noc19",
+              "label_vi": "Chi phí SX, KD dở dang",
+              "value_bn_vnd": 138407.98
+            },
+            {
+              "field": "noc113",
+              "label_vi": "Giá vốn",
+              "value_bn_vnd": 8989.8
+            }
+          ],
+          "pdf_evidence": []
+        },
+        {
+          "shap_col": "shap_risk_sgi",
+          "driver_label_vi": "SGI (Tăng trưởng doanh thu quá nóng)",
+          "shap_points": 8.9,
+          "legal_citations": [
+            {
+              "citation": "[Playbook GMI, SGI & SGAI: Rủi ro Suy giảm Biên lợi nhuận, Tăng trưởng quá nóng & Phình chi phí quản lý]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.032258,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook GMI, SGI & SGAI: Rủi ro Suy giảm Biên lợi nhuận, Tăng trưởng quá nóng & Phình chi phí quản lý - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục "
+            },
+            {
+              "citation": "[VSA 240 — Đoạn 26 & Hướng dẫn áp dụng A28-A30: Giả định bắt buộc về rủi ro gian lận trong ghi nhận doanh thu]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.03125,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Đoạn 26 & Hướng dẫn áp dụng A28-A30: Giả định bắt buộc về rủi ro gian lận trong ghi nhận doanh thu - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "net_revenue": 9073.38,
+            "accounts_receivable": 2996.11,
+            "cfo": -5971.18
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc102",
+              "label_vi": "Doanh thu",
+              "value_bn_vnd": 9079.62
+            },
+            {
+              "field": "noc103",
+              "label_vi": "Doanh thu bán hàng",
+              "value_bn_vnd": 8362.49
+            },
+            {
+              "field": "noc104",
+              "label_vi": "Doanh thu cung cấp dịch vụ",
+              "value_bn_vnd": 717.13
+            },
+            {
+              "field": "noc106",
+              "label_vi": "Giảm trừ doanh thu",
+              "value_bn_vnd": 6.24
+            }
+          ],
+          "pdf_evidence": []
+        },
+        {
+          "shap_col": "shap_risk_cfo",
+          "driver_label_vi": "CFO/Tổng TS thấp (Dòng tiền HĐKD yếu/âm)",
+          "shap_points": 8.19,
+          "legal_citations": [
+            {
+              "citation": "[Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality)]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.031855,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality) - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đích"
+            },
+            {
+              "citation": "[VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism)]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.031653,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism) - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn bản ban hành:** Thông tư số 21"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "cfo": -5971.18,
+            "net_income": -4394.64,
+            "cash_and_equivalents": 4607.6
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc1",
+              "label_vi": "Tiền và tương đương tiền",
+              "value_bn_vnd": 4607.6
+            },
+            {
+              "field": "noc2",
+              "label_vi": "Tiền mặt",
+              "value_bn_vnd": 0.29
+            },
+            {
+              "field": "noc3",
+              "label_vi": "Tiền gửi Ngân hàng",
+              "value_bn_vnd": 3343.43
+            },
+            {
+              "field": "noc15",
+              "label_vi": "Hàng tồn kho",
+              "value_bn_vnd": 147027.94
+            },
+            {
+              "field": "noc19",
+              "label_vi": "Chi phí SX, KD dở dang",
+              "value_bn_vnd": 138407.98
+            },
+            {
+              "field": "noc10",
+              "label_vi": "Phải thu ngắn hạn khác",
+              "value_bn_vnd": 37982.68
+            }
+          ],
+          "pdf_evidence": []
+        }
+      ],
+      "audit_disclaimer_vi": "Cảnh báo theo VSA 240: Kết quả chỉ phản ánh chỉ báo rủi ro chất lượng lợi nhuận (Forensic Risk Red Flags) phục vụ khoanh vùng thủ tục kiểm toán sâu, không phải kết luận pháp lý về gian lận."
+    },
+    {
+      "ticker": "NVL",
+      "year": 2025,
+      "company_name": "Công ty Cổ phần Tập đoàn Đầu tư Địa ốc No Va",
+      "icb_sector_vi": "Bất động sản",
+      "composite_risk_score": 26.84,
+      "risk_tier": "Thấp (An toàn)",
+      "beneish_m_score": -2.634,
+      "altman_z_double_prime": 6.771,
+      "pdf_status": "NOISY_OCR_TEXT",
+      "top_driver_briefs": [
+        {
+          "shap_col": "shap_risk_cfo",
+          "driver_label_vi": "CFO/Tổng TS thấp (Dòng tiền HĐKD yếu/âm)",
+          "shap_points": 6.09,
+          "legal_citations": [
+            {
+              "citation": "[Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality)]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.031855,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook TATA & CFO/Assets: Rủi ro Phân kỳ Lợi nhuận giấy — Dòng tiền âm (Accruals & Cash Quality) - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đích"
+            },
+            {
+              "citation": "[VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism)]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.031653,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Đoạn 12-14: Thái độ hoài nghi nghề nghiệp (Professional Skepticism) - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn bản ban hành:** Thông tư số 21"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "cfo": -6145.39,
+            "net_income": 1861.41,
+            "cash_and_equivalents": 4352.03
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc1",
+              "label_vi": "Tiền và tương đương tiền",
+              "value_bn_vnd": 4352.03
+            },
+            {
+              "field": "noc2",
+              "label_vi": "Tiền mặt",
+              "value_bn_vnd": 0.85
+            },
+            {
+              "field": "noc3",
+              "label_vi": "Tiền gửi Ngân hàng",
+              "value_bn_vnd": 2869.15
+            },
+            {
+              "field": "noc15",
+              "label_vi": "Hàng tồn kho",
+              "value_bn_vnd": 153744.73
+            },
+            {
+              "field": "noc19",
+              "label_vi": "Chi phí SX, KD dở dang",
+              "value_bn_vnd": 144877.13
+            },
+            {
+              "field": "noc10",
+              "label_vi": "Phải thu ngắn hạn khác",
+              "value_bn_vnd": 17590.62
+            }
+          ],
+          "pdf_evidence": [
+            {
+              "citation": "[NVL_BCTC_2025_Kiemtoan_Hopnhat.pdf — Trang 7]",
+              "page": 7,
+              "tfidf_wc": 0.1547,
+              "excerpt": "CONG TY CO PHAN T~P DOAN DAU TU DJA OC NO VA  BAO cAo TAI CHINH HQ'P NHA.T  Cho 110111 tai chinh kdt tlnic ngay 31 thang 12 110111 2025  MlJC Ll}C  1. BAO cAo cuA BAN TONG GIAM 06c  2. BAo cAo KIEM TOAN ooc L~P  3. BANG CAN 061 KE TOAN HOP NHAT  4. BAO cAo KET"
+            },
+            {
+              "citation": "[NVL_BCTC_2025_Kiemtoan_Hopnhat.pdf — Trang 12]",
+              "page": 12,
+              "tfidf_wc": 0.1279,
+              "excerpt": "MOOREAISC  BAO CAO KIEM TOAN D<)C L~P (ti~p theo)  • ' ' ;.  Van ae can nhan m~nh  M~c dC1 khong dua ra y ki@n kiSm toan ngo~i tru, chung toi luu y ngu6i d9c d@n Thuy@t minh HI.2 \"Gia  djnh ho~t d(mg lien we\" cua Bao cao tai chfnh hqp nh§t, trong d6 trinh bay "
+            }
+          ]
+        },
+        {
+          "shap_col": "shap_risk_srr",
+          "driver_label_vi": "SRR (Phải thu khác & Trả trước người bán cao)",
+          "shap_points": 1.91,
+          "legal_citations": [
+            {
+              "citation": "[Playbook SRR: Rủi ro Phải thu khác, Trả trước cho người bán & Tài sản mềm (TK 138, 331, 141)]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.032258,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook SRR: Rủi ro Phải thu khác, Trả trước cho người bán & Tài sản mềm (TK 138, 331, 141) - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đích:** Kế"
+            },
+            {
+              "citation": "[Thông tư 200/2014/TT-BTC — Điều 20 (TK 136), Điều 21 (TK 138 - Phải thu khác) & Điều 22 (TK 141 - Tạm ứng)]",
+              "doc_id": "02_TT99_2025_TT200_2014_CheDoKeToan",
+              "score_rrf": 0.03125,
+              "excerpt": "Chế độ Kế toán Doanh nghiệp Việt Nam: Thông tư 99/2025/TT-BTC & Thông tư 200/2014/TT-BTC Thông tư 200/2014/TT-BTC — Điều 20 (TK 136), Điều 21 (TK 138 - Phải thu khác) & Điều 22 (TK 141 - Tạm ứng) - **Văn bản hiện hành (từ 01/01/2026):** Thông tư số 99/2025/TT-BTC ngày 27/10/2025 "
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "other_receivables_st": 17590.62,
+            "other_receivables_lt": 14944.3,
+            "prepayments_to_suppliers": 8153.15
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc10",
+              "label_vi": "Phải thu ngắn hạn khác",
+              "value_bn_vnd": 17590.62
+            },
+            {
+              "field": "noc14",
+              "label_vi": "Phải thu khác",
+              "value_bn_vnd": 17590.62
+            },
+            {
+              "field": "noc30",
+              "label_vi": "Phải thu dài hạn khác",
+              "value_bn_vnd": 14944.3
+            },
+            {
+              "field": "noc34",
+              "label_vi": "Phải thu dài hạn khác",
+              "value_bn_vnd": 14743.58
+            }
+          ],
+          "pdf_evidence": [
+            {
+              "citation": "[NVL_BCTC_2025_Kiemtoan_Hopnhat.pdf — Trang 7]",
+              "page": 7,
+              "tfidf_wc": 0.0898,
+              "excerpt": "CONG TY CO PHAN T~P DOAN DAU TU DJA OC NO VA  BAO cAo TAI CHINH HQ'P NHA.T  Cho 110111 tai chinh kdt tlnic ngay 31 thang 12 110111 2025  MlJC Ll}C  1. BAO cAo cuA BAN TONG GIAM 06c  2. BAo cAo KIEM TOAN ooc L~P  3. BANG CAN 061 KE TOAN HOP NHAT  4. BAO cAo KET"
+            },
+            {
+              "citation": "[NVL_BCTC_2025_Kiemtoan_Hopnhat.pdf — Trang 59]",
+              "page": 59,
+              "tfidf_wc": 0.0965,
+              "excerpt": "·c T(lp daitn chi Ira c11ing theo quy c1inh, quy chi ltro'l1g  tlnro'l1g ciia T(lp doan va diing tho·i h(ln. Tfti ngay phat hitnh baa caa tai chinh !19p nhiit nay, s6 du tidn ltrong c11r9·c T(lp  daan thanh loan hdt.  VI.20 Chi phi phai tra  a. Ng~n h~n  Chi p"
+            }
+          ]
+        },
+        {
+          "shap_col": "shap_risk_depi",
+          "driver_label_vi": "DEPI (Tốc độ khấu hao TSCĐ giảm)",
+          "shap_points": 1.31,
+          "legal_citations": [
+            {
+              "citation": "[Playbook AQI & DEPI: Rủi ro Vốn hóa chi phí bất thường, Tài sản dài hạn mờ ám & Giảm tốc Khấu hao]",
+              "doc_id": "05_Forensic_Audit_Playbook_FinAudit",
+              "score_rrf": 0.032258,
+              "excerpt": "Sổ tay Thủ tục Kiểm toán Pháp chứng FinAudit AI (Ánh xạ 12 Chỉ số SHAP sang Thuyết minh B09-DN & Pháp lý) Playbook AQI & DEPI: Rủi ro Vốn hóa chi phí bất thường, Tài sản dài hạn mờ ám & Giảm tốc Khấu hao - **Tên tài liệu:** FinAudit AI Forensic Audit Playbook v2.0 | - **Mục đích:"
+            },
+            {
+              "citation": "[VSA 240 — Đoạn 31-33: Rủi ro Ban Giám đốc khống chế kiểm soát (Management Override of Controls)]",
+              "doc_id": "01_VSA_240_TT214_2012",
+              "score_rrf": 0.03125,
+              "excerpt": "Chuẩn mực Kiểm toán Việt Nam số 240 (VSA 240) VSA 240 — Đoạn 31-33: Rủi ro Ban Giám đốc khống chế kiểm soát (Management Override of Controls) - **Tên đầy đủ:** Trách nhiệm của kiểm toán viên liên quan đến gian lận trong quá trình kiểm toán báo cáo tài chính | - **Văn bản ban hành"
+            }
+          ],
+          "b01_context_bn_vnd": {
+            "ppe_net": 1839.49,
+            "depreciation": 1043.69
+          },
+          "b09_note_evidence": [
+            {
+              "field": "noc35",
+              "label_vi": "Nguyên giá TSCĐHH",
+              "value_bn_vnd": 2363.72
+            },
+            {
+              "field": "noc39",
+              "label_vi": "Hao mòn TSCĐHH",
+              "value_bn_vnd": 524.24
+            },
+            {
+              "field": "noc41",
+              "label_vi": "Tăng trong kỳ",
+              "value_bn_vnd": 119.49
+            },
+            {
+              "field": "noc143",
+              "label_vi": "Chi phí khấu hao tài sản cố định",
+              "value_bn_vnd": 1043.69
+            }
+          ],
+          "pdf_evidence": [
+            {
+              "citation": "[NVL_BCTC_2025_Kiemtoan_Hopnhat.pdf — Trang 33]",
+              "page": 33,
+              "tfidf_wc": 0.2015,
+              "excerpt": "CONG TY CO PHAN T ~p -DOAN -DA Li TU' -D!A OC NOV A  BA.N THUYET MINH BAO cAo TA.I CHiNH HQP NHAT  Cho nii111 ti1i chinh kit th1ic ngay 31 !hang 12 niim 202 5  IV.8 Ghi nh~n va khfiu hao tai siin c6 djnh (\"TSC-D\")  IV.8.1 Ghi nh~n TSC-D hii'll hlnh  Mfiu 809 -"
+            },
+            {
+              "citation": "[NVL_BCTC_2025_Kiemtoan_Hopnhat.pdf — Trang 33]",
+              "page": 33,
+              "tfidf_wc": 0.1498,
+              "excerpt": "inh 11111a s6111  Nguyen gia TSCD bao g6m gia mua (trLr (-) cac khoan du9·c chi€t khiiu tlmong m,;ii ho~c giam gia), cac khoan thu€ (kh6ng  bao g6m cac khoan thui duqc hoan !,;ii) va cac chi phi lien quan tn,rc ti€p d€n vi¢c dua tai san vao tr,;ing thai san sa"
+            }
+          ]
+        }
+      ],
+      "audit_disclaimer_vi": "Cảnh báo theo VSA 240: Kết quả chỉ phản ánh chỉ báo rủi ro chất lượng lợi nhuận (Forensic Risk Red Flags) phục vụ khoanh vùng thủ tục kiểm toán sâu, không phải kết luận pháp lý về gian lận."
+    },
+    {
+      "ticker": "FPT",
+      "year": 2025,
+      "company_name": "Công ty Cổ phần FPT",
+      "icb_sector_vi": "Công nghệ Thông tin",
+      "composite_risk_score": 11.68,
+      "risk_tier": "Thấp (An toàn)",
+      "beneish_m_score": -2.226,
+      "altman_z_double_prime": 7.106,
+      "pdf_status": "SCANNED_IMAGE_PDF",
+      "top_driver_briefs": [],
+      "audit_disclaimer_vi": "Cảnh báo theo VSA 240: Kết quả chỉ phản ánh chỉ báo rủi ro chất lượng lợi nhuận (Forensic Risk Red Flags) phục vụ khoanh vùng thủ tục kiểm toán sâu, không phải kết luận pháp lý về gian lận."
+    }
+  ]
+}

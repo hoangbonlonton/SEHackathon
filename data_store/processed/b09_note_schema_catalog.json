@@ -1,0 +1,787 @@
+{
+  "noc1": {
+    "level": 1,
+    "title_vi": "Tiền và tương đương tiền",
+    "title_en": "Cash and cash equivalents"
+  },
+  "noc2": {
+    "level": 2,
+    "title_vi": "Tiền mặt",
+    "title_en": "Cash on hand"
+  },
+  "noc3": {
+    "level": 2,
+    "title_vi": "Tiền gửi Ngân hàng",
+    "title_en": "Cash in banks"
+  },
+  "noc4": {
+    "level": 2,
+    "title_vi": "Tiền đang chuyển",
+    "title_en": "Cash in transit"
+  },
+  "noc5": {
+    "level": 2,
+    "title_vi": "Tiền và tương đương tiền",
+    "title_en": "Cash equivalents"
+  },
+  "noc6": {
+    "level": 2,
+    "title_vi": "Đầu tư tài chính NH",
+    "title_en": "Short-term investments"
+  },
+  "noc7": {
+    "level": 1,
+    "title_vi": "Chứng khoán đầu tư ngắn hạn",
+    "title_en": "Short-term securities investments"
+  },
+  "noc156": {
+    "level": 2,
+    "title_vi": "Đầu tư nắm giữ đến ngày đáo hạn",
+    "title_en": "Held-to-maturity investment"
+  },
+  "noc157": {
+    "level": 2,
+    "title_vi": "Đầu tư ngắn hạn",
+    "title_en": "Short-term"
+  },
+  "noc158": {
+    "level": 2,
+    "title_vi": "Đầu tư dài hạn",
+    "title_en": "Long-term"
+  },
+  "noc8": {
+    "level": 2,
+    "title_vi": "Đầu tư NH khác",
+    "title_en": "Other short-term investments"
+  },
+  "noc9": {
+    "level": 2,
+    "title_vi": "Dự phòng giảm giá ĐTNH",
+    "title_en": "Provision for diminution in value of short-term investments"
+  },
+  "noc10": {
+    "level": 1,
+    "title_vi": "Phải thu ngắn hạn khác",
+    "title_en": "Other Receivables"
+  },
+  "noc11": {
+    "level": 2,
+    "title_vi": "Phải thu về cổ phần hóa",
+    "title_en": "Receivables from equitization"
+  },
+  "noc12": {
+    "level": 2,
+    "title_vi": "Phải thu về cổ tức và lợi nhuận được chia",
+    "title_en": "Interest income"
+  },
+  "noc13": {
+    "level": 2,
+    "title_vi": "Phải thu người lao động",
+    "title_en": "Receivable from employees"
+  },
+  "noc14": {
+    "level": 2,
+    "title_vi": "Phải thu khác",
+    "title_en": "Other receivables"
+  },
+  "noc15": {
+    "level": 1,
+    "title_vi": "Hàng tồn kho",
+    "title_en": "INVENTORIES"
+  },
+  "noc16": {
+    "level": 2,
+    "title_vi": "Hàng mua đang đi đường",
+    "title_en": "Goods in transit"
+  },
+  "noc17": {
+    "level": 2,
+    "title_vi": "Nguyên liệu, vật liệu",
+    "title_en": "Raw materials"
+  },
+  "noc18": {
+    "level": 2,
+    "title_vi": "Công cụ, dụng cụ",
+    "title_en": "Tools and supplies"
+  },
+  "noc19": {
+    "level": 2,
+    "title_vi": "Chi phí SX, KD dở dang",
+    "title_en": "Work in progress"
+  },
+  "noc20": {
+    "level": 2,
+    "title_vi": "Thành phẩm",
+    "title_en": "Finished goods"
+  },
+  "noc21": {
+    "level": 2,
+    "title_vi": "Hàng hóa",
+    "title_en": "Merchandise inventories"
+  },
+  "noc22": {
+    "level": 2,
+    "title_vi": "Hàng gửi đi bán",
+    "title_en": "Goods on consignment"
+  },
+  "noc23": {
+    "level": 2,
+    "title_vi": "Hàng hoá kho bảo thuế",
+    "title_en": "Goods in bonded warehouses"
+  },
+  "noc24": {
+    "level": 2,
+    "title_vi": "Hàng hoá bất động sản",
+    "title_en": "Property"
+  },
+  "noc25": {
+    "level": 1,
+    "title_vi": "Tài sản ngắn hạn khác",
+    "title_en": "Other current assets"
+  },
+  "noc26": {
+    "level": 2,
+    "title_vi": "Tạm ứng",
+    "title_en": "Advances"
+  },
+  "noc27": {
+    "level": 2,
+    "title_vi": "Tài sản thiếu chờ xử lý",
+    "title_en": "Lack of assets awaiting handling"
+  },
+  "noc28": {
+    "level": 2,
+    "title_vi": "Cầm cố, ký quỹ, ký cược NH",
+    "title_en": "Short-term deposits or collateral"
+  },
+  "noc29": {
+    "level": 2,
+    "title_vi": "Khác",
+    "title_en": "Other"
+  },
+  "noc30": {
+    "level": 1,
+    "title_vi": "Phải thu dài hạn khác",
+    "title_en": "Other long-term receivables"
+  },
+  "noc31": {
+    "level": 2,
+    "title_vi": "Ký quỹ, ký cược dài hạn",
+    "title_en": "Long-term deposits or collateral"
+  },
+  "noc32": {
+    "level": 2,
+    "title_vi": "Các khoản tiền nhận ủy thác",
+    "title_en": "Sums received in Trust"
+  },
+  "noc33": {
+    "level": 2,
+    "title_vi": "Cho vay không có lãi",
+    "title_en": "Loans without interest"
+  },
+  "noc34": {
+    "level": 2,
+    "title_vi": "Phải thu dài hạn khác",
+    "title_en": "Others"
+  },
+  "noc35": {
+    "level": 1,
+    "title_vi": "Nguyên giá TSCĐHH",
+    "title_en": "Tangible fixed assets - Historical Cost"
+  },
+  "noc36": {
+    "level": 2,
+    "title_vi": "Nguyên giá đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc37": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc38": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc39": {
+    "level": 1,
+    "title_vi": "Hao mòn TSCĐHH",
+    "title_en": "Tangible fixed assets - Accumulated depreciation"
+  },
+  "noc40": {
+    "level": 2,
+    "title_vi": "Đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc41": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc42": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc43": {
+    "level": 1,
+    "title_vi": "Nguyên giá TSCĐ TTC",
+    "title_en": "Finance lease assets - Historical Cost"
+  },
+  "noc44": {
+    "level": 2,
+    "title_vi": "Nguyên giá đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc45": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc46": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc47": {
+    "level": 1,
+    "title_vi": "Hao mòn TSCĐ TTC",
+    "title_en": "Finance lease assets - Accumulated depreciation"
+  },
+  "noc48": {
+    "level": 2,
+    "title_vi": "Đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc49": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc50": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc51": {
+    "level": 1,
+    "title_vi": "Nguyên giá TSCĐVH",
+    "title_en": "Intangible fixed assets - Historical Cost"
+  },
+  "noc52": {
+    "level": 2,
+    "title_vi": "Nguyên giá đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc53": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc54": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc55": {
+    "level": 1,
+    "title_vi": "Hao mòn TSCĐVH",
+    "title_en": "Intangible fixed assets - Accumulated amortization"
+  },
+  "noc56": {
+    "level": 2,
+    "title_vi": "Đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc57": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc58": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc59": {
+    "level": 1,
+    "title_vi": "Đầu tư dài hạn khác",
+    "title_en": "Other long-term investments"
+  },
+  "noc60": {
+    "level": 2,
+    "title_vi": "Đầu tư cổ phiếu",
+    "title_en": "Investment in securities"
+  },
+  "noc61": {
+    "level": 2,
+    "title_vi": "Đầu tư trái phiếu",
+    "title_en": "Investment in bond"
+  },
+  "noc62": {
+    "level": 2,
+    "title_vi": "Đầu tư tín phiếu, kỳ phiếu",
+    "title_en": "Investments in bills of exchange, treasury bonds"
+  },
+  "noc63": {
+    "level": 2,
+    "title_vi": "Cho vay dài hạn",
+    "title_en": "Long-term loans"
+  },
+  "noc64": {
+    "level": 2,
+    "title_vi": "Đầu tư dài hạn khác",
+    "title_en": "Other long-term investments"
+  },
+  "noc65": {
+    "level": 1,
+    "title_vi": "Vay và nợ ngắn hạn",
+    "title_en": "Short-term loans and liabilities"
+  },
+  "noc66": {
+    "level": 2,
+    "title_vi": "Vay ngắn hạn",
+    "title_en": "Short-term loans"
+  },
+  "noc67": {
+    "level": 2,
+    "title_vi": "Vay dài hạn đến hạn trả",
+    "title_en": "Long-term liabilities falling due"
+  },
+  "noc147": {
+    "level": 1,
+    "title_vi": "Giá gốc Lợi thế thương mại",
+    "title_en": "Good will - Historical Cost"
+  },
+  "noc148": {
+    "level": 2,
+    "title_vi": "Số dư đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc149": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc150": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc151": {
+    "level": 1,
+    "title_vi": "Phân bổ Lũy kế",
+    "title_en": "Good will - Accumulated depreciation"
+  },
+  "noc152": {
+    "level": 2,
+    "title_vi": "Số dư đầu kỳ",
+    "title_en": "Opening Balance"
+  },
+  "noc153": {
+    "level": 2,
+    "title_vi": "Tăng trong kỳ",
+    "title_en": "Additions"
+  },
+  "noc154": {
+    "level": 2,
+    "title_vi": "Giảm trong kỳ",
+    "title_en": "Decreases"
+  },
+  "noc68": {
+    "level": 1,
+    "title_vi": "Các khoản phải trả về Thuế",
+    "title_en": "Taxes payable"
+  },
+  "noc69": {
+    "level": 2,
+    "title_vi": "Thuế GTGT",
+    "title_en": "Value added tax"
+  },
+  "noc70": {
+    "level": 2,
+    "title_vi": "Thuế TTĐB",
+    "title_en": "Special Sales Tax (SST)"
+  },
+  "noc71": {
+    "level": 2,
+    "title_vi": "Thuế XNK",
+    "title_en": "Import-Export tax"
+  },
+  "noc72": {
+    "level": 2,
+    "title_vi": "Thuế TNDN",
+    "title_en": "Corporate income Tax"
+  },
+  "noc73": {
+    "level": 2,
+    "title_vi": "Thuế TNCN",
+    "title_en": "Personal Income Tax"
+  },
+  "noc74": {
+    "level": 2,
+    "title_vi": "Thuế Tài nguyên",
+    "title_en": "Natural Resources Tax"
+  },
+  "noc75": {
+    "level": 2,
+    "title_vi": "Thuế nhà đất và tiền thuê đất",
+    "title_en": "Housing and land Tax, and land rental"
+  },
+  "noc76": {
+    "level": 2,
+    "title_vi": "Các loại thuế khác",
+    "title_en": "Other taxes"
+  },
+  "noc77": {
+    "level": 2,
+    "title_vi": "Các khoản phí, lệ phí khác",
+    "title_en": "Other fees, charges"
+  },
+  "noc78": {
+    "level": 1,
+    "title_vi": "Chi phí phải trả",
+    "title_en": "Expenses payable"
+  },
+  "noc79": {
+    "level": 2,
+    "title_vi": "Trích trước CP lương nghỉ phép",
+    "title_en": "Advances on salary during the period of taking leave"
+  },
+  "noc80": {
+    "level": 2,
+    "title_vi": "Chi phí SCL TSCĐ",
+    "title_en": "Expenses for major repair to fixed assets"
+  },
+  "noc81": {
+    "level": 2,
+    "title_vi": "Chi phí trong thời gian ngừng KD",
+    "title_en": "Expenses during the period of cessation of business activities"
+  },
+  "noc82": {
+    "level": 2,
+    "title_vi": "Khác",
+    "title_en": "Others"
+  },
+  "noc83": {
+    "level": 1,
+    "title_vi": "Phải trả phải nộp khác",
+    "title_en": "Other Payables"
+  },
+  "noc84": {
+    "level": 2,
+    "title_vi": "Tài sản thừa chờ XL",
+    "title_en": "Surplus assets awaiting handling"
+  },
+  "noc85": {
+    "level": 2,
+    "title_vi": "Kinh phí công đoàn",
+    "title_en": "Trade Union fees"
+  },
+  "noc86": {
+    "level": 2,
+    "title_vi": "Bảo hiểm xã hội",
+    "title_en": "Social insurance"
+  },
+  "noc87": {
+    "level": 2,
+    "title_vi": "Bảo hiểm y tế",
+    "title_en": "Medical Insurance"
+  },
+  "noc88": {
+    "level": 2,
+    "title_vi": "Bảo hiểm thất nghiệp",
+    "title_en": "Unemployment insurance"
+  },
+  "noc89": {
+    "level": 2,
+    "title_vi": "Phải trả về CPH",
+    "title_en": "Payables regarding equitization"
+  },
+  "noc90": {
+    "level": 2,
+    "title_vi": "Nhận ký quỹ, ký cược NH",
+    "title_en": "Receipt of short-term deposits or collateral"
+  },
+  "noc91": {
+    "level": 2,
+    "title_vi": "Doanh thu chưa thực hiện",
+    "title_en": "Unrealized revenue"
+  },
+  "noc92": {
+    "level": 2,
+    "title_vi": "Khác",
+    "title_en": "Others"
+  },
+  "noc93": {
+    "level": 1,
+    "title_vi": "Vay Dài hạn",
+    "title_en": "Long-term borrowings"
+  },
+  "noc94": {
+    "level": 2,
+    "title_vi": "Vay ngân hàng",
+    "title_en": "Bank loans"
+  },
+  "noc95": {
+    "level": 2,
+    "title_vi": "Vay đối tượng khác",
+    "title_en": "Loans from other lenders"
+  },
+  "noc96": {
+    "level": 2,
+    "title_vi": "Trái phiếu phát hành",
+    "title_en": "Issued bonds"
+  },
+  "noc97": {
+    "level": 2,
+    "title_vi": "Thuê tài chính",
+    "title_en": "Financially leased liabilities"
+  },
+  "noc98": {
+    "level": 2,
+    "title_vi": "Nợ dài hạn khác",
+    "title_en": "Other long-term liabilities"
+  },
+  "noc99": {
+    "level": 1,
+    "title_vi": "Vốn chủ sở hữu",
+    "title_en": "Paid-in capital"
+  },
+  "noc100": {
+    "level": 2,
+    "title_vi": "Vốn góp của nhà nước",
+    "title_en": "Capital contributed by the State"
+  },
+  "noc101": {
+    "level": 2,
+    "title_vi": "Vốn đầu tư của đối tượng khác",
+    "title_en": "Capital contributed by other entities"
+  },
+  "noc102": {
+    "level": 1,
+    "title_vi": "Doanh thu",
+    "title_en": "Net sales"
+  },
+  "noc103": {
+    "level": 2,
+    "title_vi": "Doanh thu bán hàng",
+    "title_en": "Sales of merchandise goods"
+  },
+  "noc104": {
+    "level": 2,
+    "title_vi": "Doanh thu cung cấp dịch vụ",
+    "title_en": "Sale from services"
+  },
+  "noc105": {
+    "level": 2,
+    "title_vi": "Doanh thu hợp đồng xây dựng",
+    "title_en": "Sale from construction contracts"
+  },
+  "noc106": {
+    "level": 1,
+    "title_vi": "Giảm trừ doanh thu",
+    "title_en": "Sales of merchandise goods"
+  },
+  "noc107": {
+    "level": 2,
+    "title_vi": "Chiết khấu thương mại",
+    "title_en": "Trade discounts"
+  },
+  "noc108": {
+    "level": 2,
+    "title_vi": "Giảm giá hàng bán",
+    "title_en": "Reductions in prices of goods sold"
+  },
+  "noc109": {
+    "level": 2,
+    "title_vi": "Hàng bán bị trả lại",
+    "title_en": "Sales returns"
+  },
+  "noc110": {
+    "level": 2,
+    "title_vi": "Thuế GTGT phải nộp",
+    "title_en": "VAT payable"
+  },
+  "noc111": {
+    "level": 2,
+    "title_vi": "Thuế tiêu thụ đặc biệt",
+    "title_en": "Special sales tax"
+  },
+  "noc112": {
+    "level": 2,
+    "title_vi": "Thuế xuất khẩu",
+    "title_en": "Export Duty"
+  },
+  "noc113": {
+    "level": 1,
+    "title_vi": "Giá vốn",
+    "title_en": "Cost of sales"
+  },
+  "noc114": {
+    "level": 2,
+    "title_vi": "Giá vốn hàng hóa đã bán",
+    "title_en": "Merchandise goods sold"
+  },
+  "noc115": {
+    "level": 2,
+    "title_vi": "Giá vốn thành phẩm đã bán",
+    "title_en": "Finished goods sold"
+  },
+  "noc116": {
+    "level": 2,
+    "title_vi": "Giá vốn của dịch vụ cung cấp",
+    "title_en": "Other services provided"
+  },
+  "noc117": {
+    "level": 2,
+    "title_vi": "Giá trị còn lại, chi phí nhượng bán, Thanh lý BĐS đầu tư đã bán",
+    "title_en": "Real estate services provided"
+  },
+  "noc118": {
+    "level": 2,
+    "title_vi": "Chi phí kinh doanh BĐS đầu tư",
+    "title_en": "Trade expenses of invested properties"
+  },
+  "noc119": {
+    "level": 2,
+    "title_vi": "Hao hụt, mất mát hàng tồn kho",
+    "title_en": "Inventories deficiencies"
+  },
+  "noc120": {
+    "level": 2,
+    "title_vi": "Các khoản chi phí vượt mức bình thường",
+    "title_en": "Expenses in excess of normal value"
+  },
+  "noc121": {
+    "level": 2,
+    "title_vi": "Dự phòng",
+    "title_en": "Provision/(reversal of provision) for the decline in value of inventory"
+  },
+  "noc122": {
+    "level": 1,
+    "title_vi": "Doanh thu tài chính",
+    "title_en": "Financial income"
+  },
+  "noc123": {
+    "level": 2,
+    "title_vi": "Lãi tiền gửi, tiền cho vay",
+    "title_en": "Interest income on loans and Deposits granted"
+  },
+  "noc124": {
+    "level": 2,
+    "title_vi": "Lãi đầu tư trái phiếu, kỳ phiếu, tín phiếu",
+    "title_en": "Gain on disposal of securities"
+  },
+  "noc125": {
+    "level": 2,
+    "title_vi": "Cổ tức, lợi nhuận được chia",
+    "title_en": "Dividends income"
+  },
+  "noc155": {
+    "level": 2,
+    "title_vi": "Lãi từ bán, thanh lý các khoản đầu tư",
+    "title_en": "Gain from disposal of Short-term or long-term investments"
+  },
+  "noc126": {
+    "level": 2,
+    "title_vi": "Lãi bán ngoại tệ",
+    "title_en": "Gains from sale of foreign currency"
+  },
+  "noc127": {
+    "level": 2,
+    "title_vi": "Lãi chênh lệch tỷ giá đã thực hiện",
+    "title_en": "Realized foreign exchange gains"
+  },
+  "noc128": {
+    "level": 2,
+    "title_vi": "Lãi chênh lệch tỷ giá chưa thực hiện",
+    "title_en": "Unrealized foreign exchange gains"
+  },
+  "noc129": {
+    "level": 2,
+    "title_vi": "Lãi bán hàng trả chậm",
+    "title_en": "Gains from sale of deferred payments goods"
+  },
+  "noc130": {
+    "level": 2,
+    "title_vi": "Doanh thu hoạt động tài chính khác",
+    "title_en": "Others"
+  },
+  "noc131": {
+    "level": 1,
+    "title_vi": "Chi phí tài chính",
+    "title_en": "Financial expenses"
+  },
+  "noc132": {
+    "level": 2,
+    "title_vi": "Lãi tiền vay",
+    "title_en": "Interest expenses on loans"
+  },
+  "noc133": {
+    "level": 2,
+    "title_vi": "Chiết khấu thanh toán, lãi bán hàng trả chậm",
+    "title_en": "Payments discount, gains from sale of deferred payments goods"
+  },
+  "noc134": {
+    "level": 2,
+    "title_vi": "Lỗ do thanh lý các khoản đầu tư ngắn hạn, dài hạn",
+    "title_en": "Loss from disposal of Short-term or long-term investments"
+  },
+  "noc135": {
+    "level": 2,
+    "title_vi": "Lỗ bán ngoại tệ",
+    "title_en": "Loss from sale of foreign currency"
+  },
+  "noc136": {
+    "level": 2,
+    "title_vi": "Lỗ chênh lệch tỷ giá đã thực hiện",
+    "title_en": "Realized foreign exchange losses"
+  },
+  "noc137": {
+    "level": 2,
+    "title_vi": "Lỗ chênh lệch tỷ giá chưa thực hiện",
+    "title_en": "Unrealized foreign exchange losses"
+  },
+  "noc138": {
+    "level": 2,
+    "title_vi": "Dự phòng giảm giá các khoản đầu tư ngắn hạn, dài hạn",
+    "title_en": "Provisions for reduction in price of short-term or long-term investments"
+  },
+  "noc139": {
+    "level": 2,
+    "title_vi": "Chi phí tài chính khác",
+    "title_en": "Others"
+  },
+  "noc140": {
+    "level": 1,
+    "title_vi": "Chi phí sản xuất theo yếu tố",
+    "title_en": "Cost of goods manufactured by factors"
+  },
+  "noc141": {
+    "level": 2,
+    "title_vi": "Chi phí nguyên liệu, vật liệu",
+    "title_en": "Raw materials"
+  },
+  "noc142": {
+    "level": 2,
+    "title_vi": "Chi phí nhân công",
+    "title_en": "Labor costs"
+  },
+  "noc143": {
+    "level": 2,
+    "title_vi": "Chi phí khấu hao tài sản cố định",
+    "title_en": "Depreciation expense"
+  },
+  "noc144": {
+    "level": 2,
+    "title_vi": "Chi phí dịch vụ mua ngoài",
+    "title_en": "Outside service expenses"
+  },
+  "noc145": {
+    "level": 2,
+    "title_vi": "Chi phí khác bằng tiền",
+    "title_en": "Other cash expenses"
+  }
+}
