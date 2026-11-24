@@ -1,0 +1,31 @@
+/* FinAudit AI Design Tokens — Approved Option 2: Deep Emerald & Terracotta Copper */
+:root {
+  --color-primary: #064E3B;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #0F766E;
+  --color-on-secondary: #FFFFFF;
+  --color-accent: #C2410C;
+  --color-on-accent: #FFFFFF;
+  --color-accent-soft: #FFF7ED;
+  --color-background: #FAF8F5;
+  --color-foreground: #132A23;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #132A23;
+  --color-muted: #F0F4F2;
+  --color-muted-foreground: #4B635B;
+  --color-border: #D1DDD8;
+  --color-success: #059669;
+  --color-warning: #B45309;
+  --color-destructive: #BE123C;
+  --color-on-destructive: #FFFFFF;
+  --color-ring: #064E3B;
+  --font-heading: "EB Garamond", Georgia, serif;
+  --font-body: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+}

@@ -1,11 +1,11 @@
 {
-  "tested_at": "2026-11-24 15:11:54",
+  "tested_at": "2026-11-25 03:14:49",
   "tests": {
     "test1_live_scoring_and_export": {
       "status": "PASS",
       "sample_csv": "D:\\SEHackathon\\data_store\\sample_uploads\\Mau_Upload_BCTC_FinAudit_AI.csv",
       "sample_xlsx": "D:\\SEHackathon\\data_store\\sample_uploads\\Mau_Upload_BCTC_FinAudit_AI.xlsx",
-      "live_latency_ms": 703.0,
+      "live_latency_ms": 724.6,
       "minh_bach_2025_score": 6.35,
       "minh_bach_2025_tier": "Thấp (An toàn)",
       "thoi_so_2025_score": 89.15,
@@ -13,31 +13,31 @@
       "tdh_2025_live_score": 80.16,
       "tdh_2025_stage3_score": 80.16,
       "tdh_2025_abs_diff": 0.0,
-      "html_report_bytes": 8126
+      "html_report_bytes": 8291
     },
     "test2_streamlit_apptest_5_modules": {
       "status": "PASS",
       "modules_passed": 5,
       "exceptions_count": 0,
       "timings_seconds": {
-        "module_1_cold_boot_s": 0.82,
-        "module_1_render_s": 0.19,
-        "module_2_render_s": 0.21,
-        "module_3_render_s": 0.11,
-        "module_4_render_s": 6.12,
-        "module_5_render_s": 0.04
+        "module_1_cold_boot_s": 0.81,
+        "module_1_render_s": 0.2,
+        "module_2_render_s": 0.24,
+        "module_3_render_s": 0.12,
+        "module_4_render_s": 6.94,
+        "module_5_render_s": 0.06
       },
-      "quick_demo_nvl_seconds": 0.05,
-      "true_full_loaded_ram_mb": 492.6
+      "quick_demo_nvl_seconds": 0.27,
+      "true_full_loaded_ram_mb": 490.6
     },
     "test3_live_streamlit_http_server": {
       "status": "PASS",
       "port_tested": 8505,
       "health_http_status": 200,
       "root_http_status": 200,
-      "server_ready_seconds": 0.93,
+      "server_ready_seconds": 0.98,
       "process_ram_mb": 3.4
     }
   },
-  "total_test_elapsed_seconds": 10.55
+  "total_test_elapsed_seconds": 11.72
 }

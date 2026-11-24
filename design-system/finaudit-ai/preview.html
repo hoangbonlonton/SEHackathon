@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FinAudit AI — Bản xem trước Hệ thống Thiết kế (Deep Emerald &amp; Terracotta Copper)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap">
+  <style>
+    :root {
+      --primary: #064E3B;
+      --secondary: #0F766E;
+      --accent: #C2410C;
+      --accent-soft: #FFF7ED;
+      --bg: #FAF8F5;
+      --fg: #132A23;
+      --card: #FFFFFF;
+      --muted: #F0F4F2;
+      --muted-fg: #4B635B;
+      --border: #D1DDD8;
+      --success: #059669;
+      --warning: #B45309;
+      --danger: #BE123C;
+      --font-heading: "EB Garamond", Georgia, serif;
+      --font-body: "Be Vietnam Pro", "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font-body); background: var(--bg); color: var(--fg); line-height: 1.55; }
+    .sticky-bar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(6, 78, 59, 0.96); backdrop-filter: blur(8px); color: #fff;
+      border-bottom: 2px solid var(--accent);
+      padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    }
+    .sticky-brand { font-family: var(--font-heading); font-size: clamp(18px, 2.2vw, 22px); font-weight: 700; letter-spacing: 0.2px; }
+    .pill-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .role-pill { font-size: 12px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: #F0FDFA; }
+    .role-pill.active { background: var(--accent); border-color: #FDBA74; font-weight: 600; color: #fff; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 18px 48px; }
+    .hero {
+      background: linear-gradient(135deg, #064E3B 0%, #0B6150 58%, #0F766E 100%);
+      color: #fff; border-radius: 16px; padding: clamp(20px, 3vw, 32px);
+      border-bottom: 4px solid var(--accent); box-shadow: 0 10px 28px rgba(6,78,59,0.16);
+    }
+    .hero h1 { font-family: var(--font-heading); font-size: clamp(24px, 3.6vw, 36px); margin: 6px 0 8px; line-height: 1.18; }
+    .hero p { margin: 0; font-size: clamp(13.5px, 1.4vw, 15px); color: #E6F4F1; max-width: 780px; }
+    .kicker { font-size: 11.5px; text-transform: uppercase; letter-spacing: 1px; color: #FDBA74; font-weight: 700; }
+    h2 { font-family: var(--font-heading); font-size: clamp(20px, 2.4vw, 26px); margin: 28px 0 12px; color: var(--primary); border-bottom: 1.5px solid var(--border); padding-bottom: 6px; }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+    .swatch { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .swatch-top { height: 64px; }
+    .swatch-body { padding: 10px 12px; font-size: 12.5px; }
+    .swatch-body code { font-weight: 700; color: var(--primary); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .kpi { background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--primary); border-radius: 12px; padding: 16px; }
+    .kpi.copper { border-top-color: var(--accent); }
+    .kpi.danger { border-top-color: var(--danger); }
+    .kpi-v { font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 4px 0; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .btn { min-height: 44px; padding: 10px 20px; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; border: none; font-family: var(--font-body); }
+    .btn-copper { background: var(--accent); color: #fff; }
+    .btn-emerald { background: var(--primary); color: #fff; }
+    .btn-outline { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
+    .badge { display: inline-block; padding: 4px 11px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+    .b-ok { background: #ECFDF5; color: #059669; border: 1px solid #A7F3D0; }
+    .b-warn { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+    .b-red { background: #FFF1F2; color: #BE123C; border: 1px solid #FECDD3; }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 13px; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+    th { background: var(--muted); color: var(--primary); font-weight: 700; }
+    footer { margin-top: 32px; padding: 18px 20px; background: var(--muted); border: 1px solid var(--border); border-radius: 12px; font-size: 12.5px; color: var(--muted-fg); }
+  </style>
+</head>
+<body>
+  <div class="sticky-bar">
+    <div class="sticky-brand">🛡️ FinAudit AI • Cổng Pháp chứng &amp; Chứng từ VAS</div>
+    <div class="pill-row">
+      <span class="role-pill active">Kiểm toán</span>
+      <span class="role-pill">Kế toán</span>
+      <span class="role-pill">Nhà đầu tư</span>
+      <span class="role-pill">Nhà cung cấp</span>
+      <span class="role-pill">Doanh nghiệp SME</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <section class="hero">
+      <div class="kicker">PHƯƠNG ÁN 2 ĐÃ CHỐT • DEEP EMERALD &amp; TERRACOTTA COPPER</div>
+      <h1>Hệ thống Sàng lọc Rủi ro BCTC &amp; Đối chiếu Pháp lý Chuẩn VAS / TT 99/2025</h1>
+      <p>Thiết kế mang bản sắc riêng biệt cho tài chính–pháp lý bền vững (ESG-G), thoát khỏi màu xanh đại trà, tối ưu khả năng đọc dấu tiếng Việt trên cả Điện thoại (375px) và Máy tính (1440px).</p>
+      <div class="btn-row">
+        <button class="btn btn-copper">🔎 Quét Rủi ro 643 Doanh nghiệp</button>
+        <button class="btn btn-emerald" style="border:1px solid rgba(255,255,255,0.35);">📄 Soi Thuyết minh PDF &amp; Luật VAS</button>
+      </div>
+    </section>
+
+    <h2>1. Bảng màu Độc bản (Deep Emerald • Terracotta Copper • Warm Ivory)</h2>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-top" style="background:#064E3B;"></div><div class="swatch-body"><strong>Ngọc Lục Bảo Đậm</strong><br><code>#064E3B</code> • Header &amp; Chủ đạo</div></div>
+      <div class="swatch"><div class="swatch-top" style="background:#0F766E;"></div><div class="swatch-body"><strong>Ngọc Lam Trầm</strong><br><code>#0F766E</code> • Phụ &amp; Gradient</div></div>
+      <div class="swatch"><div class="swatch-top" style="background:#C2410C;"></div><div class="swatch-body"><strong>Đồng Đỏ (Copper)</strong><br><code>#C2410C</code> • Nút CTA &amp; Điểm nhấn</div></div>
+      <div class="swatch"><div class="swatch-top" style="background:#FAF8F5;border-bottom:1px solid #D1DDD8;"></div><div class="swatch-body"><strong>Kem Ngà Ấm</strong><br><code>#FAF8F5</code> • Nền giấy chứng từ</div></div>
+      <div class="swatch"><div class="swatch-top" style="background:#BE123C;"></div><div class="swatch-body"><strong>Đỏ Đô (Bordeaux)</strong><br><code>#BE123C</code> • Cảnh báo Đỏ</div></div>
+      <div class="swatch"><div class="swatch-top" style="background:#B45309;"></div><div class="swatch-body"><strong>Hổ Phách Ấm</strong><br><code>#B45309</code> • Cần theo dõi</div></div>
+    </div>
+
+    <h2>2. Thẻ Chỉ số &amp; Danh mục Hiệu lực Văn bản Pháp quy</h2>
+    <div class="cards" style="margin-bottom:16px;">
+      <div class="kpi"><div style="font-size:12px;color:var(--muted-fg);">DN PHI TÀI CHÍNH</div><div class="kpi-v" style="color:var(--primary);">643</div><span class="badge b-ok">✓ 99.98% khớp B01-DN</span></div>
+      <div class="kpi danger"><div style="font-size:12px;color:var(--muted-fg);">CẢNH BÁO ĐỎ 2025</div><div class="kpi-v" style="color:var(--danger);">26 (4.1%)</div><span class="badge b-red">🔴 Cần kiểm toán sâu</span></div>
+      <div class="kpi copper"><div style="font-size:12px;color:var(--muted-fg);">BACKTEST AUC-ROC</div><div class="kpi-v" style="color:var(--accent);">0.9299</div><span class="badge b-warn">p = 5.77e-22</span></div>
+    </div>
+    <table>
+      <thead><tr><th>Số hiệu Văn bản</th><th>Cơ quan ban hành</th><th>Hiệu lực</th><th>Trạng thái</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Thông tư 99/2025/TT-BTC</strong></td><td>Bộ Tài chính</td><td>01/01/2026</td><td><span class="badge b-ok">Hiệu lực (Thay thế TT 200)</span></td></tr>
+        <tr><td><strong>Thông tư 200/2014/TT-BTC</strong></td><td>Bộ Tài chính</td><td>01/01/2015 – 31/12/2025</td><td><span class="badge b-warn">Áp dụng BCTC lịch sử &le; 2025</span></td></tr>
+        <tr><td><strong>Thông tư 48/2019/TT-BTC</strong></td><td>Bộ Tài chính</td><td>10/10/2019 (sửa đổi TT 24/2022)</td><td><span class="badge b-ok">Còn hiệu lực (Thuế TNDN)</span></td></tr>
+        <tr><td><strong>VSA 240 (TT 214/2012/TT-BTC)</strong></td><td>Bộ Tài chính</td><td>01/01/2014</td><td><span class="badge b-ok">Còn hiệu lực (Kiểm toán)</span></td></tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <strong>⚖️ Tuyên bố Pháp lý chuẩn VSA 240:</strong> Kết quả sàng lọc chỉ mang tính cảnh báo rủi ro phục vụ công tác kiểm toán/thẩm định chuyên sâu, không thay thế ý kiến kiểm toán độc lập hay kết luận pháp lý về gian lận. • FinAudit AI — SE-Hackathon Challenge 2026 (Trường Kinh tế — ĐH Công nghiệp Hà Nội).
+    </footer>
+  </div>
+</body>
+</html>

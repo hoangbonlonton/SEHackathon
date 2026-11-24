@@ -40,9 +40,9 @@ def generate_html_audit_report(
     tier = escape(str(row.get("risk_tier", "Chưa xếp hạng")))
 
     if score >= 65.0:
-        tier_bg, tier_fg, tier_bd = "#FEF2F2", "#DC2626", "#FECACA"
+        tier_bg, tier_fg, tier_bd = "#FFF1F2", "#BE123C", "#FECDD3"
     elif score >= 40.0:
-        tier_bg, tier_fg, tier_bd = "#FFFBEB", "#D97706", "#FDE68A"
+        tier_bg, tier_fg, tier_bd = "#FFF7ED", "#C2410C", "#FDBA74"
     else:
         tier_bg, tier_fg, tier_bd = "#ECFDF5", "#059669", "#A7F3D0"
 
@@ -69,7 +69,7 @@ def generate_html_audit_report(
     shap_rows_html = ""
     for lbl, val in shap_items[:8]:
         sign = "+" if val >= 0 else ""
-        color = "#DC2626" if val >= 0.5 else ("#059669" if val <= -0.5 else "#475569")
+        color = "#BE123C" if val >= 0.5 else ("#059669" if val <= -0.5 else "#4B635B")
         direction = "Đẩy rủi ro tăng" if val > 0.2 else ("Kéo rủi ro giảm" if val < -0.2 else "Trung tính")
         shap_rows_html += (
             f"<tr><td>{escape(lbl)}</td>"
@@ -94,7 +94,7 @@ def generate_html_audit_report(
             )
             rag_html += f"""
             <div class="rag-box">
-              <div class="rag-title">🚩 {escape(drv['driver_label_vi'])} <span class="rag-pts">(+{drv['shap_points']:.2f}đ SHAP)</span></div>
+              <div class="rag-title">Cờ rủi ro: {escape(drv['driver_label_vi'])} <span class="rag-pts">(+{drv['shap_points']:.2f}đ SHAP)</span></div>
               <ul class="cite-list">{cites}</ul>
               {f'<div class="b09-line"><strong>Bóc tách Thuyết minh B09-DN:</strong> {b09_items}</div>' if b09_items else ''}
               {pdf_items}
@@ -114,38 +114,38 @@ def generate_html_audit_report(
 <title>Hồ sơ Pháp chứng BCTC — {ticker} ({year}) | FinAudit AI</title>
 <style>
   @page {{ size: A4; margin: 14mm; }}
-  body {{ font-family: 'Segoe UI', Arial, sans-serif; color: #0F172A; background: #F8FAFC; margin: 0; padding: 20px; }}
-  .sheet {{ max-width: 900px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 28px 32px; box-shadow: 0 4px 16px rgba(15,23,42,0.06); }}
-  .banner {{ background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%); color: #FFFFFF; padding: 20px 24px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }}
-  .banner h1 {{ margin: 4px 0 2px; font-size: 20px; }}
-  .banner .sub {{ font-size: 12px; opacity: 0.85; }}
-  .score-box {{ background: {tier_bg}; color: {tier_fg}; border: 1.5px solid {tier_bd}; border-radius: 10px; padding: 10px 18px; text-align: center; min-width: 145px; }}
-  .score-num {{ font-size: 28px; font-weight: 800; line-height: 1.1; font-family: monospace; }}
-  .score-tier {{ font-size: 11px; font-weight: 700; margin-top: 3px; }}
-  h2 {{ font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: #1E3A8A; border-bottom: 2px solid #E2E8F0; padding-bottom: 5px; margin: 22px 0 12px; }}
+  body {{ font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif; font-size: 14px; color: #132A23; background: #FAF8F5; margin: 0; padding: 20px; }}
+  .sheet {{ max-width: 900px; margin: 0 auto; background: #FFFFFF; border: 1px solid #D1DDD8; border-radius: 12px; padding: 28px 32px; box-shadow: 0 4px 16px rgba(6,78,59,0.08); }}
+  .banner {{ background: linear-gradient(135deg, #064E3B 0%, #0F766E 100%); color: #FFFFFF; border-bottom: 4px solid #C2410C; padding: 20px 24px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }}
+  .banner h1 {{ margin: 4px 0 2px; font-size: 23px; font-family: 'EB Garamond', Georgia, serif; }}
+  .banner .sub {{ font-size: 13px; opacity: 0.92; }}
+  .score-box {{ background: {tier_bg}; color: {tier_fg}; border: 1.5px solid {tier_bd}; border-radius: 10px; padding: 10px 18px; text-align: center; min-width: 150px; }}
+  .score-num {{ font-size: 30px; font-weight: 800; line-height: 1.1; font-family: monospace; }}
+  .score-tier {{ font-size: 12.5px; font-weight: 700; margin-top: 3px; }}
+  h2 {{ font-size: 15.5px; text-transform: uppercase; letter-spacing: 0.5px; color: #064E3B; border-bottom: 2px solid #D1DDD8; padding-bottom: 6px; margin: 22px 0 12px; }}
   .grid-4 {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }}
-  .kpi {{ background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 10px 12px; }}
-  .kpi-lbl {{ font-size: 11px; color: #64748B; }}
-  .kpi-val {{ font-size: 16px; font-weight: 800; color: #0F172A; margin-top: 3px; font-family: monospace; }}
-  .kpi-sub {{ font-size: 11px; color: #475569; margin-top: 2px; }}
-  table {{ width: 100%; border-collapse: collapse; font-size: 12.5px; }}
-  th, td {{ padding: 7px 10px; border-bottom: 1px solid #E2E8F0; text-align: left; }}
-  th {{ background: #F1F5F9; color: #334155; font-weight: 700; }}
-  .rag-box {{ background: #F8FAFC; border: 1px solid #CBD5E1; border-left: 4px solid #1E3A8A; border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; font-size: 12.5px; }}
-  .rag-title {{ font-weight: 700; color: #0F172A; margin-bottom: 6px; }}
-  .rag-pts {{ color: #DC2626; font-family: monospace; }}
-  .cite-list {{ margin: 4px 0 6px 18px; padding: 0; color: #334155; }}
+  .kpi {{ background: #FAF8F5; border: 1px solid #D1DDD8; border-top: 3px solid #064E3B; border-radius: 8px; padding: 11px 13px; }}
+  .kpi-lbl {{ font-size: 12px; color: #4B635B; }}
+  .kpi-val {{ font-size: 17.5px; font-weight: 800; color: #132A23; margin-top: 3px; font-family: monospace; }}
+  .kpi-sub {{ font-size: 12px; color: #4B635B; margin-top: 2px; }}
+  table {{ width: 100%; border-collapse: collapse; font-size: 13.5px; }}
+  th, td {{ padding: 8px 10px; border-bottom: 1px solid #D1DDD8; text-align: left; }}
+  th {{ background: #F0F4F2; color: #064E3B; font-weight: 700; }}
+  .rag-box {{ background: #FAF8F5; border: 1px solid #D1DDD8; border-left: 4px solid #064E3B; border-radius: 8px; padding: 13px 15px; margin-bottom: 10px; font-size: 13.5px; }}
+  .rag-title {{ font-weight: 700; color: #132A23; margin-bottom: 6px; }}
+  .rag-pts {{ color: #BE123C; font-family: monospace; }}
+  .cite-list {{ margin: 4px 0 6px 18px; padding: 0; color: #132A23; }}
   .cite-list li {{ margin-bottom: 4px; }}
-  .b09-line {{ background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 6px; padding: 6px 10px; margin-top: 6px; font-size: 12px; color: #1E3A8A; }}
-  .pdf-quote {{ background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 6px; padding: 6px 10px; margin-top: 6px; font-size: 11.5px; color: #92400E; }}
-  .disclaimer {{ margin-top: 20px; padding: 12px 14px; background: #F1F5F9; border-radius: 8px; font-size: 11.5px; color: #475569; line-height: 1.5; }}
-  .print-btn {{ margin-bottom: 12px; padding: 8px 16px; background: #1E3A8A; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }}
+  .b09-line {{ background: #F0FDFA; border: 1px solid #99F6E4; border-radius: 6px; padding: 7px 10px; margin-top: 6px; font-size: 13px; color: #064E3B; }}
+  .pdf-quote {{ background: #FFF7ED; border: 1px solid #FDBA74; border-radius: 6px; padding: 7px 10px; margin-top: 6px; font-size: 12.5px; color: #9A3412; }}
+  .disclaimer {{ margin-top: 20px; padding: 13px 15px; background: #F0F4F2; border-radius: 8px; font-size: 12.5px; color: #4B635B; line-height: 1.55; }}
+  .print-btn {{ margin-bottom: 12px; padding: 10px 18px; background: #C2410C; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; }}
   @media print {{ .print-btn {{ display: none; }} body {{ background: #fff; padding: 0; }} .sheet {{ box-shadow: none; border: none; padding: 0; }} }}
 </style>
 </head>
 <body>
   <div style="max-width:900px;margin:0 auto;text-align:right;">
-    <button class="print-btn" onclick="window.print()">🖨️ In / Lưu thành PDF chuẩn A4</button>
+    <button class="print-btn" onclick="window.print()">In / Lưu thành PDF chuẩn A4</button>
   </div>
   <div class="sheet">
     <div class="banner">

@@ -48,18 +48,26 @@ from live_scoring_service import (
 )
 from report_exporter import generate_html_audit_report
 from ui_components import (
+    BRAND_EMBLEM_SVG,
     PALETTE,
+    ROLE_PROFILES,
     SHAP_DISPLAY_META,
     inject_fintech_css,
+    plot_company_trajectory_3d_animated,
     plot_forensic_matrix_2d,
+    plot_forensic_space_3d_animated,
     plot_multiyear_trend,
     plot_risk_gauge,
     plot_sector_radar,
     plot_sector_risk_ranking,
+    plot_sector_terrain_3d,
     plot_shap_waterfall,
     plot_validation_benchmarks,
     render_hero,
     render_kpi_card,
+    render_legal_registry_table,
+    render_role_guidance_strip,
+    render_sticky_top_banner,
     render_vsa240_disclaimer,
     risk_badge_html,
 )
@@ -69,7 +77,6 @@ from ui_components import (
 # ---------------------------------------------------------------------------
 st.set_page_config(
     page_title="FinAudit AI — FinForensics | Sàng lọc Rủi ro BCTC Chuẩn VAS",
-    page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -183,53 +190,80 @@ MODULES = [
 
 if "active_module" not in st.session_state:
     st.session_state["active_module"] = MODULES[0]
+if "nav_radio" not in st.session_state:
+    st.session_state["nav_radio"] = st.session_state["active_module"]
+if "active_role" not in st.session_state:
+    st.session_state["active_role"] = "Kiểm toán viên"
+if "role_selector" not in st.session_state:
+    st.session_state["role_selector"] = st.session_state["active_role"]
 if "selected_ticker" not in st.session_state:
     st.session_state["selected_ticker"] = "TDH"
 if "selected_year" not in st.session_state:
     st.session_state["selected_year"] = 2025
 
+# Đồng bộ an toàn khi bấm nút điều hướng nhanh trước khi khởi tạo widget st.radio
+if "pending_module" in st.session_state and st.session_state["pending_module"] in MODULES:
+    _target_mod = st.session_state.pop("pending_module")
+    st.session_state["nav_radio"] = _target_mod
+    st.session_state["active_module"] = _target_mod
+
+
+def _navigate_to(module_name: str) -> None:
+    """Chuyển phân hệ đồng bộ cả trạng thái nội bộ lẫn radio Sidebar."""
+    st.session_state["pending_module"] = module_name
+    st.session_state["active_module"] = module_name
+    st.rerun()
+
+
 with st.sidebar:
     st.markdown(
-        """
-        <div style="padding:10px 12px;border-radius:12px;background:linear-gradient(135deg,#0F172A,#1E3A8A);color:#FFFFFF;margin-bottom:12px;">
-          <div style="font-size:18px;font-weight:800;letter-spacing:-0.3px;">🛡️ FinAudit AI</div>
-          <div style="font-size:11.5px;color:#BFDBFE;margin-top:2px;">FinForensics • Chuẩn VAS &amp; TT 99/2025</div>
+        f"""
+        <div style="padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,#064E3B,#0F766E);color:#FFFFFF;border-bottom:3px solid #C2410C;margin-bottom:14px;box-shadow:0 4px 12px rgba(6,78,59,0.16);">
+          <div style="font-family:'EB Garamond',Georgia,serif;font-size:23px;font-weight:700;letter-spacing:0.2px;display:flex;align-items:center;gap:8px;">{BRAND_EMBLEM_SVG} FinAudit AI</div>
+          <div style="font-size:13px;color:#FDBA74;margin-top:4px;font-weight:600;">FinForensics • Chuẩn VAS &amp; TT 99/2025</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
+    role_options = list(ROLE_PROFILES.keys())
+    active_role = st.selectbox(
+        "Vai trò sử dụng (5 nhóm đối tượng)",
+        options=role_options,
+        key="role_selector",
+        help="Chọn vai trò của bạn để hiển thị gợi ý thao tác phù hợp trong 5 phân hệ hiện có.",
+    )
+    st.session_state["active_role"] = active_role
+
     active_module = st.radio(
         "Điều hướng 5 Phân hệ",
         options=MODULES,
-        index=MODULES.index(st.session_state["active_module"]),
         key="nav_radio",
     )
     st.session_state["active_module"] = active_module
 
     st.divider()
-    st.markdown("**⚡ Phím tắt Demo Nhanh (Hồ sơ 360°)**")
+    st.markdown("**Truy cập nhanh Hồ sơ 360° (Mẫu tiêu biểu)**")
     q_cols = st.columns(3)
     quick_presets = [
-        ("TDH", "🔴 TDH"),
-        ("QCG", "🔴 QCG"),
-        ("NVL", "🟡 NVL"),
-        ("DRH", "🟡 DRH"),
-        ("FPT", "🟢 FPT"),
-        ("VNM", "🟢 VNM"),
+        ("TDH", "TDH • Đỏ"),
+        ("QCG", "QCG • Đỏ"),
+        ("NVL", "NVL • TD"),
+        ("DRH", "DRH • TD"),
+        ("FPT", "FPT • AT"),
+        ("VNM", "VNM • AT"),
     ]
     for i, (tkr, lbl) in enumerate(quick_presets):
         if q_cols[i % 3].button(lbl, key=f"quick_{tkr}", width="stretch"):
             st.session_state["selected_ticker"] = tkr
             st.session_state["selected_year"] = 2025
-            st.session_state["active_module"] = MODULES[1]
-            st.rerun()
+            _navigate_to(MODULES[1])
 
     st.divider()
     st.markdown(
         """
-        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:10px 12px;font-size:12px;color:#334155;line-height:1.5;">
-          <strong>📦 Phạm vi dữ liệu thật:</strong><br/>
+        <div style="background:#FAF8F5;border:1px solid #D1DDD8;border-left:3px solid #064E3B;border-radius:10px;padding:12px 14px;font-size:13.8px;color:#132A23;line-height:1.6;">
+          <strong style="color:#064E3B;">Phạm vi dữ liệu thực tế:</strong><br/>
           • <strong>643 DN</strong> phi tài chính (HOSE/HNX)<br/>
           • <strong>4,340</strong> firm-years chấm điểm (2019–2025)<br/>
           • <strong>38 DN</strong> bóc tách B09-DN + <strong>4 PDF</strong> 2025<br/>
@@ -239,13 +273,61 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
 
-    with st.expander("🔑 Tùy chọn Gemini API Key (Không bắt buộc)"):
+    with st.expander("Tùy chọn Gemini API Key (Không bắt buộc)"):
         gemini_key = st.text_input(
             "Gemini API Key",
             type="password",
             placeholder="AIza... (Để trống = dùng Zero-API)",
             help="Mặc định hệ thống chạy 100% miễn phí không cần API key. Nhập key nếu muốn AI tóm tắt mở rộng ở Phân hệ 4.",
         )
+
+
+def render_top_institutional_bar() -> None:
+    """Hiển thị Thanh Sticky Top Banner + Ô Tìm kiếm Nhanh Toàn trang + Gợi ý Vai trò (Thành phần bắt buộc 1)."""
+    render_sticky_top_banner(st.session_state["active_role"], st.session_state["active_module"])
+
+    role_prof = ROLE_PROFILES.get(st.session_state["active_role"], {})
+    rec_idx = int(role_prof.get("recommended_module_idx", 0))
+    rec_mod = MODULES[rec_idx]
+    rec_lbl = str(role_prof.get("recommended_label", "Đi tới phân hệ gợi ý"))
+
+    u1, u2, u3 = st.columns([2.5, 0.85, 1.65])
+    quick_q = u1.text_input(
+        "Tra cứu nhanh toàn hệ thống",
+        label_visibility="collapsed",
+        placeholder="Nhập Mã CK (VD: FPT, TDH, NVL) → Hồ sơ 360° | Hoặc từ khóa Luật (TT 99/2025, VSA 240) → Tra cứu Pháp lý...",
+        key="global_quick_search_input",
+    )
+    if u2.button("Tra nhanh →", key="btn_global_quick_search", width="stretch"):
+        raw_q = quick_q.strip()
+        if raw_q:
+            valid_tickers = set(df_all.dropna(subset=["composite_risk_score"])["ticker"].unique().tolist())
+            q_upper = raw_q.upper()
+            if q_upper in valid_tickers:
+                tkr_years = sorted(
+                    df_all[(df_all["ticker"] == q_upper) & (df_all["composite_risk_score"].notna())]["year"].unique().tolist(),
+                    reverse=True,
+                )
+                st.session_state["selected_ticker"] = q_upper
+                st.session_state["selected_year"] = int(tkr_years[0]) if tkr_years else 2025
+                _navigate_to(MODULES[1])
+            else:
+                st.session_state["rag_query_text"] = raw_q
+                _navigate_to(MODULES[3])
+
+    if st.session_state["active_module"] != rec_mod:
+        if u3.button(rec_lbl, key="btn_role_jump", type="primary", width="stretch"):
+            _navigate_to(rec_mod)
+    else:
+        u3.markdown(
+            '<div style="min-height:46px;display:flex;align-items:center;justify-content:center;gap:7px;'
+            'background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;color:#059669;'
+            'font-size:13.8px;font-weight:700;padding:0 12px;">'
+            '<span class="fa-dot fa-dot-green"></span>Đang ở phân hệ ưu tiên cho vai trò</div>',
+            unsafe_allow_html=True,
+        )
+
+    render_role_guidance_strip(st.session_state["active_role"])
 
 
 # ===========================================================================
@@ -277,19 +359,21 @@ def render_module_1_market_radar() -> None:
         )
         ex_sel = f4.multiselect("Sàn giao dịch", ["HOSE", "HNX"], default=["HOSE", "HNX"])
 
-    df_f = df_scored_only[(df_scored_only["year"] == yr_sel) & (df_scored_only["exchange"].isin(ex_sel))].copy()
+    df_f_multiyear = df_scored_only[df_scored_only["exchange"].isin(ex_sel)].copy()
     if sec_sel:
-        df_f = df_f[df_f["icb_sector_vi"].isin(sec_sel)]
+        df_f_multiyear = df_f_multiyear[df_f_multiyear["icb_sector_vi"].isin(sec_sel)]
     if tier_sel:
-        df_f = df_f[df_f["risk_tier"].isin(tier_sel)]
+        df_f_multiyear = df_f_multiyear[df_f_multiyear["risk_tier"].isin(tier_sel)]
 
-    search_txt = st.text_input("🔍 Tìm nhanh theo mã cổ phiếu hoặc tên doanh nghiệp", placeholder="Nhập VD: TDH, QCG, FPT, Vinamilk...")
+    search_txt = st.text_input("Tìm nhanh theo mã cổ phiếu hoặc tên doanh nghiệp", placeholder="Nhập VD: TDH, QCG, FPT, Vinamilk...")
     if search_txt.strip():
         q_s = search_txt.strip().lower()
-        df_f = df_f[
-            df_f["ticker"].str.lower().str.contains(q_s, na=False)
-            | df_f["company_name"].str.lower().str.contains(q_s, na=False)
+        df_f_multiyear = df_f_multiyear[
+            df_f_multiyear["ticker"].str.lower().str.contains(q_s, na=False)
+            | df_f_multiyear["company_name"].str.lower().str.contains(q_s, na=False)
         ]
+
+    df_f = df_f_multiyear[df_f_multiyear["year"] == yr_sel].copy()
 
     # 4 Thẻ KPI lớn
     n_firms = len(df_f)
@@ -315,14 +399,41 @@ def render_module_1_market_radar() -> None:
         st.warning("Không có doanh nghiệp nào khớp bộ lọc hiện tại. Hãy nới rộng điều kiện lọc.")
         return
 
-    c_left, c_right = st.columns([1.2, 1.0])
-    with c_left:
-        st.plotly_chart(plot_forensic_matrix_2d(df_f), width="stretch")
-    with c_right:
-        st.plotly_chart(plot_sector_risk_ranking(df_f), width="stretch")
+    chart_mode_m1 = st.radio(
+        "Chế độ hiển thị Biểu đồ Thị trường & Ngành",
+        options=[
+            "Chế độ 2D Chuẩn phân tích (Mặc định — Nhanh, rõ nét)",
+            "Chế độ 3D Tương tác & Chuyển động (2019–2025)",
+        ],
+        horizontal=True,
+        key="m1_chart_mode",
+    )
+
+    if chart_mode_m1.startswith("Chế độ 2D"):
+        c_left, c_right = st.columns([1.2, 1.0])
+        with c_left:
+            st.plotly_chart(plot_forensic_matrix_2d(df_f), width="stretch")
+        with c_right:
+            st.plotly_chart(plot_sector_risk_ranking(df_f), width="stretch")
+    else:
+        st.caption(
+            "Hướng dẫn 3D: Kéo chuột để xoay khối 360°, cuộn để thu phóng, bấm Phát chuyển động để xem 643 doanh nghiệp dịch chuyển từ 2019 → 2025. "
+            "Chuyển lại Chế độ 2D khi xem nhanh trên điện thoại."
+        )
+        tab_3d_space, tab_3d_terrain = st.tabs([
+            "Không gian Pháp chứng 3D Động (Altman × Beneish × CFO/TS)",
+            "Địa hình Rủi ro 3D theo 15 Ngành ICB × 7 Năm (2019–2025)",
+        ])
+        with tab_3d_space:
+            st.plotly_chart(
+                plot_forensic_space_3d_animated(df_f_multiyear, selected_year=int(yr_sel)),
+                width="stretch",
+            )
+        with tab_3d_terrain:
+            st.plotly_chart(plot_sector_terrain_3d(df_f_multiyear), width="stretch")
 
     # Bảng Sàng lọc Doanh nghiệp + Mở nhanh Hồ sơ 360
-    st.markdown('<div class="fa-section-title">📋 Bảng Sàng lọc Rủi ro Doanh nghiệp (Sắp xếp theo Điểm Rủi ro giảm dần)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="fa-section-title">Bảng Sàng lọc Rủi ro Doanh nghiệp (Sắp xếp theo Điểm Rủi ro giảm dần)</div>', unsafe_allow_html=True)
     df_tbl = df_f.sort_values("composite_risk_score", ascending=False).copy()
 
     jump_c1, jump_c2, jump_c3 = st.columns([2.2, 1.2, 1.2])
@@ -331,11 +442,10 @@ def render_module_1_market_radar() -> None:
         options=df_tbl["ticker"].tolist(),
         format_func=lambda t: f"{t} — {df_tbl.loc[df_tbl['ticker']==t, 'company_name'].iloc[0]} ({df_tbl.loc[df_tbl['ticker']==t, 'composite_risk_score'].iloc[0]:.1f}đ)",
     )
-    if jump_c2.button("🔎 Mở Hồ sơ 360° của mã này", type="primary", width="stretch"):
+    if jump_c2.button("Mở Hồ sơ 360° của mã này", type="primary", width="stretch"):
         st.session_state["selected_ticker"] = pick_ticker
         st.session_state["selected_year"] = int(yr_sel)
-        st.session_state["active_module"] = MODULES[1]
-        st.rerun()
+        _navigate_to(MODULES[1])
 
     csv_export = df_tbl[
         [
@@ -357,7 +467,7 @@ def render_module_1_market_radar() -> None:
         ]
     ].to_csv(index=False, encoding="utf-8-sig")
     jump_c3.download_button(
-        "⬇️ Tải bảng sàng lọc (.CSV)",
+        "Tải bảng sàng lọc (.CSV)",
         data=csv_export.encode("utf-8-sig"),
         file_name=f"FinAudit_Market_Radar_{yr_sel}.csv",
         mime="text/csv",
@@ -466,36 +576,36 @@ def render_module_2_company_dossier() -> None:
     with top_l:
         badge = risk_badge_html(score, str(row["risk_tier"]))
         div_tag = (
-            '<span class="fa-badge fa-badge-red" style="margin-left:6px;">⚠️ Phân kỳ LN (+) / CFO (-)</span>'
+            '<span class="fa-badge fa-badge-red" style="margin-left:6px;"><span class="fa-dot fa-dot-red"></span>Phân kỳ LN (+) / CFO (-)</span>'
             if bool(row.get("cash_flow_divergence_flag", False))
-            else '<span class="fa-badge fa-badge-green" style="margin-left:6px;">✓ Dòng tiền đồng pha</span>'
+            else '<span class="fa-badge fa-badge-green" style="margin-left:6px;"><span class="fa-dot fa-dot-green"></span>Dòng tiền đồng pha</span>'
         )
         neg_eq_tag = (
-            '<span class="fa-badge fa-badge-red" style="margin-left:6px;">⚠️ Âm Vốn chủ sở hữu</span>'
+            '<span class="fa-badge fa-badge-red" style="margin-left:6px;"><span class="fa-dot fa-dot-red"></span>Âm Vốn chủ sở hữu</span>'
             if bool(row.get("negative_equity_flag", False))
             else ""
         )
         st.markdown(
             f"""
-            <div class="fa-card" style="height:245px;display:flex;flex-direction:column;justify-content:space-between;">
+            <div class="fa-card" style="min-height:265px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;">
               <div>
-                <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:8px;">
-                  <span style="font-size:22px;font-weight:800;color:#0F172A;font-family:monospace;">{ticker}</span>
+                <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+                  <span style="font-size:25px;font-weight:800;color:#132A23;font-family:monospace;">{ticker}</span>
                   {badge}{div_tag}{neg_eq_tag}
                 </div>
-                <div style="font-size:16px;font-weight:700;color:#1E3A8A;">{row['company_name']}</div>
-                <div style="font-size:12.5px;color:#64748B;margin-top:4px;">
+                <div style="font-family:'EB Garamond',Georgia,serif;font-size:22px;font-weight:700;color:#064E3B;">{row['company_name']}</div>
+                <div style="font-size:14.5px;color:#4B635B;margin-top:4px;">
                   Ngành ICB: <strong>{row['icb_sector_vi']}</strong> • Sàn: <strong>{row['exchange']}</strong> • Năm tài chính: <strong>{year_sel}</strong>
                 </div>
               </div>
-              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding-top:10px;border-top:1px solid #E2E8F0;font-size:12px;">
-                <div><span style="color:#64748B;">Tổng Tài sản</span><br/><strong style="font-size:14px;">{row['total_assets']:,.1f} tỷ</strong></div>
-                <div><span style="color:#64748B;">Doanh thu thuần</span><br/><strong style="font-size:14px;">{row['net_revenue']:,.1f} tỷ</strong></div>
-                <div><span style="color:#64748B;">LN Sau thuế</span><br/><strong style="font-size:14px;color:{'#059669' if row['net_income']>=0 else '#DC2626'};">{row['net_income']:,.1f} tỷ</strong></div>
-                <div><span style="color:#64748B;">Dòng tiền CFO</span><br/><strong style="font-size:14px;color:{'#059669' if row['cfo']>=0 else '#DC2626'};">{row['cfo']:,.1f} tỷ</strong></div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:10px;padding-top:12px;border-top:1px solid #D1DDD8;font-size:13.8px;">
+                <div><span style="color:#4B635B;">Tổng Tài sản</span><br/><strong style="font-size:16.5px;color:#132A23;">{row['total_assets']:,.1f} tỷ</strong></div>
+                <div><span style="color:#4B635B;">Doanh thu thuần</span><br/><strong style="font-size:16.5px;color:#132A23;">{row['net_revenue']:,.1f} tỷ</strong></div>
+                <div><span style="color:#4B635B;">LN Sau thuế</span><br/><strong style="font-size:16.5px;color:{'#059669' if row['net_income']>=0 else '#BE123C'};">{row['net_income']:,.1f} tỷ</strong></div>
+                <div><span style="color:#4B635B;">Dòng tiền CFO</span><br/><strong style="font-size:16.5px;color:{'#059669' if row['cfo']>=0 else '#BE123C'};">{row['cfo']:,.1f} tỷ</strong></div>
               </div>
-              <div style="font-size:12px;color:#334155;background:#F8FAFC;padding:7px 10px;border-radius:8px;border:1px solid #E2E8F0;">
-                <strong>Nhận định AI (SHAP):</strong> {row['top_risk_drivers_vi']}
+              <div style="font-size:14.5px;color:#132A23;background:#FAF8F5;padding:10px 12px;border-radius:8px;border:1px solid #D1DDD8;line-height:1.5;">
+                <strong style="color:#064E3B;">Nhận định AI (SHAP):</strong> {row['top_risk_drivers_vi']}
               </div>
             </div>
             """,
@@ -537,29 +647,46 @@ def render_module_2_company_dossier() -> None:
     with g2:
         st.plotly_chart(plot_sector_radar(row), width="stretch")
 
-    # Biểu đồ Xu hướng Đa năm
-    st.plotly_chart(plot_multiyear_trend(df_comp), width="stretch")
+    # Biểu đồ Xu hướng Đa năm (Mặc định 2D chuẩn báo cáo, hỗ trợ bật 3D Quỹ đạo Động có Mặt phẳng CFO = 0)
+    st.markdown('<div class="fa-section-title">Quỹ đạo Tài chính &amp; Rủi ro Đa năm (2018–2025)</div>', unsafe_allow_html=True)
+    trend_mode_m2 = st.radio(
+        "Chế độ hiển thị Quỹ đạo Đa năm",
+        options=[
+            "Chế độ 2D Hai tầng (Mặc định — Chuẩn báo cáo)",
+            "Chế độ 3D Quỹ đạo Động (Doanh thu × LNST × CFO — Kèm mặt phẳng CFO = 0)",
+        ],
+        horizontal=True,
+        key="m2_trend_mode",
+    )
+    if trend_mode_m2.startswith("Chế độ 2D"):
+        st.plotly_chart(plot_multiyear_trend(df_comp), width="stretch")
+    else:
+        st.caption(
+            "Cách đọc Quỹ đạo 3D: Các mốc năm rơi xuống dưới mặt phẳng cam (CFO = 0) cho thấy dòng tiền kinh doanh âm; "
+            "bấm Chiếu quỹ đạo để xem doanh nghiệp dịch chuyển từ 2018 đến 2025 hoặc xoay 360°."
+        )
+        st.plotly_chart(plot_company_trajectory_3d_animated(df_comp), width="stretch")
 
     # Khung Cầu nối SHAP -> Hybrid RAG (Pháp lý + B09-DN + PDF)
-    st.markdown('<div class="fa-section-title">⚖️ Đối chiếu Tự động: Cờ đỏ SHAP → Luật VAS / TT 99/2025 / VSA 240 & Thuyết minh BCTC</div>', unsafe_allow_html=True)
+    st.markdown('<div class="fa-section-title">Đối chiếu Tự động: Cờ đỏ SHAP → Luật VAS / TT 99/2025 / VSA 240 &amp; Thuyết minh BCTC</div>', unsafe_allow_html=True)
 
     if pdf_diag is not None:
         p_st = pdf_diag["quality_status"]
         if p_st == "SCANNED_IMAGE_PDF":
             st.warning(
-                f"📄 **Phát hiện PDF Scan ảnh (`{pdf_diag['file_name']}`, {pdf_diag['n_pages']} trang, 0 ký tự/trang):** "
-                f"Hệ thống từ chối đoán mù và tự động chuyển sang **Kênh 1 (Thuyết minh B09-DN cấu trúc Vietcap IQ)** bên dưới!"
+                f"**Phát hiện PDF Scan ảnh (`{pdf_diag['file_name']}`, {pdf_diag['n_pages']} trang, 0 ký tự/trang):** "
+                f"Hệ thống từ chối đoán mù và tự động chuyển sang **Kênh 1 (Thuyết minh B09-DN cấu trúc Vietcap IQ)** bên dưới."
             )
         elif p_st == "NOISY_OCR_TEXT":
             st.info(
-                f"📄 **Đã liên kết PDF Kiểm toán thật (`{pdf_diag['file_name']}`, {pdf_diag['n_pages']} trang, nhiễu OCR {pdf_diag['ocr_noise_ratio_pct']}%):** "
+                f"**Đã liên kết PDF Kiểm toán thật (`{pdf_diag['file_name']}`, {pdf_diag['n_pages']} trang, nhiễu OCR {pdf_diag['ocr_noise_ratio_pct']}%):** "
                 f"Hybrid RRF tự động trích xuất cả số liệu B09-DN lẫn trang PDF gốc có liên quan."
             )
 
     if rag_brief["top_driver_briefs"]:
         for drv in rag_brief["top_driver_briefs"]:
             cites_html = "".join(
-                f"<div style='margin-top:5px;'><strong style='color:#1E3A8A;'>📌 {c['citation']}</strong>: {c['excerpt'][:260]}...</div>"
+                f"<div style='margin-top:6px;'><strong style='color:#064E3B;'>[Căn cứ] {c['citation']}</strong>: {c['excerpt'][:260]}...</div>"
                 for c in drv["legal_citations"]
             )
             b09_html = ""
@@ -568,17 +695,17 @@ def render_module_2_company_dossier() -> None:
                     f"<strong>{b['label_vi']}:</strong> {b['value_bn_vnd']:,.2f} tỷ"
                     for b in drv["b09_note_evidence"][:6]
                 )
-                b09_html = f"<div style='margin-top:8px;padding:8px 10px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;font-size:12.5px;color:#1E3A8A;'><strong>📊 Bóc tách Thuyết minh B09-DN thật ({ticker} {year_sel}):</strong> {b09_parts}</div>"
+                b09_html = f"<div style='margin-top:10px;padding:10px 12px;background:#F0FDFA;border:1px solid #99F6E4;border-radius:8px;font-size:14.2px;color:#064E3B;'><strong>Bóc tách Thuyết minh B09-DN thật ({ticker} {year_sel}):</strong> {b09_parts}</div>"
             pdf_html = ""
             if drv["pdf_evidence"]:
                 for pe in drv["pdf_evidence"]:
-                    pdf_html += f"<div style='margin-top:6px;padding:8px 10px;background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;font-size:12px;color:#92400E;'><strong>📄 Trích xuất PDF Kiểm toán {pe['citation']}:</strong> {pe['excerpt']}...</div>"
+                    pdf_html += f"<div style='margin-top:8px;padding:10px 12px;background:#FFF7ED;border:1px solid #FDBA74;border-radius:8px;font-size:14px;color:#9A3412;'><strong>Trích xuất PDF Kiểm toán {pe['citation']}:</strong> {pe['excerpt']}...</div>"
 
             st.markdown(
                 f"""
-                <div class="fa-rag-card" style="border-left-color:#DC2626;">
-                  <div style="font-size:14px;font-weight:800;color:#0F172A;">
-                    🚩 {drv['driver_label_vi']} <span style="color:#DC2626;font-family:monospace;">(+{drv['shap_points']:.2f}đ SHAP)</span>
+                <div class="fa-rag-card" style="border-left-color:#BE123C;">
+                  <div style="font-size:16px;font-weight:800;color:#132A23;margin-bottom:4px;">
+                    Cờ rủi ro: {drv['driver_label_vi']} <span style="color:#BE123C;font-family:monospace;">(+{drv['shap_points']:.2f}đ SHAP)</span>
                   </div>
                   <div class="fa-rag-body">{cites_html}{b09_html}{pdf_html}</div>
                 </div>
@@ -587,23 +714,23 @@ def render_module_2_company_dossier() -> None:
             )
     else:
         st.success(
-            f"✅ **{ticker} ({year_sel})** không phát sinh bất kỳ cờ đỏ SHAP nào vượt ngưỡng (`> +0.5đ`). "
+            f"**{ticker} ({year_sel})** không phát sinh bất kỳ cờ đỏ SHAP nào vượt ngưỡng (`> +0.5đ`). "
             "Các chỉ tiêu Beneish, Altman Z'', dòng tiền CFO và cơ cấu tài sản đều nằm trong vùng lành mạnh hơn trung vị ngành."
         )
         if b09_row is not None:
             st.info(
-                f"📊 **Xác nhận nhanh từ Thuyết minh B09-DN ({ticker} {year_sel}):** "
+                f"**Xác nhận nhanh từ Thuyết minh B09-DN ({ticker} {year_sel}):** "
                 f"Tiền & TĐT: `{b09_row.get('noc1', 0):,.2f} tỷ` (Tiền gửi NH: `{b09_row.get('noc3', 0):,.2f} tỷ`) • "
                 f"Đầu tư TC NH: `{b09_row.get('noc6', 0):,.2f} tỷ` • "
                 f"Hàng tồn kho gộp: `{b09_row.get('noc15', 0):,.2f} tỷ`."
             )
 
     # Nút Xuất Hồ sơ Kiểm toán (HTML/In-PDF & CSV)
-    st.markdown('<div class="fa-section-title">🖨️ Xuất Hồ sơ Kiểm toán Pháp chứng (Audit Working Papers)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="fa-section-title">Xuất Hồ sơ Kiểm toán Pháp chứng (Audit Working Papers)</div>', unsafe_allow_html=True)
     exp1, exp2 = st.columns(2)
     html_report = generate_html_audit_report(row, rag_brief=rag_brief)
     exp1.download_button(
-        "📄 Tải Báo cáo Hồ sơ Kiểm toán (.HTML chuẩn A4 In PDF)",
+        "Tải Báo cáo Hồ sơ Kiểm toán (.HTML chuẩn A4 In PDF)",
         data=html_report.encode("utf-8"),
         file_name=f"FinAudit_HoSoPhapChung_{ticker}_{year_sel}.html",
         mime="text/html",
@@ -612,7 +739,7 @@ def render_module_2_company_dossier() -> None:
     )
     csv_comp = df_comp.to_csv(index=False, encoding="utf-8-sig")
     exp2.download_button(
-        f"📊 Tải toàn bộ dữ liệu 8 năm của {ticker} (.CSV)",
+        f"Tải toàn bộ dữ liệu 8 năm của {ticker} (.CSV)",
         data=csv_comp.encode("utf-8-sig"),
         file_name=f"FinAudit_DuLieu_{ticker}_2018_2025.csv",
         mime="text/csv",
@@ -626,16 +753,16 @@ def render_module_2_company_dossier() -> None:
 # ===========================================================================
 def _display_live_scoring_result(df_live_scored: pd.DataFrame, checks: list[dict[str, str]]) -> None:
     # Hiển thị kết quả Trạm 0 (Data Integrity Gate)
-    st.markdown("#### 🛡️ Kết quả Trạm 0 — Kiểm định Toàn vẹn Số liệu (Data Integrity Gate)")
+    st.markdown("#### Kết quả Trạm 0 — Kiểm định Toàn vẹn Số liệu (Data Integrity Gate)")
     chk_cols = st.columns(max(len(checks), 1))
     for i, ck in enumerate(checks):
         with chk_cols[i]:
             if ck["status"] == "PASS":
-                st.success(f"**✓ {ck['title']}**\n\n{ck['detail']}")
+                st.success(f"**[ĐẠT] {ck['title']}**\n\n{ck['detail']}")
             elif ck["status"] == "WARN":
-                st.warning(f"**⚠️ {ck['title']}**\n\n{ck['detail']}")
+                st.warning(f"**[LƯU Ý] {ck['title']}**\n\n{ck['detail']}")
             else:
-                st.error(f"**⛔ {ck['title']}**\n\n{ck['detail']}")
+                st.error(f"**[LỖI] {ck['title']}**\n\n{ck['detail']}")
 
     if any(c["status"] == "ERROR" for c in checks):
         return
@@ -645,7 +772,7 @@ def _display_live_scoring_result(df_live_scored: pd.DataFrame, checks: list[dict
         st.error("Chưa đủ chuỗi 2 năm liên tiếp hợp lệ để chấm điểm. Hãy kiểm tra lại cột `year`.")
         return
 
-    st.markdown("#### 🎯 Kết quả Chấm điểm Trực tiếp (Chạy thật qua Chuyên gia 1 → Chuyên gia 2 → Chuyên gia 3)")
+    st.markdown("#### Kết quả Chấm điểm Trực tiếp (Chạy thật qua Chuyên gia 1 → Chuyên gia 2 → Chuyên gia 3)")
     summary_disp = scored_rows[
         [
             "ticker",
@@ -689,24 +816,24 @@ def _display_live_scoring_result(df_live_scored: pd.DataFrame, checks: list[dict
         st.plotly_chart(plot_shap_waterfall(row), width="stretch")
         rag_brief = s4_mod.generate_forensic_rag_brief(row, legal_retriever=legal_retriever)
         if rag_brief["top_driver_briefs"]:
-            st.markdown("**⚖️ Căn cứ Pháp lý & Thủ tục Kiểm toán tự động gợi ý (Chuyên gia 3):**")
+            st.markdown("**Căn cứ Pháp lý & Thủ tục Kiểm toán tự động gợi ý (Chuyên gia 3):**")
             for drv in rag_brief["top_driver_briefs"]:
                 cites = " | ".join(c["citation"] for c in drv["legal_citations"])
                 st.markdown(
                     f"""
-                    <div class="fa-rag-card" style="padding:10px 12px;">
-                      <div class="fa-rag-cite">🚩 {drv['driver_label_vi']} (+{drv['shap_points']:.2f}đ)</div>
+                    <div class="fa-rag-card" style="padding:12px 14px;border-left-color:#BE123C;">
+                      <div class="fa-rag-cite" style="color:#132A23;">Cờ rủi ro: {drv['driver_label_vi']} <span style="color:#BE123C;">(+{drv['shap_points']:.2f}đ)</span></div>
                       <div class="fa-rag-meta">{cites}</div>
                     </div>
                     """,
                     unsafe_allow_html=True,
                 )
         else:
-            st.success("✅ Không có nhân tố SHAP vượt ngưỡng cảnh báo; hồ sơ tài chính nằm trong vùng lành mạnh!")
+            st.success("Không có nhân tố SHAP vượt ngưỡng cảnh báo; hồ sơ tài chính nằm trong vùng lành mạnh.")
 
         html_out = generate_html_audit_report(row, rag_brief=rag_brief)
         st.download_button(
-            f"🖨️ Xuất Báo cáo Kiểm toán cho {row['ticker']} ({int(row['year'])}) (.HTML / In PDF)",
+            f"Xuất Báo cáo Kiểm toán cho {row['ticker']} ({int(row['year'])}) (.HTML / In PDF)",
             data=html_out.encode("utf-8"),
             file_name=f"FinAudit_LiveScore_{row['ticker']}_{int(row['year'])}.html",
             mime="text/html",
@@ -726,20 +853,20 @@ def render_module_3_live_scoring() -> None:
         right_badge="<strong>Tốc độ chấm Live:</strong> &lt; 1 giây<br/><strong>Chuẩn đối chiếu:</strong> 15 Ngành ICB",
     )
 
-    tab_up, tab_whatif = st.tabs(["📤 Tải lên File Excel / CSV BCTC Mới", "🎛️ Giả lập Kịch bản Trực tiếp (What-If Simulator)"])
+    tab_up, tab_whatif = st.tabs(["Tải lên File Excel / CSV BCTC Mới", "Giả lập Kịch bản Trực tiếp (What-If Simulator)"])
 
     with tab_up:
         st.markdown("##### Bước 1: Tải File Mẫu Chuẩn VAS (Đã điền sẵn 2 công ty mẫu *Minh Bạch* & *Thổi Số*)")
         dl1, dl2 = st.columns(2)
         dl1.download_button(
-            "⬇️ Tải File Mẫu Excel (.XLSX — có sheet Hướng dẫn)",
+            "Tải File Mẫu Excel (.XLSX — có sheet Hướng dẫn)",
             data=datasets["xlsx_tpl"].read_bytes(),
             file_name="Mau_Upload_BCTC_FinAudit_AI.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             width="stretch",
         )
         dl2.download_button(
-            "⬇️ Tải File Mẫu CSV (.CSV chuẩn UTF-8)",
+            "Tải File Mẫu CSV (.CSV chuẩn UTF-8)",
             data=datasets["csv_tpl"].read_bytes(),
             file_name="Mau_Upload_BCTC_FinAudit_AI.csv",
             mime="text/csv",
@@ -749,7 +876,7 @@ def render_module_3_live_scoring() -> None:
         st.markdown("##### Bước 2: Tải lên file BCTC của bạn (hoặc bấm thử ngay trên bộ mẫu 2 công ty)")
         uploaded = st.file_uploader("Kéo thả file .CSV hoặc .XLSX (tối thiểu 2 năm liên tiếp cho mỗi DN)", type=["csv", "xlsx"])
 
-        run_sample_btn = st.button("⚡ Chạy thử ngay trên bộ mẫu (CTCP Minh Bạch vs. CTCP Thổi Số)", type="primary")
+        run_sample_btn = st.button("Chạy thử ngay trên bộ mẫu (CTCP Minh Bạch vs. CTCP Thổi Số)", type="primary")
         df_to_score = None
         if uploaded is not None:
             try:
@@ -767,7 +894,7 @@ def render_module_3_live_scoring() -> None:
             t0 = time.perf_counter()
             df_res, checks = run_live_scoring_pipeline(df_to_score, df_all, df_bench, artifacts)
             elapsed = time.perf_counter() - t0
-            st.caption(f"⏱️ Hoàn tất luồng tuần tự Tiền kiểm → CG1 → CG2 (AI+SHAP) trong `{elapsed:.2f} giây`.")
+            st.caption(f"Hoàn tất luồng tuần tự Tiền kiểm → CG1 → CG2 (AI+SHAP) trong `{elapsed:.2f} giây`.")
             _display_live_scoring_result(df_res, checks)
 
     with tab_whatif:
@@ -815,11 +942,11 @@ def render_module_3_live_scoring() -> None:
             key=f"whatif_editor_{preset_choice}",
         )
 
-        if st.button("🚀 Chạy Chấm điểm Trực tiếp cho Kịch bản vừa chỉnh", type="primary", width="stretch"):
+        if st.button("Chạy Chấm điểm Trực tiếp cho Kịch bản vừa chỉnh", type="primary", width="stretch"):
             t0 = time.perf_counter()
             df_res, checks = run_live_scoring_pipeline(edited_df, df_all, df_bench, artifacts)
             elapsed = time.perf_counter() - t0
-            st.caption(f"⏱️ Hoàn tất chấm điểm kịch bản What-If trong `{elapsed:.2f} giây`.")
+            st.caption(f"Hoàn tất chấm điểm kịch bản What-If trong `{elapsed:.2f} giây`.")
             _display_live_scoring_result(df_res, checks)
 
     render_vsa240_disclaimer()
@@ -839,7 +966,7 @@ def render_module_4_hybrid_rag() -> None:
         right_badge="<strong>Legal 20Q:</strong> Hit@1 95% | Hit@3 100%<br/><strong>Anti-Hallucination:</strong> 100% (5/5)",
     )
 
-    tab_law, tab_pdf = st.tabs(["⚖️ Tra cứu Pháp lý VAS / TT 99/2025 / TT 48 / VSA 240", "📄 Soi File PDF BCTC Kiểm toán & B09-DN (Kiến trúc 2 Kênh)"])
+    tab_law, tab_pdf = st.tabs(["Tra cứu Pháp lý VAS / TT 99/2025 / TT 48 / VSA 240", "Soi File PDF BCTC Kiểm toán & B09-DN (Kiến trúc 2 Kênh)"])
 
     with tab_law:
         st.markdown("##### Chọn nhanh câu hỏi kiểm toán mẫu (bao gồm câu test chống ảo giác) hoặc gõ câu hỏi của bạn:")
@@ -879,19 +1006,19 @@ def render_module_4_hybrid_rag() -> None:
                 enable_abstention=True,
             )
             st.caption(
-                f"⏱️ Độ trễ truy xuất: `{res['latency_ms']:.2f} ms` • "
+                f"Độ trễ truy xuất: `{res['latency_ms']:.2f} ms` • "
                 f"Word TF-IDF max: `{res['max_word_tfidf']:.4f}` • "
                 f"Hybrid TF-IDF max: `{res['max_tfidf_wc']:.4f}` • "
                 f"BM25 Dual max: `{res['max_bm25_dual']:.2f}`"
             )
             if res["abstained"]:
                 st.error(
-                    f"🛡️ **CỔNG CHỐNG ẢO GIÁC ĐÃ KÍCH HOẠT (ANTI-HALLUCINATION ABSTENTION)**\n\n"
+                    f"**CỔNG CHỐNG ẢO GIÁC ĐÃ KÍCH HOẠT (ANTI-HALLUCINATION ABSTENTION)**\n\n"
                     f"{res['abstention_reason']}"
                 )
             else:
                 if gemini_key.strip():
-                    if st.button("✨ Tóm tắt tổng hợp mở rộng bằng Gemini API (Grounded trên các nguồn dưới)"):
+                    if st.button("Tóm tắt tổng hợp mở rộng bằng Gemini API (Grounded trên các nguồn dưới)"):
                         with st.spinner("Đang gọi Gemini tổng hợp dựa trên trích dẫn..."):
                             gem_out = call_optional_gemini_synthesis(gemini_key, query_in, res["results"])
                         st.info(gem_out)
@@ -913,6 +1040,9 @@ def render_module_4_hybrid_rag() -> None:
                         """,
                         unsafe_allow_html=True,
                     )
+
+        # Thành phần bắt buộc 2: Danh mục Hiệu lực Văn bản Pháp quy chuẩn Bộ Tài chính
+        render_legal_registry_table()
 
     with tab_pdf:
         st.markdown("##### Chọn 1 trong 4 bộ PDF Kiểm toán 2025 thật (HOSE/Vietstock) HOẶC tải lên file PDF BCTC của bạn:")
@@ -962,11 +1092,11 @@ def render_module_4_hybrid_rag() -> None:
             st.markdown("<div style='height:8px;'></div>", unsafe_allow_html=True)
 
             if st_status == "SCANNED_IMAGE_PDF":
-                st.error(f"⛔ **CẢNH BÁO PDF SCAN ẢNH:** {diag['recommendation_vi']}")
+                st.error(f"**CẢNH BÁO PDF SCAN ẢNH:** {diag['recommendation_vi']}")
                 if active_ticker_for_b09:
                     sub_b09 = df_b09[(df_b09["ticker"] == active_ticker_for_b09) & (df_b09["year"] == 2025)]
                     if len(sub_b09) > 0:
-                        st.success(f"✅ **Tự động kích hoạt Kênh 1 — Bóc tách Thuyết minh B09-DN cấu trúc thật (`{active_ticker_for_b09} 2025`, Vietcap IQ API):**")
+                        st.success(f"**Tự động kích hoạt Kênh 1 — Bóc tách Thuyết minh B09-DN cấu trúc thật (`{active_ticker_for_b09} 2025`, Vietcap IQ API):**")
                         r_b09 = sub_b09.iloc[0]
                         b09_rows = []
                         for k, meta in schema_b09.items():
@@ -982,8 +1112,8 @@ def render_module_4_hybrid_rag() -> None:
                                 )
                         st.dataframe(pd.DataFrame(b09_rows), width="stretch", height=360, hide_index=True)
             else:
-                st.info(f"ℹ️ **Chẩn đoán chất lượng:** {diag['recommendation_vi']}")
-                st.markdown("**🔍 Tìm nhanh các điểm nóng kiểm toán trong file PDF này:**")
+                st.info(f"**Chẩn đoán chất lượng:** {diag['recommendation_vi']}")
+                st.markdown("**Tìm nhanh các điểm nóng kiểm toán trong file PDF này:**")
                 pdf_quick = [
                     "Vấn đề cần nhấn mạnh giả định hoạt động liên tục lưu chuyển tiền thuần âm",
                     "Thuyết minh vay ngân hàng TMCP chi tiết các khoản vay và trái phiếu",
@@ -1002,7 +1132,7 @@ def render_module_4_hybrid_rag() -> None:
                 pdf_q_in = st.text_input("Từ khóa soi trong file PDF", value=st.session_state["pdf_search_q"])
                 if pdf_ret is not None and pdf_q_in.strip():
                     p_res = pdf_ret.search(pdf_q_in.strip(), top_k=3, mode="hybrid_rrf", enable_abstention=False)
-                    st.caption(f"⏱️ Tìm trên {diag['n_chunks_indexed']} đoạn PDF trong `{p_res['latency_ms']:.2f} ms` (Hybrid RRF kháng nhiễu OCR).")
+                    st.caption(f"Tìm trên {diag['n_chunks_indexed']} đoạn PDF trong `{p_res['latency_ms']:.2f} ms` (Hybrid RRF kháng nhiễu OCR).")
                     for h in p_res["results"]:
                         st.markdown(
                             f"""
@@ -1058,20 +1188,20 @@ def render_module_5_validation_governance() -> None:
         st.plotly_chart(fig_rag, width="stretch")
 
     t_ai, t_b09, t_esg = st.tabs([
-        "📊 Chi tiết Backtest 12 Bluechip vs. 12 DN Biến cố",
-        "🔍 Đối sánh 6 Chiều B09-DN & Tam giác 3 Nguồn NVL 2025",
-        "🌱 Tác động ESG (Trụ cột G) & Lộ trình Mở rộng Phase 2",
+        "Chi tiết Backtest 12 Bluechip vs. 12 DN Biến cố",
+        "Đối sánh 6 Chiều B09-DN & Tam giác 3 Nguồn NVL 2025",
+        "Tác động ESG (Trụ cột G) & Lộ trình Mở rộng Phase 2",
     ])
 
     with t_ai:
         bc1, bc2 = st.columns(2)
         with bc1:
-            st.markdown("**🟢 Nhóm A — 12 Doanh nghiệp Bluechip Minh bạch (0.00% cảnh báo đỏ giả)**")
+            st.markdown("**Nhóm A — 12 Doanh nghiệp Bluechip Minh bạch (0.00% cảnh báo đỏ giả)**")
             df_ga = pd.DataFrame(bt["group_a_table"])[["ticker", "sector", "mean_score", "max_score", "score_2025"]]
             df_ga.columns = ["Mã CK", "Ngành ICB", "Điểm TB 7 năm", "Điểm Đỉnh", "Điểm 2025"]
             st.dataframe(df_ga.round(2), width="stretch", hide_index=True)
         with bc2:
-            st.markdown("**🔴 Nhóm B — 12 Doanh nghiệp Biến cố / Tái cấu trúc Thực tế**")
+            st.markdown("**Nhóm B — 12 Doanh nghiệp Biến cố / Tái cấu trúc Thực tế**")
             df_gb = pd.DataFrame(bt["group_b_table"])[["ticker", "sector", "mean_score", "max_score", "peak_year", "score_2025"]]
             df_gb.columns = ["Mã CK", "Ngành ICB", "Điểm TB", "Điểm Đỉnh", "Năm đỉnh", "Điểm 2025"]
             st.dataframe(df_gb.round(2), width="stretch", hide_index=True)
@@ -1094,17 +1224,17 @@ def render_module_5_validation_governance() -> None:
         st.markdown(
             """
             <div class="fa-card">
-              <h4 style="margin-top:0;color:#1E3A8A;">🌱 Đóng góp trực tiếp vào Phát triển Bền vững — Trụ cột G (Governance: Quản trị & Minh bạch)</h4>
-              <ul style="line-height:1.7;color:#334155;">
-                <li><strong>Bảo vệ Nhà đầu tư & Cổ đông thiểu số:</strong> Cảnh báo sớm bất đối xứng thông tin và dấu hiệu suy giảm chất lượng lợi nhuận trước khi biến cố xảy ra.</li>
-                <li><strong>Giảm thiểu Rủi ro Tín dụng cho Ngân hàng:</strong> Tích hợp nhanh vào khâu tiền thẩm định hồ sơ vay doanh nghiệp với chi phí SaaS tối ưu cho ngân hàng vừa/nhỏ và công ty kiểm toán SME.</li>
+              <h4 style="margin-top:0;font-family:'EB Garamond',Georgia,serif;font-size:23px;color:#064E3B;">Đóng góp trực tiếp vào Phát triển Bền vững — Trụ cột G (Governance: Quản trị &amp; Minh bạch)</h4>
+              <ul style="line-height:1.8;color:#132A23;font-size:15.5px;">
+                <li><strong>Bảo vệ Nhà đầu tư &amp; Cổ đông thiểu số:</strong> Cảnh báo sớm bất đối xứng thông tin và dấu hiệu suy giảm chất lượng lợi nhuận trước khi biến cố xảy ra.</li>
+                <li><strong>Giảm thiểu Rủi ro Tín dụng cho Ngân hàng &amp; Nhà cung cấp:</strong> Tích hợp nhanh vào khâu tiền thẩm định hồ sơ vay hoặc hạn mức công nợ bán chịu với chi phí SaaS tối ưu cho doanh nghiệp vừa và nhỏ.</li>
                 <li><strong>Đón đầu Chuẩn mực Pháp lý Mới (Thông tư 99/2025/TT-BTC):</strong> Liên thông dữ liệu lịch sử 2018–2025 (TT 200/2014) với hệ thống Báo cáo Tình hình Tài chính mới hiệu lực từ 01/01/2026.</li>
               </ul>
-              <h4 style="color:#0F172A;margin-top:14px;">⚠️ Giới hạn Trung thực & Lộ trình Mở rộng Phase 2</h4>
-              <ul style="line-height:1.7;color:#334155;">
+              <h4 style="font-family:'EB Garamond',Georgia,serif;font-size:23px;color:#C2410C;margin-top:16px;">Giới hạn Trung thực &amp; Lộ trình Mở rộng Phase 2</h4>
+              <ul style="line-height:1.8;color:#132A23;font-size:15.5px;">
                 <li><strong>Phạm vi ngành hiện tại:</strong> Tập trung 643 DN phi tài chính; khối Ngân hàng/Chứng khoán/Bảo hiểm (chuẩn TT 49/NHNN) sẽ dùng bộ chỉ số CAMELS/NPL chuyên biệt ở Phase 2.</li>
-                <li><strong>PDF Scan ảnh đóng dấu (75% mẫu 2025):</strong> MVP hiện chủ động phát hiện và chuyển sang Kênh 1 (`B09-DN` cấu trúc); Phase 2 sẽ tích hợp OCR đa phương thức (PaddleOCR / Gemini Vision).</li>
-                <li><strong>Mở rộng sản phẩm Phase 2 (`OmniReconcile`):</strong> Đối soát hóa đơn điện tử & sàn TMĐT cho hộ kinh doanh/SME theo lộ trình NĐ 117/2025 & NĐ 252/2026.</li>
+                <li><strong>PDF Scan ảnh đóng dấu (75% mẫu 2025):</strong> MVP hiện chủ động phát hiện và chuyển sang Kênh 1 (<code>B09-DN</code> cấu trúc); Phase 2 sẽ tích hợp OCR đa phương thức (PaddleOCR / Gemini Vision).</li>
+                <li><strong>Mở rộng sản phẩm Phase 2 (<code>OmniReconcile</code>):</strong> Đối soát hóa đơn điện tử &amp; sàn TMĐT cho hộ kinh doanh/SME theo lộ trình NĐ 117/2025 &amp; NĐ 252/2026.</li>
               </ul>
             </div>
             """,
@@ -1115,8 +1245,10 @@ def render_module_5_validation_governance() -> None:
 
 
 # ---------------------------------------------------------------------------
-# 3. ĐIỀU PHỐI HIỂN THỊ PHÂN HỆ ĐANG CHỌN
+# 3. ĐIỀU PHỐI HIỂN THỊ THANH BANNER CỐ ĐỊNH & PHÂN HỆ ĐANG CHỌN
 # ---------------------------------------------------------------------------
+render_top_institutional_bar()
+
 if active_module == MODULES[0]:
     render_module_1_market_radar()
 elif active_module == MODULES[1]:

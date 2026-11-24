@@ -1,22 +1,22 @@
 # BÁO CÁO NGHIỆM THU GIAI ĐOẠN 5: TRIỂN KHAI HỆ THỐNG WEB APP STREAMLIT CHUẨN FINTECH SAAS (`stage_5_web_app_deployment`)
 
-> **Thời điểm nghiệm thu:** `2026-11-24`  
-> **Trạng thái kiểm thử tự động:** **3 / 3 Bộ kiểm thử PASSED (`0` ngoại lệ trên cả 5 phân hệ, `HTTP 200 OK`, tái lập điểm Live Scoring sai số `0.000đ`)**  
-> **Tài nguyên đo thực tế (Full-load cả 643 DN + AI + SHAP + RAG + PDF 91 trang):** **`410.5 MB` RAM** (`1.28%` trên máy 32GB RAM — dư giả để triển khai miễn phí trên Streamlit Community Cloud `1 GB RAM`)
+> **Thời điểm nghiệm thu (bản nâng cấp UI/UX Pro Max & 3D WebGL):** `2026-11-25`  
+> **Trạng thái kiểm thử tự động:** **3 / 3 Bộ kiểm thử PASSED (`0` ngoại lệ trên cả 5 phân hệ, `HTTP 200 OK`, tái lập điểm Live Scoring sai số `0.000đ`) + 9/9 kiểm thử 3D & Tương tác PASSED**  
+> **Tài nguyên đo thực tế (Full-load cả 643 DN + AI + SHAP + RAG + 3D WebGL + PDF 91 trang):** **`490.5 MB` RAM** (trong phiên chạy gộp test, `~410 MB` chạy độc lập — dư giả cho Streamlit Community Cloud `1 GB RAM`)
 
 ---
 
-## 1. KIẾN TRÚC ỨNG DỤNG & HỆ THỐNG THIẾT KẾ GIAO DIỆN (FINTECH DESIGN SYSTEM)
+## 1. KIẾN TRÚC ỨNG DỤNG & HỆ THỐNG THIẾT KẾ ĐỘC BẢN (`DEEP EMERALD & TERRACOTTA COPPER`)
 
-Toàn bộ ứng dụng Web được tổ chức gọn gàng thành 4 module tách biệt trong [`stage_5_web_app_deployment/`](.) theo chuẩn sản phẩm phần mềm thương mại:
+Toàn bộ ứng dụng Web được tổ chức gọn gàng thành 4 module tách biệt trong [`stage_5_web_app_deployment/`](.) và đồng bộ với Hệ thống Thiết kế tại [`design-system/finaudit-ai/`](../design-system/finaudit-ai/):
 
 | File / Thành phần | Vai trò kỹ thuật | Lý do thiết kế |
 | :--- | :--- | :--- |
-| [`.streamlit/config.toml`](.streamlit/config.toml) | Cấu hình theme Enterprise Light & giới hạn upload 30 MB | Đồng bộ ngay từ lúc tải trang, tránh giật màu nền khi khởi động. |
-| [`ui_components.py`](ui_components.py) | CSS Design System hài hòa + 7 hàm vẽ biểu đồ tương tác Plotly | Tách riêng tầng giao diện giúp code sạch, giữ nhất quán bảng màu **Slate Navy (`#0F172A`) → Royal Blue (`#1E3A8A`)**, nền **Alabaster (`#F8FAFC`)**, thẻ trắng (`#FFFFFF`) và 3 màu ngữ nghĩa **Emerald (`#059669`) / Amber (`#D97706`) / Crimson (`#DC2626`)**. |
+| [`.streamlit/config.toml`](.streamlit/config.toml) | Cấu hình theme Deep Emerald & Warm Ivory (`#064E3B` / `#FAF8F5` / `#132A23`) & giới hạn upload 30 MB | Đồng bộ ngay từ lúc tải trang, tránh giật màu nền khi khởi động. |
+| [`ui_components.py`](ui_components.py) | Design System Responsive + 3 thành phần Pháp lý + **7 biểu đồ 2D & 3 biểu đồ 3D Plotly WebGL động** | Thoát khỏi màu xanh đại trà: dùng bảng màu độc bản **Ngọc Lục Bảo Đậm (`#064E3B`) → Ngọc Lam Trầm (`#0F766E`)**, điểm nhấn **Đồng Đỏ Terracotta (`#C2410C`)**, nền giấy **Kem Ngà (`#FAF8F5`)**, chữ **Than Rừng Sâu (`#132A23`)**, cảnh báo **Đỏ Đô Bordeaux (`#BE123C`)**, cặp font **`EB Garamond` + `Be Vietnam Pro`**, cỡ chữ `clamp()` & nút cảm ứng `>= 44px` chuẩn Mobile/Desktop. |
 | [`live_scoring_service.py`](live_scoring_service.py) | Cầu nối **Live Scoring** & tạo file mẫu Excel/CSV (`Mau_Upload_BCTC_FinAudit_AI.xlsx`) | Tái sử dụng 100% logic gốc của Giai đoạn 2 (`02_forensic_features.py`) & Giai đoạn 3 (`03_train_validate_model.py`), bảo đảm điểm chấm trực tiếp **khớp tuyệt đối `0.000đ`** với điểm đã huấn luyện. |
-| [`report_exporter.py`](report_exporter.py) | Xuất **Báo cáo Hồ sơ Kiểm toán Pháp chứng chuẩn A4 (`.html` In PDF)** | Giúp kiểm toán viên, cán bộ tín dụng và Ban Giám khảo tải về in PDF đẹp ngay trên trình duyệt mà không cần cài thư viện nặng. |
-| [`app.py`](app.py) | Ứng dụng Streamlit chính điều phối **5 Phân hệ chức năng** | Áp dụng `@st.cache_data` (nạp bảng `.parquet`/`.json` vào RAM) và `@st.cache_resource` (nạp mô hình AI `.joblib`, Hybrid RAG và chỉ mục PDF 1 lần duy nhất) giúp chuyển trang tức thì trong **`0.04s – 0.23s`**. |
+| [`report_exporter.py`](report_exporter.py) | Xuất **Báo cáo Hồ sơ Kiểm toán Pháp chứng chuẩn A4 (`.html` In PDF)** | Đồng bộ tông Ngọc Lục Bảo & Đồng Đỏ, giúp kiểm toán viên, cán bộ tín dụng và Ban Giám khảo tải về in PDF đẹp ngay trên trình duyệt. |
+| [`app.py`](app.py) | Ứng dụng Streamlit chính điều phối **5 Phân hệ chức năng** + **3 Thành phần chuẩn Website Pháp lý** | Tích hợp **Sticky Top Banner + Bộ chọn 5 Vai trò người dùng + Tra cứu nhanh toàn trang**, **Danh mục Hiệu lực 5 Văn bản Pháp quy Bộ Tài chính**, **Chân trang Pháp lý 3 cột**, và chuyển đổi mượt **3D WebGL ↔ 2D Mobile** (`0.05s – 0.40s` mỗi lần chuyển trang). |
 
 ---
 
@@ -46,13 +46,14 @@ Toàn bộ kết quả kiểm thử tự động lưu tại [`stage5_deployment_
 
 | Hạng mục Kiểm thử | Chỉ số đo thực tế | Kết quả |
 | :--- | :--- | :---: |
-| **Test 1A — Live Scoring 2 Công ty Mẫu (Upload Excel)** | `MINH_BACH 2025 = 6.35đ` (*Thấp — An toàn*) vs. `THOI_SO 2025 = 89.15đ` (*Cao — Cảnh báo Đỏ*) trong **`703.0 ms`** | ✅ **PASS** |
+| **Test 1A — Live Scoring 2 Công ty Mẫu (Upload Excel)** | `MINH_BACH 2025 = 6.35đ` (*Thấp — An toàn*) vs. `THOI_SO 2025 = 89.15đ` (*Cao — Cảnh báo Đỏ*) trong **`730.1 ms`** | ✅ **PASS** |
 | **Test 1B — Đối chứng Tái lập `TDH 2025` (Live vs. GĐ 3)** | `Live = 80.16đ` vs. `Stage 3 = 80.16đ` $\rightarrow$ **Chênh lệch tuyệt đối = `0.000đ`** | ✅ **PASS** |
-| **Test 1C — Xuất Báo cáo Hồ sơ Kiểm toán A4 (`.HTML`)** | Sinh thành công `8,126 bytes` UTF-8 hợp lệ, đầy đủ 4 trụ cột, bảng SHAP & khuyến cáo VSA 240 | ✅ **PASS** |
-| **Test 2A — Streamlit `AppTest` Khởi động lạnh (Cold Boot)** | Nạp toàn bộ dữ liệu + mô hình AI + RAG + render Phân hệ 1 trong **`0.82 giây`** (`0` lỗi) | ✅ **PASS** |
-| **Test 2B — Render cả 5 Phân hệ & Quick-Demo `NVL 2025`** | Phân hệ 1: `0.19s` • Phân hệ 2: `0.21s` • Phân hệ 3: `0.11s` • Phân hệ 4 *(gồm lập chỉ mục PDF 91 tr lần đầu)*: `6.12s` • Phân hệ 5: `0.04s` • Nhảy nhanh `NVL 2025` *(đã cache)*: **`0.05s`** (`0` lỗi trên toàn bộ 5/5 trang) | ✅ **PASS** |
+| **Test 1C — Xuất Báo cáo Hồ sơ Kiểm toán A4 (`.HTML`)** | Sinh thành công `8,253 bytes` UTF-8 hợp lệ (tông Deep Emerald & Terracotta), đầy đủ 4 trụ cột, bảng SHAP & khuyến cáo VSA 240 | ✅ **PASS** |
+| **Test 2A — Streamlit `AppTest` Khởi động lạnh (Cold Boot)** | Nạp toàn bộ dữ liệu + mô hình AI + RAG + render Phân hệ 1 (kèm 3D WebGL) trong **`1.06 giây`** (`0` lỗi) | ✅ **PASS** |
+| **Test 2B — Render cả 5 Phân hệ & Quick-Demo `NVL 2025`** | Phân hệ 1 *(3D Động + 3D Địa hình)*: `0.40s` • Phân hệ 2 *(Quỹ đạo 3D)*: `0.21s` • Phân hệ 3: `0.13s` • Phân hệ 4 *(gồm lập chỉ mục PDF 91 tr lần đầu + Danh mục Pháp quy)*: `6.21s` • Phân hệ 5: `0.05s` • Nhảy nhanh `NVL 2025`: **`0.21s`** (`0` lỗi trên toàn bộ 5/5 trang) | ✅ **PASS** |
+| **Test 2C — Kiểm thử Biểu đồ 3D WebGL & Toggle 3D ↔ 2D** | 3 biểu đồ 3D (`7` frame Thị trường `2019→2025` + `5` chú thích 3D; Địa hình 15 ngành + `3` chú thích 3D + fallback 1 ngành; Quỹ đạo DN `8` frame `2018→2025` + mặt phẳng `CFO=0` + `3` chú thích 3D) & chuyển đổi 3D ↔ 2D Mobile ở Phân hệ 1 & 2 | ✅ **PASS** |
 | **Test 3 — Khởi chạy thật `streamlit run` HTTP Server** | `/_stcore/health` & `/` trả về **`HTTP 200 OK`** sau **`0.93 giây`** | ✅ **PASS** |
-| **Đo RAM Thực tế (Full-load cả 5 phân hệ + PDF 91 tr)** | **`410.5 MB`** *(ứng dụng độc lập)* / **`492.6 MB`** *(đỉnh trong phiên chạy gộp test)* — `< 1.6%` trên máy 32GB RAM & `< 50%` hạn mức 1GB của Streamlit Cloud | ✅ **PASS** |
+| **Đo RAM Thực tế (Full-load cả 5 phân hệ + 3D + PDF 91 tr)** | **`490.5 MB`** *(phiên gộp test)* / **`~410 MB`** *(ứng dụng độc lập)* — `< 1.6%` trên máy 32GB RAM & `< 50%` hạn mức 1GB của Streamlit Cloud | ✅ **PASS** |
 
 ---
 
