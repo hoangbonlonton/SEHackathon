@@ -447,10 +447,15 @@ def inject_fintech_css() -> None:
         [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
             font-size: 15.5px !important;
         }
-        /* Mở rộng không gian hiển thị chuẩn cổng thông tin */
+        /* Mở rộng không gian hiển thị chuẩn cổng thông tin — chừa khoảng an toàn cho thanh Toolbar Streamlit Cloud */
+        [data-testid="stHeader"] {
+            background: rgba(242, 245, 244, 0.92) !important;
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid rgba(201, 216, 210, 0.6);
+        }
         .main .block-container,
         [data-testid="stMainBlockContainer"] {
-            padding-top: 0.55rem !important;
+            padding-top: 3.85rem !important;
             padding-bottom: 2.2rem !important;
             padding-left: clamp(1rem, 2.2vw, 2.2rem) !important;
             padding-right: clamp(1rem, 2.2vw, 2.2rem) !important;
@@ -1452,7 +1457,7 @@ def inject_fintech_css() -> None:
             [data-testid="stMainBlockContainer"] {
                 padding-left: 0.65rem !important;
                 padding-right: 0.65rem !important;
-                padding-top: 0.4rem !important;
+                padding-top: 3.5rem !important;
                 padding-bottom: 5.8rem !important;
             }
             [data-testid="stVerticalBlockBorderWrapper"] {
