@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinAudit AI V2 — Mô hình Giao diện Đề xuất (Mở toàn màn hình Chrome/Edge)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 16px;
+      background: #EFECE6;
+      color: #132A23;
+      font-family: 'Be Vietnam Pro', 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .fa-head { font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif; }
+    .fa-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+    .ctrl-bar {
+      max-width: 1520px; margin: 0 auto 12px; background: #FFFFFF; border: 1px solid #D1DDD8;
+      border-radius: 12px; padding: 12px 18px; display: flex; flex-wrap: wrap;
+      justify-content: space-between; align-items: center; gap: 12px;
+    }
+    .ctrl-btn {
+      padding: 8px 14px; border-radius: 8px; font-size: 13.5px; font-weight: 700;
+      border: 1.5px solid #D1DDD8; background: #FFFFFF; color: #132A23; cursor: pointer;
+    }
+    .ctrl-btn.active { background: #064E3B; color: #FFFFFF; border-color: #064E3B; }
+    .ctrl-btn.copper { background: #FFF7ED; color: #C2410C; border-color: #FDBA74; }
+
+    .fa-shell {
+      max-width: 1520px; margin: 0 auto; background: #FAF8F5; border: 1px solid #D1DDD8;
+      border-radius: 16px; overflow: hidden; box-shadow: 0 14px 40px rgba(6, 78, 59, 0.14);
+      transition: max-width 0.25s ease;
+    }
+    .fa-shell.mobile-mode {
+      max-width: 410px; border: 6px solid #132A23; border-radius: 28px;
+    }
+    .fa-shell.mobile-mode .fa-body-grid { grid-template-columns: 1fr !important; }
+    .fa-shell.mobile-mode .fa-sidebar { border-right: none !important; border-bottom: 1px solid #D1DDD8; }
+    .fa-shell.mobile-mode .fa-kpi-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .fa-shell.mobile-mode .fa-2col, .fa-shell.mobile-mode .fa-filter-grid { grid-template-columns: 1fr !important; }
+    .fa-shell.mobile-mode .fa-footer-3col { grid-template-columns: 1fr !important; }
+
+    .fa-topbar {
+      background: linear-gradient(135deg, #043628 0%, #064E3B 55%, #0F766E 100%);
+      border-bottom: 3px solid #C2410C; padding: 12px 22px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    .fa-dual-gold {
+      background: linear-gradient(90deg, #FDE68A 0%, #FDBA74 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;
+    }
+    .fa-nav { display: flex; flex-wrap: wrap; gap: 6px; }
+    .fa-nav-btn {
+      padding: 9px 15px; border-radius: 9px; font-size: 14.5px; font-weight: 600;
+      color: #E6F4F1; background: transparent; border: 1px solid transparent; cursor: pointer;
+      white-space: nowrap; transition: all 0.15s ease; font-family: inherit;
+    }
+    .fa-nav-btn:hover { background: rgba(255,255,255,0.14); color: #FFFFFF; }
+    .fa-nav-btn.active {
+      background: #FFFFFF; color: #064E3B; font-weight: 800; border-color: #FDBA74;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+    }
+    .fa-body-grid { display: grid; grid-template-columns: 268px 1fr; min-height: 780px; }
+    .fa-sidebar {
+      background: #FFFFFF; border-right: 1px solid #D1DDD8; padding: 18px 16px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .fa-main { padding: 20px 26px 28px; }
+    .fa-subtab {
+      padding: 10px 18px; border-radius: 10px; font-size: 15px; font-weight: 600;
+      color: #4B635B; background: #FFFFFF; border: 1.5px solid #D1DDD8; cursor: pointer; font-family: inherit;
+    }
+    .fa-subtab.active { background: #064E3B; color: #FFFFFF; border-color: #064E3B; }
+    .fa-sec-title {
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 800;
+      color: #064E3B; border-left: 4px solid #C2410C; padding-left: 12px; margin: 20px 0 12px;
+    }
+    .fa-sec-title span { color: #C2410C; }
+    .fa-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .fa-callout {
+      display: none; background: #FEF3C7; border: 1.5px dashed #C2410C; color: #7C2D12;
+      font-size: 13.5px; font-weight: 600; padding: 8px 12px; border-radius: 8px; margin-bottom: 12px;
+    }
+    .show-callouts .fa-callout { display: block; }
+    .fa-kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 18px; }
+    .fa-kpi {
+      background: #FFFFFF; border: 1px solid #D1DDD8; border-radius: 12px; padding: 16px 18px;
+      box-shadow: 0 2px 6px rgba(19,42,35,0.04);
+    }
+    .fa-2col { display: grid; grid-template-columns: 1.15fr 1fr; gap: 18px; }
+    .fa-filter-grid {
+      background: #FFFFFF; padding: 14px 20px; display: grid;
+      grid-template-columns: 110px 1.5fr 1.2fr 1fr 1.3fr; gap: 10px; align-items: end;
+    }
+    .fa-footer-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    input, select { font-family: inherit; }
+  </style>
+</head>
+<body>
+
+  <div class="ctrl-bar">
+    <div>
+      <div class="fa-head" style="font-size: 16px; font-weight: 800; color: #064E3B;">Mô hình Giao diện Trực quan — FinAudit AI V2 (Plus Jakarta Sans + Be Vietnam Pro + JetBrains Mono)</div>
+      <div style="font-size: 13.5px; color: #4B635B;">Bấm trực tiếp 5 Phân hệ trên thanh ngang, đổi 5 Vai trò, bấm 6 nút mẫu 2×3, bật 2D/3D hoặc xem thử Điện thoại 390px.</div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <button id="btnDesktop" class="ctrl-btn active" onclick="setViewport('desktop')">Máy tính (Full Width)</button>
+      <button id="btnMobile" class="ctrl-btn" onclick="setViewport('mobile')">Điện thoại (390px)</button>
+      <button id="btnCallouts" class="ctrl-btn copper" onclick="toggleCallouts()">Bật chú thích điểm sửa</button>
+    </div>
+  </div>
+
+  <div id="previewShell" class="fa-shell">
+    <!-- 1. THANH ĐIỀU HƯỚNG NGANG THỐNG NHẤT -->
+    <header class="fa-topbar">
+      <div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="switchModule(1)">
+        <svg width="44" height="44" viewBox="0 0 48 48" fill="none" aria-label="FinAudit AI Logo">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0A5F4E"/><stop offset="100%" stop-color="#042F25"/>
+            </linearGradient>
+            <linearGradient id="cr1" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FDE68A"/><stop offset="55%" stop-color="#FDBA74"/><stop offset="100%" stop-color="#C2410C"/>
+            </linearGradient>
+          </defs>
+          <path d="M24 3L6 10.5V23.2C6 34.4 13.5 43.2 24 46C34.5 43.2 42 34.4 42 23.2V10.5L24 3Z" fill="url(#lg1)" stroke="url(#cr1)" stroke-width="2.4"/>
+          <rect x="14" y="25" width="4.2" height="9" rx="1.4" fill="#A7F3D0"/>
+          <rect x="21.5" y="20" width="4.2" height="14" rx="1.4" fill="#FDE68A"/>
+          <rect x="29" y="15" width="4.2" height="19" rx="1.4" fill="#FDBA74"/>
+          <path d="M13 21.5L20 15.5L25.5 18.5L34.5 11.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="34.5" cy="11.5" r="2.2" fill="#FDE68A"/>
+        </svg>
+        <div>
+          <div class="fa-head" style="font-size:23px;font-weight:800;color:#FFFFFF;line-height:1.1;">FinAudit <span class="fa-dual-gold">AI</span></div>
+          <div style="font-size:11.5px;color:#A7F3D0;font-weight:700;letter-spacing:0.4px;margin-top:2px;">PHÁP CHỨNG BCTC • VAS &amp; TT 99/2025</div>
+        </div>
+      </div>
+
+      <nav class="fa-nav">
+        <button class="fa-nav-btn active" data-mod="1" onclick="switchModule(1)">1. Thị trường</button>
+        <button class="fa-nav-btn" data-mod="2" onclick="switchModule(2)">2. Hồ sơ 360°</button>
+        <button class="fa-nav-btn" data-mod="3" onclick="switchModule(3)">3. Thẩm định BCTC</button>
+        <button class="fa-nav-btn" data-mod="4" onclick="switchModule(4)">4. Luật VAS &amp; PDF</button>
+        <button class="fa-nav-btn" data-mod="5" onclick="switchModule(5)">5. Kiểm chứng ESG</button>
+      </nav>
+
+      <div style="display:flex;gap:6px;align-items:center;">
+        <input id="quickSearch" type="text" placeholder="Mã CK (FPT, TDH) hoặc Luật..."
+          style="background:rgba(255,255,255,0.14);border:1px solid rgba(253,186,116,0.45);color:#FFFFFF;border-radius:9px;padding:9px 12px;font-size:14px;width:225px;outline:none;"
+          onkeydown="if(event.key==='Enter') runQuickSearch()" />
+        <button onclick="runQuickSearch()" style="background:#C2410C;color:#FFFFFF;border:1px solid #FDBA74;border-radius:9px;padding:9px 14px;font-size:14px;font-weight:700;cursor:pointer;">Tra →</button>
+      </div>
+    </header>
+
+    <div class="fa-body-grid">
+      <aside class="fa-sidebar">
+        <div class="fa-callout">ĐÃ SỬA: Không lặp Logo, bỏ khoảng trống thừa, 6 nút mẫu chia lưới 2×3 hiện ĐỦ 100% chữ!</div>
+        <div>
+          <div style="font-size:13px;font-weight:800;color:#064E3B;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Vai trò sử dụng</div>
+          <select id="roleSelect" onchange="updateRole()" style="width:100%;padding:10px 12px;border-radius:9px;border:1.5px solid #D1DDD8;background:#FAF8F5;color:#132A23;font-size:15.5px;font-weight:600;">
+            <option value="auditor">Kiểm toán viên</option>
+            <option value="accountant">Kế toán doanh nghiệp</option>
+            <option value="investor">Nhà đầu tư</option>
+            <option value="supplier">Nhà cung cấp / Đối tác</option>
+            <option value="sme">Doanh nghiệp SME</option>
+          </select>
+          <div id="roleFocusBox" style="margin-top:10px;background:#FFF7ED;border:1px solid #FDBA74;border-left:4px solid #C2410C;border-radius:9px;padding:10px 12px;font-size:14px;color:#7C2D12;line-height:1.55;">
+            <strong>Góc nhìn Kiểm toán:</strong> Khoanh vùng TK 131, 138, 229, 241, đối chiếu VSA 240 &amp; soi B09-DN.
+          </div>
+          <button id="roleJumpBtn" onclick="jumpRecommended()" style="margin-top:9px;width:100%;padding:11px 12px;border-radius:9px;background:#C2410C;color:#FFFFFF;border:none;font-size:14.5px;font-weight:700;cursor:pointer;">Mở nhanh Hồ sơ 360° →</button>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #E5ECE9;margin:0;" />
+
+        <div>
+          <div style="font-size:13px;font-weight:800;color:#064E3B;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Hồ sơ Mẫu Đối chứng</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <button onclick="openTicker('TDH')" style="padding:10px 8px;border-radius:9px;border:1.5px solid #FECDD3;background:#FFF1F2;color:#BE123C;font-size:14.5px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><span class="fa-dot" style="background:#BE123C;"></span>TDH • Đỏ</button>
+            <button onclick="openTicker('QCG')" style="padding:10px 8px;border-radius:9px;border:1.5px solid #FECDD3;background:#FFF1F2;color:#BE123C;font-size:14.5px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><span class="fa-dot" style="background:#BE123C;"></span>QCG • Đỏ</button>
+            <button onclick="openTicker('NVL')" style="padding:10px 8px;border-radius:9px;border:1.5px solid #FDE68A;background:#FFFBEB;color:#B45309;font-size:14.5px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><span class="fa-dot" style="background:#B45309;"></span>NVL • TD</button>
+            <button onclick="openTicker('DRH')" style="padding:10px 8px;border-radius:9px;border:1.5px solid #FDE68A;background:#FFFBEB;color:#B45309;font-size:14.5px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><span class="fa-dot" style="background:#B45309;"></span>DRH • TD</button>
+            <button onclick="openTicker('FPT')" style="padding:10px 8px;border-radius:9px;border:1.5px solid #A7F3D0;background:#ECFDF5;color:#059669;font-size:14.5px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><span class="fa-dot" style="background:#059669;"></span>FPT • AT</button>
+            <button onclick="openTicker('VNM')" style="padding:10px 8px;border-radius:9px;border:1.5px solid #A7F3D0;background:#ECFDF5;color:#059669;font-size:14.5px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><span class="fa-dot" style="background:#059669;"></span>VNM • AT</button>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #E5ECE9;margin:0;" />
+
+        <details style="background:#FAF8F5;border:1px solid #D1DDD8;border-radius:10px;padding:11px 13px;font-size:14px;">
+          <summary style="font-weight:700;color:#064E3B;cursor:pointer;">Dữ liệu &amp; Cấu hình Nâng cao</summary>
+          <div style="margin-top:8px;line-height:1.65;color:#4B635B;">
+            • <strong>643 DN</strong> HOSE/HNX (2019–2025)<br/>
+            • <strong>38 B09-DN</strong> + <strong>4 PDF</strong> Kiểm toán 2025<br/>
+            • Chạy <strong>Zero-API</strong> 100% cục bộ
+            <input type="password" placeholder="Gemini API Key (không bắt buộc)" style="margin-top:8px;width:100%;padding:8px 10px;border:1px solid #D1DDD8;border-radius:7px;font-size:13.5px;background:#FFFFFF;" />
+          </div>
+        </details>
+      </aside>
+
+      <main class="fa-main">
+        <!-- MODULE 1 -->
+        <section id="mod-1" class="mod-pane">
+          <div class="fa-callout">ĐÃ SỬA: Gộp 4 tầng rời rạc thành 1 khối đầu trang gắn liền Bộ lọc + Tiêu đề Pha 2 màu (Trắng + Vàng Đồng) → 4 Thẻ KPI hiện ngay tầm mắt đầu tiên!</div>
+          <div style="border-radius:14px;overflow:hidden;border:1px solid #D1DDD8;box-shadow:0 4px 16px rgba(6,78,59,0.06);margin-bottom:18px;">
+            <div style="background:linear-gradient(135deg,#064E3B 0%,#0F766E 100%);padding:18px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
+              <div>
+                <div style="font-size:12.5px;font-weight:700;letter-spacing:1px;color:#A7F3D0;">PHÂN HỆ 1 • MARKET &amp; SECTOR RADAR</div>
+                <h1 style="margin:4px 0 0;font-size:30px;font-weight:800;color:#FFFFFF;line-height:1.25;">Tổng quan Thị trường &amp; <span class="fa-dual-gold">Quét Rủi ro Pháp chứng</span> Ngành ICB</h1>
+              </div>
+              <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(253,186,116,0.38);border-radius:10px;padding:9px 15px;font-size:14px;color:#FAF8F5;text-align:right;">
+                Nguồn: <strong>Vietcap IQ API</strong><br/>Chuẩn: <strong>TT 200/2014 &amp; TT 99/2025</strong>
+              </div>
+            </div>
+            <div class="fa-filter-grid">
+              <div><div style="font-size:13.5px;font-weight:700;color:#4B635B;margin-bottom:4px;">Năm</div><select style="width:100%;padding:9px;border:1.5px solid #D1DDD8;border-radius:8px;font-size:15.5px;font-weight:600;background:#FAF8F5;"><option>2025</option><option>2024</option></select></div>
+              <div><div style="font-size:13.5px;font-weight:700;color:#4B635B;margin-bottom:4px;">Ngành ICB (15 ngành)</div><select style="width:100%;padding:9px;border:1.5px solid #D1DDD8;border-radius:8px;font-size:15.5px;background:#FAF8F5;"><option>Tất cả 15 ngành phi tài chính</option><option>Bất động sản</option></select></div>
+              <div><div style="font-size:13.5px;font-weight:700;color:#4B635B;margin-bottom:4px;">Hạng Rủi ro</div><select style="width:100%;padding:9px;border:1.5px solid #D1DDD8;border-radius:8px;font-size:15.5px;background:#FAF8F5;"><option>Tất cả hạng</option><option>Cao (Cảnh báo Đỏ)</option></select></div>
+              <div><div style="font-size:13.5px;font-weight:700;color:#4B635B;margin-bottom:4px;">Sàn giao dịch</div><div style="padding:8px 10px;border:1.5px solid #D1DDD8;border-radius:8px;font-size:14px;background:#FAF8F5;display:flex;gap:6px;"><span style="background:#064E3B;color:#fff;padding:2px 9px;border-radius:6px;font-weight:700;">HOSE</span><span style="background:#064E3B;color:#fff;padding:2px 9px;border-radius:6px;font-weight:700;">HNX</span></div></div>
+              <div><div style="font-size:13.5px;font-weight:700;color:#4B635B;margin-bottom:4px;">Tìm mã / tên DN</div><input type="text" placeholder="VD: TDH, FPT..." style="width:100%;padding:9px 11px;border:1.5px solid #D1DDD8;border-radius:8px;font-size:15.5px;background:#FAF8F5;" /></div>
+            </div>
+          </div>
+
+          <div class="fa-kpi-grid">
+            <div class="fa-kpi" style="border-top:4px solid #064E3B;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">DOANH NGHIỆP ĐANG QUÉT</div><div class="fa-mono" style="font-size:34px;font-weight:800;color:#064E3B;margin:4px 0;">639</div><div style="font-size:14.5px;color:#4B635B;">Năm 2025 • HOSE &amp; HNX</div></div>
+            <div class="fa-kpi" style="border-top:4px solid #BE123C;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">CẢNH BÁO ĐỎ (&ge; 65Đ)</div><div class="fa-mono" style="font-size:34px;font-weight:800;color:#BE123C;margin:4px 0;">26 <span style="font-size:21px;">(4.1%)</span></div><div style="font-size:14.5px;color:#4B635B;">Ưu tiên kiểm toán sâu</div></div>
+            <div class="fa-kpi" style="border-top:4px solid #B45309;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">PHÂN KỲ DÒNG TIỀN</div><div class="fa-mono" style="font-size:34px;font-weight:800;color:#B45309;margin:4px 0;">175 <span style="font-size:21px;">(27.4%)</span></div><div style="font-size:14.5px;color:#4B635B;">Báo lãi sau thuế / CFO âm</div></div>
+            <div class="fa-kpi" style="border-top:4px solid #059669;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">ĐIỂM RỦI RO TRUNG VỊ</div><div class="fa-mono" style="font-size:34px;font-weight:800;color:#059669;margin:4px 0;">24.5 <span style="font-size:19px;color:#4B635B;">/ 100</span></div><div style="font-size:14.5px;color:#4B635B;">Nền thị trường 7 năm: 29.2đ</div></div>
+          </div>
+
+          <div style="background:#FFFFFF;border:1px solid #D1DDD8;border-radius:14px;padding:18px 22px;margin-bottom:18px;">
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;">
+              <div class="fa-head" style="font-size:20px;font-weight:800;color:#064E3B;">Trực quan hóa <span style="color:#C2410C;">Rủi ro Thị trường &amp; 15 Ngành ICB</span></div>
+              <div style="display:flex;gap:8px;">
+                <button id="m1Btn2d" onclick="setM1Chart('2d')" class="fa-subtab active" style="padding:8px 14px;font-size:14px;">Chế độ 2D Chuẩn</button>
+                <button id="m1Btn3d" onclick="setM1Chart('3d')" class="fa-subtab" style="padding:8px 14px;font-size:14px;">Chế độ 3D Động (2019–2025)</button>
+              </div>
+            </div>
+            <div id="m1Chart2d" class="fa-2col">
+              <div style="border:1px solid #E5ECE9;border-radius:10px;padding:16px;background:#FCFBF9;">
+                <div style="font-size:16px;font-weight:700;color:#064E3B;margin-bottom:6px;">Ma trận Pháp chứng 2D: Beneish M vs. Altman Z''</div>
+                <div style="font-size:13.5px;color:#4B635B;margin-bottom:10px;display:flex;gap:14px;flex-wrap:wrap;">
+                  <span><span class="fa-dot" style="background:#059669;margin-right:5px;"></span>An toàn (487)</span>
+                  <span><span class="fa-dot" style="background:#B45309;margin-right:5px;"></span>Theo dõi (126)</span>
+                  <span><span class="fa-dot" style="background:#BE123C;margin-right:5px;"></span>Cảnh báo Đỏ (26)</span>
+                </div>
+                <svg viewBox="0 0 460 220" style="width:100%;height:auto;">
+                  <rect x="42" y="10" width="135" height="92" fill="rgba(190,18,60,0.08)" rx="4"/>
+                  <rect x="215" y="102" width="235" height="90" fill="rgba(5,150,105,0.07)" rx="4"/>
+                  <line x1="42" y1="102" x2="450" y2="102" stroke="#BE123C" stroke-dasharray="5 4" stroke-width="1.5"/>
+                  <line x1="177" y1="10" x2="177" y2="192" stroke="#BE123C" stroke-dasharray="5 4" stroke-width="1.4"/>
+                  <line x1="215" y1="10" x2="215" y2="192" stroke="#059669" stroke-dasharray="3 3" stroke-width="1.4"/>
+                  <rect x="48" y="16" width="122" height="22" rx="4" fill="#FFF1F2" stroke="#FECDD3"/>
+                  <text x="54" y="31" font-size="11.5" font-weight="700" fill="#BE123C">Vùng Rủi ro Kép</text>
+                  <rect x="48" y="84" width="120" height="17" rx="3" fill="#FFFFFF"/>
+                  <text x="52" y="96" font-size="11" font-weight="700" fill="#BE123C">Ngưỡng M = -1.78</text>
+                  <text x="224" y="185" font-size="11.5" font-weight="700" fill="#059669">Vùng An toàn (Z'' &ge; 5.85)</text>
+                  <circle cx="120" cy="65" r="7" fill="#BE123C"/><text x="132" y="69" font-size="12" font-weight="700" fill="#BE123C">TDH</text>
+                  <circle cx="95" cy="82" r="6" fill="#BE123C" opacity="0.85"/>
+                  <circle cx="192" cy="98" r="6.5" fill="#B45309" opacity="0.88"/>
+                  <circle cx="290" cy="145" r="7.5" fill="#059669"/><text x="302" y="149" font-size="12" font-weight="700" fill="#064E3B">FPT</text>
+                  <circle cx="345" cy="138" r="7" fill="#059669" opacity="0.85"/>
+                  <line x1="42" y1="192" x2="450" y2="192" stroke="#D1DDD8"/>
+                  <text x="170" y="213" font-size="12" font-weight="600" fill="#4B635B">Altman Z''-Score (An toàn →)</text>
+                </svg>
+              </div>
+              <div style="border:1px solid #E5ECE9;border-radius:10px;padding:16px;background:#FCFBF9;">
+                <div style="font-size:16px;font-weight:700;color:#064E3B;margin-bottom:12px;">Xếp hạng Rủi ro Trung vị theo Ngành ICB</div>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+                  <div style="display:grid;grid-template-columns:140px 1fr 155px;align-items:center;gap:8px;"><span style="text-align:right;font-weight:600;">Ô tô &amp; Phụ tùng</span><div style="background:#EAEFEA;height:15px;border-radius:4px;overflow:hidden;"><div style="width:88%;height:100%;background:#C2410C;"></div></div><span class="fa-mono" style="font-size:13px;font-weight:700;color:#C2410C;">38.6đ (0% • n=14)</span></div>
+                  <div style="display:grid;grid-template-columns:140px 1fr 155px;align-items:center;gap:8px;"><span style="text-align:right;font-weight:600;">Bất động sản</span><div style="background:#EAEFEA;height:15px;border-radius:4px;overflow:hidden;"><div style="width:68%;height:100%;background:#064E3B;"></div></div><span class="fa-mono" style="font-size:13px;font-weight:600;">29.6đ (6.4% • n=78)</span></div>
+                  <div style="display:grid;grid-template-columns:140px 1fr 155px;align-items:center;gap:8px;"><span style="text-align:right;font-weight:600;">Công nghệ TT</span><div style="background:#EAEFEA;height:15px;border-radius:4px;overflow:hidden;"><div style="width:63%;height:100%;background:#064E3B;"></div></div><span class="fa-mono" style="font-size:13px;font-weight:600;">27.5đ (12.5% • n=16)</span></div>
+                  <div style="display:grid;grid-template-columns:140px 1fr 155px;align-items:center;gap:8px;"><span style="text-align:right;font-weight:600;">Xây dựng &amp; VL</span><div style="background:#EAEFEA;height:15px;border-radius:4px;overflow:hidden;"><div style="width:60%;height:100%;background:#064E3B;"></div></div><span class="fa-mono" style="font-size:13px;font-weight:600;">26.2đ (6.5% • n=123)</span></div>
+                  <div style="display:grid;grid-template-columns:140px 1fr 155px;align-items:center;gap:8px;"><span style="text-align:right;font-weight:600;">Thực phẩm &amp; ĐU</span><div style="background:#EAEFEA;height:15px;border-radius:4px;overflow:hidden;"><div style="width:50%;height:100%;background:#0F766E;"></div></div><span class="fa-mono" style="font-size:13px;font-weight:600;">22.1đ (3.9% • n=51)</span></div>
+                  <div style="display:grid;grid-template-columns:140px 1fr 155px;align-items:center;gap:8px;"><span style="text-align:right;font-weight:600;">Y tế</span><div style="background:#EAEFEA;height:15px;border-radius:4px;overflow:hidden;"><div style="width:40%;height:100%;background:#059669;"></div></div><span class="fa-mono" style="font-size:13px;font-weight:700;color:#059669;">17.6đ (0% • n=26)</span></div>
+                </div>
+              </div>
+            </div>
+            <div id="m1Chart3d" style="display:none;border:1.5px solid #D1DDD8;border-radius:10px;padding:26px;background:linear-gradient(180deg,#FAF8F5,#F0F4F2);text-align:center;">
+              <div class="fa-head" style="font-size:18px;font-weight:800;color:#064E3B;margin-bottom:6px;">Không gian Pháp chứng 3D Động (2019 → 2025) &amp; Địa hình 15 Ngành ICB</div>
+              <div style="font-size:15px;color:#4B635B;">Chỉ bật khi người dùng muốn xoay 360° và phát chuyển động đa năm.</div>
+            </div>
+          </div>
+
+          <div class="fa-sec-title">Bảng Sàng lọc <span>Rủi ro Doanh nghiệp</span></div>
+          <div style="background:#FFFFFF;border:1px solid #D1DDD8;border-radius:12px;padding:16px 20px;">
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;">
+              <div style="font-size:15.5px;">Đang chọn: <strong>TDH — CTCP Phát triển Nhà Thủ Đức (80.2đ)</strong></div>
+              <div style="display:flex;gap:8px;">
+                <button onclick="openTicker('TDH')" style="padding:11px 20px;border-radius:9px;background:#C2410C;color:#FFFFFF;border:none;font-size:15px;font-weight:700;cursor:pointer;">Mở Hồ sơ 360° của TDH →</button>
+                <button style="padding:11px 16px;border-radius:9px;background:#FFFFFF;color:#064E3B;border:1.5px solid #D1DDD8;font-size:15px;font-weight:600;cursor:pointer;">Tải bảng (.CSV)</button>
+              </div>
+            </div>
+            <table style="width:100%;border-collapse:collapse;font-size:15px;">
+              <thead><tr style="background:#F0F4F2;color:#064E3B;text-align:left;"><th style="padding:11px;">Mã CK</th><th style="padding:11px;">Tên Doanh nghiệp</th><th style="padding:11px;">Điểm Rủi ro</th><th style="padding:11px;">Hạng</th><th style="padding:11px;">Giải trình Top SHAP</th></tr></thead>
+              <tbody>
+                <tr style="border-top:1px solid #E5ECE9;cursor:pointer;" onclick="openTicker('TDH')"><td class="fa-mono" style="padding:11px;font-weight:800;color:#BE123C;">TDH</td><td style="padding:11px;font-weight:600;">CTCP Phát triển Nhà Thủ Đức</td><td class="fa-mono" style="padding:11px;font-weight:800;color:#BE123C;">80.2 đ</td><td style="padding:11px;"><span style="background:#FFF1F2;color:#BE123C;border:1px solid #FECDD3;padding:3px 10px;border-radius:999px;font-size:13.5px;font-weight:700;">Cảnh báo Đỏ</span></td><td style="padding:11px;color:#4B635B;">Altman Z'' thấp (+16.2đ); SGI tăng nóng (+12.9đ); CFO âm (+8.4đ)</td></tr>
+                <tr style="border-top:1px solid #E5ECE9;cursor:pointer;" onclick="openTicker('NVL')"><td class="fa-mono" style="padding:11px;font-weight:800;color:#B45309;">NVL</td><td style="padding:11px;font-weight:600;">CTCP Tập đoàn Đầu tư Địa ốc No Va</td><td class="fa-mono" style="padding:11px;font-weight:800;color:#B45309;">47.8 đ</td><td style="padding:11px;"><span style="background:#FFFBEB;color:#B45309;border:1px solid #FDE68A;padding:3px 10px;border-radius:999px;font-size:13.5px;font-weight:700;">Cần theo dõi</span></td><td style="padding:11px;color:#4B635B;">CFO âm (-6,145 tỷ); Hàng tồn kho BĐS dở dang lớn</td></tr>
+                <tr style="border-top:1px solid #E5ECE9;cursor:pointer;" onclick="openTicker('FPT')"><td class="fa-mono" style="padding:11px;font-weight:800;color:#059669;">FPT</td><td style="padding:11px;font-weight:600;">Công ty Cổ phần FPT</td><td class="fa-mono" style="padding:11px;font-weight:800;color:#059669;">11.7 đ</td><td style="padding:11px;"><span style="background:#ECFDF5;color:#059669;border:1px solid #A7F3D0;padding:3px 10px;border-radius:999px;font-size:13.5px;font-weight:700;">An toàn</span></td><td style="padding:11px;color:#4B635B;">Dòng tiền khỏe; không phát sinh cờ đỏ SHAP</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- MODULE 2 -->
+        <section id="mod-2" class="mod-pane" style="display:none;">
+          <div style="background:linear-gradient(135deg,#064E3B 0%,#0F766E 100%);border-radius:14px;padding:18px 24px;margin-bottom:18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
+            <div>
+              <div style="font-size:12.5px;font-weight:700;letter-spacing:1px;color:#A7F3D0;">PHÂN HỆ 2 • COMPANY FORENSIC DOSSIER 360°</div>
+              <h1 style="margin:4px 0 0;font-size:30px;font-weight:800;color:#FFFFFF;">Hồ sơ Pháp chứng 360° &amp; <span class="fa-dual-gold">Giải thích AI (SHAP + RAG)</span></h1>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(253,186,116,0.38);border-radius:10px;padding:9px 15px;font-size:14px;color:#FAF8F5;text-align:right;">SHAP Fidelity: <strong>R² = 0.9964</strong><br/>Hội tụ kế toán: <strong>96.31%</strong></div>
+          </div>
+          <div class="fa-callout">ĐÃ SỬA: Đồng hồ Gauge tách tiêu đề khỏi vạch số 40/60; sạch 100% ký tự ** thô trong thẻ RAG; gấp gọn cờ #2, #3 để đỡ kéo dài trang!</div>
+          <div class="fa-2col" style="grid-template-columns:1.75fr 1fr;margin-bottom:18px;">
+            <div style="background:#FFFFFF;border:1px solid #D1DDD8;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;">
+              <div>
+                <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:8px;">
+                  <span id="m2Ticker" class="fa-mono" style="font-size:30px;font-weight:800;">TDH</span>
+                  <span id="m2Badge" style="background:#FFF1F2;color:#BE123C;border:1px solid #FECDD3;padding:4px 12px;border-radius:999px;font-size:14.5px;font-weight:700;">Cao (Cảnh báo Đỏ)</span>
+                  <span id="m2DivBadge" style="background:#FFF1F2;color:#BE123C;border:1px solid #FECDD3;padding:4px 12px;border-radius:999px;font-size:14.5px;font-weight:700;">Phân kỳ LN (+) / CFO (-)</span>
+                </div>
+                <div id="m2Name" class="fa-head" style="font-size:24px;font-weight:800;color:#064E3B;">Công ty Cổ phần Phát triển Nhà Thủ Đức</div>
+                <div id="m2Meta" style="font-size:15px;color:#4B635B;margin-top:4px;">Bất động sản • HOSE • Năm 2025</div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;border-top:1px solid #E5ECE9;padding-top:12px;">
+                <div><div style="font-size:13.5px;color:#4B635B;">Tổng Tài sản</div><div id="m2Assets" class="fa-mono" style="font-size:18px;font-weight:800;">685.4 tỷ</div></div>
+                <div><div style="font-size:13.5px;color:#4B635B;">Doanh thu</div><div id="m2Rev" class="fa-mono" style="font-size:18px;font-weight:800;">122.8 tỷ</div></div>
+                <div><div style="font-size:13.5px;color:#4B635B;">LN Sau thuế</div><div id="m2Ni" class="fa-mono" style="font-size:18px;font-weight:800;color:#059669;">108.3 tỷ</div></div>
+                <div><div style="font-size:13.5px;color:#4B635B;">Dòng tiền CFO</div><div id="m2Cfo" class="fa-mono" style="font-size:18px;font-weight:800;color:#BE123C;">-23.8 tỷ</div></div>
+              </div>
+            </div>
+            <div style="background:#FFFFFF;border:1px solid #D1DDD8;border-radius:14px;padding:18px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+              <div class="fa-head" style="font-size:17px;font-weight:800;color:#064E3B;">Composite Risk Score</div>
+              <div id="m2GaugeTier" style="font-size:14.5px;color:#BE123C;font-weight:700;margin-bottom:10px;">Cao (Cảnh báo Đỏ)</div>
+              <svg viewBox="0 0 220 120" style="width:220px;height:auto;">
+                <path d="M 22 105 A 88 88 0 0 1 198 105" fill="none" stroke="#F0F4F2" stroke-width="18" stroke-linecap="round"/>
+                <path d="M 22 105 A 88 88 0 0 1 182 55" fill="none" stroke="#BE123C" stroke-width="18" stroke-linecap="round"/>
+                <text id="m2GaugeNum" x="110" y="96" text-anchor="middle" font-size="32" font-weight="800" fill="#BE123C" class="fa-mono">80.2 đ</text>
+              </svg>
+              <div style="font-size:13px;color:#4B635B;">Thang điểm 0 – 100 (Ngưỡng đỏ &ge; 65đ)</div>
+            </div>
+          </div>
+
+          <div class="fa-sec-title">Đối chiếu Tự động: <span>Cờ đỏ SHAP → Luật VAS &amp; Thuyết minh B09-DN</span></div>
+          <div style="background:#FFFFFF;border:1px solid #D1DDD8;border-left:4px solid #BE123C;border-radius:11px;padding:18px 20px;margin-bottom:10px;">
+            <div style="font-size:17px;font-weight:800;color:#132A23;margin-bottom:8px;">1. Altman Z'' thấp (Sức khỏe tài chính yếu / áp lực trả nợ) <span class="fa-mono" style="color:#BE123C;">(+16.19đ SHAP)</span></div>
+            <div style="font-size:15.5px;line-height:1.68;">
+              <div><strong style="color:#064E3B;">[VSA 240 — Phụ lục 1]:</strong> Đánh giá áp lực tài chính, rủi ro thanh toán và khả năng hoạt động liên tục theo <strong>Thông tư 214/2012/TT-BTC</strong> (sạch 100% ký tự <code>**</code> thô).</div>
+              <div style="margin-top:10px;padding:11px 14px;background:#F0FDFA;border:1px solid #99F6E4;border-radius:8px;font-size:15px;color:#064E3B;"><strong>Bóc tách Thuyết minh B09-DN thật (TDH 2025):</strong> Vay ngắn hạn: <strong>0.20 tỷ</strong> • Vay dài hạn: <strong>0.65 tỷ</strong> • Phải trả thuế: <strong>2.91 tỷ</strong></div>
+            </div>
+          </div>
+          <details style="background:#FFFFFF;border:1px solid #D1DDD8;border-left:4px solid #C2410C;border-radius:11px;padding:14px 18px;margin-bottom:10px;">
+            <summary style="font-size:16px;font-weight:700;cursor:pointer;">2. SGI — Tăng trưởng doanh thu quá nóng <span class="fa-mono" style="color:#C2410C;">(+12.94đ SHAP)</span> — Bấm xem căn cứ VSA 240 Đoạn 26</summary>
+            <div style="margin-top:10px;font-size:15px;color:#4B635B;">Đối chiếu giả định bắt buộc về rủi ro gian lận doanh thu (VSA 240 Đoạn 26) &amp; B09-DN: 106.52 tỷ.</div>
+          </details>
+          <details style="background:#FFFFFF;border:1px solid #D1DDD8;border-left:4px solid #C2410C;border-radius:11px;padding:14px 18px;">
+            <summary style="font-size:16px;font-weight:700;cursor:pointer;">3. CFO/Tổng TS thấp — Dòng tiền HĐKD âm <span class="fa-mono" style="color:#C2410C;">(+8.40đ SHAP)</span> — Bấm xem căn cứ VSA 240 Đoạn 12</summary>
+            <div style="margin-top:10px;font-size:15px;color:#4B635B;">Đối chiếu thái độ hoài nghi nghề nghiệp &amp; Hàng tồn kho dở dang B09-DN: 391.87 tỷ.</div>
+          </details>
+        </section>
+
+        <!-- MODULE 3 -->
+        <section id="mod-3" class="mod-pane" style="display:none;">
+          <div style="background:linear-gradient(135deg,#064E3B 0%,#0F766E 100%);border-radius:14px;padding:18px 24px;margin-bottom:18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
+            <div>
+              <div style="font-size:12.5px;font-weight:700;letter-spacing:1px;color:#A7F3D0;">PHÂN HỆ 3 • UPLOAD &amp; LIVE SCORING LAB</div>
+              <h1 style="margin:4px 0 0;font-size:30px;font-weight:800;color:#FFFFFF;">Phòng Thẩm định BCTC Mới &amp; <span class="fa-dual-gold">Giả lập Kịch bản What-If</span></h1>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(253,186,116,0.38);border-radius:10px;padding:9px 15px;font-size:14px;color:#FAF8F5;text-align:right;">Tốc độ chấm Live: <strong>&lt; 1 giây</strong><br/>Đối chiếu: <strong>15 Ngành ICB</strong></div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
+            <button class="fa-subtab active">1. Tải lên File Excel / CSV BCTC Mới</button>
+            <button class="fa-subtab">2. Giả lập Kịch bản Trực tiếp (What-If Simulator)</button>
+          </div>
+          <div class="fa-2col" style="grid-template-columns:1fr 1.25fr;">
+            <div style="background:#FFFFFF;border:1.5px solid #D1DDD8;border-top:4px solid #064E3B;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;">
+              <div>
+                <span style="background:#ECFDF5;color:#064E3B;font-size:13px;font-weight:800;padding:4px 11px;border-radius:999px;">BƯỚC 1</span>
+                <h3 style="margin:12px 0 6px;font-size:21px;font-weight:800;color:#064E3B;">Tải File Mẫu Chuẩn VAS</h3>
+                <p style="font-size:15.5px;color:#4B635B;margin:0;">Điền sẵn 2 công ty đối chứng (<strong>Minh Bạch</strong> &amp; <strong>Thổi Số</strong>) kèm sheet hướng dẫn chuẩn Thông tư 200/99.</p>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <button style="padding:12px 16px;border-radius:10px;border:1.5px solid #064E3B;background:#F0FDFA;color:#064E3B;font-size:15.5px;font-weight:700;cursor:pointer;">Tải File Mẫu Excel (.XLSX — có Hướng dẫn)</button>
+                <button style="padding:12px 16px;border-radius:10px;border:1.5px solid #D1DDD8;background:#FFFFFF;color:#132A23;font-size:15.5px;font-weight:600;cursor:pointer;">Tải File Mẫu CSV (.CSV chuẩn UTF-8)</button>
+              </div>
+            </div>
+            <div style="background:#FFFFFF;border:1.5px solid #D1DDD8;border-top:4px solid #C2410C;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;">
+              <div>
+                <span style="background:#FFF7ED;color:#C2410C;font-size:13px;font-weight:800;padding:4px 11px;border-radius:999px;">BƯỚC 2</span>
+                <h3 style="margin:12px 0 6px;font-size:21px;font-weight:800;color:#132A23;">Tải lên BCTC 2 Năm &amp; <span style="color:#C2410C;">Chấm điểm Live</span></h3>
+                <div style="margin-top:10px;border:2px dashed #99B5AC;border-radius:12px;background:#FAF8F5;padding:24px;text-align:center;color:#4B635B;font-size:15.5px;">Kéo thả file <strong>.CSV</strong> hoặc <strong>.XLSX</strong> vào đây (Tối đa 30MB • Tối thiểu 2 năm liên tiếp)</div>
+              </div>
+              <button style="padding:14px 18px;border-radius:10px;border:none;background:#C2410C;color:#FFFFFF;font-size:16px;font-weight:700;cursor:pointer;">Chạy thử ngay trên bộ mẫu (Minh Bạch vs. Thổi Số) →</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE 4: CHAT BOX THÔNG MINH ĐA NĂNG (HỎI LUẬT + ĐÍNH KÈM/SOI PDF TRÊN CẢ MÁY TÍNH & ĐIỆN THOẠI) -->
+        <section id="mod-4" class="mod-pane" style="display:none;">
+          <div style="background:linear-gradient(135deg,#064E3B 0%,#0F766E 100%);border-radius:14px;padding:18px 24px;margin-bottom:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
+            <div>
+              <div style="font-size:12.5px;font-weight:700;letter-spacing:1px;color:#A7F3D0;">PHÂN HỆ 4 • CONVERSATIONAL HYBRID RAG CHATBOX</div>
+              <h1 style="margin:4px 0 0;font-size:30px;font-weight:800;color:#FFFFFF;">Hộp thoại AI Tra cứu Luật VAS &amp; <span class="fa-dual-gold">Soi Thuyết minh PDF / B09-DN</span></h1>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(253,186,116,0.38);border-radius:10px;padding:9px 15px;font-size:14px;color:#FAF8F5;text-align:right;">Độ trễ: <strong>&lt; 2 ms</strong> • Hit@3: <strong>100%</strong><br/>Chống ảo giác: <strong>100% (5/5)</strong></div>
+          </div>
+
+          <div class="fa-callout">ĐÃ SỬA THEO YÊU CẦU MỚI: Chuyển thành Khung Chat Box hội thoại tự nhiên — có thanh Đính kèm / Chọn PDF ngay trên đầu khung chat, nút gợi ý 1 chạm cuộn mượt trên điện thoại, bong bóng hỏi-đáp rõ ràng và ô nhập tin nhắn cố định bên dưới!</div>
+
+          <!-- KHUNG CHAT BOX HỘI THOẠI ĐA NĂNG (TƯƠNG THÍCH ĐIỆN THOẠI & MÁY TÍNH) -->
+          <div style="background:#FFFFFF;border:1.5px solid #D1DDD8;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(6,78,59,0.06);margin-bottom:20px;">
+            <!-- Thanh Đính kèm / Chọn Nguồn Tài liệu ngay đầu Chat Box -->
+            <div style="background:#F0F4F2;border-bottom:1px solid #D1DDD8;padding:12px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;">
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;flex:1;">
+                <span style="font-size:13.5px;font-weight:800;color:#064E3B;text-transform:uppercase;">Nguồn Chat &amp; Tài liệu đính kèm:</span>
+                <select style="padding:7px 11px;border-radius:8px;border:1.5px solid #064E3B;background:#FFFFFF;color:#132A23;font-size:14.5px;font-weight:600;flex:1;min-width:210px;">
+                  <option>Kho Pháp lý VAS / TT 99/2025 / VSA 240 + PDF Đính kèm</option>
+                  <option>Đính kèm sẵn: NVL_BCTC_2025_Kiemtoan.pdf (91 trang • Moore AISC)</option>
+                  <option>Đính kèm sẵn: TDH_BCTC_2025_Kiemtoan.pdf (52 trang • Tự bật Kênh 1 B09-DN)</option>
+                  <option>Đính kèm sẵn: FPT_BCTC_2025_Kiemtoan.pdf (73 trang • Tự bật Kênh 1 B09-DN)</option>
+                </select>
+                <label style="padding:7px 13px;border-radius:8px;border:1.5px dashed #C2410C;background:#FFF7ED;color:#C2410C;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;">
+                  + Tải file PDF lên
+                </label>
+              </div>
+              <button style="padding:6px 12px;border-radius:8px;border:1px solid #D1DDD8;background:#FFFFFF;color:#4B635B;font-size:13.5px;font-weight:600;cursor:pointer;">Xóa lịch sử chat</button>
+            </div>
+
+            <!-- Dải Gợi ý Câu hỏi Nhanh 1 Chạm (Cuộn ngang mượt trên Điện thoại) -->
+            <div style="padding:10px 18px;background:#FAF8F5;border-bottom:1px solid #E5ECE9;display:flex;gap:8px;overflow-x:auto;white-space:nowrap;">
+              <span style="font-size:13px;font-weight:700;color:#4B635B;align-self:center;">Gợi ý hỏi nhanh:</span>
+              <button style="padding:6px 12px;border-radius:999px;border:1px solid #D1DDD8;background:#FFFFFF;color:#064E3B;font-size:13.5px;font-weight:600;cursor:pointer;">Đổi tên B01-DN theo TT 99/2025?</button>
+              <button style="padding:6px 12px;border-radius:999px;border:1px solid #D1DDD8;background:#FFFFFF;color:#064E3B;font-size:13.5px;font-weight:600;cursor:pointer;">Khác nhau giữa TT 48/2019 và TT 200/99?</button>
+              <button style="padding:6px 12px;border-radius:999px;border:1px solid #D1DDD8;background:#FFFFFF;color:#064E3B;font-size:13.5px;font-weight:600;cursor:pointer;">Soi vấn đề hoạt động liên tục trong PDF NVL?</button>
+              <button style="padding:6px 12px;border-radius:999px;border:1px solid #FECDD3;background:#FFF1F2;color:#BE123C;font-size:13.5px;font-weight:600;cursor:pointer;">[Test Chống Ảo giác] Thời tiết ngày mai?</button>
+            </div>
+
+            <!-- Luồng Tin nhắn Hội thoại (Chat Stream) -->
+            <div style="padding:18px;display:flex;flex-direction:column;gap:14px;background:#FCFBF9;max-height:420px;overflow-y:auto;">
+              <!-- Tin nhắn Người dùng -->
+              <div style="align-self:flex-end;max-width:85%;background:#064E3B;color:#FFFFFF;padding:12px 16px;border-radius:14px 14px 3px 14px;font-size:15.5px;line-height:1.55;box-shadow:0 2px 6px rgba(6,78,59,0.12);">
+                Theo Thông tư 99/2025, Bảng cân đối kế toán đổi tên thành gì và hiệu lực khi nào?
+              </div>
+
+              <!-- Tin nhắn Trợ lý FinAudit AI -->
+              <div style="align-self:flex-start;max-width:92%;background:#FFFFFF;border:1px solid #D1DDD8;border-left:4px solid #064E3B;padding:15px 18px;border-radius:3px 14px 14px 14px;box-shadow:0 2px 8px rgba(19,42,35,0.05);">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+                  <span style="font-size:14px;font-weight:800;color:#064E3B;">Trợ lý Pháp chứng FinAudit AI • Hybrid RRF (1.56 ms)</span>
+                  <span style="background:#ECFDF5;color:#059669;border:1px solid #A7F3D0;padding:2px 9px;border-radius:999px;font-size:12.5px;font-weight:700;">100% Grounded • 0 Ảo giác</span>
+                </div>
+                <div style="font-size:15.5px;line-height:1.68;color:#132A23;">
+                  <strong>Nguồn #1 — [Thông tư 99/2025/TT-BTC — Điều 17, Điều 18 &amp; Phụ lục IV]:</strong><br/>
+                  Theo <strong>Điều 17 Thông tư 99/2025/TT-BTC</strong> (ban hành 27/10/2025, hiệu lực từ <strong>01/01/2026</strong> thay thế Thông tư 200/2014/TT-BTC):<br/>
+                  1. <strong>Báo cáo tình hình tài chính</strong> (Mẫu <code>B01-DN</code>, Phụ lục IV) — đổi tên từ <em>"Bảng cân đối kế toán"</em> nhằm tiệm cận IFRS / IAS 1.<br/>
+                  2. <strong>Báo cáo kết quả hoạt động kinh doanh</strong> (<code>B02-DN</code>) • 3. <strong>Lưu chuyển tiền tệ</strong> (<code>B03-DN</code>) • 4. <strong>Thuyết minh BCTC</strong> (<code>B09-DN</code>).
+                </div>
+              </div>
+            </div>
+
+            <!-- Ô Nhập Chat Cố định Dưới Đáy (Thao tác Ngón cái Cực Dễ trên Điện thoại) -->
+            <div style="padding:12px 16px;background:#FFFFFF;border-top:1px solid #D1DDD8;display:flex;gap:10px;align-items:center;">
+              <input type="text" placeholder="Nhập câu hỏi luật kế toán, kiểm toán hoặc nội dung cần tìm trong file PDF đính kèm..."
+                style="flex:1;padding:12px 15px;border:1.5px solid #064E3B;border-radius:999px;font-size:15.5px;background:#FAF8F5;color:#132A23;outline:none;" />
+              <button style="padding:12px 22px;border-radius:999px;background:#C2410C;color:#FFFFFF;border:none;font-size:15.5px;font-weight:700;cursor:pointer;white-space:nowrap;">
+                Gửi câu hỏi →
+              </button>
+            </div>
+          </div>
+
+          <div class="fa-sec-title">Danh mục <span>Văn bản Pháp quy &amp; Trạng thái Hiệu lực</span></div>
+          <div style="background:#FFFFFF;border:1px solid #D1DDD8;border-radius:12px;overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:15px;">
+              <thead><tr style="background:#064E3B;color:#FFFFFF;text-align:left;"><th style="padding:12px 14px;width:22%;">Số hiệu Văn bản</th><th style="padding:12px 14px;width:44%;">Trích yếu nội dung (Hiển thị trọn vẹn)</th><th style="padding:12px 14px;width:15%;">Hiệu lực</th><th style="padding:12px 14px;width:19%;">Trạng thái</th></tr></thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #E5ECE9;"><td style="padding:12px 14px;font-weight:700;color:#064E3B;">TT 99/2025/TT-BTC</td><td style="padding:12px 14px;">Hướng dẫn Chế độ kế toán doanh nghiệp (Đổi tên B01-DN thành Báo cáo tình hình tài chính, Phụ lục II &amp; IV).</td><td style="padding:12px 14px;">Từ 01/01/2026</td><td style="padding:12px 14px;"><span style="background:#ECFDF5;color:#059669;border:1px solid #A7F3D0;padding:3px 10px;border-radius:999px;font-size:13.5px;font-weight:700;">Hiệu lực (Thay TT 200)</span></td></tr>
+                <tr style="border-bottom:1px solid #E5ECE9;background:#FAF8F5;"><td style="padding:12px 14px;font-weight:700;">TT 200/2014/TT-BTC</td><td style="padding:12px 14px;">Chế độ kế toán doanh nghiệp lịch sử (TK 131, 138, 229, 241, 331, 511) áp dụng cho BCTC đến hết 31/12/2025.</td><td style="padding:12px 14px;">2015 – 2025</td><td style="padding:12px 14px;"><span style="background:#FFFBEB;color:#B45309;border:1px solid #FDE68A;padding:3px 10px;border-radius:999px;font-size:13.5px;font-weight:700;">BCTC lịch sử &le; 2025</span></td></tr>
+                <tr><td style="padding:12px 14px;font-weight:700;color:#064E3B;">VSA 240 (TT 214/2012)</td><td style="padding:12px 14px;">Trách nhiệm kiểm toán viên liên quan đến gian lận BCTC (Đoạn 12 Hoài nghi, Đoạn 26 Doanh thu, Đoạn 31–33).</td><td style="padding:12px 14px;">Từ 01/01/2014</td><td style="padding:12px 14px;"><span style="background:#ECFDF5;color:#059669;border:1px solid #A7F3D0;padding:3px 10px;border-radius:999px;font-size:13.5px;font-weight:700;">Còn hiệu lực</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- MODULE 5 -->
+        <section id="mod-5" class="mod-pane" style="display:none;">
+          <div style="background:linear-gradient(135deg,#064E3B 0%,#0F766E 100%);border-radius:14px;padding:18px 24px;margin-bottom:18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
+            <div>
+              <div style="font-size:12.5px;font-weight:700;letter-spacing:1px;color:#A7F3D0;">PHÂN HỆ 5 • VALIDATION &amp; ESG-G</div>
+              <h1 style="margin:4px 0 0;font-size:30px;font-weight:800;color:#FFFFFF;">Trung tâm Kiểm chứng Khoa học &amp; <span class="fa-dual-gold">Quản trị Minh bạch ESG-G</span></h1>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(253,186,116,0.38);border-radius:10px;padding:9px 15px;font-size:14px;color:#FAF8F5;text-align:right;">Backtest AUC: <strong>0.9299</strong><br/>Bluechip False Flag: <strong>0.00%</strong></div>
+          </div>
+          <div class="fa-kpi-grid">
+            <div class="fa-kpi" style="border-top:4px solid #064E3B;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">BACKTEST AUC-ROC</div><div class="fa-mono" style="font-size:32px;font-weight:800;color:#064E3B;">0.9299</div><div style="font-size:14px;color:#4B635B;">p = 5.77e-22</div></div>
+            <div class="fa-kpi" style="border-top:4px solid #059669;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">SHAP FIDELITY V2</div><div class="fa-mono" style="font-size:32px;font-weight:800;color:#059669;">R² = 0.9964</div><div style="font-size:14px;color:#4B635B;">MAE = 0.85đ (-68.2%)</div></div>
+            <div class="fa-kpi" style="border-top:4px solid #0F766E;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">ỔN ĐỊNH OOT (24–25)</div><div class="fa-mono" style="font-size:32px;font-weight:800;color:#0F766E;">ρ = 0.9983</div><div style="font-size:14px;color:#4B635B;">Hội tụ 96.31%</div></div>
+            <div class="fa-kpi" style="border-top:4px solid #C2410C;"><div style="font-size:13.5px;font-weight:700;color:#4B635B;">HYBRID RAG PHÁP LÝ</div><div class="fa-mono" style="font-size:32px;font-weight:800;color:#C2410C;">Hit@3 = 100%</div><div style="font-size:14px;color:#4B635B;">Chống ảo giác 100%</div></div>
+          </div>
+          <div style="background:#FFFFFF;border:1px solid #D1DDD8;border-radius:14px;padding:20px;">
+            <div class="fa-head" style="font-size:17px;font-weight:800;color:#064E3B;margin-bottom:14px;">Đối chứng Động cơ RAG: Pháp lý VAS (20Q) &amp; PDF Nhiễu OCR NVL 2025 (6Q)</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:end;height:150px;padding:10px 12px 0;border-bottom:1px solid #D1DDD8;">
+              <div style="text-align:center;"><div style="display:flex;justify-content:center;align-items:end;gap:6px;height:115px;"><div style="width:30px;height:90%;background:#064E3B;border-radius:4px 4px 0 0;"></div><div style="width:30px;height:17%;background:#C2410C;border-radius:4px 4px 0 0;"></div></div><div style="font-size:13.5px;font-weight:600;margin-top:6px;">BM25 Raw</div></div>
+              <div style="text-align:center;"><div style="display:flex;justify-content:center;align-items:end;gap:6px;height:115px;"><div style="width:30px;height:90%;background:#064E3B;border-radius:4px 4px 0 0;"></div><div style="width:30px;height:83%;background:#C2410C;border-radius:4px 4px 0 0;"></div></div><div style="font-size:13.5px;font-weight:600;margin-top:6px;">BM25 Dual-VN</div></div>
+              <div style="text-align:center;"><div style="display:flex;justify-content:center;align-items:end;gap:6px;height:115px;"><div style="width:30px;height:95%;background:#064E3B;border-radius:4px 4px 0 0;"></div><div style="width:30px;height:50%;background:#C2410C;border-radius:4px 4px 0 0;"></div></div><div style="font-size:13.5px;font-weight:600;margin-top:6px;">TF-IDF W+C</div></div>
+              <div style="text-align:center;"><div style="display:flex;justify-content:center;align-items:end;gap:6px;height:115px;"><div style="width:30px;height:95%;background:#064E3B;border-radius:4px 4px 0 0;"></div><div style="width:30px;height:83%;background:#C2410C;border-radius:4px 4px 0 0;"></div></div><div style="font-size:13.5px;font-weight:800;color:#064E3B;margin-top:6px;">Hybrid RRF</div></div>
+            </div>
+            <div style="margin-top:14px;display:flex;justify-content:center;gap:22px;font-size:14px;font-weight:600;">
+              <span><span class="fa-dot" style="background:#064E3B;margin-right:6px;"></span>20 câu Pháp lý VAS — Hit@1 (%)</span>
+              <span><span class="fa-dot" style="background:#C2410C;margin-right:6px;"></span>PDF Nhiễu OCR NVL 2025 — Hit@1 (%)</span>
+            </div>
+          </div>
+        </section>
+
+        <footer style="margin-top:26px;background:#F0F4F2;border:1px solid #D1DDD8;border-top:3px solid #064E3B;border-radius:12px;padding:18px 22px;font-size:14.5px;color:#4B635B;line-height:1.6;">
+          <div class="fa-footer-3col">
+            <div><div class="fa-head" style="font-size:16.5px;font-weight:800;color:#064E3B;margin-bottom:6px;">Tuyên bố Pháp lý chuẩn VSA 240</div>FinAudit AI chỉ cung cấp <em>Chỉ báo rủi ro chất lượng lợi nhuận</em> hỗ trợ khoanh vùng kiểm toán, tuyệt đối không kết luận pháp lý về gian lận.</div>
+            <div><div class="fa-head" style="font-size:16.5px;font-weight:800;color:#064E3B;margin-bottom:6px;">Nguồn Dữ liệu &amp; Chuẩn mực</div>Vietcap IQ API (643 DN) • Cổng công bố HOSE/Vietstock • Liên thông TT 200/2014 (&le;2025) &amp; TT 99/2025 (từ 01/01/2026).</div>
+            <div><div class="fa-head" style="font-size:16.5px;font-weight:800;color:#064E3B;margin-bottom:6px;">Dự án &amp; Đối tượng Hỗ trợ</div>SE-Hackathon Challenge 2026 (Trường Kinh tế — HaUI). Phục vụ Kiểm toán, Kế toán, Nhà đầu tư, Nhà cung cấp &amp; SME.</div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const ROLES = {
+      auditor:    { focus: "<strong>Góc nhìn Kiểm toán:</strong> Khoanh vùng TK 131, 138, 229, 241, đối chiếu VSA 240 & soi B09-DN.", label: "Mở nhanh Hồ sơ 360° →", mod: 2 },
+      accountant: { focus: "<strong>Góc nhìn Kế toán:</strong> Kiểm tra cân đối B01/B02, chuyển đổi TT 99/2025 & ranh giới dự phòng TT 48/2019.", label: "Mở nhanh Tra cứu Luật VAS →", mod: 4 },
+      investor:   { focus: "<strong>Góc nhìn Nhà đầu tư:</strong> Quét nhanh 643 mã HOSE/HNX, lọc bẫy lợi nhuận giấy / CFO âm.", label: "Mở nhanh Radar Thị trường →", mod: 1 },
+      supplier:   { focus: "<strong>Góc nhìn Nhà cung cấp:</strong> Kiểm tra Altman Z'' & sức khỏe trả nợ đối tác trước khi bán chịu.", label: "Soi sức khỏe Đối tác (360°) →", mod: 2 },
+      sme:        { focus: "<strong>Góc nhìn Doanh nghiệp SME:</strong> Tải file mẫu Excel BCTC 2 năm để tự kiểm tra toàn vẹn & sức khỏe vay vốn.", label: "Mở nhanh Upload BCTC Mới →", mod: 3 }
+    };
+    const TICKERS = {
+      TDH: { name: "Công ty Cổ phần Phát triển Nhà Thủ Đức", meta: "Bất động sản • HOSE • 2025", assets: "685.4 tỷ", rev: "122.8 tỷ", ni: "108.3 tỷ", cfo: "-23.8 tỷ", score: "80.2 đ", tier: "Cao (Cảnh báo Đỏ)", color: "#BE123C", bg: "#FFF1F2", bd: "#FECDD3", div: "Phân kỳ LN (+) / CFO (-)" },
+      QCG: { name: "Công ty Cổ phần Quốc Cường Gia Lai", meta: "Bất động sản • HOSE • 2025", assets: "9,120.5 tỷ", rev: "729.4 tỷ", ni: "71.8 tỷ", cfo: "-48.2 tỷ", score: "69.9 đ", tier: "Cao (Cảnh báo Đỏ)", color: "#BE123C", bg: "#FFF1F2", bd: "#FECDD3", div: "Phân kỳ LN (+) / CFO (-)" },
+      NVL: { name: "CTCP Tập đoàn Đầu tư Địa ốc No Va", meta: "Bất động sản • HOSE • 2025", assets: "238,619 tỷ", rev: "9,073 tỷ", ni: "-4,351 tỷ", cfo: "-6,145 tỷ", score: "47.8 đ", tier: "Trung bình (Cần theo dõi)", color: "#B45309", bg: "#FFFBEB", bd: "#FDE68A", div: "Moore AISC Trang 12" },
+      DRH: { name: "Công ty Cổ phần DRH Holdings", meta: "Bất động sản • HOSE • 2025", assets: "3,890.2 tỷ", rev: "45.1 tỷ", ni: "-96.4 tỷ", cfo: "-112.0 tỷ", score: "50.7 đ", tier: "Trung bình (Cần theo dõi)", color: "#B45309", bg: "#FFFBEB", bd: "#FDE68A", div: "Dòng tiền HĐKD âm" },
+      FPT: { name: "Công ty Cổ phần FPT", meta: "Công nghệ Thông tin • HOSE • 2025", assets: "72,013 tỷ", rev: "62,849 tỷ", ni: "9,427 tỷ", cfo: "+11,840 tỷ", score: "11.7 đ", tier: "Thấp (An toàn)", color: "#059669", bg: "#ECFDF5", bd: "#A7F3D0", div: "Dòng tiền đồng pha" },
+      VNM: { name: "Công ty Cổ phần Sữa Việt Nam", meta: "Thực phẩm & Đồ uống • HOSE • 2025", assets: "55,049 tỷ", rev: "61,783 tỷ", ni: "9,453 tỷ", cfo: "+10,920 tỷ", score: "12.4 đ", tier: "Thấp (An toàn)", color: "#059669", bg: "#ECFDF5", bd: "#A7F3D0", div: "Dòng tiền đồng pha" }
+    };
+    function switchModule(n) {
+      document.querySelectorAll('.mod-pane').forEach(p => p.style.display = 'none');
+      document.getElementById('mod-' + n).style.display = 'block';
+      document.querySelectorAll('.fa-nav-btn').forEach(b => b.classList.toggle('active', Number(b.dataset.mod) === n));
+    }
+    function updateRole() {
+      const r = ROLES[document.getElementById('roleSelect').value];
+      document.getElementById('roleFocusBox').innerHTML = r.focus;
+      document.getElementById('roleJumpBtn').textContent = r.label;
+    }
+    function jumpRecommended() { switchModule(ROLES[document.getElementById('roleSelect').value].mod); }
+    function openTicker(t) {
+      const d = TICKERS[t] || TICKERS.TDH;
+      document.getElementById('m2Ticker').textContent = t;
+      document.getElementById('m2Name').textContent = d.name;
+      document.getElementById('m2Meta').innerHTML = d.meta;
+      document.getElementById('m2Assets').textContent = d.assets;
+      document.getElementById('m2Rev').textContent = d.rev;
+      document.getElementById('m2Ni').textContent = d.ni;
+      document.getElementById('m2Cfo').textContent = d.cfo;
+      document.getElementById('m2GaugeNum').textContent = d.score;
+      document.getElementById('m2GaugeNum').setAttribute('fill', d.color);
+      document.getElementById('m2GaugeTier').textContent = d.tier;
+      document.getElementById('m2GaugeTier').style.color = d.color;
+      const b = document.getElementById('m2Badge');
+      b.textContent = d.tier; b.style.color = d.color; b.style.background = d.bg; b.style.borderColor = d.bd;
+      const db = document.getElementById('m2DivBadge');
+      db.textContent = d.div; db.style.color = d.color; db.style.background = d.bg; db.style.borderColor = d.bd;
+      switchModule(2);
+    }
+    function runQuickSearch() {
+      const q = document.getElementById('quickSearch').value.trim().toUpperCase();
+      if (!q) return;
+      if (TICKERS[q]) openTicker(q); else switchModule(4);
+    }
+    function setM1Chart(mode) {
+      document.getElementById('m1Chart2d').style.display = mode === '2d' ? 'grid' : 'none';
+      document.getElementById('m1Chart3d').style.display = mode === '3d' ? 'block' : 'none';
+      document.getElementById('m1Btn2d').classList.toggle('active', mode === '2d');
+      document.getElementById('m1Btn3d').classList.toggle('active', mode === '3d');
+    }
+    function setViewport(v) {
+      document.getElementById('previewShell').classList.toggle('mobile-mode', v === 'mobile');
+      document.getElementById('btnDesktop').classList.toggle('active', v === 'desktop');
+      document.getElementById('btnMobile').classList.toggle('active', v === 'mobile');
+    }
+    function toggleCallouts() {
+      const on = document.getElementById('previewShell').classList.toggle('show-callouts');
+      document.getElementById('btnCallouts').textContent = on ? 'Tắt chú thích điểm sửa' : 'Bật chú thích điểm sửa';
+    }
+  </script>
+</body>
+</html>

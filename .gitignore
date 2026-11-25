@@ -1,4 +1,10 @@
 .venv/
+.pip_cache/
+.tmp/
 __pycache__/
 *.py[cod]
 .env
+*.tmp
+.tmp_*
+FinAudit_HoSo*.html
+địa-hình-*.png

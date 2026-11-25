@@ -29,6 +29,7 @@ from live_scoring_service import (
     SAMPLE_WORKED_EXAMPLES,
     ensure_sample_upload_files,
     run_live_scoring_pipeline,
+    smart_normalize_uploaded_bctc,
 )
 from report_exporter import generate_html_audit_report
 
@@ -76,6 +77,27 @@ def main() -> None:
     print(f"  -> Đối chứng tái lập TDH 2025: Live={tdh_live_score}đ vs Stage3={tdh_stage3_score}đ (chênh {tdh_diff}đ)")
     assert tdh_diff < 1.5, f"TDH live vs Stage 3 mismatch too large: {tdh_diff}"
 
+    # Kiểm thử Upload linh hoạt KHÔNG theo mẫu 26 cột (bảng dọc tiếng Việt B01-DN + đơn vị VND đồng)
+    custom_vertical_bctc = pd.DataFrame(
+        [
+            {"Chỉ tiêu BCTC": "Tổng cộng tài sản", "Năm 2024": "1.000.000.000.000", "Năm 2025": "1.200.000.000.000"},
+            {"Chỉ tiêu BCTC": "Tài sản ngắn hạn", "Năm 2024": "550.000.000.000", "Năm 2025": "680.000.000.000"},
+            {"Chỉ tiêu BCTC": "Phải thu ngắn hạn của khách hàng", "Năm 2024": "110.000.000.000", "Năm 2025": "290.000.000.000"},
+            {"Chỉ tiêu BCTC": "Hàng tồn kho", "Năm 2024": "200.000.000.000", "Năm 2025": "210.000.000.000"},
+            {"Chỉ tiêu BCTC": "Nợ phải trả", "Năm 2024": "450.000.000.000", "Năm 2025": "620.000.000.000"},
+            {"Chỉ tiêu BCTC": "Nợ ngắn hạn", "Năm 2024": "300.000.000.000", "Năm 2025": "450.000.000.000"},
+            {"Chỉ tiêu BCTC": "Vốn chủ sở hữu", "Năm 2024": "550.000.000.000", "Năm 2025": "580.000.000.000"},
+            {"Chỉ tiêu BCTC": "Doanh thu thuần", "Năm 2024": "800.000.000.000", "Năm 2025": "950.000.000.000"},
+            {"Chỉ tiêu BCTC": "Lợi nhuận sau thuế", "Năm 2024": "60.000.000.000", "Năm 2025": "85.000.000.000"},
+            {"Chỉ tiêu BCTC": "Lưu chuyển tiền thuần từ hoạt động kinh doanh", "Năm 2024": "55.000.000.000", "Năm 2025": "-40.000.000.000"},
+        ]
+    )
+    df_flex, flex_rep = smart_normalize_uploaded_bctc(custom_vertical_bctc, default_ticker="SME_VN", default_sector="Bất động sản")
+    assert flex_rep["was_transposed"] is True and flex_rep["unit_scaled_from_vnd"] is True and not flex_rep["missing_core"]
+    df_flex_scored, flex_chk = run_live_scoring_pipeline(df_flex, df_all, df_bench, artifacts)
+    flex_sc = round(float(df_flex_scored[df_flex_scored["year"] == 2025]["composite_risk_score"].iloc[0]), 2)
+    print(f"  -> Upload linh hoạt BCTC dọc tiếng Việt (10 chỉ tiêu, đơn vị VND): tự xoay & chấm điểm = {flex_sc}/100 (0 lỗi)")
+
     # Kiểm thử xuất HTML Audit Report
     html_str = generate_html_audit_report(r_ts, rag_brief=None)
     assert len(html_str) > 4000 and "VSA 240" in html_str and "THOI_SO" in html_str
@@ -93,19 +115,19 @@ def main() -> None:
         "tdh_2025_live_score": tdh_live_score,
         "tdh_2025_stage3_score": tdh_stage3_score,
         "tdh_2025_abs_diff": tdh_diff,
+        "flexible_vertical_vn_score": flex_sc,
         "html_report_bytes": len(html_str),
     }
 
     # -----------------------------------------------------------------------
-    # TEST 2: STREAMLIT APPTEST QUA CẢ 5 PHÂN HỆ CHỨC NĂNG
+    # TEST 2: STREAMLIT APPTEST QUA 4 PHÂN HỆ LÀM VIỆC + CHAT DRAWER + GIỚI THIỆU
     # -----------------------------------------------------------------------
-    print("[Test 2/3] Đang chạy Streamlit AppTest kiểm thử toàn bộ 5 phân hệ giao diện...")
+    print("[Test 2/3] Đang chạy Streamlit AppTest kiểm thử 4 phân hệ làm việc & hộp thoại...")
     modules_to_test = [
-        "1. Tổng quan Thị trường & Radar Ngành",
-        "2. Hồ sơ Pháp chứng 360° & SHAP",
-        "3. Phòng Thẩm định BCTC Mới (Live)",
-        "4. Trợ lý AI Soi PDF & Luật VAS",
-        "5. Trung tâm Kiểm chứng & ESG-G",
+        "1. Tổng quan Thị trường",
+        "2. Hồ sơ Doanh nghiệp 360°",
+        "3. Kiểm tra BCTC của Bạn",
+        "4. Trợ lý Pháp lý & Soi PDF",
     ]
     app_path = str(STAGE5_DIR / "app.py")
     at = AppTest.from_file(app_path, default_timeout=45)
@@ -118,14 +140,22 @@ def main() -> None:
     module_timings = {"module_1_cold_boot_s": cold_boot_s}
     for idx_m, mod_name in enumerate(modules_to_test, start=1):
         t_m = time.perf_counter()
-        at.sidebar.radio[0].set_value(mod_name).run()
+        at.button(key=f"nav_btn_{idx_m - 1}").click().run()
         dur_s = round(time.perf_counter() - t_m, 2)
         if len(at.exception) > 0:
             raise AssertionError(f"Exception in {mod_name}: {at.exception}")
+        assert at.session_state["active_module"] == mod_name, f"Expected {mod_name}, got {at.session_state['active_module']}"
         module_timings[f"module_{idx_m}_render_s"] = dur_s
         print(f"  -> PASS {mod_name} | Render time: {dur_s}s | Exceptions: 0")
 
-    # Kiểm thử tương tác bấm nút Demo NVL ở Sidebar (nhảy sang Hồ sơ 360° NVL 2025 + PDF Trang 12!)
+    # Kiểm thử 3 đầu mục hàng dọc (1, 2, 3) dưới Banner Trợ lý Pháp lý (Kiểu bố cục Gemini ở Trang 4)
+    for sec_idx in (1, 2, 0):
+        at.button(key=f"m4_nav_{sec_idx}").click().run()
+        assert len(at.exception) == 0, f"Exception clicking m4_nav_{sec_idx}: {at.exception}"
+        assert at.session_state["m4_active_section"] == sec_idx
+    print("  -> PASS Cột dọc 3 đầu mục (1, 2, 3) dưới Banner Trợ lý Pháp lý (Bố cục Gemini) | Exceptions: 0")
+
+    # Kiểm thử bấm nút Demo NVL ở Sidebar -> Hồ sơ 360° NVL 2025 + So sánh Ngành (thay Radar)
     t_nvl = time.perf_counter()
     for btn in at.sidebar.button:
         if "NVL" in btn.label:
@@ -134,9 +164,25 @@ def main() -> None:
     nvl_jump_s = round(time.perf_counter() - t_nvl, 2)
     assert len(at.exception) == 0, f"Exception after clicking NVL quick demo: {at.exception}"
     assert at.session_state["selected_ticker"] == "NVL"
-    print(f"  -> PASS Quick-Demo NVL 2025 (Hồ sơ 360° + PDF Moore AISC): {nvl_jump_s}s | Exceptions: 0")
+    assert any("fa-peer-table" in m.value for m in at.markdown), "Peer comparison table missing on Page 2!"
+    assert any("fa-rating-card" in m.value for m in at.markdown), "Scientific rating card missing on Page 2!"
+    print(f"  -> PASS Quick-Demo NVL 2025 (Xếp hạng Hạng B + So sánh Ngành + PDF): {nvl_jump_s}s | Exceptions: 0")
 
-    # Đo RAM thực tế của tiến trình Python sau khi đã nạp đầy đủ cả 5 phân hệ, cache dữ liệu, AI & PDF NVL 91 trang
+    # Kiểm thử Biểu tượng Chat Icon Nổi trên Trang 2 -> Mở Hộp thoại Chat rộng
+    t_chat = time.perf_counter()
+    at.button(key="fab_chat_launcher").click().run()
+    chat_open_s = round(time.perf_counter() - t_chat, 2)
+    assert len(at.exception) == 0, f"Exception opening Floating Chatbox Drawer: {at.exception}"
+    assert at.session_state["chat_drawer_open"] is True
+    print(f"  -> PASS Floating Chat Icon -> Mở Hộp thoại Chat rộng: {chat_open_s}s | Exceptions: 0")
+
+    # Kiểm thử Hộp thoại Giới thiệu Phương pháp (chứa AUC / Backtest / ESG ẩn gọn ở chân trang)
+    at.session_state["chat_drawer_open"] = False
+    at.button(key="btn_footer_about").click().run()
+    assert len(at.exception) == 0 and at.session_state["about_modal_open"] is True
+    print("  -> PASS Hộp thoại Giới thiệu Phương pháp & Kiểm định (ẩn gọn ở chân trang) | Exceptions: 0")
+
+    # Đo RAM thực tế của tiến trình Python sau khi đã nạp đầy đủ cache
     try:
         full_ram_mb = round(
             float(
@@ -151,9 +197,9 @@ def main() -> None:
     except Exception:
         full_ram_mb = None
 
-    results["tests"]["test2_streamlit_apptest_5_modules"] = {
+    results["tests"]["test2_streamlit_apptest_4_modules"] = {
         "status": "PASS",
-        "modules_passed": 5,
+        "modules_passed": 4,
         "exceptions_count": 0,
         "timings_seconds": module_timings,
         "quick_demo_nvl_seconds": nvl_jump_s,

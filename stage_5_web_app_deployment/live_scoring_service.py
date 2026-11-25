@@ -10,11 +10,16 @@ Kết nối trực tiếp dữ liệu người dùng tải lên (CSV/Excel hoặ
 
 from __future__ import annotations
 
+from datetime import datetime
 import importlib.util
+import re
 import sys
+import time
+import unicodedata
 from pathlib import Path
 from typing import Any
 
+import httpx
 import numpy as np
 import pandas as pd
 
@@ -508,3 +513,370 @@ def run_live_scoring_pipeline(
     # Trạm 2: Chạy trực tiếp Isolation Forest + Composite (0-100) + SHAP TreeExplainer V2
     df_scored = s3.score_new_observations(df_feat, artifacts)
     return df_scored, checks
+
+
+# ---------------------------------------------------------------------------
+# 2. BỘ NHẬN DIỆN & ÁNH XẠ LINH HOẠT FILE BCTC KHÔNG THEO MẪU 26 CỘT
+# ---------------------------------------------------------------------------
+def _norm_header(text: Any) -> str:
+    s = str(text or "").replace("đ", "d").replace("Đ", "D")
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(ch for ch in s if unicodedata.category(ch) != "Mn").lower()
+    s = re.sub(r"[^a-z0-9\s]", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+FLEX_COLUMN_ALIASES: dict[str, list[str]] = {
+    "ticker": ["ticker", "ma ck", "ma chung khoan", "ma dn", "ma doanh nghiep", "symbol", "code", "cong ty"],
+    "company_name": ["company_name", "ten cong ty", "ten doanh nghiep", "doanh nghiep", "ten dn"],
+    "icb_sector_vi": ["icb_sector_vi", "nganh", "nganh icb", "nganh nghe", "linh vuc", "sector"],
+    "year": ["year", "nam", "nam tai chinh", "ky bao cao", "nien do"],
+    "total_assets": ["total_assets", "tong cong tai san", "tong tai san", "ma so 270", "ms 270", "270"],
+    "current_assets": ["current_assets", "tai san ngan han", "ts ngan han", "ma so 100", "ms 100", "100"],
+    "cash_and_equivalents": ["cash_and_equivalents", "tien va cac khoan tuong duong tien", "tien va tuong duong tien", "tien mat", "ma so 110", "110"],
+    "accounts_receivable": ["accounts_receivable", "phai thu ngan han cua khach hang", "phai thu khach hang", "phai thu kh", "tk 131", "131"],
+    "prepayments_to_suppliers": ["prepayments_to_suppliers", "tra truoc cho nguoi ban", "tra truoc nguoi ban", "132"],
+    "other_receivables_st": ["other_receivables_st", "phai thu ngan han khac", "phai thu khac ngan han", "136"],
+    "provision_doubtful_debts": ["provision_doubtful_debts", "du phong phai thu ngan han kho doi", "du phong phai thu kho doi", "du phong kho doi", "137", "2293"],
+    "inventory": ["inventory", "hang ton kho", "ton kho", "140", "141"],
+    "other_receivables_lt": ["other_receivables_lt", "phai thu dai han khac", "phai thu khac dai han", "216"],
+    "ppe_net": ["ppe_net", "tai san co dinh huu hinh", "tscd huu hinh", "tai san co dinh", "tscd", "221", "220"],
+    "long_term_investments": ["long_term_investments", "dau tu tai chinh dai han", "dau tu dai han", "250"],
+    "total_liabilities": ["total_liabilities", "no phai tra", "tong no phai tra", "tong no", "300"],
+    "current_liabilities": ["current_liabilities", "no ngan han", "310"],
+    "total_equity": ["total_equity", "von chu so huu", "von csh", "vcsh", "400"],
+    "retained_earnings": ["retained_earnings", "loi nhuan sau thue chua phan phoi", "lnst chua phan phoi", "loi nhuan chua phan phoi", "421"],
+    "net_revenue": ["net_revenue", "doanh thu thuan", "doanh thu thuan ve ban hang", "doanh thu ban hang", "doanh thu", "revenue"],
+    "cogs": ["cogs", "gia von hang ban", "gia von"],
+    "gross_profit": ["gross_profit", "loi nhuan gop", "lai gop"],
+    "sga_expenses": ["sga_expenses", "chi phi ban hang va quan ly", "chi phi bh va qldn", "tong chi phi ban hang", "sga"],
+    "selling_expenses": ["selling_expenses", "chi phi ban hang"],
+    "admin_expenses": ["admin_expenses", "chi phi quan ly doanh nghiep", "chi phi qldn"],
+    "ebit": ["ebit", "loi nhuan truoc lai vay va thue", "loi nhuan thuan tu hoat dong kinh doanh", "loi nhuan tu hdkd"],
+    "net_income": ["net_income", "loi nhuan sau thue", "lnst", "loi nhuan rong", "lai sau thue"],
+    "cfo": ["cfo", "luu chuyen tien thuan tu hoat dong kinh doanh", "luu chuyen tien tu hdkd", "dong tien hdkd", "dong tien kinh doanh"],
+    "depreciation": ["depreciation", "khau hao tscd", "khau hao tai san co dinh", "chi phi khau hao", "khau hao"],
+}
+
+CORE_MANDATORY_FLEX = [
+    "year", "total_assets", "current_assets", "total_liabilities",
+    "current_liabilities", "total_equity", "net_revenue", "net_income", "cfo",
+]
+
+
+def _parse_vn_number(val: Any) -> float:
+    """Chuyển đổi an toàn số định dạng VN/Quốc tế (VD: '1.250,5', '(45.2)', '1,250.5') sang float."""
+    if val is None or (isinstance(val, float) and np.isnan(val)):
+        return np.nan
+    if isinstance(val, (int, float, np.number)):
+        return float(val)
+    s = str(val).strip()
+    if not s or s in ("-", "--", "N/A", "nan", "None"):
+        return np.nan
+    neg = s.startswith("(") and s.endswith(")")
+    s = s.strip("() ").replace(" ", "")
+    # Nếu có cả dấu chấm và phẩy: phân biệt kiểu VN (1.234,56) vs US (1,234.56)
+    if "." in s and "," in s:
+        if s.rfind(",") > s.rfind("."):
+            s = s.replace(".", "").replace(",", ".")
+        else:
+            s = s.replace(",", "")
+    elif s.count(".") >= 2:
+        # Số tiền VND ngăn cách hàng nghìn bằng nhiều dấu chấm (VD: 1.000.000.000.000)
+        s = s.replace(".", "")
+    elif "," in s:
+        parts = s.split(",")
+        if len(parts) == 2 and len(parts[1]) <= 2:
+            s = s.replace(",", ".")
+        else:
+            s = s.replace(",", "")
+    try:
+        num = float(s)
+        return -abs(num) if neg else num
+    except ValueError:
+        return np.nan
+
+
+def _try_transpose_vertical_bctc(df_raw: pd.DataFrame) -> tuple[pd.DataFrame, bool]:
+    """Tự động nhận diện bảng BCTC trình bày dọc chuẩn VAS (cột 1 = Chỉ tiêu, các cột sau = Năm 2024, 2025...) và xoay ngang."""
+    year_cols: list[tuple[Any, int]] = []
+    for c in df_raw.columns:
+        m = re.search(r"\b(201[5-9]|202[0-9])\b", str(c))
+        if m:
+            year_cols.append((c, int(m.group(1))))
+    if len(year_cols) < 2:
+        return df_raw, False
+
+    # Tìm cột chứa tên chỉ tiêu văn bản dài nhất
+    text_col = None
+    best_str_score = -1
+    for c in df_raw.columns:
+        if any(c == yc for yc, _ in year_cols):
+            continue
+        vals = df_raw[c].dropna().astype(str)
+        score = sum(1 for v in vals if len(v.strip()) >= 6 and re.search(r"[a-zA-ZÀ-ỹ]", v))
+        if score > best_str_score:
+            best_str_score = score
+            text_col = c
+    if text_col is None or best_str_score < 4:
+        return df_raw, False
+
+    rows_out: list[dict[str, Any]] = []
+    for orig_col, yr in year_cols:
+        rec: dict[str, Any] = {"year": yr}
+        for _, r in df_raw.iterrows():
+            lbl = str(r.get(text_col, "")).strip()
+            if lbl:
+                rec[lbl] = _parse_vn_number(r.get(orig_col))
+        rows_out.append(rec)
+    return pd.DataFrame(rows_out), True
+
+
+def smart_normalize_uploaded_bctc(
+    df_raw: pd.DataFrame,
+    default_ticker: str = "DN_MOI",
+    default_sector: str = "Xây dựng và Vật liệu",
+) -> tuple[pd.DataFrame, dict[str, Any]]:
+    """
+    Nhận file BCTC Excel/CSV linh hoạt (cả file chuẩn 26 cột lẫn file tiếng Việt tự xuất hoặc bảng dọc B01-DN):
+      1. Tự nhận diện & xoay bảng dọc (Chỉ tiêu × Năm) nếu cần.
+      2. Tự khớp tên cột tiếng Việt / mã số chỉ tiêu VAS sang 26 cột chuẩn.
+      3. Tự tính hoặc điền an toàn các chỉ tiêu phụ bị thiếu (kèm danh sách minh bạch cho người dùng),
+         đảm bảo mô hình AI vận hành ổn định, không bao giờ lỗi sập trang.
+    """
+    df_work, was_transposed = _try_transpose_vertical_bctc(df_raw.copy())
+    df_work.columns = [str(c).strip() for c in df_work.columns]
+
+    mapped_cols: dict[str, str] = {}
+    used_src: set[str] = set()
+
+    # Khớp chính xác trước, khớp từ khóa tiếng Việt sau
+    norm_src = {c: _norm_header(c) for c in df_work.columns}
+    for std_col, aliases in FLEX_COLUMN_ALIASES.items():
+        if std_col in df_work.columns and std_col not in used_src:
+            mapped_cols[std_col] = std_col
+            used_src.add(std_col)
+            continue
+        matched_src = None
+        for al in aliases:
+            al_n = _norm_header(al)
+            for orig_c, norm_c in norm_src.items():
+                if orig_c in used_src:
+                    continue
+                if norm_c == al_n or (len(al_n) >= 5 and al_n in norm_c):
+                    matched_src = orig_c
+                    break
+            if matched_src is not None:
+                break
+        if matched_src is not None:
+            mapped_cols[std_col] = matched_src
+            used_src.add(matched_src)
+
+    out = pd.DataFrame(index=df_work.index)
+    for std_col, src_col in mapped_cols.items():
+        if std_col in ("ticker", "company_name", "icb_sector_vi"):
+            out[std_col] = df_work[src_col].astype(str).str.strip()
+        else:
+            out[std_col] = df_work[src_col].apply(_parse_vn_number)
+
+    if "ticker" not in out.columns:
+        out["ticker"] = default_ticker.strip().upper() or "DN_MOI"
+    if "company_name" not in out.columns:
+        out["company_name"] = out["ticker"]
+    if "icb_sector_vi" not in out.columns:
+        out["icb_sector_vi"] = default_sector
+
+    # Chuẩn hóa đơn vị: nếu Tổng TS > 10^9 (người dùng để đơn vị VND đồng thay vì Tỷ VND) -> tự quy đổi về Tỷ VND
+    unit_scaled = False
+    if "total_assets" in out.columns and out["total_assets"].dropna().abs().median() > 1e8:
+        unit_scaled = True
+        for col in out.columns:
+            if col not in ("ticker", "company_name", "icb_sector_vi", "year"):
+                out[col] = out[col] / 1e9
+
+    # Suy luận an toàn các cột phụ kế toán nếu người dùng upload file rút gọn (không đủ 26 cột)
+    auto_estimated: list[str] = []
+    if "sga_expenses" not in out.columns and ("selling_expenses" in out.columns or "admin_expenses" in out.columns):
+        out["sga_expenses"] = out.get("selling_expenses", 0.0).fillna(0.0).abs() + out.get("admin_expenses", 0.0).fillna(0.0).abs()
+        auto_estimated.append("Chi phí BH & QLDN (cộng từ CP bán hàng + CP quản lý)")
+    if "cogs" in out.columns:
+        out["cogs"] = out["cogs"].abs()
+    if "provision_doubtful_debts" in out.columns:
+        out["provision_doubtful_debts"] = out["provision_doubtful_debts"].abs()
+    if "sga_expenses" in out.columns:
+        out["sga_expenses"] = out["sga_expenses"].abs()
+    if "depreciation" in out.columns:
+        out["depreciation"] = out["depreciation"].abs()
+
+    if "gross_profit" not in out.columns and "net_revenue" in out.columns and "cogs" in out.columns:
+        out["gross_profit"] = out["net_revenue"] - out["cogs"]
+        auto_estimated.append("Lợi nhuận gộp (= Doanh thu thuần - Giá vốn)")
+    elif "cogs" not in out.columns and "net_revenue" in out.columns and "gross_profit" in out.columns:
+        out["cogs"] = (out["net_revenue"] - out["gross_profit"]).clip(lower=0.0)
+        auto_estimated.append("Giá vốn hàng bán (= Doanh thu thuần - LN gộp)")
+    elif "cogs" not in out.columns and "gross_profit" not in out.columns and "net_revenue" in out.columns:
+        out["cogs"] = (out["net_revenue"] * 0.78).clip(lower=0.0)
+        out["gross_profit"] = out["net_revenue"] - out["cogs"]
+        auto_estimated.append("Giá vốn & Lợi nhuận gộp (ước lượng mặc định do file thiếu)")
+
+    if "sga_expenses" not in out.columns and "gross_profit" in out.columns and "net_income" in out.columns:
+        out["sga_expenses"] = (out["gross_profit"] - out["net_income"]).clip(lower=0.0)
+        auto_estimated.append("Chi phí BH & QLDN (ước lượng từ LN gộp - LNST)")
+    if "ebit" not in out.columns and "net_income" in out.columns:
+        out["ebit"] = out["net_income"] * 1.25
+        auto_estimated.append("Lợi nhuận trước lãi vay & thuế EBIT (ước lượng từ LNST)")
+
+    fallback_zero_labels = {
+        "cash_and_equivalents": "Tiền & tương đương tiền",
+        "accounts_receivable": "Phải thu khách hàng",
+        "prepayments_to_suppliers": "Trả trước cho người bán",
+        "other_receivables_st": "Phải thu ngắn hạn khác",
+        "provision_doubtful_debts": "Dự phòng nợ khó đòi",
+        "inventory": "Hàng tồn kho",
+        "other_receivables_lt": "Phải thu dài hạn khác",
+        "ppe_net": "Tài sản cố định hữu hình",
+        "long_term_investments": "Đầu tư tài chính dài hạn",
+        "retained_earnings": "Lợi nhuận chưa phân phối",
+        "depreciation": "Chi phí khấu hao TSCĐ",
+    }
+    for col, lbl_vi in fallback_zero_labels.items():
+        if col not in out.columns:
+            out[col] = 0.0
+            auto_estimated.append(f"{lbl_vi} (mặc định 0 do file không có)")
+
+    missing_core = [c for c in CORE_MANDATORY_FLEX if c not in mapped_cols and c not in out.columns]
+    report = {
+        "was_transposed": was_transposed,
+        "unit_scaled_from_vnd": unit_scaled,
+        "mapped_count": len(mapped_cols),
+        "mapped_cols": mapped_cols,
+        "auto_estimated": auto_estimated,
+        "missing_core": missing_core,
+        "is_standard_26": len(auto_estimated) == 0 and not was_transposed,
+    }
+    return out, report
+
+
+# ---------------------------------------------------------------------------
+# 3. ĐỒNG BỘ DỮ LIỆU THỜI GIAN THỰC THEO YÊU CẦU TỪ VIETCAP IQ API
+# ---------------------------------------------------------------------------
+VIETCAP_BASE_URL = "https://iq.vietcap.com.vn/api/iq-insight-service/v1"
+VIETCAP_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/125.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "https://iq.vietcap.com.vn/",
+    "Origin": "https://iq.vietcap.com.vn",
+}
+
+
+def sync_company_live_from_vietcap(
+    ticker: str,
+    meta_row: pd.Series,
+    df_market_ref: pd.DataFrame,
+    benchmarks_df: pd.DataFrame,
+    artifacts: dict[str, Any],
+) -> tuple[pd.DataFrame | None, str, str]:
+    """
+    Gọi trực tiếp API công khai Vietcap IQ cho 1 mã doanh nghiệp (3 bảng B01/B02/B03),
+    sau đó chạy lại pipeline chấm điểm AI + SHAP trong ~2 giây để cập nhật số liệu mới nhất theo thời gian thực.
+    """
+    tkr = ticker.strip().upper()
+    now_str = datetime.now().strftime("%H:%M:%S %d/%m/%Y")
+    sec_by_year: dict[str, dict[int, dict[str, Any]]] = {}
+
+    try:
+        with httpx.Client(headers=VIETCAP_HEADERS, timeout=12.0) as client:
+            for sec in ("BALANCE_SHEET", "INCOME_STATEMENT", "CASH_FLOW"):
+                resp = client.get(f"{VIETCAP_BASE_URL}/company/{tkr}/financial-statement?section={sec}")
+                if resp.status_code != 200:
+                    return None, f"Không thể kết nối Vietcap IQ (mã HTTP {resp.status_code}). Hệ thống giữ nguyên dữ liệu đã lưu.", now_str
+                payload = resp.json()
+                ymap: dict[int, dict[str, Any]] = {}
+                for r in payload.get("data", {}).get("years", []):
+                    yr = r.get("yearReport")
+                    if yr is not None and 2018 <= int(yr) <= 2027:
+                        ymap[int(yr)] = r
+                sec_by_year[sec] = ymap
+    except Exception as exc:
+        return None, f"Tạm thời không kết nối được máy chủ dữ liệu trực tuyến ({type(exc).__name__}). Đang dùng dữ liệu đã kiểm định cục bộ.", now_str
+
+    common_years = sorted(
+        set(sec_by_year["BALANCE_SHEET"]) & set(sec_by_year["INCOME_STATEMENT"]) & set(sec_by_year["CASH_FLOW"])
+    )
+    if len(common_years) < 2:
+        return None, f"API chưa trả đủ 2 năm liên tiếp cho mã {tkr}. Đang giữ nguyên dữ liệu cục bộ.", now_str
+
+    def _f(v: Any) -> float:
+        try:
+            return float(v) if v is not None and v != "" else np.nan
+        except (TypeError, ValueError):
+            return np.nan
+
+    def _pos(v: Any) -> float:
+        x = _f(v)
+        return -x if not np.isnan(x) else np.nan
+
+    scale = 1e9
+    recs: list[dict[str, Any]] = []
+    for yr in common_years:
+        b = sec_by_year["BALANCE_SHEET"][yr]
+        i = sec_by_year["INCOME_STATEMENT"][yr]
+        f = sec_by_year["CASH_FLOW"][yr]
+        selling = _pos(i.get("isa9"))
+        admin = _pos(i.get("isa10"))
+        sga = (0.0 if np.isnan(selling) else selling) + (0.0 if np.isnan(admin) else admin)
+        ebt = _f(i.get("isa16"))
+        int_exp = _pos(i.get("isa8"))
+        ebit = ebt + (0.0 if np.isnan(int_exp) else int_exp) if not np.isnan(ebt) else np.nan
+        prov_raw = _f(b.get("bsa14"))
+        recs.append(
+            {
+                "ticker": tkr,
+                "company_name": str(meta_row.get("company_name", tkr)),
+                "exchange": str(meta_row.get("exchange", "HOSE")),
+                "icb_sector_vi": str(meta_row.get("icb_sector_vi", "Phi tài chính")),
+                "year": yr,
+                "total_assets": _f(b.get("bsa53")) / scale,
+                "current_assets": _f(b.get("bsa1")) / scale,
+                "cash_and_equivalents": _f(b.get("bsa2")) / scale,
+                "short_term_investments": _f(b.get("bsa5")) / scale,
+                "short_term_receivables": _f(b.get("bsa8")) / scale,
+                "accounts_receivable": _f(b.get("bsa9")) / scale,
+                "prepayments_to_suppliers": _f(b.get("bsa10")) / scale,
+                "other_receivables_st": _f(b.get("bsa13")) / scale,
+                "provision_doubtful_debts": (abs(prov_raw) / scale) if not np.isnan(prov_raw) else 0.0,
+                "inventory": _f(b.get("bsa15")) / scale,
+                "other_receivables_lt": (_f(b.get("bsa27")) / scale) if not np.isnan(_f(b.get("bsa27"))) else 0.0,
+                "ppe_net": _f(b.get("bsa30")) / scale,
+                "fixed_assets_total": _f(b.get("bsa29")) / scale,
+                "construction_in_progress": (_f(b.get("bsa188")) / scale) if not np.isnan(_f(b.get("bsa188"))) else 0.0,
+                "long_term_investments": (_f(b.get("bsa43")) / scale) if not np.isnan(_f(b.get("bsa43"))) else 0.0,
+                "total_liabilities": _f(b.get("bsa54")) / scale,
+                "current_liabilities": _f(b.get("bsa55")) / scale,
+                "short_term_debt": (_f(b.get("bsa56")) / scale) if not np.isnan(_f(b.get("bsa56"))) else 0.0,
+                "long_term_liabilities": (_f(b.get("bsa67")) / scale) if not np.isnan(_f(b.get("bsa67"))) else 0.0,
+                "long_term_debt": (_f(b.get("bsa71")) / scale) if not np.isnan(_f(b.get("bsa71"))) else 0.0,
+                "total_equity": _f(b.get("bsa78")) / scale,
+                "retained_earnings": (_f(b.get("bsa90")) / scale) if not np.isnan(_f(b.get("bsa90"))) else 0.0,
+                "net_revenue": _f(i.get("isa3")) / scale,
+                "cogs": _pos(i.get("isa4")) / scale,
+                "gross_profit": _f(i.get("isa5")) / scale,
+                "selling_expenses": (selling / scale) if not np.isnan(selling) else 0.0,
+                "admin_expenses": (admin / scale) if not np.isnan(admin) else 0.0,
+                "sga_expenses": sga / scale,
+                "interest_expense": (int_exp / scale) if not np.isnan(int_exp) else 0.0,
+                "operating_income": _f(i.get("isa11")) / scale,
+                "ebt": ebt / scale if not np.isnan(ebt) else np.nan,
+                "ebit": ebit / scale if not np.isnan(ebit) else np.nan,
+                "net_income": _f(i.get("isa20")) / scale,
+                "cfo": _f(f.get("cfa18")) / scale,
+                "depreciation": (_f(f.get("cfa2")) / scale) if not np.isnan(_f(f.get("cfa2"))) else 0.0,
+            }
+        )
+
+    df_live_raw = pd.DataFrame(recs)
+    df_scored, checks = run_live_scoring_pipeline(df_live_raw, df_market_ref, benchmarks_df, artifacts)
+    if any(c["status"] == "ERROR" for c in checks):
+        return None, f"Dữ liệu trực tuyến của {tkr} chưa đủ điều kiện chấm điểm.", now_str
+    max_yr = int(df_scored["year"].max())
+    return df_scored, f"Đã đồng bộ dữ liệu trực tuyến mới nhất từ Vietcap IQ ({len(common_years)} năm, đến năm {max_yr}) lúc {now_str}.", now_str

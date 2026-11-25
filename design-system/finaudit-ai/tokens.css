@@ -19,8 +19,9 @@
   --color-destructive: #BE123C;
   --color-on-destructive: #FFFFFF;
   --color-ring: #064E3B;
-  --font-heading: "EB Garamond", Georgia, serif;
+  --font-heading: "Plus Jakarta Sans", "Be Vietnam Pro", "Segoe UI", sans-serif;
   --font-body: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
