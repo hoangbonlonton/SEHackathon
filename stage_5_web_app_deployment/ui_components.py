@@ -447,15 +447,21 @@ def inject_fintech_css() -> None:
         [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
             font-size: 15.5px !important;
         }
-        /* Mở rộng không gian hiển thị chuẩn cổng thông tin — chừa khoảng an toàn cho thanh Toolbar Streamlit Cloud */
+        /* Mở rộng không gian hiển thị chuẩn cổng thông tin — ẩn nút GitHub/Share thừa & chừa khoảng trên an toàn */
         [data-testid="stHeader"] {
-            background: rgba(242, 245, 244, 0.92) !important;
-            backdrop-filter: blur(6px);
-            border-bottom: 1px solid rgba(201, 216, 210, 0.6);
+            background: transparent !important;
+            height: 2.6rem !important;
+        }
+        [data-testid="stToolbar"],
+        [data-testid="stDecoration"],
+        [data-testid="stStatusWidget"] {
+            visibility: hidden !important;
+            height: 0 !important;
         }
         .main .block-container,
-        [data-testid="stMainBlockContainer"] {
-            padding-top: 3.85rem !important;
+        [data-testid="stMainBlockContainer"],
+        [data-testid="stAppViewBlockContainer"] {
+            padding-top: 3.4rem !important;
             padding-bottom: 2.2rem !important;
             padding-left: clamp(1rem, 2.2vw, 2.2rem) !important;
             padding-right: clamp(1rem, 2.2vw, 2.2rem) !important;
@@ -483,6 +489,7 @@ def inject_fintech_css() -> None:
             border-top: 4px solid var(--fa-primary);
             border-radius: 5px 5px 0 0;
             padding: 14px 22px;
+            margin-top: 22px !important;
             margin-bottom: 0;
             box-shadow: 0 2px 8px rgba(6, 78, 59, 0.06);
             display: flex;
